@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# VSCode settings
+.vscode/
+
+# Cursor IDE settings
+.cursor/
+
+# 本地数据库目录
+data/
+
+# 数据库文件
+*.db
+
+# 环境变量
+.env

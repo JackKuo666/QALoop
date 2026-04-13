@@ -1,0 +1,64 @@
+<!-- 系统配置管理内容页独立页面 -->
+<div id="systemConfigManagementContent">
+    <div class="section-header">
+        <h2 data-i18n="system.systemConfig">系统配置</h2>
+    </div>
+    <div class="section-content">
+        <div class="config-list-container">
+            <div class="config-card">
+                <div class="config-card-header">
+                    <h3 data-i18n="system.registrationSettings">注册设置</h3>
+                    <span class="config-key">allow_registration</span>
+                </div>
+                <div class="config-card-body">
+                    <div class="config-description">
+                        <p data-i18n="system.allowRegistrationDesc">控制是否允许用户注册。设置为 "true" 允许注册，设置为 "false" 禁止注册。</p>
+                    </div>
+                    <div class="config-value-section">
+                        <label data-i18n="system.currentValue">当前值：</label>
+                        <div class="config-value-display" id="registrationValueDisplay">
+                            <span class="value-text" data-i18n="common.loading">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="config-actions">
+                        <button class="btn btn-primary" id="editRegistrationBtn"><span data-i18n="system.editSettings">编辑设置</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="config-card">
+                <div class="config-card-header">
+                    <h3 data-i18n="system.llmSettings">LLM 配置</h3>
+                    <span class="config-key">llm_*</span>
+                </div>
+                <div class="config-card-body">
+                    <div class="config-description">
+                        <p data-i18n="system.llmSettingsDesc">配置用于智能分析标注备注的 LLM API 参数。</p>
+                    </div>
+                    <div class="config-value-section">
+                        <label data-i18n="system.llmApiKey">API Key：</label>
+                        <div class="config-value-display" id="llmApiKeyDisplay">
+                            <span class="value-text" data-i18n="common.loading">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="config-value-section">
+                        <label data-i18n="system.llmBaseUrl">Base URL：</label>
+                        <div class="config-value-display" id="llmBaseUrlDisplay">
+                            <span class="value-text" data-i18n="common.loading">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="config-value-section">
+                        <label data-i18n="system.llmModelName">模型名称：</label>
+                        <div class="config-value-display" id="llmModelNameDisplay">
+                            <span class="value-text" data-i18n="common.loading">加载中...</span>
+                        </div>
+                    </div>
+                    <div class="config-actions" style="display: flex; gap: 10px; align-items: center;">
+                        <button class="btn btn-primary" id="editLlmConfigBtn"><span data-i18n="system.editSettings">编辑设置</span></button>
+                        <button class="btn btn-success" id="testLlmConnectionBtn"><span data-i18n="system.testConnection">测试连接</span></button>
+                        <span id="llmTestResult" style="font-size: 13px;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

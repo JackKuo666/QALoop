@@ -1,0 +1,335 @@
+<!-- 用户种子问题管理内容页独立页面 -->
+<div id="userSeedQuestionContent">
+    <div class="section-header">
+        <h2 data-i18n="user.mySeedQuestions">我的种子问题</h2>
+        <div class="header-actions">
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control search-input"
+                data-i18n-placeholder="seedQuestion.searchPlaceholder"
+                placeholder="搜索问题..."
+            >
+            <button class="btn btn-secondary" id="showSeedQuestionUsageBtn"><span data-i18n="actions.usageGuide">使用说明</span></button>
+            <button class="btn btn-success" id="importCsvBtn"><span data-i18n="actions.importCsv">导入CSV</span></button>
+            <button class="btn btn-primary" id="addQuestionBtn"><span data-i18n="user.addQuestion">添加问题</span></button>
+            <button class="btn btn-secondary" id="refreshListBtn"><span data-i18n="actions.refresh">刷新</span></button>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th data-i18n="seedQuestion.seedQuestion">种子问题</th>
+                        <th data-i18n="seedQuestion.type">类型</th>
+                        <th data-i18n="seedQuestion.subtype">亚类</th>
+                        <th data-i18n="seedQuestion.speciesOrDomain">物种/领域</th>
+                        <th data-i18n="seedQuestion.model">模型</th>
+                        <th data-i18n="seedQuestion.date">日期</th>
+                        <th data-i18n="seedQuestion.verified">核验</th>
+                        <th data-i18n="seedQuestion.createdAt">创建时间</th>
+                        <th data-i18n="common.operation">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="questionsTableBody">
+                    <tr>
+                        <td colspan="10" class="loading" data-i18n="common.loading">加载中...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container hidden" id="listPaginationContainer">
+            <div class="pagination-info" id="listPaginationInfo"></div>
+            <div class="pagination-controls">
+                <button class="btn btn-sm btn-secondary" id="listPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                <span id="listPageNumbers" class="pagination-numbers"></span>
+                <button class="btn btn-sm btn-secondary" id="listNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                <select id="listPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage" title="每页显示数量">
+                    <option value="10">10条/页</option>
+                    <option value="20" selected>20条/页</option>
+                    <option value="50">50条/页</option>
+                    <option value="100">100条/页</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 添加问题模态框 -->
+<div class="modal" id="addModal">
+    <div class="modal-content" style="max-width: 800px;">
+        <div class="modal-header">
+            <h3 data-i18n="seedQuestion.addSeedQuestion">添加种子问题</h3>
+            <button class="modal-close" id="addModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="addQuestionForm" class="seed-question-form">
+                <!-- 基本信息 -->
+                <div class="form-section">
+                    <div class="form-section-title" data-i18n="seedQuestion.basicInfo">基本信息</div>
+                    <div class="form-group">
+                        <label for="addQuestion">
+                            <span data-i18n="seedQuestion.seedQuestion">种子问题</span>
+                            <span class="required">*</span>
+                            <span class="field-hint" data-i18n="seedQuestion.isRequired">（必填）</span>
+                        </label>
+                        <textarea
+                            id="addQuestion"
+                            name="question"
+                            class="form-control"
+                            rows="5"
+                            data-i18n-placeholder="seedQuestion.questionPlaceholder"
+                            placeholder="请输入种子问题内容，尽量详细和具体..."
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- 分类信息 -->
+                <div class="form-section">
+                    <div class="form-section-title" data-i18n="seedQuestion.categoryInfo">分类信息</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="addType">
+                                <span data-i18n="seedQuestion.type">类型</span>
+                                <span class="required">*</span>
+                            </label>
+                            <select id="addType" name="type" class="form-control" required>
+                                <option value="" data-i18n="seedQuestion.selectType">请选择类型...</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addSubtype">
+                                <span data-i18n="seedQuestion.subtype">亚类</span>
+                                <span class="required">*</span>
+                            </label>
+                            <select id="addSubtype" name="subtype" class="form-control" required>
+                                <option value="" data-i18n="seedQuestion.selectTypeFirst">请先选择类型...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 附加信息 -->
+                <div class="form-section">
+                    <div class="form-section-title" data-i18n="seedQuestion.additionalInfo">附加信息</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="addSpeciesOrDomain">
+                                <span data-i18n="seedQuestion.speciesOrDomain">物种/领域</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="addSpeciesOrDomain"
+                                name="species_or_domain"
+                                class="form-control"
+                                data-i18n-placeholder="seedQuestion.speciesPlaceholder"
+                                placeholder="例如：水稻、玉米、小麦等"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addModel">
+                                <span data-i18n="seedQuestion.model">使用的模型</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="addModel"
+                                name="model"
+                                class="form-control"
+                                data-i18n-placeholder="seedQuestion.modelPlaceholder"
+                                placeholder="例如：GPT-4、Claude、文心一言等"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="addDate">
+                                <span data-i18n="seedQuestion.date">日期</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input
+                                type="date"
+                                id="addDate"
+                                name="date"
+                                class="form-control"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addIsVerified">
+                                <span data-i18n="seedQuestion.isVerified">是否人工核验</span>
+                                <span class="required">*</span>
+                            </label>
+                            <label for="addIsVerified" class="checkbox-label">
+                                <input
+                                    type="checkbox"
+                                    id="addIsVerified"
+                                    name="is_verified"
+                                    required
+                                >
+                                <span data-i18n="seedQuestion.isVerified">是否人工核验</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="addModalCancel"><span data-i18n="actions.cancel">取消</span></button>
+            <button class="btn btn-secondary" id="addModalReset"><span data-i18n="actions.reset">重置</span></button>
+            <button class="btn btn-primary" id="addModalSubmit"><span data-i18n="actions.submit">提交</span></button>
+        </div>
+    </div>
+</div>
+
+<!-- 编辑模态框 -->
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 data-i18n="seedQuestion.editSeedQuestion">编辑种子问题</h3>
+            <button class="modal-close" id="editModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="editForm" class="seed-question-form">
+                <input type="hidden" id="editQuestionId">
+
+                <div class="form-group">
+                    <label for="editQuestion"><span data-i18n="seedQuestion.seedQuestion">种子问题</span> <span class="required">*</span></label>
+                    <textarea
+                        id="editQuestion"
+                        name="question"
+                        class="form-control"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editType"><span data-i18n="seedQuestion.type">类型</span> <span class="required">*</span></label>
+                        <select id="editType" name="type" class="form-control" required>
+                            <option value="" data-i18n="seedQuestion.selectType">请选择类型...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editSubtype"><span data-i18n="seedQuestion.subtype">亚类</span> <span class="required">*</span></label>
+                        <select id="editSubtype" name="subtype" class="form-control" required>
+                            <option value="" data-i18n="seedQuestion.selectTypeFirst">请先选择类型...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editSpeciesOrDomain">
+                            <span data-i18n="seedQuestion.speciesOrDomain">物种/领域</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="editSpeciesOrDomain"
+                            name="species_or_domain"
+                            class="form-control"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editModel">
+                            <span data-i18n="seedQuestion.model">使用的模型</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="editModel"
+                            name="model"
+                            class="form-control"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editDate">
+                            <span data-i18n="seedQuestion.date">日期</span>
+                            <span class="required">*</span>
+                        </label>
+                        <input
+                            type="date"
+                            id="editDate"
+                            name="date"
+                            class="form-control"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editIsVerified">
+                            <span data-i18n="seedQuestion.isVerified">是否人工核验</span>
+                            <span class="required">*</span>
+                        </label>
+                        <label for="editIsVerified" class="checkbox-label">
+                            <input
+                                type="checkbox"
+                                id="editIsVerified"
+                                name="is_verified"
+                                required
+                            >
+                            <span data-i18n="seedQuestion.isVerified">是否人工核验</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="editModalCancel"><span data-i18n="actions.cancel">取消</span></button>
+            <button class="btn btn-primary" id="editModalSubmit"><span data-i18n="actions.save">保存</span></button>
+        </div>
+    </div>
+</div>
+
+<!-- 导入CSV模态框 -->
+<div class="modal" id="importCsvModal">
+    <div class="modal-content" style="max-width: 600px;">
+        <div class="modal-header">
+            <h3 data-i18n="seedQuestion.importCsvFile">导入CSV文件</h3>
+            <button class="modal-close" id="importCsvModalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="csvFileInput">
+                    <span data-i18n="seedQuestion.selectCsvFile">选择CSV文件</span>
+                    <span class="required">*</span>
+                </label>
+                <input
+                    type="file"
+                    id="csvFileInput"
+                    name="csvFile"
+                    accept=".csv"
+                    class="form-control"
+                    required
+                >
+                <small class="form-text text-muted" data-i18n="seedQuestion.csvFileHelp">
+                    CSV文件必须包含以下列（全部必填）：种子问题、类型、亚类、物种/领域、模型、日期（YYYYMMDD或YYYY-MM-DD格式）、是否核验（是/否）
+                </small>
+            </div>
+            <div id="importResult" class="import-result hidden"></div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="importCsvModalCancel"><span data-i18n="actions.cancel">取消</span></button>
+            <button class="btn btn-primary" id="importCsvModalSubmit"><span data-i18n="seedQuestion.importCsvFile">导入</span></button>
+        </div>
+    </div>
+</div>

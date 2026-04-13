@@ -1,0 +1,194 @@
+/* 任务管理模块样式 */
+
+/* 确保动态加载容器占满父容器 */
+#user-available-tasks-container,
+#user-my-tasks-container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#userAvailableTasksContent,
+#userMyTasksContent {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* section-header 样式 */
+#userAvailableTasksContent .section-header,
+#userMyTasksContent .section-header {
+    margin-bottom: 0;
+    padding: 24px 24px 24px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+#userAvailableTasksContent .section-content,
+#userMyTasksContent .section-content {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 表格容器应该可以滚动，占据可用空间 */
+#userAvailableTasksContent .section-content .table-container,
+#userMyTasksContent .section-content .table-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    min-height: 0;
+}
+
+/* 分页器固定在底部，不参与滚动 */
+#userAvailableTasksContent .section-content .pagination-container,
+#userMyTasksContent .section-content .pagination-container {
+    flex-shrink: 0;
+    margin-top: 16px;
+}
+
+/* 空状态样式 */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 16px;
+}
+
+/* 评估维度标签样式 */
+.evaluation-dimension-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px 4px 2px 0;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.evaluation-dimension-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* 分类要求样式 */
+.category-requirement {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.category-requirement.has-category {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.category-requirement.no-category {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* 完成时间倒计时样式 */
+.deadline-countdown {
+    font-weight: 500;
+}
+
+.deadline-countdown.warning {
+    color: #ff9800;
+}
+
+.deadline-countdown.danger {
+    color: #f44336;
+    font-weight: 600;
+}
+
+.deadline-countdown.expired {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* 任务描述截断 */
+.task-description {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 评估目的截断 */
+.evaluation-purpose {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 任务进度样式 */
+.task-progress {
+    min-width: 120px;
+}
+
+.task-progress-text {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.task-progress-bar-container {
+    background: #e0e0e0;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.task-progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.task-progress-bar-low {
+    background: #f44336;
+}
+
+.task-progress-bar-medium {
+    background: #ff9800;
+}
+
+.task-progress-bar-high {
+    background: #4caf50;
+}
+
+.task-progress-bar-complete {
+    background: #2196f3;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    #userAvailableTasksContent .section-header,
+    #userMyTasksContent .section-header {
+        padding: 16px;
+    }
+
+    #userAvailableTasksContent .section-content,
+    #userMyTasksContent .section-content {
+        padding: 16px;
+    }
+
+    .task-description,
+    .evaluation-purpose {
+        max-width: 150px;
+    }
+}

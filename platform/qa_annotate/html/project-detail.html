@@ -1,0 +1,170 @@
+<!-- 项目详情页独立页面 -->
+<div id="projectDetailContent">
+    <div class="project-detail-header">
+        <div class="project-detail-header-content">
+            <div class="project-detail-title-section">
+                <h2 id="projectDetailTitle" class="project-detail-title" data-i18n="project.projectDetail">项目详情</h2>
+                <span id="projectDetailName" class="project-detail-name">-</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-info-container">
+        <div class="project-info-card">
+            <div class="project-info-grid">
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.projectId">项目ID</span>
+                    <span class="project-info-value" id="projectDetailId">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.version">版本</span>
+                    <span class="project-info-value" id="projectDetailVersion">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="common.status">状态</span>
+                    <span class="project-info-value" id="projectDetailStatus">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.category">分类</span>
+                    <span class="project-info-value" id="projectDetailCategory">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.creator">创建者</span>
+                    <span class="project-info-value" id="projectDetailCreator">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="common.createdAt">创建时间</span>
+                    <span class="project-info-value" id="projectDetailCreatedAt">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="common.updatedAt">更新时间</span>
+                    <span class="project-info-value" id="projectDetailUpdatedAt">-</span>
+                </div>
+                <div class="project-info-item project-info-description">
+                    <span class="project-info-label" data-i18n="common.description">描述</span>
+                    <div class="project-description" id="projectDetailDescription">-</div>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.evaluationPurpose">评估目的</span>
+                    <span class="project-info-value" id="projectDetailEvaluationPurpose">-</span>
+                </div>
+                <div class="project-info-item">
+                    <span class="project-info-label" data-i18n="project.deadline">完成时间</span>
+                    <span class="project-info-value" id="projectDetailDeadline">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-stats-card">
+            <div class="project-stat-item">
+                <div class="project-stat-icon">📊</div>
+                <div class="project-stat-content">
+                    <div class="project-stat-value" id="projectDetailDatasetsCount">0</div>
+                    <div class="project-stat-label" data-i18n="project.datasets">数据集</div>
+                </div>
+            </div>
+            <div class="project-stat-item">
+                <div class="project-stat-icon">⚙️</div>
+                <div class="project-stat-content">
+                    <div class="project-stat-value" id="projectDetailConfigsCount">0</div>
+                    <div class="project-stat-label" data-i18n="project.configs">标注配置</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-tabs" style="margin-top: 20px;">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="project-datasets" data-i18n="project.datasetManagement">数据集管理</button>
+            <button class="tab-btn" data-tab="project-configs" data-i18n="project.configManagement">标注配置管理</button>
+            <button class="tab-btn" data-tab="project-analysis" data-i18n="project.annotationAnalysis">标注结果分析</button>
+        </div>
+        <div class="tab-content active" id="project-datasets" style="margin-top: 15px;">
+            <div style="margin-bottom: 15px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-primary" id="addDatasetToProjectBtn" data-i18n="project.addDataset">添加数据集</button>
+                <button class="btn btn-success" id="importDatasetToProjectBtn" data-i18n="project.importDataset">导入数据集</button>
+                <button class="btn btn-success" id="exportProjectAnnotationsBtn"><span data-i18n="project.exportProject">📥 导出项目</span></button>
+            </div>
+            <div id="projectDatasetsCardContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+                <div class="loading" style="text-align: center; padding: 40px; color: #999; grid-column: 1 / -1;"><span data-i18n="common.loading">加载中...</span></div>
+            </div>
+            <div id="projectDatasetsLoader" style="display: none; text-align: center; padding: 20px; color: #999;">
+                <div class="loading"><span data-i18n="common.loading">加载中...</span></div>
+            </div>
+        </div>
+        <div class="tab-content" id="project-configs" style="margin-top: 15px;">
+            <div style="margin-bottom: 15px;">
+                <button class="btn btn-primary" id="addConfigToProjectBtn" data-i18n="project.addConfig">添加标注配置</button>
+            </div>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;" data-i18n="project.order">顺序</th>
+                            <th>ID</th>
+                            <th data-i18n="common.name">名称</th>
+                            <th data-i18n="config.configType">类型</th>
+                            <th data-i18n="config.configDescription">描述</th>
+                            <th data-i18n="config.isRequired">必填</th>
+                            <th data-i18n="common.operation">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projectConfigsTableBody">
+                        <tr>
+                            <td colspan="7" class="loading"><span data-i18n="common.loading">加载中...</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-content" id="project-analysis" style="margin-top: 15px;">
+            <div class="analysis-overview-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="analysisTotalDatasets">0</div>
+                        <div class="stat-label" data-i18n="dataset.datasetList">数据集</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="analysisTotalItems">0</div>
+                        <div class="stat-label" data-i18n="dataset.itemCount">QA对</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="analysisAnnotatedItems">0</div>
+                        <div class="stat-label" data-i18n="dataset.annotatedItems">已标注QA对</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="analysisFullyAnnotatedItems">0</div>
+                        <div class="stat-label" data-i18n="analysis.fullyAnnotatedItems">已完整标注QA对</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="analysisCompletionRate">0%</div>
+                        <div class="stat-label" data-i18n="analysis.completionRate">完整标注率</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="analysisConfigsContainer">
+                <div class="loading" style="text-align: center; padding: 40px;"><span data-i18n="common.loading">加载中...</span></div>
+            </div>
+
+            <div class="analysis-notes-section" style="margin-top: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 style="margin: 0;" data-i18n="analysis.annotationNotesSummary">标注理由汇总</h3>
+                    <button class="btn btn-primary" id="generateLlmAnalysisBtn" data-i18n="analysis.generateLlmAnalysis">一键生成分析</button>
+                </div>
+                <div id="llmAnalysisResult"></div>
+                <div id="analysisNotesContainer"></div>
+            </div>
+        </div>
+    </div>
+</div>

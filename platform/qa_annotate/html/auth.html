@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA 标注系统 - 登录/注册</title>
+    <link rel="stylesheet" href="/static/css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h1 data-i18n="auth.loginTitle">QA 标注系统</h1>
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="login" data-i18n="auth.login">登录</button>
+                    <button class="tab-btn" data-tab="register" data-i18n="auth.register">注册</button>
+                </div>
+            </div>
+
+            <!-- 登录表单 -->
+            <div class="form-container active" id="login-form">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-username" data-i18n="auth.username">用户名</label>
+                        <input
+                            type="text"
+                            id="login-username"
+                            name="username"
+                            required
+                            minlength="3"
+                            maxlength="50"
+                            data-i18n-placeholder="auth.usernamePlaceholder"
+                            placeholder="请输入用户名"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" data-i18n="auth.password">密码</label>
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            required
+                            minlength="6"
+                            data-i18n-placeholder="auth.passwordPlaceholder"
+                            placeholder="请输入密码"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.login">登录</span></button>
+                    </div>
+                    <div class="message" id="login-message"></div>
+                </form>
+            </div>
+
+            <!-- 注册表单 -->
+            <div class="form-container" id="register-form">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="register-username" data-i18n="auth.username">用户名</label>
+                        <input
+                            type="text"
+                            id="register-username"
+                            name="username"
+                            required
+                            minlength="3"
+                            maxlength="50"
+                            data-i18n-placeholder="auth.usernamePlaceholderWithHint"
+                            placeholder="请输入用户名（3-50个字符）"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password" data-i18n="auth.password">密码</label>
+                        <input
+                            type="password"
+                            id="register-password"
+                            name="password"
+                            required
+                            minlength="6"
+                            data-i18n-placeholder="auth.passwordPlaceholderWithHint"
+                            placeholder="请输入密码（至少6个字符）"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="register-fullname" data-i18n="auth.fullnameOptional">全名（可选）</label>
+                        <input
+                            type="text"
+                            id="register-fullname"
+                            name="full_name"
+                            maxlength="100"
+                            data-i18n-placeholder="auth.fullnamePlaceholder"
+                            placeholder="请输入全名"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="register-organization" data-i18n="auth.organizationOptional">单位（可选）</label>
+                        <select id="register-organization" name="organization">
+                            <option value="" data-i18n="auth.selectOrganization">请选择</option>
+                            <option value="崖州湾实验室">崖州湾实验室</option>
+                            <option value="之江实验室">之江实验室</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-team" data-i18n="auth.teamOptional">团队（可选）</label>
+                        <input
+                            type="text"
+                            id="register-team"
+                            name="team"
+                            maxlength="100"
+                            data-i18n-placeholder="auth.teamPlaceholder"
+                            placeholder="请输入团队"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="register-species" data-i18n="auth.speciesOptional">物种（可选）</label>
+                        <input
+                            type="text"
+                            id="register-species"
+                            name="species"
+                            maxlength="100"
+                            data-i18n-placeholder="auth.speciesPlaceholder"
+                            placeholder="请输入物种"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.register">注册</span></button>
+                    </div>
+                    <div class="message" id="register-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/i18next@23.7.11/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/i18n-helper.js"></script>
+    <script src="/static/js/auth.js"></script>
+
+    <!-- i18n 国际化初始化 -->
+    <script>
+        // 等待所有脚本加载完成后再初始化 i18n
+        window.addEventListener('load', async function() {
+            if (typeof i18next === 'undefined') {
+                console.error('i18next 库未加载');
+                return;
+            }
+
+            const savedLanguage = localStorage.getItem('appLanguage') || 'zh-CN';
+
+            try {
+                const [zhCN, enUS] = await Promise.all([
+                    fetch('/static/locales/zh-CN.json').then(r => r.json()),
+                    fetch('/static/locales/en-US.json').then(r => r.json())
+                ]);
+
+                await i18next.init({
+                    lng: savedLanguage,
+                    fallbackLng: 'zh-CN',
+                    debug: false,
+                    resources: {
+                        'zh-CN': {
+                            translation: zhCN.translation
+                        },
+                        'en-US': {
+                            translation: enUS.translation
+                        }
+                    }
+                });
+
+                window.i18next = i18next;
+                window.t = function(key, options) {
+                    return i18next.t(key, options);
+                };
+
+                updatePageLanguage();
+            } catch (error) {
+                console.error('i18next 初始化失败:', error);
+            }
+        });
+
+        function updatePageLanguage() {
+            if (!window.i18next) return;
+
+            const lang = window.i18next.language;
+            document.documentElement.lang = lang;
+
+            // 更新所有带有 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = window.i18next.t(key);
+
+                if (element.children.length === 1 && element.children[0].tagName === 'SPAN') {
+                    const span = element.children[0];
+                    if (span.hasAttribute('data-i18n')) {
+                        span.textContent = window.i18next.t(span.getAttribute('data-i18n'));
+                    } else {
+                        element.textContent = translation;
+                    }
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            // 更新 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                element.placeholder = window.i18next.t(key);
+            });
+
+            // 更新页面标题
+            document.title = window.i18next.t('auth.loginTitle') + ' - ' + window.i18next.t('auth.login');
+        }
+    </script>
+</body>
+</html>

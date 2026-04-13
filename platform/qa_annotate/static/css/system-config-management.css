@@ -1,0 +1,131 @@
+/* 系统配置管理样式 */
+
+.config-list-container {
+    padding: 24px;
+}
+
+.config-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.config-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.config-card-header {
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.config-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.config-key {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-family: 'Courier New', monospace;
+    backdrop-filter: blur(10px);
+}
+
+.config-card-body {
+    padding: 24px;
+}
+
+.config-description {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.config-description p {
+    margin: 0;
+}
+
+.config-value-section {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.config-value-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.config-value-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.value-text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.value-text.value-enabled {
+    color: #28a745;
+}
+
+.value-text.value-disabled {
+    color: #dc3545;
+}
+
+.value-raw {
+    font-size: 12px;
+    color: #666;
+    font-family: 'Courier New', monospace;
+}
+
+.config-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .config-list-container {
+        padding: 16px;
+    }
+
+    .config-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .config-actions {
+        flex-direction: column;
+    }
+
+    .config-actions .btn {
+        width: 100%;
+    }
+}

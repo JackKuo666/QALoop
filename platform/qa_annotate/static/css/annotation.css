@@ -1,0 +1,444 @@
+.annotation-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.annotation-sidebar {
+    width: 360px;
+    background: white;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.annotation-sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.annotation-sidebar-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.annotation-sidebar-header .form-control {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.annotation-sidebar-header .form-control:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.annotation-sidebar-header select.form-control {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.annotation-sidebar-header select.form-control option {
+    padding: 8px 12px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.annotation-sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.annotation-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.annotation-header {
+    padding: 20px 24px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.annotation-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.annotation-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    gap: 24px;
+    padding: 24px;
+}
+
+.annotation-qa-display {
+    flex: 1;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.annotation-form-panel {
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.annotation-form-panel-header {
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.annotation-form-panel-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.annotation-form-panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.qa-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.qa-card-header {
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qa-card-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.qa-card-navigation {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.qa-card-body {
+    padding: 20px;
+}
+
+.qa-card-navigation-bottom {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.qa-item {
+    margin-bottom: 20px;
+}
+
+.qa-item:last-child {
+    margin-bottom: 0;
+}
+
+.qa-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.qa-text {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.annotation-form {
+    margin: 0;
+    padding: 0;
+}
+
+.annotation-form-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.annotation-field {
+    margin-bottom: 24px;
+}
+
+.annotation-field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.annotation-field-label .required {
+    color: #dc3545;
+    margin-left: 4px;
+}
+
+.annotation-field-description {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.annotation-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.annotation-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.annotation-input textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.annotation-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.annotation-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.annotation-option:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.annotation-option input[type="radio"],
+.annotation-option input[type="checkbox"] {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.annotation-option-label {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.annotation-option-description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.annotation-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.annotation-navigation {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.progress-info {
+    padding: 12px;
+    background: #e7f3ff;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #0066cc;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.empty-state-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.empty-state-text {
+    font-size: 16px;
+}
+
+.score-input-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.score-input {
+    flex: 1;
+}
+
+.score-range {
+    font-size: 12px;
+    color: #666;
+}
+
+.qa-list-container {
+    padding: 0;
+}
+
+.qa-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.qa-list-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.qa-list-item:hover {
+    background-color: #f8f9fa;
+}
+
+.qa-list-item.active {
+    background-color: #e7f3ff;
+    border-left: 3px solid #667eea;
+}
+
+.qa-list-item-content {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.qa-list-item-number {
+    color: #999;
+    font-size: 12px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.qa-list-item-question {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.qa-list-item-status {
+    flex-shrink: 0;
+}
+
+.qa-list-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    list-style: none;
+}
+
+.qa-list-loading {
+    padding: 20px;
+    text-align: center;
+    color: #667eea;
+    list-style: none;
+    font-size: 14px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin: 10px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}

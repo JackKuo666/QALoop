@@ -1,0 +1,52 @@
+<!-- 我的任务管理内容页 -->
+<div id="userMyTasksContent">
+    <div class="section-header">
+        <h2 data-i18n="user.myTasks">我的任务</h2>
+        <div class="header-actions">
+            <button class="btn btn-secondary" id="showMyTasksUsageBtn"><span data-i18n="actions.usageGuide">使用说明</span></button>
+            <button class="btn btn-secondary" id="refreshMyTasksBtn"><span data-i18n="actions.refresh">刷新</span></button>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="dataset.datasetName">数据集名称</th>
+                        <th data-i18n="project.taskDescription">任务描述</th>
+                        <th data-i18n="project.category">分类</th>
+                        <th data-i18n="project.targetAnnotationCount">目标标注数量</th>
+                        <th data-i18n="project.progress">进度</th>
+                        <th data-i18n="project.projectName">项目名称</th>
+                        <th data-i18n="project.evaluationPurpose">评估目的</th>
+                        <th data-i18n="project.deadline">要求完成时间</th>
+                        <th data-i18n="project.evaluationDimension">评估维度</th>
+                        <th data-i18n="common.operation">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="myTasksTableBody">
+                    <tr>
+                        <td colspan="10" class="loading"><span data-i18n="common.loading">加载中...</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container hidden" id="myTasksPaginationContainer">
+            <div class="pagination-info" id="myTasksPaginationInfo"></div>
+            <div class="pagination-controls">
+                <button class="btn btn-sm btn-secondary" id="myTasksPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                <span id="myTasksPageNumbers" class="pagination-numbers"></span>
+                <button class="btn btn-sm btn-secondary" id="myTasksNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                <select id="myTasksPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage">
+                    <option value="10">10 条/页</option>
+                    <option value="20" selected>20 条/页</option>
+                    <option value="50">50 条/页</option>
+                    <option value="100">100 条/页</option>
+                </select>
+            </div>
+        </div>
+        <div class="empty-state hidden" id="myTasksEmptyState">
+            <p data-i18n="user.noTasksClaimed">您还没有领取任何任务</p>
+        </div>
+    </div>
+</div>

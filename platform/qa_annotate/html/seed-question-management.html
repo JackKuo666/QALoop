@@ -1,0 +1,57 @@
+<!-- 种子问题管理内容页独立页面 -->
+<div id="seedQuestionManagementContent">
+    <div class="section-header">
+        <h2 data-i18n="nav.seedQuestionManagement">种子问题管理</h2>
+        <div class="header-actions">
+            <input
+                type="text"
+                id="adminSearchInput"
+                class="form-control search-input"
+                data-i18n-placeholder="seedQuestion.searchPlaceholder"
+                placeholder="搜索问题..."
+            >
+            <button class="btn btn-primary" id="manageTypesBtn"><span data-i18n="system.manageTypes">管理类型和亚类</span></button>
+            <button class="btn btn-success" id="exportBtn"><span data-i18n="system.exportCsv">导出CSV</span></button>
+            <button class="btn btn-secondary" id="refreshAdminBtn"><span data-i18n="actions.refresh">刷新</span></button>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="common.id">ID</th>
+                        <th data-i18n="seedQuestion.seedQuestion">种子问题</th>
+                        <th data-i18n="seedQuestion.type">类型</th>
+                        <th data-i18n="seedQuestion.subtype">亚类</th>
+                        <th data-i18n="seedQuestion.speciesOrDomain">物种/领域</th>
+                        <th data-i18n="seedQuestion.model">模型</th>
+                        <th data-i18n="seedQuestion.date">日期</th>
+                        <th data-i18n="seedQuestion.verified">核验</th>
+                        <th data-i18n="system.creator">创建者</th>
+                        <th data-i18n="seedQuestion.createdAt">创建时间</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    <tr>
+                        <td colspan="10" class="loading" data-i18n="common.loading">加载中...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container hidden" id="adminPaginationContainer">
+            <div class="pagination-info" id="adminPaginationInfo"></div>
+            <div class="pagination-controls">
+                <button class="btn btn-sm btn-secondary" id="adminPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                <span id="adminPageNumbers" class="pagination-numbers"></span>
+                <button class="btn btn-sm btn-secondary" id="adminNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                <select id="adminPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage">
+                    <option value="10">10条/页</option>
+                    <option value="20" selected>20条/页</option>
+                    <option value="50">50条/页</option>
+                    <option value="100">100条/页</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

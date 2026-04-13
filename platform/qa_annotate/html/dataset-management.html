@@ -1,0 +1,99 @@
+<!-- 数据库管理内容页独立页面 -->
+<div id="datasetManagementContent">
+    <div class="section-header">
+        <h2 data-i18n="nav.datasetManagement">数据库管理</h2>
+        <div class="header-actions">
+            <button class="btn btn-primary" id="addDatasetBtn"><span data-i18n="dataset.addDataset">添加数据集</span></button>
+            <button class="btn btn-primary" id="importDatasetBtn"><span data-i18n="dataset.importDataset">导入数据集</span></button>
+            <button class="btn btn-success" id="exportAnnotationsBtn" style="display: none;"><span data-i18n="system.exportAnnotations">导出标注结果</span></button>
+            <button class="btn btn-secondary" id="refreshDatasetsBtn"><span data-i18n="actions.refresh">刷新</span></button>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="datasets-list"><span data-i18n="dataset.datasetList">数据集列表</span></button>
+            <button class="tab-btn" data-tab="dataset-items"><span data-i18n="system.qaPairManagement">QA对管理</span></button>
+        </div>
+        <!-- 数据集列表 -->
+        <div class="tab-content active" id="datasets-list">
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="common.id">ID</th>
+                            <th data-i18n="common.name">名称</th>
+                            <th data-i18n="common.description">描述</th>
+                            <th data-i18n="system.version">版本</th>
+                            <th data-i18n="common.status">状态</th>
+                            <th data-i18n="dataset.itemCount">QA对数量</th>
+                            <th data-i18n="system.annotationProgress">标注进展</th>
+                            <th data-i18n="system.annotator">标注者</th>
+                            <th data-i18n="common.createdAt">创建时间</th>
+                            <th data-i18n="common.operation">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datasetsTableBody">
+                        <tr>
+                            <td colspan="10" class="loading"><span data-i18n="common.loading">加载中...</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination-container" id="datasetsPaginationContainer" style="display: none;">
+                <div class="pagination-info" id="datasetsPaginationInfo"></div>
+                <div class="pagination-controls">
+                    <button class="btn btn-sm btn-secondary" id="datasetsPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                    <span id="datasetsPageNumbers" style="display: flex; gap: 4px;"></span>
+                    <button class="btn btn-sm btn-secondary" id="datasetsNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                    <select id="datasetsPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage" style="width: auto; padding: 6px 12px; margin-left: 8px;">
+                        <option value="10">10条/页</option>
+                        <option value="20" selected>20条/页</option>
+                        <option value="50">50条/页</option>
+                        <option value="100">100条/页</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- QA对管理 -->
+        <div class="tab-content" id="dataset-items">
+            <div class="filter-bar">
+                <select id="datasetSelect" class="form-control" data-i18n-placeholder="system.selectDataset">
+                    <option value="" data-i18n="system.selectDataset">选择数据集...</option>
+                </select>
+                <button class="btn btn-primary" id="importDataBtn" style="margin-left: 12px;"><span data-i18n="system.importData">导入数据</span></button>
+            </div>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="system.serialNumber">序号</th>
+                            <th data-i18n="dataset.question">问题</th>
+                            <th data-i18n="dataset.answer">答案</th>
+                            <th data-i18n="common.operation">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="qaPairsTableBody">
+                        <tr>
+                            <td colspan="4" class="loading"><span data-i18n="system.selectDatasetFirst">请先选择数据集</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination-container" id="qaPaginationContainer" style="display: none;">
+                <div class="pagination-info" id="qaPaginationInfo"></div>
+                <div class="pagination-controls">
+                    <button class="btn btn-sm btn-secondary" id="qaPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                    <span id="qaPageNumbers" style="display: flex; gap: 4px;"></span>
+                    <button class="btn btn-sm btn-secondary" id="qaNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                    <select id="qaPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage" style="width: auto; padding: 6px 12px; margin-left: 8px;">
+                        <option value="10">10条/页</option>
+                        <option value="20" selected>20条/页</option>
+                        <option value="50">50条/页</option>
+                        <option value="100">100条/页</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

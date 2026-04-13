@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA 标注系统 - 用户中心</title>
+    <link rel="stylesheet" href="/static/css/manager.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 data-i18n="app.userCenter">用户中心</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <!-- 页面项 -->
+                <div class="nav-group">
+                    <button class="nav-item active" data-section="my-tasks">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text" data-i18n="user.myTasks">我的任务</span>
+                    </button>
+                    <button class="nav-item" data-section="available-tasks">
+                        <span class="nav-icon">📋</span>
+                        <span class="nav-text" data-i18n="user.availableTasks">可领取任务</span>
+                    </button>
+                    <button class="nav-item" data-section="seed-questions">
+                        <span class="nav-icon">🌱</span>
+                        <span class="nav-text" data-i18n="nav.seedQuestionManagement">种子问题</span>
+                    </button>
+                </div>
+                <!-- 分隔线 -->
+                <div class="nav-divider hidden" id="navDivider"></div>
+                <!-- 跳转项 -->
+                <div class="nav-group">
+                    <button class="nav-item nav-item-link hidden" id="goToManagerBtn">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text" data-i18n="app.manager">管理后台</span>
+                    </button>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn-language-switch" id="languageSwitchBtn" title="切换语言 / Switch Language">
+                    <span id="currentLanguage">中文</span>
+                </button>
+                <button class="btn-logout" id="logoutBtn" data-i18n="actions.logout">退出登录</button>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 我的任务 -->
+            <section class="content-section active" id="my-tasks-section">
+                <div class="section-content-wrapper">
+                    <!-- 我的任务内容动态加载容器 -->
+                    <div id="user-my-tasks-container"></div>
+                </div>
+            </section>
+            <!-- 可领取任务 -->
+            <section class="content-section" id="available-tasks-section">
+                <div class="section-content-wrapper">
+                    <!-- 可领取任务内容动态加载容器 -->
+                    <div id="user-available-tasks-container"></div>
+                </div>
+            </section>
+            <!-- 种子问题 -->
+            <section class="content-section" id="seed-questions-section">
+                <div class="section-content-wrapper">
+                    <!-- 种子问题内容动态加载容器 -->
+                    <div id="user-seed-question-container"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">标题</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 动态内容 -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalCancel" data-i18n="actions.cancel">取消</button>
+                <button class="btn btn-primary" id="modalSubmit" data-i18n="actions.confirm">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/i18next@23.7.11/dist/umd/i18next.min.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/pagination.js"></script>
+    <script src="/static/js/i18n-helper.js"></script>
+    <script src="/static/js/user.js"></script>
+
+    <!-- i18n 国际化初始化 -->
+    <script>
+        // 等待所有脚本加载完成后再初始化 i18n
+        window.addEventListener('load', async function() {
+            // 检查 i18next 是否已加载
+            if (typeof i18next === 'undefined') {
+                console.error('i18next 库未加载');
+                return;
+            }
+
+            // 初始化 i18next
+            const savedLanguage = localStorage.getItem('appLanguage') || 'zh-CN';
+
+            try {
+                // 并行加载语言文件
+                const [zhCN, enUS] = await Promise.all([
+                    fetch('/static/locales/zh-CN.json').then(r => r.json()),
+                    fetch('/static/locales/en-US.json').then(r => r.json())
+                ]);
+
+                await i18next.init({
+                    lng: savedLanguage,
+                    fallbackLng: 'zh-CN',
+                    debug: false,
+                    resources: {
+                        'zh-CN': {
+                            translation: zhCN.translation
+                        },
+                        'en-US': {
+                            translation: enUS.translation
+                        }
+                    }
+                });
+
+                // 将 i18n 暴露到全局，供其他脚本使用
+                window.i18next = i18next;
+                window.t = function(key, options) {
+                    return i18next.t(key, options);
+                };
+
+                // 触发自定义事件，通知所有模块 i18next 已准备好
+                const i18nReadyEvent = new CustomEvent('i18next-ready', {
+                    detail: { language: savedLanguage }
+                });
+                window.dispatchEvent(i18nReadyEvent);
+
+                // 更新页面语言
+                updatePageLanguage();
+
+                // 设置语言切换按钮
+                const langBtn = document.getElementById('languageSwitchBtn');
+                if (langBtn) {
+                    langBtn.addEventListener('click', toggleLanguage);
+                }
+            } catch (error) {
+                console.error('i18next 初始化失败:', error);
+            }
+        });
+
+        // 切换语言
+        function toggleLanguage() {
+            if (!window.i18next) return;
+
+            const currentLang = window.i18next.language;
+            const newLang = currentLang === 'zh-CN' ? 'en-US' : 'zh-CN';
+
+            window.i18next.changeLanguage(newLang, () => {
+                localStorage.setItem('appLanguage', newLang);
+                updatePageLanguage();
+            });
+        }
+
+        // 更新页面语言
+        function updatePageLanguage() {
+            if (!window.i18next) return;
+
+            const lang = window.i18next.language;
+
+            // 更新 HTML lang 属性
+            document.documentElement.lang = lang;
+
+            // 更新语言切换按钮文本
+            const langBtn = document.getElementById('currentLanguage');
+            if (langBtn) {
+                langBtn.textContent = lang === 'zh-CN' ? '中文' : 'English';
+            }
+
+            // 更新所有带有 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = window.i18next.t(key);
+
+                // 如果元素内有 span 元素，只更新文本节点
+                if (element.children.length === 1 && element.children[0].tagName === 'SPAN') {
+                    // 保留 span 元素，只更新其内容
+                    const span = element.children[0];
+                    if (span.hasAttribute('data-i18n')) {
+                        span.textContent = window.i18next.t(span.getAttribute('data-i18n'));
+                    } else {
+                        element.textContent = translation;
+                    }
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            // 更新带有 data-i18n-title 属性的元素的 title
+            document.querySelectorAll('[data-i18n-title]').forEach(element => {
+                const key = element.getAttribute('data-i18n-title');
+                element.title = window.i18next.t(key);
+            });
+
+            // 更新带有 data-i18n-placeholder 属性的 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                element.placeholder = window.i18next.t(key);
+            });
+
+            // 更新 select 选项的文本（通过查找 data-i18n 属性的选项）
+            document.querySelectorAll('select').forEach(select => {
+                select.querySelectorAll('option').forEach(option => {
+                    const i18nKey = option.getAttribute('data-i18n');
+                    if (i18nKey) {
+                        // 使用第一个文本节点
+                        if (option.firstChild) {
+                            option.firstChild.textContent = window.i18next.t(i18nKey);
+                        } else {
+                            option.textContent = window.i18next.t(i18nKey);
+                        }
+                    }
+                });
+            });
+
+            // 更新页面标题
+            document.title = window.i18next.t('app.title') + ' - ' + window.i18next.t('app.userCenter');
+
+            // 重新渲染当前活动的动态内容，并清空其他 section 的容器
+            const activeSection = document.querySelector('.content-section.active');
+            const activeSectionId = activeSection ? activeSection.id : '';
+
+            // 定义每个 section 对应的容器 ID
+            const sectionContainers = {
+                'my-tasks-section': 'user-my-tasks-container',
+                'available-tasks-section': 'user-available-tasks-container',
+                'seed-questions-section': 'user-seed-question-container'
+            };
+
+            // 清空非当前活动的 section 的容器
+            Object.keys(sectionContainers).forEach(sectionId => {
+                if (sectionId !== activeSectionId) {
+                    const containerId = sectionContainers[sectionId];
+                    const container = document.getElementById(containerId);
+                    if (container) {
+                        container.innerHTML = '';
+                    }
+                }
+            });
+
+            // 重新渲染当前活动的动态内容
+            if (activeSection) {
+                const sectionId = activeSection.id;
+
+                // 根据不同的 section 重新加载相应模块的数据
+                if (sectionId === 'my-tasks-section' && window.MyTasks) {
+                    window.MyTasks.loadTasks();
+                } else if (sectionId === 'available-tasks-section' && window.AvailableTasks) {
+                    window.AvailableTasks.loadTasks();
+                } else if (sectionId === 'seed-questions-section' && window.UserSeedQuestion) {
+                    window.UserSeedQuestion.loadSeedQuestions();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

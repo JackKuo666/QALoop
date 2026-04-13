@@ -1,0 +1,50 @@
+<!-- 可领取任务管理内容页 -->
+<div id="userAvailableTasksContent">
+    <div class="section-header">
+        <h2 data-i18n="user.availableTasks">可领取任务</h2>
+        <div class="header-actions">
+            <button class="btn btn-secondary" id="refreshAvailableTasksBtn"><span data-i18n="actions.refresh">刷新</span></button>
+        </div>
+    </div>
+    <div class="section-content">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="dataset.datasetName">数据集名称</th>
+                        <th data-i18n="project.taskDescription">任务描述</th>
+                        <th data-i18n="project.categoryRequirement">分类要求</th>
+                        <th data-i18n="project.targetAnnotationCount">目标标注数量</th>
+                        <th data-i18n="project.projectName">项目名称</th>
+                        <th data-i18n="project.evaluationPurpose">评估目的</th>
+                        <th data-i18n="project.deadline">要求完成时间</th>
+                        <th data-i18n="project.evaluationDimension">评估维度</th>
+                        <th data-i18n="common.operation">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="availableTasksTableBody">
+                    <tr>
+                        <td colspan="9" class="loading"><span data-i18n="common.loading">加载中...</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-container hidden" id="availableTasksPaginationContainer">
+            <div class="pagination-info" id="availableTasksPaginationInfo"></div>
+            <div class="pagination-controls">
+                <button class="btn btn-sm btn-secondary" id="availableTasksPrevPage"><span data-i18n="pagination.previous">上一页</span></button>
+                <span id="availableTasksPageNumbers" class="pagination-numbers"></span>
+                <button class="btn btn-sm btn-secondary" id="availableTasksNextPage"><span data-i18n="pagination.next">下一页</span></button>
+                <select id="availableTasksPageSize" class="form-control" data-i18n-title="pagination.itemsPerPage">
+                    <option value="10">10条/页</option>
+                    <option value="20" selected>20条/页</option>
+                    <option value="50">50条/页</option>
+                    <option value="100">100条/页</option>
+                </select>
+            </div>
+        </div>
+        <div class="empty-state hidden" id="availableTasksEmptyState">
+            <p data-i18n="user.noAvailableTasks">暂无可领取的任务</p>
+        </div>
+    </div>
+</div>

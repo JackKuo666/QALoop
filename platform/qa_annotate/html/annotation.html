@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA 标注系统 - 标注工作台</title>
+    <link rel="stylesheet" href="/static/css/manager.css">
+    <link rel="stylesheet" href="/static/css/annotation.css">
+</head>
+<body>
+    <div class="annotation-container">
+        <!-- 侧边栏 -->
+        <aside class="annotation-sidebar">
+            <div class="annotation-sidebar-header">
+                <h2 data-i18n="annotation.taskList">任务列表</h2>
+            </div>
+            <div class="annotation-sidebar-content">
+                <div id="progressInfo" class="progress-info" style="display: none;">
+                    <div><span data-i18n="annotation.annotated">已标注</span>: <span id="annotatedCount">0</span> <span data-i18n="annotation.of">/</span> <span id="totalCount">0</span></div>
+                    <div style="margin-top: 8px;">
+                        <div style="background: #e0e0e0; height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div id="progressBar" style="background: #667eea; height: 100%; width: 0%; transition: width 0.3s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qa-list-container" style="flex: 1; overflow-y: auto; min-height: 0;">
+                    <ul id="qaListBody" class="qa-list">
+                        <li class="qa-list-empty"><span data-i18n="common.loading">加载中...</span></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="annotation-main">
+            <div class="annotation-header">
+                <h1 data-i18n="annotation.workbench">标注工作台</h1>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <button class="btn btn-primary" id="backBtn"><span data-i18n="annotation.back">返回</span></button>
+                    <button class="btn btn-secondary" id="logoutBtn"><span data-i18n="annotation.logout">退出登录</span></button>
+                </div>
+            </div>
+            <div class="annotation-content" id="annotationContent">
+                <div class="annotation-qa-display" id="qaDisplay">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📝</div>
+                        <div class="empty-state-text"><span data-i18n="common.loading">加载中...</span></div>
+                    </div>
+                </div>
+                <div class="annotation-form-panel" id="annotationFormPanel" style="display: none;">
+                    <div class="annotation-form-panel-header">
+                        <h3 data-i18n="annotation.annotationForm">标注表单</h3>
+                    </div>
+                    <div class="annotation-form-panel-body" id="annotationFormBody">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/i18next@23.7.11/dist/umd/i18next.min.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/i18n-helper.js"></script>
+    <script src="/static/js/annotation.js"></script>
+
+    <!-- i18n 国际化初始化 -->
+    <script>
+        window.addEventListener('load', async function() {
+            if (typeof i18next === 'undefined') {
+                console.error('i18next 库未加载');
+                return;
+            }
+
+            const savedLanguage = localStorage.getItem('appLanguage') || 'zh-CN';
+
+            try {
+                const [zhCN, enUS] = await Promise.all([
+                    fetch('/static/locales/zh-CN.json').then(r => r.json()),
+                    fetch('/static/locales/en-US.json').then(r => r.json())
+                ]);
+
+                await i18next.init({
+                    lng: savedLanguage,
+                    fallbackLng: 'zh-CN',
+                    debug: false,
+                    resources: {
+                        'zh-CN': {
+                            translation: zhCN.translation
+                        },
+                        'en-US': {
+                            translation: enUS.translation
+                        }
+                    }
+                });
+
+                window.i18next = i18next;
+                window.t = function(key, options) {
+                    return i18next.t(key, options);
+                };
+
+                updatePageLanguage();
+            } catch (error) {
+                console.error('i18next 初始化失败:', error);
+            }
+        });
+
+        function updatePageLanguage() {
+            if (!window.i18next) return;
+
+            const lang = window.i18next.language;
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = window.i18next.t(key);
+
+                if (element.children.length === 1 && element.children[0].tagName === 'SPAN') {
+                    const span = element.children[0];
+                    if (span.hasAttribute('data-i18n')) {
+                        span.textContent = window.i18next.t(span.getAttribute('data-i18n'));
+                    } else {
+                        element.textContent = translation;
+                    }
+                } else {
+                    element.textContent = translation;
+                }
+            });
+
+            document.title = window.i18next.t('app.title') + ' - ' + window.i18next.t('annotation.workbench');
+        }
+    </script>
+</body>
+</html>

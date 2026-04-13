@@ -1,0 +1,44 @@
+[project]
+name = "qa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wangchen", email = "wangchen@zhejianglab.org" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic",
+    "pydantic-settings>=2.0.0",
+    "sqlalchemy>=2.0.0",
+    "fastapi",
+    "python-multipart",
+    "email-validator",
+    "uvicorn[standard]",
+    "python-dotenv>=1.0.0",
+    "pyjwt>=2.8.0",
+    "httpx>=0.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+qa = "qa_annotate.main:main"
+
+[project.optional-dependencies]
+backup = [
+    "schedule>=1.2.0",
+]
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["qa_annotate"]

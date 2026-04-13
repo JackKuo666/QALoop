@@ -1,0 +1,50 @@
+/* 用户管理模块样式 */
+/* 确保动态加载容器占满父容器 */
+#user-management-container {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#userManagementContent {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* section-header 在 section-content-wrapper 内部时的样式 */
+#userManagementContent .section-header {
+    margin-bottom: 0;
+    padding: 24px 24px 24px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+#userManagementContent .section-content {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* 表格容器应该可以滚动，占据可用空间 */
+#userManagementContent .section-content .table-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    min-height: 0;
+}
+
+/* 分页器固定在底部，不参与滚动 */
+#userManagementContent .section-content .pagination-container {
+    flex-shrink: 0;
+    margin-top: 16px;
+}

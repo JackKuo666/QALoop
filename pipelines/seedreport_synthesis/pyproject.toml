@@ -1,0 +1,14 @@
+[project]
+name = "seedreport-synthesis"
+version = "2.0.0"
+description = "种质报告QA对生成器 - 基于农作物审定报告生成SFT训练数据"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.65.0",
+]
+
+[dependency-groups]
+dev = []

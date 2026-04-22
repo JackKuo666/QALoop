@@ -1,0 +1,12 @@
+[project]
+name = "books-qa-generater"
+version = "1.0.0"
+description = "Book chapter QA generation from Markdown/JSONL textbooks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=1.0.0",
+]

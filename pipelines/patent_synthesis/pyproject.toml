@@ -1,0 +1,13 @@
+[project]
+name = "patent-synthesis"
+version = "1.0.0"
+description = "Chinese patent QA generation from Markdown patents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "aiohttp>=3.8.0",
+    "aiofiles>=23.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.65.0",
+]

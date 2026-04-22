@@ -1,0 +1,34 @@
+{
+  "Title": "Genome-wide identification and expression analysis of the WRKY gene family in rice (Oryza sativa L.) under drought stress",
+  "DOI": "10.1234/example.pone.0123456",
+  "Authors": ["Zhang San", "Li Si"],
+  "Journal": "PLoS ONE",
+  "Year": 2024,
+  "Abstract": "WRKY transcription factors play crucial roles in plant responses to abiotic stresses. In this study, we identified 102 WRKY genes in the rice genome and analyzed their expression patterns under drought stress conditions.",
+  "Plant_Genes": [
+    {
+      "Gene Symbol": "OsWRKY45",
+      "Gene ID": "LOC_Os05g25770",
+      "Description": "WRKY transcription factor 45, involved in disease resistance and abiotic stress response",
+      "Chromosome": "5",
+      "Start Position": 15012345,
+      "End Position": 15014567,
+      "Strand": "+",
+      "Protein Length": 328,
+      "Expression_Up": true,
+      "Fold_Change": 5.2
+    },
+    {
+      "Gene Symbol": "OsWRKY76",
+      "Gene ID": "LOC_Os09g17860",
+      "Description": "WRKY transcription factor 76, regulates drought-responsive genes",
+      "Chromosome": "9",
+      "Start Position": 8923456,
+      "End Position": 8925678,
+      "Strand": "-",
+      "Protein Length": 295,
+      "Expression_Up": true,
+      "Fold_Change": 3.8
+    }
+  ]
+}

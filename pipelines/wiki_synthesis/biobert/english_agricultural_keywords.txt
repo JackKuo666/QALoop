@@ -1,0 +1,5376 @@
+# English Agricultural Keywords List
+# Source: 中国农业关键词.xlsx
+# Total: 5374
+
+   1. agriculture
+   2. primitive agriculture
+   3. ancient agriculture
+   4. traditional agriculture
+   5. modern agriculture
+   6. blue agriculture
+   7. extensive agriculture
+   8. intensive agriculture
+   9. natural agriculture
+  10. inorganic agriculture
+  11. organic agriculture
+  12. characteristic agriculture
+  13. export-oriented agriculture
+  14. contract farming
+  15. multifunctional agriculture
+  16. nutrition sensitive agriculture
+  17. ecological agriculture
+  18. sustainable agriculture
+  19. green agriculture
+  20. multi-storied agriculture
+  21. protected agriculture
+  22. industrialized farming
+  23. irrigation farming
+  24. dryland farming
+  25. rainfed farming
+  26. mountain farming
+  27. grassland farming
+  28. plateau agriculture
+  29. suburban farming
+  30. urban agriculture
+  31. precision agriculture
+  32. digital agriculture
+  33. smart agriculture
+  34. low-carbon agriculture
+  35. creative agriculture
+  36. agritourism
+  37. crop
+  38. root
+  39. stem
+  40. leaf
+  41. flower
+  42. fruit
+  43. pericarp
+  44. seed
+  45. grain crop
+  46. economic crop
+  47. horticultural crop
+  48. aquatic crop
+  49. vegetable crop
+  50. fiber crop
+  51. bast fiber crop
+  52. sugar crop
+  53. oil-bearing crop
+  54. aromatic crop
+  55. spice crop
+  56. dye crop
+  57. medicinal crop
+  58. tropical crop
+  59. field crop
+  60. protected crop
+  61. annual crop
+  62. perennial crop
+  63. spring sown crop
+  64. summer sown crop
+  65. autumn sown crop
+  66. summer harvesting crop
+  67. autumn harvesting crop
+  68. overwintering crop
+  69. drought tolerant crop
+  70. waterlogging tolerant crop
+  71. salt tolerant crop
+  72. pioneer crop
+  73. cover crop
+  74. tuber crop
+  75. root crop
+  76. food crop
+  77. feed crop
+  78. industrial crop
+  79. green manure crop
+  80. nitrogen-fixing crop
+  81. farmland
+  82. high yield farmland
+  83. medium-low yield field
+  84. well-facilitated farmland
+  85. permanent basic farm
+  86. paddy land
+  87. dryland
+  88. grainfield
+  89. vegetable fields
+  90. orchard
+  91. forest land
+  92. grassland
+  93. rubble land
+  94. terrace
+  95. dam field
+  96. flat dam field
+  97. platform
+  98. reserve farmland
+  99. black soil land
+ 100. red and yellow soil
+ 101. irrigated land
+ 102. saline-alkali land
+ 103. agronomy
+ 104. basic agronomy
+ 105. crop science
+ 106. horticulture
+ 107. pomology, fruit science
+ 108. vegetable science
+ 109. agricultural biology
+ 110. plant protection
+ 111. agricultural entomology
+ 112. plant pathology
+ 113. crop genetics
+ 114. principles of crop breeding
+ 115. crop morphology
+ 116. crop physiology
+ 117. crop ecology
+ 118. crop cultivation and geoponics
+ 119. herbology
+ 120. agro-environmentology
+ 121. agro-edaphology
+ 122. agricultural ecology
+ 123. agricultural microbiology
+ 124. agricultural phenology
+ 125. agricultural physics
+ 126. agricultural chemistry
+ 127. agricultural meteorology
+ 128. agricultural water conservancy
+ 129. agricultural geography
+ 130. agricultural engineering science
+ 131. agricultural machinery science
+ 132. crop seed science
+ 133. agricultural information
+ 134. bioinformatics
+ 135. agricultural information analytics
+ 136. agricultural modeling
+ 137. agricultural system engineering
+ 138. agricultural regional planning
+ 139. agricultural regional development
+ 140. management of agricultural economy
+ 141. agricultural economics
+ 142. rural economics
+ 143. rural finance
+ 144. agricultural statistics
+ 145. rural public finance
+ 146. rural demography
+ 147. rural sociology
+ 148. rural cooperative economics
+ 149. agricultural technology economics
+ 150. agricultural extension
+ 151. agribusiness operation and management
+ 152. agricultural insurance
+ 153. agricultural informatics
+ 154. Twenty-Four Solar Terms
+ 155. Beginning of Spring
+ 156. First Rainfall
+ 157. Hibernator Awakening
+ 158. Spring Equinox
+ 159. Fresh Green
+ 160. Grain Rain
+ 161. Beginning of Summer
+ 162. Approaching Fullness
+ 163. Harvesting and Sowing
+ 164. Summer Solstice
+ 165. Minor Heat
+ 166. Major Heat
+ 167. Beginning of Autumn
+ 168. Heat Withdraws
+ 169. White Dew
+ 170. Autumnal Equinox
+ 171. Cold Dew
+ 172. First Frost
+ 173. Beginning of Winter
+ 174. First Snow
+ 175. First Snow Cover
+ 176. Winter Solstice
+ 177. Minor Cold
+ 178. Major Cold
+ 179. agricultural test
+ 180. field trial
+ 181. test site
+ 182. test region
+ 183. experimental design
+ 184. experimental plot
+ 185. treatment
+ 186. control test
+ 187. comparative test
+ 188. varietal yield test
+ 189. split-plot test
+ 190. regional test
+ 191. duplicate tests
+ 192. block
+ 193. randomized block
+ 194. plot arrangement
+ 195. systematic arrangement
+ 196. randomized arrangement
+ 197. marginal effect
+ 198. stochastic model
+ 199. fixed model
+ 200. mixed model
+ 201. mathematical simulation
+ 202. law of chance
+ 203. background survey
+ 204. agronomic character
+ 205. agricultural resources
+ 206. virtual agricultural resources
+ 207. agricultural planning
+ 208. agricultural zoning
+ 209. agriculture industrial park
+ 210. agriculture demonstration zone
+ 211. agriculture park
+ 212. agricultural mechanization
+ 213. agricultural industrialization
+ 214. agriculture informatization
+ 215. agricultural modernization
+ 216. agricultural engineering
+ 217. agriculture infrastructure
+ 218. agricultural science and technology innovation
+ 219. agrotechnology popularization
+ 220. agriculture products
+ 221. agricultural inputs
+ 222. agriculture products supply and demand
+ 223. food security
+ 224. food quantitative security
+ 225. food qualitative security
+ 226. food nutritional security
+ 227. agricultural risk
+ 228. agrobiodiversity
+ 229. ecosystem of cropland
+ 230. arable land red line
+ 231. ecological compensation for cultivated land
+ 232. green development of agriculture
+ 233. carbon cycle
+ 234. nitrogen cycle
+ 235. water cycle
+ 236. agricultural management entity
+ 237. agricultural Cooperation Organization
+ 238. rural land transfer
+ 239. farming system
+ 240. rural revitalization
+ 241. agricultural cultural heritage
+ 242. cereal crop
+ 243. rice
+ 244. wild rice
+ 245. common wild rice
+ 246. Medicinal wild rice
+ 247. wild rice with warts
+ 248. cultivated rice
+ 249. Asian cultivated rice
+ 250. African cultivated rice
+ 251. deep water rice
+ 252. floating rice
+ 253. aerobic rice
+ 254. early rice
+ 255. semilate rice
+ 256. late rice
+ 257. single cropping rice
+ 258. double cropping rice
+ 259. ratoon rice
+ 260. perennial rice
+ 261. hsien rice
+ 262. keng rice
+ 263. glutinous rice
+ 264. hybrid rice
+ 265. three-line hybrid rice
+ 266. two-line hybrid rice
+ 267. transplanting rice
+ 268. direct-seeding rice
+ 269. wheat
+ 270. einkorn wheat
+ 271. emmer wheat
+ 272. turgidum wheat
+ 273. durum wheat
+ 274. timopheevi wheat
+ 275. spelt wheat
+ 276. club wheat
+ 277. common wheat
+ 278. winter wheat
+ 279. spring wheat
+ 280. hard wheat
+ 281. soft wheat
+ 282. strong gluten wheat
+ 283. medium gluten wheat
+ 284. weak gluten wheat
+ 285. waxy wheat
+ 286. colored-grain wheat
+ 287. barley, Hordeum vulgare (L.) Bowden
+ 288. two-rowed barley
+ 289. intermedium barley
+ 290. multi-rowed barley
+ 291. hulled barley
+ 292. naked barley
+ 293. malting barley
+ 294. rye, Secale cereale L.
+ 295. triticale, Secale sylvestre Host
+ 296. oat, Avena sativa L.
+ 297. hulled oat
+ 298. naked oat
+ 299. corn, maize
+ 300. flint corn
+ 301. dent corn
+ 302. semi dent corn
+ 303. pop corn
+ 304. sweet corn
+ 305. waxy corn
+ 306. sweet plus waxy corn
+ 307. soft corn
+ 308. high oil corn
+ 309. baby corn
+ 310. spring corn
+ 311. summer corn
+ 312. hybrid corn
+ 313. mechanical grain harvesting corn
+ 314. silage corn
+ 315. sorghum, Sorghum bicolor (L.) Moench
+ 316. glutinous sorghum
+ 317. sweet sorghum
+ 318. hybrid sorghum
+ 319. millet, foxtail millet
+ 320. pearl millet
+ 321. broomcorn millet
+ 322. finger millet
+ 323. job's tears
+ 324. buckwheat, Fagopyrum esculentum Moench
+ 325. tartary buckwheat
+ 326. common buckwheat
+ 327. winged buckwheat
+ 328. rice buckwheat
+ 329. quinoa, Chenopodium quinoa Willd.
+ 330. white quinoa
+ 331. red quinoa
+ 332. black quinoa
+ 333. grain amaranth
+ 334. legume crops
+ 335. soybean
+ 336. wild soybean
+ 337. semi-wild soybean
+ 338. cultivated soybean
+ 339. spring soybean
+ 340. summer soybean
+ 341. yellow soybean
+ 342. black soybean
+ 343. broad bean
+ 344. pea, Pisum sativum L.
+ 345. pink-flowered pea
+ 346. pink-flowered pea
+ 347. mung bean
+ 348. red bean
+ 349. bean, kidney bean
+ 350. cowpea
+ 351. lentil, Lens culinaris Medic.
+ 352. lupine, Lupinus micranthus Guss.
+ 353. rice bean
+ 354. chickpea, Cicer arietinum Linn
+ 355. velvet bean
+ 356. lima bean
+ 357. pigeonpea, Cajanus cajan (Linn.) Millsp.
+ 358. root and tuber crops
+ 359. potato, Solanum tuberosum L.
+ 360. sweet potato
+ 361. common yam
+ 362. winged yam
+ 363. yambean
+ 364. dasheen
+ 365. leopard-palm, Amorphophallus rivieri Durieu
+ 366. jerusalemartichoke, Helianthus tuberosus L.
+ 367. fragrant taro
+ 368. forage crop of legume family
+ 369. pinto peanut
+ 370. erect milkvetch
+ 371. sweetclover-like milkvetch
+ 372. Chinese milkvetch
+ 373. intermediate peashrub
+ 374. korshinskii peashrub
+ 375. microphylla peashrub
+ 376. Cassia nictitans (L.) Moench
+ 377. roundleaf sensitive pea
+ 378. butterfly pea
+ 379. crown vetch
+ 380. zarzabacoa galana
+ 381. east goatsrue
+ 382. wild soybean
+ 383. himalaya Kudzu
+ 384. shrubby sweetvetch
+ 385. smooth shrubby sweetvetch
+ 386. slenderbranch sweetvetch
+ 387. pink-flower indigo
+ 388. bicolor bush clover
+ 389. dahurian bushclover
+ 390. rush bushclover
+ 391. beautiful bushclover
+ 392. white leadtree
+ 393. baines lotononis
+ 394. purple bean
+ 395. horse gram, Macrotyloma uniflorum (Lam.) Verdc.
+ 396. sickle alfalfa
+ 397. black medick
+ 398. burclover, Medicago polymorpha L.
+ 399. alfalfa, Medicago sativa L.
+ 400. variegated alfalfa
+ 401. ruthenia medic
+ 402. white sweet clover
+ 403. yellow sweet clover
+ 404. velvetbean, Mucuna pruriens (L.) DC.
+ 405. sainfoin, Onobrychis viciaefolia Scop.
+ 406. Oxytropis caerulea (Pall.) DC.
+ 407. kudzu
+ 408. tropical kudzu
+ 409. emperor's candlesticks
+ 410. vetchleaf sophora
+ 411. stylo, Stylosanthes guianensis (Aubl)Sw.
+ 412. caribbean stylo
+ 413. shrubby stylo
+ 414. white tephrosia
+ 415. crimson clover
+ 416. wild clover
+ 417. red clover
+ 418. white clover
+ 419. broadleaf vetch
+ 420. ribbed vetch
+ 421. bird vetch
+ 422. oriental vetch
+ 423. common vetch
+ 424. narrowleaved vetch
+ 425. two-leaved vetch
+ 426. winter vetch
+ 427. forage crop of grass family
+ 428. far east achnatherum
+ 429. crested wheatgrass
+ 430. hybrid wheatgrass
+ 431. desert wheatgrass
+ 432. michno wheatgrass
+ 433. Mongolian wheatgrass
+ 434. digitate goldenbeard
+ 435. palisade signalgrass
+ 436. decumbent signalgrass
+ 437. Brachiaria dictyoneura (Fig. & De Not.) Stapf
+ 438. palisade grass
+ 439. rescuegrass, Bromus catharticus Vahl.
+ 440. fringed bromegrass
+ 441. smooth bromegrass
+ 442. awnless cleistogenes
+ 443. bermudagrass, Cynodon dactylon (Linn.) Pers.
+ 444. orchardgrass, Dactylis glomerata L.
+ 445. barnyardgrass, Echinochloa crus-galli (L.) Beauv.
+ 446. shortawn wildryegrass
+ 447. drooping wildryegrass
+ 448. Siberian wildryegrass
+ 449. quackgrass, Elytrigia repens (Linn.) Nevski
+ 450. maire lovegrass
+ 451. teosinte, Euchlaena mexicana Schrad.
+ 452. tall fescue
+ 453. Chinese fescue
+ 454. south-western helictotrichon
+ 455. compressed hemarthria
+ 456. common velvetgrass
+ 457. thoroldiana, Kengyilia thoroldiana (Oliver) J.L. Yang et al.
+ 458. rigidula, Kengyilia rigidula (Keng) J.L. Yang et al.
+ 459. sheepgrass, Leymus chinensis (Trin.) Tzvel.
+ 460. pabo leymus
+ 461. festulolium, Lolium perenne ×Festuca arundinacea
+ 462. Italian ryegrass
+ 463. perennial ryegrass
+ 464. molassesgrass, Melinis minutiflora Beauv.
+ 465. guineagrass, Panicum maximum Jacq.
+ 466. ditch millet
+ 467. vasey's grass
+ 468. Chinese fountaingrass
+ 469. pearl millet
+ 470. pennisetum, Pennisetum americanum ×P. purpureum
+ 471. kikuygrass, Pennisetum cladestinum Hochstetter ex Chiovenda
+ 472. mission grass
+ 473. napiergrass, Pennisetum purpureum Schum.
+ 474. reed canargrass
+ 475. timothy, Phleum pratense L.
+ 476. Russian wildrye
+ 477. Korean alkaligrass
+ 478. thinflower alkaligrass
+ 479. ciliate roegneria
+ 480. common roegneria
+ 481. oliganthous roegneria
+ 482. strict roegneria
+ 483. roegneria, Roegneria turczaninovii (Drob.) Nevski
+ 484. African bristlegrass
+ 485. sorghum sudangrass hybrid
+ 486. sudangrass, Sorghum sudanense (Piper) Stapf
+ 487. zoysiagrass, Zoysia japonica Steud.
+ 488. other forage crop
+ 489. red amaranth
+ 490. slim amaranth
+ 491. prince-of-wales feather
+ 492. rajgeera
+ 493. fodder beet
+ 494. creeping inchplant
+ 495. eurotia arborescens
+ 496. cordate leaf ceratoides
+ 497. winter fat
+ 498. chicory, Cichorium intybus L.
+ 499. cymose buckwheat
+ 500. polycephalous ixeris
+ 501. forage kochia
+ 502. Indian lettuce
+ 503. raphanistrum-like radish
+ 504. rumex, Rumex patientia × R. tianschanicus
+ 505. perfoliate rosinweed
+ 506. comfrey, Symphytum officinale L.
+ 507. feed ramie
+ 508. cotton
+ 509. upland cotton
+ 510. sea-island cotton
+ 511. Asiatic cotton
+ 512. herbaceous cotton
+ 513. natural color cotton
+ 514. transgenic pest-resistant cotton
+ 515. cotton growing regions in China
+ 516. cotton boll
+ 517. bolls formed at three growth periods
+ 518. seed cotton
+ 519. lint
+ 520. lint percentage
+ 521. raw cotton
+ 522. cotton seed
+ 523. cotton linter
+ 524. mature fiber
+ 525. immature fiber
+ 526. cotton cultivation mode
+ 527. growing cotton in saline-alkali soil
+ 528. dense-short-early cotton planting
+ 529. growing cotton with plastic-mulching
+ 530. machine picked cotton
+ 531. pruning of cotton plant
+ 532. China cotton growth index
+ 533. cleanliness
+ 534. saw ginned cotton
+ 535. roller ginned cotton
+ 536. cotton seed delinting
+ 537. cotton notarial inspection
+ 538. calibration cotton standard sample
+ 539. preparation quality
+ 540. color grade
+ 541. cotton grade
+ 542. upper half mean length
+ 543. uniformity index
+ 544. breaking tenacity
+ 545. micronaire
+ 546. fineness
+ 547. breaking elongation
+ 548. cotton maturity
+ 549. reflectance degree
+ 550. yellowness
+ 551. spinning consistency index
+ 552. cotton seed cake
+ 553. cottonseed meal
+ 554. gossypol
+ 555. Cotton Price Index
+ 556. Cotton Futures
+ 557. bast fiber crops
+ 558. raw fiber
+ 559. fiber content in fresh stem
+ 560. leaf fiber crops
+ 561. multi-utilization of bast and leaf fiber crops
+ 562. hard fiber
+ 563. Ramie
+ 564. green cuttings propagation
+ 565. ramie of first cut
+ 566. darkened stem
+ 567. degumed ramie
+ 568. Flax, Linum usitatissimum L.
+ 569. flax straw
+ 570. retted flax straw
+ 571. fiber content in straw
+ 572. dew retting of flax
+ 573. scutched bast fiber
+ 574. tow
+ 575. Hemp, Cannabis sativa L.
+ 576. industrial hemp
+ 577. whole female hemp
+ 578. cannabinoids
+ 579. corchorus, Jute
+ 580. hibiscus cannabinus, Kenaf
+ 581. agave
+ 582. sisal
+ 583. Apocynum L. Dogbane
+ 584. morus Linn.
+ 585. Morus alba var. pendula Dipp.
+ 586. seedling mulberry
+ 587. mulberry pruning
+ 588. oilseed rape
+ 589. rapeseed
+ 590. oil mustard
+ 591. turnip rape
+ 592. ethiopian mustard
+ 593. spring rapeseed
+ 594. winter rapeseed
+ 595. semi-winter rapeseed
+ 596. ornamental rapeseed
+ 597. polima cytoplasmic male sterile line
+ 598. direct sowing rapeseed
+ 599. establishment in autumn
+ 600. flowering with no seed setting
+ 601. resynthesized rapeseed
+ 602. erucic acid
+ 603. glucosinolate
+ 604. double high rapeseed
+ 605. double low rapeseed
+ 606. high oleic acid rapeseed
+ 607. high oil content rapeseed
+ 608. pod shattering resistant rapeseed
+ 609. high density tolerant rapeseed
+ 610. peanut, groundnut
+ 611. Arachis hypogaea var. hypogaea
+ 612. Arachis hypogaea var. hirsuta
+ 613. Arachis hypogaea var. Vulgaris
+ 614. Arachis hypogaea var. fastigiata
+ 615. O / L ratio
+ 616. spring sown peanut
+ 617. summer sown peanut
+ 618. peg
+ 619. high-oil peanut
+ 620. high oleic acid peanut
+ 621. sesame, Sesamum indicum L.
+ 622. sesame capsule
+ 623. summer sesame
+ 624. autumn sesame
+ 625. high oil content sesamin
+ 626. sesame oil
+ 627. sunflower, Helianthus annus L.
+ 628. oilseed sunflower
+ 629. confectionery sunflower
+ 630. ornamental sunflower
+ 631. high-oleic varieties
+ 632. castor, Ricinus communis L.
+ 633. castor oil
+ 634. beet, Beta vulgaris L.
+ 635. sugar beet
+ 636. sea beet
+ 637. vegetative growth period of sugarbeet
+ 638. reproductive growth period of sugarbeet
+ 639. beet root
+ 640. single embryo seed
+ 641. multi-embryo seed
+ 642. sectional mechanical harvesting
+ 643. combined mechanical harvesting
+ 644. sugarcane, Saccharum officinarum L.
+ 645. milling cane
+ 646. energy cane
+ 647. chewing cane
+ 648. ratoon sugarcane
+ 649. safflower
+ 650. safflower oil
+ 651. vanilla
+ 652. Vanilla planifolia Ames
+ 653. Vanilla pompona Schiede
+ 654. Vanilla tahitensis
+ 655. star anise
+ 656. cinnamon
+ 657. cinnamon bark
+ 658. tobacco
+ 659. Nicotiana tobacco L.
+ 660. Nicotiana rustica L.
+ 661. wild tobacco
+ 662. flue-cured tobacco
+ 663. sun-cured tobacco
+ 664. air-cured tobacco
+ 665. maryland tobacco
+ 666. burley tobacco
+ 667. cigar tobacco
+ 668. oriental tobacco
+ 669. tobacco quality
+ 670. coffee
+ 671. arabica coffee
+ 672. robusta coffee
+ 673. liberica coffee
+ 674. coffee bean
+ 675. cacao, Theobroma cacao L.
+ 676. cocoa beans
+ 677. natural rubber
+ 678. cassava
+ 679. cassava starch
+ 680. coconut, Cocos nucifera L.
+ 681. oil palm
+ 682. Elaeis guinensis
+ 683. Elaeis oleifera
+ 684. pepper, Piper Nigrum L.
+ 685. fruit tree
+ 686. deciduous fruit tree
+ 687. evergreen fruit tree
+ 688. fruit bagging
+ 689. chinese white pear
+ 690. Chinese sand pear
+ 691. European pear
+ 692. Ussurian pear
+ 693. Callery pear
+ 694. brichleaf pear
+ 695. apple
+ 696. crabapple, Malus asiatica Nakai
+ 697. pearleaf crabapple
+ 698. siberian crabapple
+ 699. Kaido crabapple
+ 700. Chinese flowering crabapple
+ 701. hawthorn, Crataegus pinnatifida Bge.
+ 702. loquat, Eriobotrya japonica Lindl.
+ 703. Chinese quince
+ 704. quince, Cydonia oblonga Mill.
+ 705. peach, Prunus persica (L.) Batsch
+ 706. flat peach
+ 707. smooth pit peach
+ 708. David peach
+ 709. nectarine, Prunus persica L.
+ 710. Chinese plum
+ 711. European plum
+ 712. American plum
+ 713. mei, Prunus mume Sieb. et Zucc.
+ 714. apricot, Prunus armeniaca L.
+ 715. almond, Prunus dulcis L.
+ 716. cherry, Cerasus pseudocerasus (Lindl.) G.
+ 717. wweet cherry
+ 718. sour cherry
+ 719. nanking cherry
+ 720. strawberry, Fragaria ananassa Duch.
+ 721. Chilean strawberry
+ 722. raspberry, Rubus spp.
+ 723. blackberry, Rubus L.
+ 724. gooseberry, Ribes sativum
+ 725. currant, Ribes spp.
+ 726. Roxburgh rose
+ 727. mandarin, Citrus reticulata Blanco
+ 728. Satsuma mandarin
+ 729. sweet orange
+ 730. sour orange
+ 731. Ichang papeda
+ 732. pummelo, Citrus maxima (Burm.) Merril
+ 733. grapefruit, Citrus paradise Macf.
+ 734. lemon, Citrus limon (L.) Burm. f.
+ 735. canton lemon
+ 736. lime, Citrus aurantifolia Swingle
+ 737. calamondin, Citrus microcarpa Bge.
+ 738. Mauritius parade
+ 739. Honghe papeda
+ 740. citron, Citrus medica L.
+ 741. finger citron
+ 742. round kumquat
+ 743. oval kumquat
+ 744. wompee, Clausena lansium (Lour.) Skeels
+ 745. trifoliate orange
+ 746. grape, Vitis spp.
+ 747. European grape
+ 748. fox grape
+ 749. ussurian grape
+ 750. persimmon, Diospyros kaki L.
+ 751. dateplum, Diospyros lotus L.
+ 752. Chinese date
+ 753. spine date
+ 754. oleaster, Elaeagnus angustifolia L.
+ 755. pomegranate, Punica granatum L.
+ 756. fig, Ficus carica L.
+ 757. Chinese gooseberry
+ 758. kiwiberry, Actinidia arguta (Sieb. et Zucc.) Planch. ex Miq.
+ 759. blueberry, Vaccinium spp.
+ 760. linberry, Vaccinium vitis-idaea L.
+ 761. bog blueberry
+ 762. persian walnut
+ 763. cathay hickory
+ 764. pecan, Carya pecan Engl. et Fraebn.
+ 765. Chinese chestnut
+ 766. siberian hazelnut
+ 767. filbert, Corylus avellana L.
+ 768. Chinese torreya
+ 769. ginkgo, Ginkgo biloba L.
+ 770. white Chinese olive
+ 771. black Chinese olive
+ 772. banana, Musa nana Lour.
+ 773. silk banana
+ 774. Pisang Awak banana
+ 775. plantain banana
+ 776. carambola, Averrhoa carambola L.
+ 777. bayberry, Myrica rubra Sieb. et Zucc.
+ 778. longan, Dimocarpus longan Lour Sapindaceae
+ 779. litchi, Lichi chinensis Sonn.
+ 780. mango
+ 781. date palm
+ 782. pineapple, Ananas comosus (L.) Merr
+ 783. jack fruit
+ 784. papaya, Carica papaya L.
+ 785. guava, Psidium guajava L.
+ 786. sugarapple, Annona squamosa L.
+ 787. durian, Durio zibethinus Murr.
+ 788. rose-apple, Syzegium jambos Alston (Eugenia jambos L.)
+ 789. cashew
+ 790. avocado, Persea Americana Mill.
+ 791. rambutan, Nephelium lappaceum L.
+ 792. mangosteen, Garcinia mangostana L.
+ 793. sapodilla, Achras sapota L.
+ 794. tamarind, Tamarindus indica L.
+ 795. emblic leafflower
+ 796. pistachio, Pistacia vera L.
+ 797. macadamia nut
+ 798. fructus momordicae
+ 799. wax apple
+ 800. green jujube
+ 801. pitaya, Hylocereus undulatus Britt.
+ 802. passion fruit
+ 803. olive, Olea europaea L.
+ 804. wood of shinyleaf yellow-horn
+ 805. mulberry, Morus alba Linn.
+ 806. scion
+ 807. rootstock
+ 808. dwarfing rootstock
+ 809. semi-dwarfing rootstock
+ 810. semi-vigorous rootstock
+ 811. vigorous rootstock
+ 812. graft
+ 813. propagation by seeds
+ 814. asexual reproduction
+ 815. layerage
+ 816. cuttage
+ 817. root sucker propagation
+ 818. grafting propagation
+ 819. vegetable
+ 820. root and stem vegetable
+ 821. leaf vegetable
+ 822. flower vegetable
+ 823. fruit vegetable
+ 824. condiment vegetable
+ 825. sprouting vegetable
+ 826. wild vegetable
+ 827. rare vegetable
+ 828. protected vegetable
+ 829. cole vegetable
+ 830. cabbage
+ 831. red cabbage
+ 832. savoy cabbage
+ 833. brussels sprouts
+ 834. cauliflower
+ 835. broccoli
+ 836. Chinese kale
+ 837. kohlrabi
+ 838. kale
+ 839. broccolini
+ 840. Chinese cabbage group
+ 841. Chinese cabbage
+ 842. pak-choi
+ 843. Wuta-tsai
+ 844. choy sum
+ 845. tai-tsai
+ 846. turnip
+ 847. rutabaga
+ 848. mustard vegetable
+ 849. solanaceous vegetable
+ 850. tomato
+ 851. eggplant
+ 852. pepino
+ 853. pepper
+ 854. Physalis
+ 855. okra
+ 856. leguminous vegetable
+ 857. common bean
+ 858. vegetable soybean
+ 859. asparagus bean
+ 860. sugar pod garden pea
+ 861. Lablab
+ 862. scarlet runner bean
+ 863. winged bean
+ 864. sword bean
+ 865. gourd vegetable
+ 866. cucumber
+ 867. muskmelon
+ 868. cantaloupe
+ 869. snake melon
+ 870. oriental pickling melon
+ 871. watermelon
+ 872. pumpkin
+ 873. winter squash
+ 874. summersquash
+ 875. bottle gourd
+ 876. wax gourd
+ 877. hairy gourd
+ 878. luffa-smooth loofah
+ 879. luffa-angled loofah
+ 880. bitter gourd
+ 881. chayote
+ 882. edible snake gourd
+ 883. fig-leaf gourd
+ 884. allium vegetable
+ 885. welsh onion
+ 886. onion
+ 887. shallot
+ 888. chive
+ 889. bounching onion
+ 890. storey onion
+ 891. leek
+ 892. Mongolian wild onion
+ 893. Chinese chive
+ 894. Chinese onion
+ 895. garlic
+ 896. tuber and tuberous rooted vegetable
+ 897. Chinese artichoke
+ 898. Chinese yam
+ 899. ginger
+ 900. taro
+ 901. elephant-foot yam
+ 902. edible canna
+ 903. potato bean
+ 904. thomson kudzu
+ 905. aquatic vegetable
+ 906. lotus
+ 907. water bamboo
+ 908. Chinese arrowhead
+ 909. Chinese water chestnut
+ 910. gordon euryale
+ 911. water caltrop
+ 912. watercress
+ 913. water shield
+ 914. water dropwort
+ 915. common cattail
+ 916. kelp
+ 917. laver
+ 918. radish
+ 919. shepherd's purse
+ 920. horse-radish
+ 921. rorippa
+ 922. cornuted pugionium
+ 923. carrot
+ 924. celery
+ 925. celeriac
+ 926. parsley
+ 927. parsnip
+ 928. fennel
+ 929. florence fennel
+ 930. coriander
+ 931. dill
+ 932. spinach
+ 933. garden beet
+ 934. leaf beet
+ 935. amaranth
+ 936. purslane
+ 937. great burdock
+ 938. salsify
+ 939. leaf lettuce
+ 940. stem lettuce
+ 941. head lettuce
+ 942. romaine lettuce
+ 943. endive
+ 944. common sowthistle
+ 945. garland chrysanthemum
+ 946. coltsfoot
+ 947. artichoke
+ 948. vegetable chrysanthemum
+ 949. gynura
+ 950. Indian kalimeris herb
+ 951. dandelion
+ 952. seleng wormwood
+ 953. water spinach
+ 954. Chinese mallow
+ 955. malabar spinach
+ 956. New Zealand spinach
+ 957. [California] burclover
+ 958. sweet basil
+ 959. purple common perilla
+ 960. wrinkled gianthyssop
+ 961. garden orach
+ 962. bamboo shoot
+ 963. Chinese mahogang
+ 964. daylily
+ 965. asparagus
+ 966. mioga ginger
+ 967. vileplume
+ 968. houttuynia cordata
+ 969. medlar
+ 970. garden rhubarb
+ 971. balloon flower
+ 972. vetch
+ 973. hairyvein agrimony
+ 974. flower fern
+ 975. bracken [fern]
+ 976. fa-tsai, hair weeds
+ 977. edible mushroom
+ 978. white button mushroom
+ 979. honey mushroom
+ 980. hairy wood ear
+ 981. wood ear
+ 982. king bolete
+ 983. shaggy mane
+ 984. trooping Cordyceps
+ 985. poplar fieldcap
+ 986. winter mushroom
+ 987. reishi
+ 988. hen of the woods
+ 989. lion's mane mushroom
+ 990. beech mushroom
+ 991. black forest mushroom
+ 992. fried chicken mushroom
+ 993. morel
+ 994. golden ear
+ 995. veiled stink horn
+ 996. butterscotch mushroom
+ 997. king oyster mushroom
+ 998. oyster mushroom
+ 999. phoenix mushroom
+1000. bailinggu
+1001. sanghuang mushroom
+1002. cauliflower mushroom
+1003. wine cap mushroom
+1004. snow fungus
+1005. matsutake
+1006. truffle
+1007. Chinese mushroom
+1008. floral crop
+1009. perennial flower
+1010. bulb flower
+1011. aquatic flower
+1012. ornamental fern
+1013. cacti and succulent flowers
+1014. ornamental grass
+1015. daisy
+1016. pot marigold
+1017. China-aster
+1018. blue-bottle
+1019. common cosmos
+1020. florists cineraria
+1021. marigold
+1022. French marigold
+1023. common zinnia
+1024. gerbera
+1025. dahlia
+1026. chrysanthemum
+1027. spike gay feather
+1028. Chinese pink
+1029. carnation
+1030. petunia
+1031. cockscomb
+1032. common globe-amaranth
+1033. rose moss
+1034. common snapdragon
+1035. monkeyflower
+1036. toadflax
+1037. foxglove
+1038. brahmi
+1039. angelonia
+1040. common garden coleus
+1041. scarlet sage
+1042. sage
+1043. sky-blue sage
+1044. false dragonhead
+1045. lavender
+1046. bergamot
+1047. rosemary
+1048. ground ivy
+1049. common stock
+1050. common wallflower
+1051. orychophragmus
+1052. sweet alyssum
+1053. bell flower
+1054. lobelia
+1055. pansy
+1056. viola cornuta
+1057. common garden verbena
+1058. bouquet larkspur
+1059. Asian virginsbower
+1060. european clumbine
+1061. persian buttercup
+1062. poppy anemone
+1063. busy lizzie
+1064. New Guinea impatiens
+1065. drunk butterfly
+1066. vinca rose
+1067. desert rose
+1068. sweet pea
+1069. sensitive plant
+1070. primrose
+1071. cyclamen
+1072. begonia
+1073. tuberous begonia
+1074. four-o'clock
+1075. great bougainvillea
+1076. broomsedge
+1077. corn poppy
+1078. California poppy
+1079. sealflower
+1080. cypress vine
+1081. morning glory
+1082. tillandsias
+1083. ornamental bromeliad
+1084. saxifrage
+1085. alumroot
+1086. hydrangea
+1087. prairie gentian
+1088. summer perennial phlox
+1089. shining bird of paradise
+1090. bird of paradise flower
+1091. African violet
+1092. gloxinia
+1093. storksbill
+1094. hollyhock
+1095. sea lavender
+1096. evening primrose
+1097. dayflower
+1098. anthurium
+1099. calla lily
+1100. variable tuftroot
+1101. devil's ivy
+1102. Asian taro
+1103. fragrant plantainlily
+1104. daylily
+1105. torch lily
+1106. nipponlily
+1107. creeping liriope
+1108. dwarf lilyturf
+1109. lily
+1110. crown imperial
+1111. tulip
+1112. star of bethelem
+1113. grape hyacinth
+1114. African lily
+1115. giant onion
+1116. Chinese water bamboo
+1117. tufted bracketplant
+1118. aspargus
+1119. asparagus ferm
+1120. aloe
+1121. wart plant
+1122. blackberry lily
+1123. Chinese small iris
+1124. iris
+1125. jade cicada flower
+1126. freesia
+1127. gladiolus
+1128. saffron crocus
+1129. herbaceous peony
+1130. tree peony
+1131. sedum
+1132. lineare stonecrop
+1133. showy stonecrop
+1134. stonecrop
+1135. mother of millons
+1136. kalanchoe
+1137. Chinese narcissus
+1138. common daffodil
+1139. red spider lily
+1140. amaryllis
+1141. tuberose
+1142. rainflower
+1143. spider lily
+1144. peruvian lily
+1145. kafir lily
+1146. hyacinth
+1147. lily of the valley
+1148. bowstring-hemp
+1149. canna
+1150. pink sorrel
+1151. rose
+1152. rugosa rose
+1153. mei flower
+1154. false spirea
+1155. common camellia
+1156. Yunnan camellia
+1157. poinsettia
+1158. Sweet Osmanthus
+1159. jasmine
+1160. Azalea
+1161. cape jasmine
+1162. maranta
+1163. spring orchid
+1164. faber cymbidium
+1165. sword-leaved cymbidium
+1166. Chinese cymbidium
+1167. cymbidium kanran
+1168. dendrobium
+1169. moth orchid
+1170. cactus
+1171. agave
+1172. bottle palm
+1173. living stone
+1174. water lily
+1175. tea
+1176. puer tea
+1177. pubilimba tea
+1178. Da chang tea
+1179. Dali tea
+1180. crassicolumna tea
+1181. gymnogyna tea
+1182. natural selection
+1183. crop origin
+1184. crop origin center
+1185. diversity center
+1186. secondary center of origin
+1187. domestication
+1188. wild relatives
+1189. crop introduction
+1190. cryopreservation
+1191. molecular evolution
+1192. molecular clock
+1193. molecular phylogenetics
+1194. micro-evolution
+1195. macro-evolution
+1196. neutral mutation
+1197. genome evolution
+1198. gene evolution
+1199. chromosomal evolution
+1200. adaptive evolution
+1201. evolutionary biology
+1202. evolutionary distance
+1203. evolutionary rate
+1204. concerted evolution
+1205. reproductive isolation
+1206. positive selection
+1207. negative selection
+1208. selection sweep
+1209. molecular domestication
+1210. artificial domestication
+1211. de-domestication
+1212. domestication gene
+1213. domesticaion trait
+1214. speed domestication
+1215. re-wild crops
+1216. ecotype
+1217. ecogenotype
+1218. biodiversity
+1219. genetic drift
+1220. genetic migration
+1221. germplasm
+1222. basic collection
+1223. core collection
+1224. mini core collcetion
+1225. genetic richness
+1226. polymorphic information content
+1227. genetic uniformity
+1228. genetic specificity
+1229. genetic accumulativeness
+1230. genetic vulnerability
+1231. germplasm enhancement
+1232. orthodox seed
+1233. recalcitrant seed
+1234. germplasm nursery
+1235. accession
+1236. gene library
+1237. genetic integrity
+1238. genetic erosion
+1239. passport data
+1240. gene bank
+1241. gene pool
+1242. micropropagation
+1243. germplasm storage
+1244. ex situ conservation
+1245. in situ conservation
+1246. in vitro conservation
+1247. germplasm resource
+1248. genetic resource
+1249. gene resource
+1250. qualitative trait
+1251. quantitative trait
+1252. heritability
+1253. qualitative inheritance
+1254. quantitative inheritance
+1255. transgressive inheritance
+1256. karyotype
+1257. haplotype
+1258. addition line
+1259. substitution line
+1260. translocation line
+1261. euploid
+1262. aneuploid
+1263. diploid
+1264. amphiploid
+1265. amphidiploid
+1266. autotetraploid
+1267. allotetraploid
+1268. allohexaploid
+1269. autopolyploid
+1270. allopolyploid
+1271. haploid
+1272. haploid breeding
+1273. polyhaploid
+1274. autopolyhaploid
+1275. polyploid
+1276. polyploid breeding
+1277. somatic doubling
+1278. union of unreduced gametes
+1279. polyspermy
+1280. pollen culture
+1281. anther culture
+1282. embryo culture
+1283. tissue culture
+1284. organ culture
+1285. cell culture
+1286. protoplast culture
+1287. embryo grafting
+1288. substitution
+1289. transition
+1290. transversion
+1291. frameshift
+1292. duplication
+1293. replication
+1294. additive effect
+1295. additive genetic variance
+1296. non-additive effect
+1297. dominant
+1298. complete dominance
+1299. incomplete dominance
+1300. dominant lethal
+1301. recessive
+1302. recessive lethal
+1303. complementary effect
+1304. gene transfer
+1305. non-homologous chromosome
+1306. genotype
+1307. genotype frequency
+1308. phenotype
+1309. relative character
+1310. pleiotropism
+1311. multigenic effect
+1312. allele
+1313. multi-allele
+1314. genomic imprinting
+1315. pedigree
+1316. pedigree analysis
+1317. karyomixis
+1318. karyolysis
+1319. homogeneity
+1320. heterogeneity
+1321. somatogamy
+1322. continuous distribution
+1323. discontinuous distribution
+1324. xenia
+1325. metaxenia
+1326. sexual reproduction
+1327. line
+1328. advanced line
+1329. donor
+1330. recipient
+1331. parental generation
+1332. progeny
+1333. offspring
+1334. male parent
+1335. female parent
+1336. random mating
+1337. natural outbreeding rate
+1338. law of independent assortment
+1339. law of segregation
+1340. law of linked inheritance
+1341. linkage group
+1342. duplicate effect
+1343. inhibition effect
+1344. cross
+1345. hybrid breeding
+1346. hybrid
+1347. first filial
+1348. hybrid combination
+1349. heterosis
+1350. heterosis depression
+1351. over-standard heterosis
+1352. over-parent heterosis
+1353. mid-parent heterosis
+1354. mitochondrial complementation
+1355. pure line
+1356. pure line cultivar
+1357. pure line breeding
+1358. permanent F population
+1359. test cross
+1360. test cross cultivar
+1361. tester
+1362. single cross
+1363. single cross hybrid
+1364. double cross
+1365. double cross hybrid
+1366. three-way cross
+1367. tetracross
+1368. top cross
+1369. reciprocal cross
+1370. inbreeding
+1371. inbreeding coefficient
+1372. inbreeding depression
+1373. outbreeding
+1374. selfing
+1375. selfing line
+1376. Sn selection
+1377. near-isogenic line
+1378. outcrossing
+1379. intercrossing
+1380. backcross
+1381. recurrent parent
+1382. nonrecurrent parent
+1383. backcross recombinant inbred line
+1384. recombinant inbred line
+1385. backcross inbred line
+1386. stepwise backcross
+1387. convergent backcross
+1388. advanced backcross QTL analysis
+1389. full-sib mating
+1390. half-sib mating
+1391. multiple male-parental cross
+1392. intergeneric hybridization
+1393. interspecific hybridization
+1394. intervarietal hybridization
+1395. diallel hybridization
+1396. composite hybridization
+1397. convergent hybridization
+1398. introgressive hybridization
+1399. genetic introgression lines
+1400. polycross
+1401. sexual hybridization
+1402. vegetative hybridization
+1403. nucleo-cytoplasmic hybrid
+1404. cytoplasmic hybrid
+1405. nucleo-cytoplasmic interaction
+1406. early generation test
+1407. progeny test
+1408. general combining ability
+1409. specific combining ability
+1410. synthetic cultivar
+1411. second cycle line
+1412. cultivar adaptability
+1413. intervarietal hybrid
+1414. hybrid cultivar
+1415. composite cultivar
+1416. multi-line cultivar
+1417. compatible
+1418. compatibility
+1419. incompatibility
+1420. self-compatibility
+1421. self-incompatibillity
+1422. cross-compatibility
+1423. cross-incompatibility
+1424. cytoplasmic incompatibility
+1425. gametophytic self-incompatibility system
+1426. sporophytic self-incompatibility system
+1427. crossability
+1428. cross fertilization
+1429. hybrid sterility
+1430. self-fertility
+1431. self-sterility
+1432. pollen sterility
+1433. male sterility
+1434. cytoplasmic male sterility
+1435. nucleus male sterility
+1436. genotype-environmental male sterility
+1437. cytoplasmic-nucleic male sterility
+1438. sporophyte male sterility
+1439. gametophyte male sterility
+1440. female sterility
+1441. male sterile line
+1442. genic male sterile line
+1443. restorer gene
+1444. restorer line
+1445. maintainer line
+1446. three-line hybrid
+1447. emasculation
+1448. pollination
+1449. double fertilization
+1450. open pollination
+1451. supplementary pollination
+1452. cross pollination
+1453. self-pollination
+1454. self-fertilization
+1455. artificial pollination
+1456. mixed pollination
+1457. bud pollination
+1458. controlled pollination
+1459. pollen mentor
+1460. predominantly self-pollinating
+1461. selection
+1462. selection breeding
+1463. selection index
+1464. selection intensity
+1465. selection response
+1466. selection differential
+1467. hitchhiking effects
+1468. reciprocal recurrent selection
+1469. directional selection
+1470. successive selection
+1471. disruptive selection
+1472. convergent selection
+1473. individual plant selection
+1474. bud selection
+1475. gametic selection
+1476. line selection
+1477. bulk selection
+1478. modified bulk selection
+1479. single trait selection
+1480. multiple trait selection
+1481. seedling lines
+1482. pedigree method
+1483. ear-to-row method
+1484. plant-to-row method
+1485. boll-to-row method
+1486. breeding nursery
+1487. ideotype
+1488. genetic gain
+1489. population
+1490. population buffering
+1491. population bottleneck effect
+1492. natural population
+1493. artificial population
+1494. population improvement
+1495. population cultivar
+1496. mass selection
+1497. recurrent selection
+1498. single seed descent
+1499. derived line method
+1500. modified pedigree method
+1501. line × tester method
+1502. shuttle breeding
+1503. bulk breeding
+1504. breeding for disease resistance
+1505. major-gene resistance
+1506. minor-gene resistance
+1507. polygenic resistance
+1508. horizontal resistance
+1509. vertical resistance
+1510. slow disease
+1511. all stage resistance
+1512. adult-plant resistance
+1513. durable resistance
+1514. breeding for insect resistance
+1515. breeding for stress tolerance
+1516. host-pathogen population interactions resistance
+1517. breeding for quality
+1518. combination breeding
+1519. plant architecture breeding
+1520. spontaneous mutation
+1521. biochemical mutation
+1522. cytoplasmic mutation
+1523. bud mutation
+1524. mutation spectrum
+1525. mutation pressure
+1526. mutation breeding
+1527. space mutagenesis
+1528. mutagenic effect
+1529. opaque mutant [corn]
+1530. clone
+1531. vegetative propagation
+1532. androgenesis
+1533. parthenogenesis
+1534. adventitious embryony
+1535. apospory
+1536. apomixis
+1537. diplospory
+1538. clonal cultivar
+1539. crop genomics
+1540. genome
+1541. reference genome
+1542. draft genome
+1543. golden genome
+1544. pan-genome
+1545. graph-based genome
+1546. graph-based pan-genome
+1547. comparative genomics
+1548. crop transcriptomics
+1549. proteomics
+1550. crop metabolomics
+1551. crop cytomics
+1552. single-cell omics
+1553. epigenomics
+1554. phenomics
+1555. chromosomics
+1556. mutagenomics
+1557. mirnomics
+1558. glycomics
+1559. lipidomics
+1560. secretomics
+1561. signalomics
+1562. thiolomics
+1563. chloroplast omics
+1564. connectomics
+1565. micromorphomics
+1566. microbiomics
+1567. multi-omics
+1568. multi-dimensional omics
+1569. 3D genomics
+1570. spatial transcriptomics
+1571. spatial proteomics
+1572. translatome
+1573. degradome
+1574. breeding by design
+1575. breeding by molecular design
+1576. breeding by genomics-design
+1577. genome-assisted breeding
+1578. biotechnological breeding
+1579. transgenic breeding
+1580. speed breeding
+1581. de novo domestication
+1582. smart breeding
+1583. breeding by big data
+1584. biofortification breeding
+1585. trans-kingdom improvement
+1586. second generation sequence technology
+1587. high fidelity reads
+1588. sequencing by synthesis
+1589. clone by clone
+1590. genome annotation
+1591. high-throughput genotyping
+1592. house-keeping gene
+1593. inducible gene
+1594. repressible gene
+1595. modifying gene
+1596. co-regulated genes
+1597. gene family
+1598. multigene family
+1599. gene interaction
+1600. transcriptional factor
+1601. transposable elements
+1602. DNA transponson
+1603. enhancer
+1604. enhancer trapping
+1605. gene introduction
+1606. intergenomic invasion
+1607. recombination hotspot
+1608. repeat sequence
+1609. deletion
+1610. chromosomal rearrangement
+1611. chromosomal structure variation
+1612. chromosomal segment substitution line
+1613. matrix attachment region
+1614. structural domain
+1615. quantitative trait loci
+1616. major effect QTL
+1617. minor effect QTL
+1618. linkage map
+1619. high-resolution linkage map
+1620. interval mapping
+1621. composite interval mapping
+1622. multiple interval mapping
+1623. inclusive composite interval mapping
+1624. molecular marker
+1625. map-based cloning
+1626. marker assisted selection
+1627. single marker analysis
+1628. gene expression
+1629. expression pattern
+1630. ectopic expression
+1631. resetting of expression
+1632. juvenility resetting region
+1633. serial analysis of gene expression
+1634. expressed sequence tag sequencing technique
+1635. gene introgression
+1636. gene silencing
+1637. trans-kingdom gene silence
+1638. gene writing
+1639. gene rapid-evolution
+1640. association analysis
+1641. genome-wide association study
+1642. transcriptome-wide association study
+1643. proteome-wide association study
+1644. spurious association
+1645. plant memory
+1646. protein post-translational modification
+1647. immunoblotting
+1648. electronphoretic mobility shift assay
+1649. epigenetic phenomena
+1650. epiallele
+1651. epigenetic analysis
+1652. epigenetic recombinant inbred line
+1653. liquid chip
+1654. allele-specific PCR
+1655. anchor probe
+1656. neighbor-joining method
+1657. foreground selection
+1658. background selection
+1659. breeding element
+1660. gene site-directed mutagenesis
+1661. insertion mutation
+1662. forward mutation
+1663. reverse mutation
+1664. yeast artificial chromosome
+1665. cell line
+1666. multi-gene transformation
+1667. sequential re-transformation
+1668. embryoid
+1669. variety
+1670. variety regionalization
+1671. variety replacement
+1672. variety identification
+1673. variety certification
+1674. variety registration
+1675. landrace
+1676. improved variety
+1677. commercial variety
+1678. introduced variety
+1679. breeder seed
+1680. foundation seed
+1681. foundation seed nursery
+1682. breeder's seed
+1683. pre-basic seed
+1684. basic seed
+1685. registered seed
+1686. certified seed
+1687. commercial seed
+1688. seed production technology
+1689. hybrid seed production technique
+1690. distance isolation
+1691. time isolation
+1692. propagation coefficient
+1693. seed purification
+1694. rogueing
+1695. seed longevity
+1696. seed inspection
+1697. seed quarantine
+1698. seed identification
+1699. seed testing
+1700. varietal purity
+1701. purity testing
+1702. seed admixture
+1703. seed plumpness
+1704. seed moisture content
+1705. seed volume weight
+1706. seed specific weight
+1707. seed vigor
+1708. vigor test
+1709. germination test
+1710. seed germination rate
+1711. seed germination vigor
+1712. seed reservation
+1713. seed deterioration
+1714. air drying
+1715. heat drying
+1716. storage period
+1717. seed storage
+1718. seed granary
+1719. seed cleaning
+1720. seed disinfection
+1721. seed dressing
+1722. seed dormancy
+1723. stratification
+1724. seed certification
+1725. record filling of introduced cultivar
+1726. recepient cultivar
+1727. breeder right
+1728. owner of breeder right
+1729. variety distincness
+1730. variety uniformity
+1731. variety stability
+1732. DNA finger-print test
+1733. seed registrition system
+1734. initial variety
+1735. essential derived variety
+1736. three-nursery system
+1737. four-stage seed-production system
+1738. seed label
+1739. seed lot
+1740. seed quality certification
+1741. single seed sowing
+1742. seed coating
+1743. seed health
+1744. artificial seed
+1745. seed industry
+1746. seed company
+1747. seed standardization
+1748. seed enhancement
+1749. standard germination
+1750. stressed germination
+1751. accelerated aging germination
+1752. cold soak germination
+1753. radicle protrusion
+1754. seed germination
+1755. seedling vigour
+1756. crop growth
+1757. vegetative growth
+1758. reproductive growth
+1759. growth curve
+1760. growth center
+1761. crop development
+1762. photomorphogenesis
+1763. phytochrome
+1764. phasic development
+1765. vernalization
+1766. photoperiodism
+1767. tillering ability
+1768. tiller polarization
+1769. productive tiller
+1770. unproductive tiller
+1771. productive tiller percentage
+1772. flower bud differentiation
+1773. panicle [spike] primordium differentiation
+1774. apical dominance
+1775. synchronous organ growth
+1776. leafing interval
+1777. leafing rate
+1778. leaf age
+1779. remaining leaf number
+1780. leaf age index
+1781. leaf age model
+1782. root length density
+1783. specific root length
+1784. root and shoot ratio
+1785. crop senescence
+1786. early senescence
+1787. unfavorably-delayed senescence
+1788. early maturity
+1789. late maturity
+1790. physiological maturity
+1791. growth stage
+1792. trefoil stage
+1793. tillering stage
+1794. over-wintering stage
+1795. jointing stage
+1796. booting stage
+1797. heading stage
+1798. bolting stage
+1799. flowering stage
+1800. silking stage
+1801. anthesis-silking interval
+1802. pod-setting stage
+1803. pod-filling stage
+1804. filling stage
+1805. maturing stage
+1806. milky ripe
+1807. waxy ripe
+1808. yellow ripe
+1809. full ripe
+1810. growth analysis
+1811. relative growth rate
+1812. crop growth rate
+1813. net assimilation rate
+1814. crop growth status
+1815. crop appearance
+1816. stem strength
+1817. morphological plasticity
+1818. plant growth regulator
+1819. biological yield
+1820. economic yield
+1821. harvest index
+1822. yield components
+1823. yield stability
+1824. yield potential
+1825. photosynthetic performance
+1826. C3 crop
+1827. C4 crop
+1828. leaf area index
+1829. optimum leaf area
+1830. leaf area duration
+1831. leaf inclination
+1832. specific leaf area
+1833. specific leaf weight
+1834. functional leaf
+1835. stay green character
+1836. photosynthetic efficiency
+1837. quantum efficiency
+1838. carboxylation efficiency
+1839. photosynthetic rate
+1840. respiration rate
+1841. respiratory coefficient
+1842. photorespiration
+1843. photosynthetic potential
+1844. net photosynthesis
+1845. canopy photosynthesis
+1846. ribulose-1,5-bisphosphate carboxylase/oxygenase
+1847. light compensation point
+1848. light saturation point
+1849. CO2 compensation point
+1850. CO2 saturation point
+1851. midday depression of photosynthesis
+1852. stomatal conductance
+1853. stomatal limitation
+1854. non-stomatal limitation
+1855. photosynthetically active radiation
+1856. radiation use efficiency
+1857. light interception rate
+1858. extinction coefficient
+1859. canopy-air temperature difference
+1860. crop population
+1861. crop population structure
+1862. light distribution in population
+1863. canopy structure
+1864. spike density
+1865. self-regulation of population
+1866. crop population quality
+1867. self-thinning
+1868. dry matter accumulation
+1869. dry matter translocation
+1870. structural matter
+1871. Nonstructural matter
+1872. assimilate partitioning
+1873. metabolic source
+1874. metabolic sink
+1875. sink organ
+1876. sink capacity
+1877. sink activity
+1878. sink strength
+1879. source strength
+1880. source-sink relation
+1881. grain-leaf area ratio
+1882. floret fertility
+1883. seed abortion
+1884. grain filling
+1885. superior grain
+1886. inferior grain
+1887. grain growth rate
+1888. grain growth duration
+1889. source-sink interaction of grain yield
+1890. source limitation of grain yield
+1891. sink limitation of grain yield
+1892. carbon metabolism
+1893. nitrogen metabolism
+1894. grain uniformity
+1895. endosperm texture
+1896. horny endosperm
+1897. farinaceous endosperm
+1898. aleurone layer
+1899. brown rice percentage
+1900. head rice percentage
+1901. chalkiness
+1902. chalkiness degree
+1903. chalky grain rate
+1904. flour yield
+1905. starch granule
+1906. amylose
+1907. amylopectin
+1908. flour water absorption rate
+1909. starch gelatinization
+1910. breakdown
+1911. peak viscosity
+1912. gluten
+1913. gluten strength
+1914. dough rheological properties
+1915. protein component
+1916. albumin
+1917. globulin
+1918. gliadin
+1919. glutenin
+1920. glutenin macropolymer
+1921. oil body
+1922. fiber fineness
+1923. fiber strength
+1924. fiber specific strength
+1925. biofortification
+1926. secondary metabolite
+1927. stress
+1928. stress resistance
+1929. molecular mechanism of stress resistance
+1930. stress adaptation
+1931. stress cross adaptation
+1932. stress avoidance
+1933. stress tolerance
+1934. stress priming
+1935. stress-resistance hardening
+1936. stress response
+1937. stress reversibility
+1938. strain repairing
+1939. stress signal
+1940. proline
+1941. polyamine
+1942. betaine
+1943. salicylic acid
+1944. fructan
+1945. calmodulin
+1946. protein kinase
+1947. phytohormone
+1948. membrane stability
+1949. light stress
+1950. photoinhibition
+1951. photodamage
+1952. photoprotection
+1953. chilling resistance
+1954. cold resistance
+1955. freezing resistance
+1956. chilling hardening
+1957. low temperature-induced protein
+1958. antifreeze protein
+1959. heat tolerance
+1960. heat shock protein
+1961. molecular chaperone
+1962. salt injury
+1963. acid injury
+1964. alkali injury
+1965. salt tolerance
+1966. acid and alkaline tolerance
+1967. oxidative stress
+1968. reactive oxygen species
+1969. membrane lipid peroxidation
+1970. malondiadehyde
+1971. superoxide dismutase
+1972. catalase
+1973. peroxidase
+1974. ascorbate
+1975. glutathione
+1976. trehalose
+1977. waterlogging tolerance
+1978. drought resistance
+1979. drought avoidance
+1980. drought prevention
+1981. drought tolerance
+1982. wilting coefficient
+1983. drought-induced protein
+1984. late embryogenesis abundant protein
+1985. water metabolism
+1986. water potential
+1987. osmosis
+1988. osmotic regulation
+1989. aquaporin
+1990. root pressure
+1991. active absorption of water
+1992. passive absorption of water
+1993. crop water balance
+1994. transpiration
+1995. transpiration efficiency
+1996. transpiration coefficient
+1997. stomatal transpiration
+1998. stomatal regulation
+1999. physiological drought
+2000. physiological water requirement of crop
+2001. ecological water requirement of crop
+2002. critical period of crop water requirement
+2003. nutrient reutilization
+2004. transporter
+2005. high-affinity transporter
+2006. low-affinity transporter
+2007. nutrient absorption efficiency
+2008. nutrient internal efficiency
+2009. nutrient use efficiency
+2010. nitrogen harvest index
+2011. integrative physiology of crop
+2012. multi-omics integration
+2013. gene-environment-management interaction
+2014. crop ecophysiology
+2015. crop cultivation physiology
+2016. multiobjective collaboration
+2017. crop system simulation
+2018. gene-to-phenotype modelling
+2019. crop growth simulation
+2020. virtual plant
+2021. phyllochron
+2022. photothermal quotient
+2023. potential grain size
+2024. maximum nitrogen concentration
+2025. critical nitrogen concentration
+2026. nitrogen nutrition index
+2027. normalized difference vegetation index
+2028. cropping system
+2029. crop composition and distribution
+2030. sole cropping
+2031. multiple cropping
+2032. sequential cropping
+2033. intercropping
+2034. relay cropping
+2035. mixed cropping
+2036. strip cropping
+2037. multistory cropping
+2038. land equivalent ratio
+2039. dense planting effect
+2040. nutrient homogeneity effect
+2041. boundary effect
+2042. complementarity effect
+2043. allelopathic effect
+2044. multistory cropping and raising
+2045. regenerate crop
+2046. cropping index
+2047. maturation cropping
+2048. monocropping
+2049. multiple cropping
+2050. fallow
+2051. shifting cultivation
+2052. crop rotation
+2053. rotation cycle
+2054. legume gramineae rotation
+2055. paddy upland rotation
+2056. grass crop rotation
+2057. replanting
+2058. replanting problem
+2059. previous crop with its stubble field
+2060. previous crop
+2061. later crop
+2062. alternate cropping
+2063. soil improving crops
+2064. soil depleting crop
+2065. ecological adaptability
+2066. crop ecological factors
+2067. farmland potential productivity
+2068. land potential productivity
+2069. primary production
+2070. secondary production
+2071. crop livestocks integration
+2072. crop cultivation
+2073. stubbling
+2074. pregermination
+2075. dry rice nursery
+2076. presowing treatment
+2077. sowing rate
+2078. seeding date
+2079. seeding density
+2080. sowing method
+2081. broadcast sowing
+2082. drill sowing
+2083. hole seeding
+2084. direct sowing
+2085. dry seeded rice
+2086. minimum sowing
+2087. drilling width
+2088. row spacing
+2089. plant spacing
+2090. temporary planting
+2091. thinning
+2092. final singling
+2093. hardening of seedling
+2094. weed control
+2095. hilling
+2096. seedling nursery
+2097. seedling bed
+2098. formulated fertilization
+2099. agronomic water saving
+2100. engineering water saving
+2101. management water saving
+2102. biological water saving
+2103. chemical regulation
+2104. precise cultivation of crop
+2105. clean cultivation of crop
+2106. adverse resistant cultivation
+2107. crop growing period
+2108. long day crop
+2109. short day crop
+2110. day neutral crop
+2111. chimonophilous crop
+2112. thermophilic crop
+2113. alternate yield
+2114. indeterminate growth
+2115. determinate growth
+2116. cuttage
+2117. layering
+2118. division propagation
+2119. budding grafting
+2120. branch grafting
+2121. root grafting
+2122. multiple rootstock grafting
+2123. stock scion interaction
+2124. pinch
+2125. pruning
+2126. fruit thinning
+2127. flower thinning
+2128. leaves thinning
+2129. tissue culture reproduction
+2130. grafting affinity
+2131. seedling stock
+2132. interstock
+2133. vigorous stock
+2134. seedling
+2135. grafting seedling
+2136. own rooted seedlings
+2137. factory nursery
+2138. nutrition pot seedling
+2139. plug seedling
+2140. seedling nursery
+2141. dwarfing culture
+2142. field culture
+2143. trellis culture
+2144. soilless culture
+2145. protected culture
+2146. grass mulching culture
+2147. transplantation
+2148. girdling
+2149. tree forming
+2150. hanging
+2151. flower and fruit protection
+2152. pinching
+2153. lateral branch pruning
+2154. plant training
+2155. framing
+2156. branch traction
+2157. branch binding
+2158. branch holding
+2159. substrate culture
+2160. hydroponics
+2161. aeroponics
+2162. virus free seedling propagation
+2163. soil tillage
+2164. plough layer
+2165. land preparation
+2166. basic tillage
+2167. plow tillage
+2168. subsoiling
+2169. rotary tillage
+2170. surface tillage
+2171. harrowing
+2172. dragging
+2173. intertillage
+2174. packing compacting
+2175. bedding
+2176. ridging
+2177. leveling
+2178. soil tillage system
+2179. soil tillage practice
+2180. ridge cultivation
+2181. flat planting
+2182. minimum tillage reduced tillage
+2183. no tillage
+2184. contour tillage contour ploughing
+2185. conservation tillage
+2186. plastic mulching
+2187. straw mulching
+2188. straw returning
+2189. soil productivity
+2190. improving soil fertilitivity
+2191. soil fertilizer
+2192. soil
+2193. soil science
+2194. pedosphere
+2195. soil resource
+2196. soil fertility
+2197. soil age
+2198. natural soil
+2199. cultivated soil
+2200. soil management
+2201. digital soil
+2202. soil information system
+2203. soil quality
+2204. soil physics
+2205. soil bulk density
+2206. soil specific gravity
+2207. soil compaction
+2208. soil solid phase
+2209. soil liquid phase
+2210. soil gas phase
+2211. soil structure
+2212. crumb structure
+2213. soil micromorphology
+2214. soil aggregate
+2215. soil heat exchange
+2216. soil heat capacity
+2217. soil heat conduction
+2218. soil heat diffusivity
+2219. soil heat balance
+2220. soil heat flux
+2221. soil moisture
+2222. soil water content
+2223. field capacity
+2224. wilting point
+2225. soil water potential
+2226. matric potential
+2227. osmotic potential
+2228. gravitational potential
+2229. soil water suction
+2230. soil water stress
+2231. soil infiltration
+2232. water balance
+2233. soil drainage
+2234. soil evaporation
+2235. soil hydraulic conductivity
+2236. saturated hydraulic conductivity
+2237. moisture characteristic curve
+2238. soil solution
+2239. soil permeability
+2240. solute transfer
+2241. soil salt
+2242. soil conductance
+2243. mechanical composition
+2244. sand
+2245. soil texture
+2246. sand
+2247. clay
+2248. loam
+2249. spatial variability
+2250. soil profile
+2251. profile pattern
+2252. surface soil layer
+2253. subsurface layer
+2254. substratum
+2255. plow pan
+2256. diagnostic horizon
+2257. soil new formations
+2258. soil intrusions
+2259. irregular calcareous concretions
+2260. spectrum of soil
+2261. soil remote sensing
+2262. soil air
+2263. soil aeration
+2264. soil respiration
+2265. gas exchange
+2266. soil solute transfer
+2267. soil solute diffusion
+2268. soil chemistry
+2269. soil pH
+2270. soil acidity
+2271. soil alkalinity
+2272. soil salt content
+2273. soil nutrient
+2274. water soluble nutrient
+2275. acid soluble nutrient
+2276. difficultly soluble nutrient
+2277. slowly available nutrient
+2278. available nutrient
+2279. non available nutrient
+2280. soil buffering
+2281. soil buffer capacity
+2282. soil potential acidity
+2283. lime requirement
+2284. soil colloid
+2285. permanent charge
+2286. variable charge
+2287. diffused double layer
+2288. specific adsorption
+2289. non specific adsorption
+2290. soil desorption
+2291. cation exchange capacity
+2292. base saturation percentage
+2293. physisorption
+2294. chemical adsorption
+2295. exchange adsorption
+2296. competitive adsorption
+2297. soil mineral
+2298. clay mineral
+2299. kaolinite
+2300. montmorillonite
+2301. illite
+2302. crystalline mineral
+2303. noncrystalline material
+2304. soil surface chemistry
+2305. soil specific surface area
+2306. soil organic matter
+2307. soil humus
+2308. humification
+2309. isohumic coefficient
+2310. mineralization coefficient
+2311. humic acid
+2312. humic acid
+2313. fulvic acid
+2314. carbon pool in soil
+2315. soil carbon sink
+2316. soil carbon source
+2317. soil carbon sequestration
+2318. carbon sequestration efficiency
+2319. soil carbon in microbe
+2320. soil organic carbon
+2321. soil geography
+2322. soil specimen
+2323. soil forming process
+2324. soil genesis
+2325. weathering
+2326. soil forming factor
+2327. parent material
+2328. soil succession
+2329. gleyization
+2330. pseudogleyization
+2331. garillization
+2332. elviating process
+2333. deposition process
+2334. salinization
+2335. alkalization
+2336. calcification
+2337. podzolization
+2338. genetic horizon
+2339. organic horizon
+2340. humus horizon
+2341. eluvial horizon
+2342. illuvial horizon
+2343. soil distribution
+2344. general detailed soil survey
+2345. soil cartography
+2346. zonality soil
+2347. non zonality soil
+2348. soil classification
+2349. genetic soil classification
+2350. soil taxonomy
+2351. red earth
+2352. yellow earth
+2353. brown earth
+2354. cinnamon soil
+2355. black soil
+2356. purplish soil
+2357. steletal soil
+2358. fluvo aquic soil
+2359. Shajiang black soil
+2360. solonchak
+2361. solonetz
+2362. saline alkali soil
+2363. authro sol
+2364. paddy soil
+2365. histosol
+2366. soil biology
+2367. soil biochemistry
+2368. nitrogen mineralization
+2369. nitrogen biological immobilization
+2370. soil nitrogen cycle
+2371. soil carbon cycle
+2372. soil sulphur cycle
+2373. soil phosphorus cycle
+2374. soil microorganism
+2375. soil microbiomics
+2376. soil fungus
+2377. soil bacterium
+2378. arbuscular mycorrhiza
+2379. azotobacteria
+2380. phosphobacteria
+2381. potassium bacteria
+2382. microbe for promoting plant growth
+2383. soil archae
+2384. ammonium oxidizing archae
+2385. ammonium oxidizing bacteria
+2386. ammonifying bacteria
+2387. nitrifying bacteria
+2388. Denitrifying microbe
+2389. soil animal
+2390. soil food web
+2391. soil microbial diversity
+2392. soil ecosystem
+2393. soil amelioration soil improvement
+2394. Akanthomyces lecanii
+2395. nucleopolyhedrovirus
+2396. oligosaccharide
+2397. invasive alien species
+2398. biological invasion
+2399. indigenous species
+2400. alien species
+2401. naturalized species
+2402. introduction pathway
+2403. risk assessment for alien invasive species
+2404. interspecies competitive displacement
+2405. emergency management and elimination
+2406. ecological restoration
+2407. fall armyworm
+2408. codling moth
+2409. colorado potato beetle
+2410. tomato leafminer
+2411. rice water weevil
+2412. oriental fruit fly
+2413. solenopsis mealybug
+2414. red fire ant
+2415. American serpentine leaf miner
+2416. amazonian smail
+2417. potato golden nematode
+2418. beet cyst nematode
+2419. banana burrowing nematode
+2420. wheat common bunt
+2421. scab of cucurbits
+2422. fusarium wilt Fusarium oxysporum
+2423. sunflower phoma black stem
+2424. pear fire blight
+2425. bacterial fruit blotch
+2426. bacterial canker of tomato
+2427. bacterial canker of kiwifruit
+2428. potato mop top virus
+2429. maize chlorotic mottle virus
+2430. plum pox virus
+2431. tomato brown rugose fruit virus
+2432. Johnson grass
+2433. damel ryegrass
+2434. Tauschs goatgrass
+2435. ragweed
+2436. weed
+2437. annual weed
+2438. biennial weed
+2439. perennial weed
+2440. grass weed
+2441. common crabgrass
+2442. goosegrass
+2443. wild oat
+2444. shortawn foxtail
+2445. American sloughgrass
+2446. Japanese foxtail
+2447. Chinese sprangletop
+2448. knotgrass
+2449. sedge weed
+2450. variable flatsedge
+2451. broadleaf weed
+2452. redroot pigweed
+2453. lambsquarters
+2454. Canada thistle
+2455. field sowthistle
+2456. Bunges smartweed
+2457. tropical white weed
+2458. smallflower galinso ga
+2459. flixweed
+2460. false cleavers
+2461. threeleaf arrowhead
+2462. oval leaf pondweed
+2463. weed community
+2464. rodent Pest
+2465. rodents
+2466. brown rat
+2467. house mouse
+2468. oriental house rat
+2469. striped field mouse
+2470. greater long tailed hamster
+2471. striped dwarf hamster
+2472. agricultural finance and insurance
+2473. agricultural insurance
+2474. agricultural credit
+2475. agricultural subsidy
+2476. rural finance
+2477. agricultural investment
+2478. agricultural futures
+2479. agricultural risk management
+2480. agricultural policy
+2481. grain storage and purchase policy
+2482. minimum purchase price policy
+2483. target price policy
+2484. agricultural support and protection policy
+2485. rural revitalization strategy
+2486. rural land system reform
+2487. rural collective property rights reform
+2488. agricultural socialized services
+2489. farmer specialized cooperatives
+2490. family farm
+2491. agricultural industrialization leading enterprise
+2492. new agricultural management entity
+2493. agricultural science and technology innovation system
+2494. agricultural technology extension system
+2495. modern agricultural industry technology system
+2496. agricultural internet of things
+2497. agricultural big data
+2498. agricultural artificial intelligence
+2499. agricultural robot
+2500. agricultural drone
+2501. agricultural sensor
+2502. agricultural blockchain
+2503. agricultural cloud computing
+2504. agricultural 5G technology
+2505. agricultural e-commerce
+2506. agricultural product e-commerce
+2507. rural e-commerce
+2508. agricultural brand building
+2509. agricultural product quality and safety
+2510. agricultural product traceability system
+2511. green food
+2512. organic food
+2513. geographical indication product
+2514. agricultural product certification
+2515. good agricultural practices
+2516. agricultural standardization
+2517. agricultural resources and environmental protection
+2518. agricultural non-point source pollution
+2519. agricultural waste resource utilization
+2520. cultivated land protection
+2521. farmland water conservancy construction
+2522. water-saving irrigation
+2523. agricultural climate resources
+2524. agricultural meteorological disaster
+2525. globally important agricultural heritage systems
+2526. agricultural international cooperation
+2527. Belt and Road agricultural cooperation
+2528. agricultural outward investment
+2529. agricultural product international trade
+2530. agricultural technical assistance
+2531. South-South cooperation
+2532. agricultural sustainable development
+2533. circular agriculture
+2534. climate-smart agriculture
+2535. agricultural adaptation to climate change
+2536. agricultural mitigation of climate change
+2537. agricultural ecological civilization construction
+2538. high-quality agricultural development
+2539. modern agriculture construction
+2540. agricultural and rural modernization
+2541. urban-rural integrated development
+2542. rural living environment improvement
+2543. rural infrastructure construction
+2544. rural public services
+2545. rural education
+2546. rural medical care
+2547. rural elderly care
+2548. rural culture
+2549. rural sports
+2550. rural tourism
+2551. sightseeing agriculture
+2552. experiential agriculture
+2553. plant factory
+2554. vertical farming
+2555. aeroponics
+2556. tissue culture
+2557. A (adenine)
+2558. Ab ( antibody)
+2559. ABC model
+2560. abiotic
+2561. abscisic acid
+2562. abzyme
+2563. acaricide
+2564. ACC synthase
+2565. acceptor control
+2566. acceptor junction site
+2567. accessory bud
+2568. acclimatization
+2569. acellular
+2570. acentric chromosome
+2571. acetyl coenzyme A
+2572. acyl carrier protein
+2573. acquired
+2574. acrylicity
+2575. acrocentric
+2576. acropetal
+2577. activated charcoal
+2578. active transport
+2579. acute transfection
+2580. adaptation
+2581. additive genes
+2582. adenosine
+2583. adenosine diphosphate
+2584. adenosine monophosphate
+2585. adenosine triphosphate
+2586. adenovirus
+2587. adenylic acid
+2588. adoptive immunization
+2589. adventitious
+2590. aerobe
+2591. aerobic
+2592. aerobic respiration
+2593. affinity chromatography
+2594. affinity tag
+2595. aflatoxins
+2596. agar
+2597. agarose
+2598. agarose gel electrophoresis
+2599. aggregate
+2600. agonist
+2601. Agrobacterium
+2602. Agrobacterium rhizogenes
+2603. Agrobacterium tumefaciens
+2604. Agrobacterium tumefaciens-mediated transformation
+2605. airlift fermenter
+2606. albinism
+2607. albino
+2608. algal biomass
+2609. alginate
+2610. alkylating agent
+2611. allele frequency
+2612. allele-specific amplification
+2613. allelic exclusion
+2614. allelopathy
+2615. allergen
+2616. allogenic
+2617. allometric
+2618. allopatric
+2619. allopatric speciation
+2620. allosome
+2621. allosteric control
+2622. allosteric enzyme
+2623. allosteric regulation
+2624. allosteric site
+2625. allosteric transition
+2626. allotype
+2627. allozygote
+2628. allozyme
+2629. alternative messenger RNA splicing
+2630. Alu sequences
+2631. amber stop codon
+2632. amino acid
+2633. aminoacyl site
+2634. aminoacyl transfer ribonucleic acid synthetase
+2635. amitosis
+2636. amniocentesis
+2637. amnion
+2638. amniotic fluid
+2639. amorph
+2640. amphimixis
+2641. ampicillin
+2642. amplicon
+2643. amplification
+2644. amplified fragment length polymorphism
+2645. amylase
+2646. amylolytic
+2647. anabolic pathway
+2648. anabolism
+2649. anaerobe
+2650. anaerobic
+2651. anaerobic digestion
+2652. anaerobic respiration
+2653. analogous
+2654. anaphase
+2655. anchor gene
+2656. androgen
+2657. androgenesis
+2658. angiogenesis
+2659. angiogenin
+2660. angiosperm
+2661. animal cell immobilization
+2662. animal cloning
+2663. anneal
+2664. annual
+2665. anonymous deoxyribonucleic acid marker
+2666. antagonism
+2667. antagonist
+2668. anther
+2669. anthocyanin
+2670. antiauxin
+2671. antibiosis
+2672. antibiotic
+2673. antibiotic resistance
+2674. antibiotic resistance marker gene
+2675. antibody binding site
+2676. antibody class
+2677. antibody structure
+2678. antibody-mediated immune response
+2679. anticlinal
+2680. anticoding strand
+2681. anticodon
+2682. antigen
+2683. antigenic determinant
+2684. antigenic switching
+2685. antihaemophilic globulin
+2686. anti-idiotype antibody
+2687. antimicrobial agent
+2688. antinutrient
+2689. anti-oncogene
+2690. antioxidant
+2691. antiparallel orientation
+2692. antisense deoxyribonucleic acid
+2693. antisense gene
+2694. antisense ribonucleic acid
+2695. antisense therapy
+2696. antiserum
+2697. anti-terminator
+2698. antitranspirant
+2699. antixenosis
+2700. apex
+2701. apical cell
+2702. apical meristem
+2703. apoenzyme
+2704. apomixis
+2705. apoptosis
+2706. aptamer
+2707. aquaculture
+2708. Arabidopsis
+2709. arbitrarily primed polymerase chain reaction
+2710. artificial embryo implantation
+2711. artificial insemination
+2712. artificial medium
+2713. arbitrary primer
+2714. Archaea
+2715. artificial selection
+2716. ascites
+2717. ascospore
+2718. ascus
+2719. aseptic
+2720. asexual
+2721. asexual embryogenesis
+2722. asexual reproduction
+2723. assay
+2724. assortative mating
+2725. assortment
+2726. asymmetric hybrid
+2727. asynapsis
+2728. attenuated vaccine
+2729. attenuation
+2730. attenuator
+2731. aureofacin
+2732. authentic protein
+2733. autocatalysis
+2734. autocatalytic reaction
+2735. autoclave
+2736. autogenous control
+2737. auto-immune disease
+2738. auto-immunity
+2739. autologous cells
+2740. autolysis
+2741. autonomous
+2742. autonomously replicating segment
+2743. autoradiograph
+2744. autosome
+2745. autotroph
+2746. auxin
+2747. auxin-cytokinin ratio
+2748. auxotroph
+2749. availability
+2750. avidin
+2751. avidity
+2752. avirulence gene
+2753. axenic culture
+2754. axillary bud
+2755. axillary bud proliferation
+2756. B cell
+2757. B chromosome
+2758. B lymphocyte
+2759. bacillus
+2760. Bacillus thuringiensis
+2761. back mutation
+2762. bacterial artificial chromosome
+2763. bacterial toxin
+2764. bactericide
+2765. bacteriocin
+2766. bacteriophage
+2767. bacteriostat
+2768. bacterium
+2769. baculovirus
+2770. baculovirus expression vector
+2771. balanced lethal system
+2772. balanced polymorphism
+2773. barnase
+2774. Barr body
+2775. barstar protein
+2776. basal
+2777. base
+2778. base analogue
+2779. base pair
+2780. base substitution
+2781. basic fibroblast growth factor
+2782. basipetal
+2783. basophil
+2784. batch culture
+2785. batch fermentation
+2786. bench-scale process
+2787. beta-DNA
+2788. beta-galactosidase
+2789. beta-glucuronidase
+2790. beta-lactamase
+2791. beta-sitosterol
+2792. biennial
+2793. bifunctional vector
+2794. binary vector system
+2795. binding
+2796. bio-accumulation
+2797. bio-assay
+2798. bioavailability
+2799. biocatalysis
+2800. biochip
+2801. biocontrol
+2802. bioconversion
+2803. biodegradable
+2804. biodegrade
+2805. biodesulphurization
+2806. bio-energetics
+2807. bio-engineering
+2808. bio-enrichment
+2809. bio-ethics
+2810. biofilms
+2811. biofuel
+2812. biogas
+2813. bioleaching
+2814. biolistics
+2815. biological ageing
+2816. biological containment
+2817. biological control
+2818. biological diversity
+2819. biological oxygen demand
+2820. biologics
+2821. bioluminescence
+2822. biomagnification
+2823. biomass
+2824. biomass concentration
+2825. biome
+2826. biometry
+2827. biomimetic materials
+2828. biopesticide
+2829. biopharming
+2830. biopiracy
+2831. biopolymer
+2832. bioprocess
+2833. bioreactor
+2834. biorecovery
+2835. bioremediation
+2836. biosafety
+2837. biosafety protocol
+2838. biosensor
+2839. biosilk
+2840. biosorbents
+2841. biosphere
+2842. biosynthesis
+2843. biosynthetic antibody binding sites
+2844. biotechnology
+2845. biotic factor
+2846. biotic stress
+2847. biotin
+2848. biotin labelling
+2849. biotinylated-deoxyribonucleic acid
+2850. biotope
+2851. biotoxin
+2852. bivalent
+2853. blast cell
+2854. blastocyst
+2855. blastomere
+2856. blastula
+2857. bleeding
+2858. blot
+2859. blunt end
+2860. blunt-end cut
+2861. blunt-end ligation
+2862. boring platform
+2863. bound water
+2864. bovine growth hormone
+2865. bovine spongiform encephalopathy
+2866. bract
+2867. breed at risk
+2868. breeding
+2869. breeding value
+2870. brewer's yeast
+2871. bridge
+2872. broad-host-range plasmid
+2873. broad-sense heritability
+2874. broodstock
+2875. browning
+2876. bubble column fermenter
+2877. bud
+2878. bulked segregant analysis
+2879. buoyant density
+2880. budding
+2882. CAAT box
+2883. cabinet
+2884. callipyge
+2885. callus
+2886. callus culture
+2887. cambial zone
+2888. cambium
+2889. candidate gene
+2890. candidate-gene strategy
+2891. canola
+2892. cap
+2893. catabolite activator protein
+2894. cap site
+2895. capacitation
+2896. capillary electrophoresis
+2897. cleaved amplified polymorphic sequence
+2898. capsid
+2899. capsule
+2900. carbohydrate
+2901. carboxypeptidase
+2902. carcinogen
+2903. carcinoma
+2904. carotene
+2905. carotenoid
+2906. carpel
+2907. carrier
+2908. carrier deoxyribonucleic acid
+2909. carrier molecule
+2910. Cartagena protocol
+2911. casein
+2912. casein hydrolysate
+2913. cassette
+2914. catabolic pathway
+2915. catabolism
+2916. catabolite repression
+2917. catalysis
+2918. catalyst
+2919. catalytic antibody
+2920. catalytic ribonucleic acid
+2921. catalytic site
+2922. cauliflower mosaic virus
+2923. cauliflower mosaic virus 355 promoter
+2924. caulogenesis
+2925. Convention on Biological Diversity
+2926. covalently-closed circular deoxyribonucleic acid
+2927. cluster of differentiation molecules
+2928. complementary deoxyribonucleic acid
+2929. complementary deoxyribonucleic acid clone
+2930. complementary deoxyribonucleic acid cloning
+2931. complementary deoxyribonucleic acid library
+2932. complementarity-determining regions
+2933. cell
+2934. cell cycle
+2935. cell differentiation
+2936. cell division
+2937. cell fusion
+2938. cell generation time
+2939. cell hybridization
+2940. cell membrane
+2941. cell number
+2942. cell plate
+2943. cell sap
+2944. cell selection
+2945. cell sorter
+2946. cell strain
+2947. cell suspension
+2948. cell wall
+2949. cell-free protein synthesis
+2950. cell-free transcription
+2951. cell-free translation
+2952. cell-mediated immune response
+2953. cellular oncogene
+2954. cellulase
+2955. cellulose
+2956. cellulose nitrate
+2957. cellulosome
+2958. centiMorgan
+2959. central dogma
+2960. central mother cell
+2961. centre of origin
+2962. centrifugation
+2963. centrifuge
+2964. centriole
+2965. centromere
+2966. centrosome
+2967. cephem-type antibiotic
+2968. chain terminator
+2969. Chakrabarty decision
+2970. chaperonin
+2971. character
+2972. characterization
+2973. charcoal
+2974. chelate
+2975. chemical mutagen
+2976. chemically-defined medium
+2977. chemiluminescence
+2978. chemostat
+2979. chemotaxis
+2980. chemotherapy
+2981. chiasma
+2982. chimera
+2983. chimeroplasty
+2984. chimeric deoxyribonucleic acid
+2985. chimeric gene
+2986. chimeric protein
+2987. chimeric selectable marker gene
+2988. chip
+2989. chitin
+2990. chitinase
+2991. chloramphenicol
+2992. chlorenchyma
+2993. chlorophyll
+2994. chloroplast
+2995. chloroplast deoxyribonucleic acid
+2996. chloroplast transit peptide
+2997. chlorosis
+2998. chromatin fibre
+2999. chromatography
+3000. chromocentre
+3001. chromogenic substrate
+3002. chromomeres
+3003. chromonema
+3004. chromoplast plastid
+3005. chromosomal aberration
+3006. chromatid
+3007. chromatin
+3008. chromosomal integration site
+3009. chromosomal polymorphism
+3010. chromosome
+3011. chromosome banding
+3012. chromosome jumping
+3013. chromosome landing
+3014. chromosome mutation
+3015. chromosome theory of inheritance
+3016. chromosome walking
+3017. chymosin
+3018. ciliate
+3019. cilium
+3020. circadian
+3021. circularization
+3022. cis-configuration
+3023. cis-heterozygote
+3024. cis-acting protein
+3025. cis-acting sequence
+3026. cistron
+3027. class switching
+3028. cleave
+3029. cline
+3030. clonal propagation
+3031. clonal selection
+3032. clone
+3033. clone bank
+3034. cloned strain or line
+3035. cloning site
+3036. cloning vector
+3037. closed continuous culture
+3038. coat protein
+3039. coccus
+3040. co-cloning
+3041. coconut milk
+3042. co-culture
+3043. Codex Alimentarius Commission
+3044. coding
+3045. coding sequence
+3046. coding strand
+3047. co-dominance
+3048. co-dominant alleles
+3049. codon
+3050. codon optimization
+3051. co-enzyme
+3052. co-evolution
+3053. co-factor
+3054. co-fermentation
+3055. cohesive end
+3056. coincidence
+3057. co-integrate
+3058. co-integrate vector system
+3059. colchicine
+3060. coleoptile
+3061. coleorhiza
+3062. co-linearity
+3063. collenchyma
+3064. colony
+3065. colony hybridization
+3066. combinatorial library
+3067. combining site
+3068. commensalism
+3069. companion cell
+3070. comparative mapping
+3071. comparative positional candidate gene
+3072. competent
+3073. complement proteins
+3074. complementarity
+3075. complementary
+3076. complementary entity
+3077. complementary genes
+3078. complementary homopolymeric tailing
+3079. complementation
+3080. complementation test
+3081. complete digest
+3082. composite transposon
+3083. compound chromosome
+3084. concatener
+3085. concordance
+3086. conditional lethal mutation
+3087. conditioning
+3088. conformation
+3089. conidium
+3090. conjugation
+3091. conjugative functions
+3092. consanguinity
+3093. consensus sequence
+3094. conservation
+3095. conserved sequence
+3096. constant domains
+3097. constitutive
+3098. constitutive gene
+3099. constitutive promoter
+3100. constitutive synthesis
+3101. construct
+3102. contained use
+3103. containment
+3104. contaminant
+3105. contig
+3106. continuous culture
+3107. continuous fermentation
+3108. continuous variation
+3109. controlled environment
+3110. controlling element
+3111. conversion
+3112. coordinate repression
+3113. copy deoxyribonucleic acid
+3114. copy number
+3115. co-repressor
+3116. corpus
+3117. correlation
+3118. cortex
+3119. cos ends
+3120. cos sites
+3121. co-segregation
+3122. cosmid
+3123. co-suppression
+3124. cot curve
+3125. co-transfection
+3126. co-transformation
+3127. cotyledon
+3128. coupling
+3129. covalently-closed circular deoxyribonucleic acid
+3130. CP4 enolpyruvyl-shikimate-3-phosphate synthase
+3131. cross hybridization
+3132. cross pollination efficiency
+3133. crossing over
+3134. crossing-over unit
+3135. crown
+3136. crown gall
+3137. cry proteins
+3138. cryobiological preservation
+3139. cryogenic
+3140. cryopreservation
+3141. cryoprotectant
+3142. cryptic
+3143. cytidine triphosphate
+3144. cultigen
+3145. culture
+3146. culture alteration
+3147. culture medium
+3148. culture room
+3149. curing
+3150. cut
+3151. cuticle
+3152. cutting
+3153. cyclic adenosine monophosphate
+3154. cyclodextrin
+3155. cycloheximide
+3156. cytidine
+3157. cytidylic acid
+3158. cytochrome
+3159. cytochrome p450
+3160. cytogenetics
+3161. cytokine
+3162. cytokinesis
+3163. cytokinin
+3164. cytology
+3165. cytolysis
+3166. cytoplasm
+3167. cytoplasmic genes
+3168. cytoplasmic inheritance
+3169. cytoplasmic organelles
+3170. cytosol
+3171. cytotoxic T cell
+3172. cytotoxicity
+3173. cytotype
+3174. D loop
+3175. dA - dT tailing
+3176. single domain antibody
+3177. DNA amplification fingerprinting
+3178. Dalton
+3179. directed amplification of minisatellite DNA
+3180. Darwinian cloning
+3181. deoxyadenosine triphosphate
+3182. deoxycytidine triphosphate
+3183. di-deoxynucleotide
+3184. death phase
+3185. deceleration phase
+3186. de-differentiation
+3187. defective virus
+3188. deficiency
+3189. defined
+3190. degeneracy
+3191. degeneration
+3192. dehalogenation
+3193. dehiscence
+3194. dehydrogenase
+3195. dehydrogenation
+3196. de-ionized water
+3197. deliberate release
+3198. delta endotoxins
+3199. deme
+3200. demineralise
+3201. denature
+3202. denatured deoxyribonucleic acid
+3203. denatured protein
+3204. denaturing gradient gel electrophoresis
+3205. dendrimer
+3206. denitrification
+3207. density gradient centrifugation
+3208. deoxyadenosine
+3209. deoxycytidine
+3210. deoxyguanosine
+3211. deoxyribonuclease
+3212. deoxyribonucleic acid
+3213. deoxyribonucleoside
+3214. deoxyribonucleotide
+3215. deoxyribose
+3216. deoxythymidine
+3217. derepression
+3218. derivative
+3219. desiccant
+3220. desulphurization
+3221. detergent
+3222. determinate growth
+3223. determination
+3224. determined
+3225. development
+3226. deviation
+3227. dextrin
+3228. dG - dC tailing
+3229. deoxyguanosine triphosphate
+3230. diagnostic procedure
+3231. diakinesis
+3232. dialysis
+3233. diazotroph
+3234. dicentric chromosome
+3235. dichogamy
+3236. dicot
+3237. differential centrifugation
+3238. differential display
+3239. differentially permeable
+3240. differentiation
+3241. diffusion
+3242. digest
+3243. dihaploid
+3244. dihybrid
+3245. dimmer
+3246. dimethyl sulphoxide
+3247. dimorphism
+3248. dinucleotide
+3249. dioccious
+3250. diplochromosome
+3251. diplonema
+3252. diplotene
+3253. direct embryogenesis
+3254. direct organogenesis
+3255. direct repeat
+3256. directed mutagenesis
+3257. directional cloning
+3258. disaccharide
+3259. disarm
+3260. discontinuous variation
+3261. discordant
+3262. disease resistance
+3263. disease-free
+3264. disease-indexing
+3265. disinfection
+3266. disinfestation
+3267. disomic
+3268. disomy
+3269. dispense
+3270. disrupter gene
+3271. dissecting microscope
+3272. dissection
+3273. distillation
+3274. disulphide bond
+3275. disulphide bridge
+3276. ditype
+3277. diurnal
+3278. dizygotic twins
+3279. deoxyribonucleic acid amplification
+3280. deoxyribonucleic acid amplification fingerprinting
+3281. deoxyribonucleic acid chip
+3282. deoxyribonucleic acid cloning
+3283. deoxyribonucleic acid construct
+3284. deoxyribonucleic acid delivery system
+3285. deoxyribonucleic acid diagnostics
+3286. deoxyribonucleic acid fingerprint
+3287. deoxyribonucleic acid fingerprinting
+3288. deoxyribonucleic acid helicase
+3289. deoxyribonucleic acid hybridization
+3290. deoxyribonucleic acid ligase
+3291. deoxyribonucleic acid micro-array
+3292. deoxyribonucleic acid polymerase
+3293. deoxyribonucleic acid polymorphism
+3294. deoxyribonucleic acid primase
+3295. deoxyribonucleic acid probe
+3296. deoxyribonucleic acid profile
+3297. deoxyribonucleic acid repair
+3298. deoxyribonucleic acid replication
+3299. deoxyribonucleic acid sequencing
+3300. deoxyribonucleic acid topo-isomerase
+3301. deoxyribonucleic acid transformation
+3302. deoxyribonucleic acid vaccine
+3303. Dolly
+3304. dominant
+3305. dominant acting oncogene
+3306. dominant marker selection
+3307. dominant selectable marker
+3308. donor junction site
+3309. donor plant
+3310. dormancy
+3311. dosage compensation
+3312. double crossing-over
+3313. double helix
+3314. double recessive
+3315. double-stranded complementary deoxyribonucleic acid
+3316. double-stranded deoxyribonucleic acid
+3317. doubling time
+3318. down promoter mutation
+3319. down-regulate
+3320. downstream
+3321. downstream processing
+3322. drift
+3323. Drosophila melanogaster
+3324. drug
+3325. drug delivery
+3326. deoxythymidine triphosphate
+3327. dual culture
+3328. duplication
+3329. dry weight
+3330. E site
+3331. Escherichia coli
+3332. estimated breeding value
+3333. Enzyme Commission number
+3334. ecdysone
+3335. eclosion
+3336. ecosystem
+3337. ectopic
+3338. edible vaccine
+3339. editing
+3340. ethylenediaminetetraacetic acid
+3341. essential derivation of varieties
+3342. effector cells
+3343. effector molecule
+3344. egg
+3345. external guide sequence
+3346. enzyme immuno-assay
+3347. elastin
+3348. electro-blotting
+3349. electrochemical sensor
+3350. electron microscope
+3351. electrophoresis
+3352. electroporation
+3353. enzyme-linked immunosorbent assay
+3354. elite tree
+3355. elongation factors
+3356. embryo
+3357. embryo cloning
+3358. embryo culture
+3359. embryo multiplication and transfer
+3360. embryo rescue
+3361. embryo sac
+3362. embryo sexing
+3363. embryo splitting
+3364. embryo storage
+3365. embryo technology
+3366. embryo transfer
+3367. embryogenesis
+3368. embryonic stem cells
+3369. emission wavelength
+3370. encapsidation
+3371. encapsulating agents
+3372. encapsulation
+3373. endangered species
+3374. endemic
+3375. end-labelling
+3376. endocrine gland
+3377. endocrine interference
+3378. endocytosis
+3379. endoderm
+3380. endodermis
+3381. endogamy
+3382. endogenous
+3383. endomitosis
+3384. endonuclease
+3385. endophyte
+3386. endoplasmic reticulum
+3387. endopolyploidy
+3388. endoprotease
+3389. endoreduplication
+3390. endosperm
+3391. endosperm mother cell
+3392. endotoxin
+3393. end-product inhibition
+3394. enhancer element
+3395. enhancer sequence
+3396. enolpyruvyl-shikimate-3-phosphate synthase
+3397. enterotoxin
+3398. enucleated ovum
+3399. enzyme
+3400. enzyme bioreactor
+3401. enzyme electrode
+3402. enzyme immunoassay
+3403. enzyme kinetics
+3404. enzyme stabilization
+3405. expected progeny difference
+3406. epicotyl
+3407. epidermis
+3408. epigenesis
+3409. epigenetic variation
+3410. epinasty
+3411. epiphyte
+3412. episome
+3413. epistasis
+3414. epitope
+3415. epizootic
+3416. enolpyruvyl-shikimate-3-phosphate synthase
+3417. equational division
+3418. equilibrium density gradient centrifugation
+3419. Erlenmeyer flask
+3420. essential amino acid
+3421. essential element
+3422. essential nutrient
+3423. essential requirement
+3424. expressed sequence tag
+3425. established culture
+3426. estimated breeding value
+3427. estrogen
+3428. ethanol
+3429. ethephon
+3430. ethidium bromide
+3431. ethylene
+3432. etiolation
+3433. economic trait locus
+3434. eucaryote
+3435. eukaryotic
+3436. euchromatin
+3437. eugenics
+3438. evapotranspiration
+3439. evolution
+3440. ex-situ conservation
+3441. ex vitro
+3442. ex vivo gene therapy
+3443. excinuclease
+3444. excision
+3445. excision repair
+3446. excitation wavelength
+3447. excrete
+3448. exit site
+3449. exonuclease III
+3450. exocrine gland
+3451. exodeoxyribonuclease III
+3452. exogamy
+3453. exogenous
+3454. exogenous deoxyribonucleic acid
+3455. exon
+3456. exon amplification
+3457. exonuclease
+3458. exopolysaccharide
+3459. exotoxin
+3460. expected progeny difference
+3461. explant
+3462. explant donor
+3463. explantation
+3464. explosion method
+3465. exponential phase
+3466. export
+3467. express
+3468. expression library
+3469. expression system
+3470. expression vector
+3471. expressivity
+3472. extension
+3473. extrachromosomal
+3474. extrachromosomal inheritance
+3475. extranuclear genes
+3476. exude
+3477. F factor
+3478. first filial generation
+3479. second filial generation
+3480. antigen binding fragment
+3481. fluorescence-activated cell sorting
+3482. factorial mating
+3483. facultative anaerobe
+3484. flavin adenine dinucleotide
+3485. false fruit
+3486. false negative
+3487. false positive
+3488. farm animal genetic resources
+3489. farmers’ privilege
+3490. farmers’ rights
+3491. fascicle
+3492. fragment crystallizable
+3493. fed-batch fermentation
+3494. feedback inhibition
+3495. fermentation
+3496. fermentation substrates
+3497. fermenter
+3498. fertile
+3499. fertility factor
+3500. fertilization
+3501. fertilizer
+3502. fetus
+3503. Feulgen staining
+3504. fluorescence immuno-assay
+3505. fibril
+3506. fibroblasts
+3507. fibrous root
+3508. filial generation
+3509. filter bioreactor
+3510. filter sterilization
+3511. filtration
+3512. fingerprinting
+3513. fluorescence in situ hybridization
+3514. fission
+3515. fitness
+3516. flanking region
+3517. fluorescence-activated cell sorting
+3518. fluorescent probe
+3519. flocculant
+3520. flush end
+3521. floccule
+3522. flush-end cut
+3523. foetus
+3524. fog
+3525. fold-back
+3526. folded genome
+3527. follicle
+3528. follicle stimulating hormone
+3529. food processing enzyme
+3530. formulation
+3531. forskolin
+3532. fortify
+3533. fouling
+3534. founder animal
+3535. founder principle
+3536. four-base cutter
+3537. fractionation
+3538. fragment
+3539. frameshift mutation
+3540. free water
+3541. free-living conditions
+3542. freeze preservation
+3543. freeze-dry
+3544. fresh weight
+3545. friable
+3546. follicle stimulating hormone
+3547. functional food
+3548. functional gene cloning
+3549. functional genomics
+3550. fungicide
+3551. fungus
+3552. Fusarium species
+3553. fusion biopharmaceuticals
+3554. fusion gene
+3555. fusion protein
+3556. fusion toxin
+3557. fusogenic agent
+3559. G cap
+3560. G protein
+3561. galactomannan
+3562. gall
+3563. gamete
+3564. gamete and embryo storage
+3565. gametic disequilibrium
+3566. gametic equilibrium
+3567. gametoclone
+3568. gametogenesis
+3569. gametophyte
+3570. gametophytic incompatibility
+3571. gap
+3572. gapped deoxyribonucleic acid
+3573. gas transfer
+3574. gastrula
+3575. guanine-cytosine island
+3576. guanosine diphosphate
+3577. gel
+3578. gel electrophoresis
+3579. gel filtration
+3580. gelatine
+3581. gelatinization
+3582. Gelrite
+3583. genetically engineered microorganism
+3584. gene
+3585. gene resources conservation
+3586. gene addition
+3587. gene amplification
+3588. gene cloning
+3589. gene construct
+3590. gene conversion
+3591. gene flow
+3592. gene frequency
+3593. gene gun
+3594. gene imprinting
+3595. gene insertion
+3596. gene interaction
+3597. gene knockout
+3598. gene linkage
+3599. gene machine
+3600. gene mapping
+3601. gene modification
+3602. gene probe
+3603. gene recombination
+3604. gene regulation
+3605. gene replacement
+3606. gene sequencing
+3607. gene shears
+3608. gene splicing
+3609. gene stacking
+3610. gene therapy
+3611. gene tracking
+3612. gene translocation
+3613. genera
+3614. generally regarded as safe
+3615. generation time
+3616. generative
+3617. generative nucleus
+3618. genet
+3619. genetic assimilation
+3620. genetic code
+3621. genetic complementation
+3622. genetic disease
+3623. genetic distance
+3624. genetic distancing
+3625. genetic diversity
+3626. genetic engineering
+3627. genetic equilibrium
+3628. genetic fingerprinting
+3629. genetic gain
+3630. genetic heterogeneity
+3631. genetic immunization
+3632. genetic information
+3633. genetic linkage
+3634. genetic map
+3635. genetic mapping
+3636. genetic marker
+3637. genetic pollution
+3638. genetic polymorphism
+3639. genetic relatedness
+3640. genetic selection
+3641. genetic transformation
+3642. genetic use restriction technology
+3643. genetic variation
+3644. genetically engineered organism
+3645. genetically modified organism
+3646. genetics
+3647. genomics
+3648. geotropism
+3649. germ
+3650. germ cell
+3651. germ cell gene therapy
+3652. germ layer
+3653. germ line
+3654. germ line cell
+3655. germinal epithelium
+3656. germination
+3657. gestation
+3658. green fluorescent protein
+3659. growth hormone
+3660. gibberellins
+3661. gland
+3662. glaucous
+3663. good laboratory practice
+3664. glucocorticoid
+3665. glucose invertase
+3666. glucose isomerase
+3667. glycosinolates
+3668. glucuronidase
+3669. gluten
+3670. glycoalkaloids
+3671. glycoform
+3672. glycolysis
+3673. glycoprotein
+3674. glycoprotein remodelling
+3675. glycosylation
+3676. glyphosate
+3677. glyphosate oxidase
+3678. glyphosate oxidoreductase
+3679. genetically modified food
+3680. genetically modified organism
+3681. guanosine monophosphate
+3682. good manufacturing practice
+3683. biogas
+3684. golden rice
+3685. Golgi apparatus
+3686. gonad
+3687. G-protein coupled receptor
+3688. graft
+3689. graft chimera
+3690. graft hybrid
+3691. graft inoculation test
+3692. graft union
+3693. graft-versus-host disease
+3694. Gram staining
+3695. granum
+3696. generally regarded as safe
+3697. gratuitous inducer
+3698. gravitropism
+3699. green revolution
+3700. Gro-lux
+3701. growth cabinet
+3702. growth factor
+3703. growth inhibitor
+3704. growth phase
+3705. growth rate
+3706. growth regulator
+3707. growth retardant
+3708. growth ring
+3709. growth substance
+3710. guanosine triphosphate
+3711. guanosine
+3712. guanylic acid
+3713. guard cell
+3714. guide ribonucleic acid
+3715. guide sequence
+3716. gus gene
+3717. gymnosperm
+3718. gynandromorph
+3719. gyrase
+3720. human
+3721. habituation
+3722. human artificial chromosome
+3723. haemoglobin
+3724. haemolymph
+3725. haemophilia
+3726. hairpin loop
+3727. hairy root culture
+3728. hairy root disease
+3729. halophyte
+3730. hanging droplet technique
+3731. haplotype
+3732. hemizygous
+3733. hapten
+3734. haptoglobin
+3735. hardening off
+3736. harvesting
+3737. heat therapy
+3738. helix
+3739. helminth
+3740. helper cell
+3741. helper plasmid
+3742. helper T cell
+3743. helper T lymphocyte
+3744. helper virus
+3745. hemicellulase
+3746. hemicellulose
+3747. hemizygous
+3748. hemolymph
+3749. high efficiency particulate air filter
+3750. herbicide
+3751. herbicide resistance
+3752. heredity
+3753. hermaphrodite
+3754. heteroallele
+3755. heterochromatin
+3756. heteroduplex
+3757. heteroduplex analysis
+3758. heterogametic
+3759. heterogeneous nuclear ribonucleic acid
+3760. heterokaryon
+3761. heterologous
+3762. heterologous probe
+3763. heterologous protein
+3764. heteroploid
+3765. heteropyknosis
+3766. heterotroph
+3767. heterotrophic
+3768. heterozygous
+3769. heterozygote
+3770. high frequency recombination
+3771. human growth hormone
+3772. high throughput screening
+3773. histocompatibility
+3774. histocompatibility complex
+3775. histoglobulin
+3776. histology
+3777. histone
+3778. human-leukocyte-antigen system
+3779. Hogness box
+3780. hollow fibre
+3781. holoenzyme
+3782. holometabolous
+3783. homeobox
+3784. homeodomain
+3785. homeotic genes
+3786. homeotic mutation
+3787. homollele
+3788. homodimer
+3789. homoduplex deoxyribonucleic acid
+3790. homeologous
+3791. homogametic
+3792. homogenotization
+3793. homokaryon
+3794. homologous
+3795. homozygote
+3796. homologous recombination
+3797. hormone
+3798. homology
+3799. host
+3800. homomultimer
+3801. host-specific toxin
+3802. homopolymer
+3803. hot spot
+3804. homopolymeric tailing
+3805. human serum albumin
+3806. homozygous
+3807. human-leukocyte-antigen system
+3808. hybrid arrested translation
+3809. hybrid cell
+3810. hybrid dysgenesis
+3811. hybrid released translation
+3812. hybrid seed
+3813. hybrid selection
+3814. hybridoma
+3815. hydrogen-uptake positive
+3816. hydrolysis
+3817. hydrophobic interaction
+3818. hydroponics
+3819. hygromycin
+3820. hyperploid
+3821. hypersensitive response
+3822. hypersensitive site
+3823. hypertonic
+3824. hypervariable region
+3825. hypervariable segment
+3826. hypocotyls
+3827. hypomorph
+3828. hypoplastic
+3829. hypoploid
+3830. hypothalamic peptides
+3831. hypotonic
+3832. integration-excision region
+3833. intracytoplasmic sperm injection
+3834. identical twin
+3835. idiogram
+3836. idiotype
+3837. immunoglobulin A / immunoglobulin D / immunoglobulin G / immunoglobulin E / immunoglobulin M
+3838. internal guide sequence / intergenic spacer
+3839. imaginal disc
+3840. imbibition
+3841. immediate early gene
+3842. immobilized cells
+3843. immortalization
+3844. immortalizing oncogene
+3845. immune response
+3846. immunity
+3847. immunization
+3848. immunoaffinity chromatography
+3849. immunoassay
+3850. immunochemical control
+3851. immunodiagnostics
+3852. immunogen
+3853. immunogenicity
+3854. immunoglobulin
+3855. immunoprophylaxis
+3856. immunosensor
+3857. immunosuppression
+3858. immunosuppressor
+3859. immunotherapy
+3860. immunotoxin
+3861. impeller
+3862. in situ
+3863. in situ colony hybridization
+3864. in-situ conservation
+3865. in situ hybridization
+3866. in situ plaque hybridization
+3867. in vitro
+3868. in vitro embryo production
+3869. in vitro fertilization
+3870. in vitro maturation
+3871. in vitro mutagenesis
+3872. in vitro transcription
+3873. in vitro translation
+3874. in vivo
+3875. in vivo gene therapy
+3876. inactivated agent
+3877. inbreeding depression
+3878. inclusion body
+3879. incompatibility
+3880. incompatibility group
+3881. incomplete digest
+3882. incomplete penetrance
+3883. incubation
+3884. incubator
+3885. indehiscent
+3886. independent assortment
+3887. indeterminate growth
+3888. indirect embryogenesis
+3889. indirect organogenesis
+3890. inducer
+3891. inducible
+3892. inducible enzyme
+3893. inducible promoter
+3894. induction
+3895. induction media
+3896. inembryonation
+3897. infection
+3898. infectious agent
+3899. infiltrate
+3900. inflorescence
+3901. inhibitor
+3902. initial Cells
+3903. initiation
+3904. initiation codon
+3905. initiation factor
+3906. inoculate
+3907. inoculation cabinet
+3908. inoculum
+3909. inorganic compound
+3910. inositol
+3911. inositol lipid
+3912. insecticide
+3913. insert
+3914. insertion element
+3915. insertion sequence
+3916. insertion site
+3917. instability
+3918. insulin
+3919. integrating vector
+3920. integration
+3921. intercellular space
+3922. interfascicular cambium
+3923. interference
+3924. Interferon
+3925. Intergeneric
+3926. Intergenic
+3927. Interkinesis
+3928. Internal guide sequence
+3929. Internode
+3930. Interphase
+3931. Intersex
+3932. Interspecific
+3933. Intervarietal
+3934. Intracellular
+3935. Intragenic
+3936. Intramolecular
+3937. Intraspecific
+3938. Introduction
+3939. Introgression
+3940. Intron
+3941. Inulin
+3942. Invagination
+3943. Invariant
+3944. Inversion
+3945. Involucre
+3946. Iodine
+3947. Ion
+3948. Ion channel
+3949. Ion exchange
+3950. Ionic bond
+3951. Ionizing radiation
+3952. Isoagglutinin
+3953. Isoallele
+3954. Isoantibody
+3955. Isoantigen
+3956. Isochromosome
+3957. Isocitrate
+3958. Isodiametric
+3959. Isoelectric focusing
+3960. Isoelectric point
+3961. Isoenzyme
+3962. Isogamy
+3963. Isogenic
+3964. Isograft
+3965. Isohaplont
+3966. Isolation
+3967. Isoleucine
+3968. Isomer
+3969. Isomerase
+3970. Isometric
+3971. Isoprene
+3972. Isotonic
+3973. Isotope
+3974. Isotropic
+3975. Iteroparity
+3976. Jelly
+3977. Junk deoxyribonucleic acid
+3978. Juvenile hormone
+3979. Juvenility
+3980. Karyotype
+3981. Killer T cell
+3982. Killer toxin
+3983. Kinin
+3984. Knockout
+3985. Labelling
+3986. Lac operon
+3987. Lag phase
+3988. Lambda phage
+3989. Late gene
+3990. Lateral bud
+3991. Lateral meristem
+3992. Leader peptide
+3993. Leader sequence
+3994. Leaf abscission
+3995. Leaf primordium
+3996. Leaky mutant
+3997. Lectin
+3998. Leghemoglobin
+3999. Lethal gene
+4000. Lethal mutation
+4001. Library
+4002. Ligand
+4003. Ligation
+4004. Light repair
+4005. Lignin
+4006. Linkage
+4007. Linkage disequilibrium
+4008. Linkage map
+4009. Linker
+4010. Lipase
+4011. Lipid
+4012. Liposome
+4013. Locus
+4014. Logarithmic phase
+4015. Long-day plant
+4016. Long-terminal repeat
+4017. Lymphocyte
+4018. Lymphokine
+4019. Lysis
+4020. Lysogen
+4021. Lysogenic
+4022. Lysogeny
+4023. Lysosome
+4024. Lysozyme
+4025. Lytic
+4026. Lytic cycle
+4027. Lytic response
+4028. Macronutrient
+4029. Macrophage
+4030. Major gene
+4031. Major histocompatibility complex
+4032. Mapping
+4033. Marker gene
+4034. Marker-assisted selection
+4035. Maternal effect
+4036. Maternal inheritance
+4037. Mating
+4038. Mating system
+4039. Maturation
+4040. Meiosis
+4041. Melting
+4042. Membrane
+4043. Membrane bioreactor
+4044. Meristem
+4045. Meristem culture
+4046. Meristem tip culture
+4047. Messenger ribonucleic acid
+4048. Metabolism
+4049. Metabolite
+4050. Metallothionein
+4051. Metaphase
+4052. Microarray
+4053. Microbe
+4054. Microbial pesticide
+4055. Microbody
+4056. Microcarrier
+4057. Microfibril
+4058. Microinjection
+4059. Micronutrient
+4060. Microprojectile
+4061. Microprojectile bombardment
+4062. Micropropagation
+4063. Microspore
+4064. Microspore culture
+4065. Microtubule
+4066. Middle lamella
+4067. Mineral
+4068. Minimal medium
+4069. Minimum inoculum size
+4070. Minisatellite deoxyribonucleic acid
+4071. Mitochondrion
+4072. Mitosis
+4073. Mixed culture
+4074. Molting
+4075. Monoclonal antibody
+4076. Monocot
+4077. Monoculture
+4078. Monoecious
+4079. Monogenic
+4080. Monolayer
+4081. Monomer
+4082. Monosaccharide
+4083. Monovalent
+4084. Morphogenesis
+4085. Morphology
+4086. Mosaic
+4087. Motif
+4088. Mouse
+4089. Multicellular
+4090. Multienzyme system
+4091. Multifactorial
+4092. Multiple cloning site
+4093. Multiple ovulation and embryo transfer
+4094. Multipotent
+4095. Mutagen
+4096. Mutagenesis
+4097. Mutant
+4098. Mutation
+4099. Mutation breeding
+4100. Mycelium
+4101. Mycorrhiza
+4102. Myeloma
+4103. Narrow-sense heritability
+4104. Native
+4105. Necrosis
+4106. Nectar
+4107. Negative control
+4108. Negative selection
+4109. Nematode
+4110. Neoplasm
+4111. Nested primers
+4112. Neurotransmitter
+4113. Nick
+4114. Nick translation
+4115. Nitrate reductase
+4116. Nitrogen fixation
+4117. Nitrogenase
+4118. Nodule
+4119. Non-disjunction
+4120. Non-histone chromosomal proteins
+4121. Non-Mendelian inheritance
+4122. Non-parental ditype
+4123. Non-recombinant
+4124. Nonsense codon
+4125. Northern blotting
+4126. Nuclear envelope
+4127. Nuclear matrix
+4128. Nuclear pore
+4129. Nuclear transfer
+4130. Nuclease
+4131. Nucleic acid
+4132. Nucleoid
+4133. Nucleolar organizer
+4134. Nucleolus
+4135. Nucleoplasm
+4136. Nucleoprotein
+4137. Nucleoside
+4138. Nucleosome
+4139. Nucleotide
+4140. Nucleus
+4141. Nullisomic
+4142. Null mutation
+4143. Nutrient
+4144. Nutrient medium
+4145. Oils
+4146. Oligonucleotide
+4147. Oncogene
+4148. Oncogenic
+4149. Oocyte
+4150. Oogenesis
+4151. Open continuous culture
+4152. Open reading frame
+4153. Operator
+4154. Operon
+4155. Organ
+4156. Organelle
+4157. Organic
+4158. Organism
+4159. Organogenesis
+4160. Origin of replication
+4161. Ornamental
+4162. Orthologous genes
+4163. Osmotic pressure
+4164. Ovary
+4165. Overhang
+4166. Overlapping genes
+4167. Ovule
+4168. Oxidation
+4169. Oxidative phosphorylation
+4170. Oxygenase
+4171. Pachytene
+4172. Palindromic sequence
+4173. Pandemic
+4174. Paralogous genes
+4175. Parasexual cycle
+4176. Parasite
+4177. Parathyroid hormone
+4178. Parental ditype
+4179. Parthenocarpy
+4180. Partial digest
+4181. Passage
+4182. Passive immunity
+4183. Pasteurization
+4184. Pathogen
+4185. Pathogenesis
+4186. Pathogenesis-related proteins
+4187. Pathogenicity
+4188. Pathotype
+4189. Penetrance
+4190. Peptide
+4191. Peptide bond
+4192. Peptidyl site
+4193. Perennial
+4194. Perfect flower
+4195. Periclinal
+4196. Pericycle
+4197. Peroxisome
+4198. Pest
+4199. Pesticide
+4200. Petiole
+4201. Phagocytosis
+4202. Phenotype
+4203. Phenotypic variance
+4204. Pheromone
+4205. Phloem
+4206. Phosphatase
+4207. Phosphodiester bond
+4208. Phospholipid
+4209. Phosphorylation
+4210. Photoperiod
+4211. Photophosphorylation
+4212. Photosynthesis
+4213. Phototropism
+4214. Phycobilin
+4215. Phylogeny
+4216. Physical map
+4217. Phytoalexin
+4218. Phytosterol
+4219. Pigment
+4220. Pilus
+4221. Pinocytosis
+4222. Pistil
+4223. Pith
+4224. Placenta
+4225. Plant
+4226. Plant breeding
+4227. Plant cell culture
+4228. Plant genetic resources
+4229. Plant variety protection
+4230. Plaque
+4231. Plasma
+4232. Plasma cell
+4233. Plasmalemma
+4234. Plasmid
+4235. Plasmodesma
+4236. Plasmogamy
+4237. Plasmolysis
+4238. Plastid
+4239. Plastoquinone
+4240. Plate
+4241. Pleiotropy
+4242. Ploidy
+4243. Plug
+4244. Point mutation
+4245. Polar body
+4246. Polar nucleus
+4247. Pollen
+4248. Pollen tube
+4249. Polyacrylamide gel electrophoresis
+4250. Polyadenylation
+4251. Polycistronic messenger ribonucleic acid
+4252. Polyclonal antibody
+4253. Polyembryony
+4254. Polygene
+4255. Polymer
+4256. Polymerase
+4257. Polymerase chain reaction
+4258. Polymorphism
+4259. Polynucleotide
+4260. Polypeptide
+4261. Polysaccharide
+4262. Polysome
+4263. Polyunsaturated fatty acid
+4264. Position effect
+4265. Positional candidate gene
+4266. Positional cloning
+4267. Positive control
+4268. Positive selection
+4269. Post-transcriptional modification
+4270. Post-translational modification
+4271. Pre-filter
+4272. Precipitation
+4273. Precursor
+4274. Prenatal diagnosis
+4275. Primary immune response
+4276. Primary meristem
+4277. Primary structure
+4278. Primer
+4279. Prion
+4280. Probe
+4281. Product
+4282. Proembryo
+4283. Proenzyme
+4284. Prokaryote
+4285. Prolactin
+4286. Promoter
+4287. Promoter gene
+4288. Proofreading
+4289. Prophage
+4290. Prophase
+4291. Proplastid
+4292. Protease
+4293. Protein
+4294. Protein engineering
+4295. Proteolysis
+4296. Proteome
+4297. Protocorm
+4298. Protoplast
+4299. Protoplast fusion
+4300. Prototroph
+4301. Protozoa
+4302. Provirus
+4303. Pseudogene
+4304. Puberty
+4305. Puff
+4306. Pulmonary
+4307. Purification
+4308. Purine
+4309. Putative
+4310. Pyrimidine
+4311. Pyrogen
+4312. Quaternary structure
+4313. Race
+4314. Radial symmetry
+4315. Radiation hybrid
+4316. Radioimmunoassay
+4317. Radioisotope
+4318. Random amplified polymorphic deoxyribonucleic acid
+4319. Reading frame
+4320. Reagent
+4321. Recalcitrant
+4322. Recessive
+4323. Reciprocal translocation
+4324. Recombinant
+4325. Recombinant deoxyribonucleic acid
+4326. Recombinant protein
+4327. Recombination
+4328. Recombination fraction
+4329. Recombinational hot spot
+4330. Recovery
+4331. Regulator gene
+4332. Regulatory sequence
+4333. Release factor
+4334. Remediation
+4335. Renaturation
+4336. Replica plating
+4337. Replication fork
+4338. Replicon
+4339. Reporter gene
+4340. Repression
+4341. Repressor
+4342. Reproduction
+4343. Reproductive cloning
+4344. Resistance
+4345. Resolution
+4346. Respiration
+4347. Response element
+4348. Resting potential
+4349. Restriction enzyme
+4350. Restriction fragment
+4351. Restriction fragment length polymorphism
+4352. Restriction map
+4353. Restriction site
+4354. Reticulocyte
+4355. Retrotransposon
+4356. Retrovirus
+4357. Reverse genetics
+4358. Reverse transcriptase
+4359. Reverse transcription
+4360. Ribonuclease
+4361. Ribonucleic acid
+4362. Ribonucleic acid editing
+4363. Ribonucleic acid polymerase
+4364. Ribonucleic acid processing
+4365. Ribose
+4366. Ribosomal binding site
+4367. Ribosomal ribonucleic acid
+4368. Ribosome
+4369. Ribozyme
+4370. Rickets
+4371. Rigor mortis
+4372. Ri plasmid
+4373. Root cap
+4374. Root culture
+4375. Root hair
+4376. Root tip
+4377. Rough endoplasmic reticulum
+4378. Round
+4379. Rous sarcoma virus
+4380. R plasmid
+4381. r-selection
+4382. Rubisco
+4383. Rust
+4384. S phase
+4385. Sacculus
+4386. Salinity
+4387. Sap
+4388. Saprophyte
+4389. Satellite
+4390. Satellite deoxyribonucleic acid
+4391. Saturation
+4392. Scale-up
+4393. Scanning electron microscope
+4394. Sclerenchyma
+4395. Screening
+4396. Secondary immune response
+4397. Secondary structure
+4398. Secretin
+4399. Secretion
+4400. Seed bank
+4401. Selectable marker
+4402. Selection coefficient
+4403. Selection pressure
+4404. Self-assembly
+4405. Self-fertilization
+4406. Self-incompatibility
+4407. Self-replication
+4408. Semen
+4409. Semi-conservative replication
+4410. Seminal
+4411. Sense strand
+4412. Sensitization
+4413. Sepal
+4414. Sequence
+4415. Sequence homology
+4416. Sequence tagged site
+4417. Sequencing
+4418. Serine
+4419. Serology
+4420. Serum
+4421. Sex chromosome
+4422. Sex determination
+4423. Sex linkage
+4424. Sex pilus
+4425. Sexual reproduction
+4426. Shoot
+4427. Shoot apex
+4428. Shoot tip culture
+4429. Short-day plant
+4430. Shotgun cloning
+4431. Shuttle vector
+4432. Sieve tube
+4433. Signal peptide
+4434. Signal recognition particle
+4435. Signal transduction
+4436. Silencing
+4437. Silent mutation
+4438. Similarity
+4439. Single cell line
+4440. Single cell protein
+4441. Single nucleotide polymorphism
+4442. Single-cell culture
+4443. Single-strand binding protein
+4444. Sink
+4445. Site-directed mutagenesis
+4446. Site-specific recombination
+4447. Slow-release
+4448. Smooth endoplasmic reticulum
+4449. Sodium dodecyl sulphate polyacrylamide gel electrophoresis
+4450. Softwood
+4451. Soma
+4452. Somatic
+4453. Somatic cell embryogenesis
+4454. Somatic cell genetics
+4455. Somatic cell hybrid panel
+4456. Somatic hybridization
+4457. Somatic mutation
+4458. Somatostatin
+4459. Southern blotting
+4460. Species
+4461. Specificity
+4462. Sperm
+4463. Spermatid
+4464. Spermatocyte
+4465. Spermatogenesis
+4466. Spermatogonium
+4467. Spheroplast
+4468. Spike
+4469. Spikelet
+4470. Spindle
+4471. Spleen
+4472. Split gene
+4473. Sporangium
+4474. Spore
+4475. Sporophyte
+4476. Sporulation
+4477. Stabilizing selection
+4478. Stacked genes
+4479. Stamen
+4480. Standard
+4481. Stem cell
+4482. Sterile
+4483. Sterility
+4484. Sterilization
+4485. Steroid
+4486. Stigma
+4487. Stock
+4488. Stolon
+4489. Stoma
+4490. Stop codon
+4491. Strain
+4492. Streptavidin
+4493. Streptomycin
+4494. Stress
+4495. Stress protein
+4496. Structural gene
+4497. Style
+4498. Sub-cloning
+4499. Sub-species
+4500. Substrate
+4501. Succession
+4502. Sucrose
+4503. Sugar
+4504. Supercoil
+4505. Superfemale
+4506. Supergene
+4507. Superinfection
+4508. Superior
+4509. Supermale
+4510. Superovulation
+4511. Suppressor
+4512. Suppressor mutation
+4513. Surrogate
+4514. Susceptibility
+4515. Suspension culture
+4516. Symbiosis
+4517. Sympatric
+4518. Sympatric speciation
+4519. Symplast
+4520. Synapsis
+4521. Synaptonemal complex
+4522. Synergid
+4523. Synergism
+4524. Synteny
+4525. Synthesis
+4526. Synthetic
+4527. Systemic
+4528. Systemic acquired resistance
+4529. T cell
+4530. T lymphocyte
+4531. T-DNA
+4532. Tandem repeat
+4533. Tap root
+4534. Target
+4535. Targeting
+4536. TATA box
+4537. Taxon
+4538. Taxonomy
+4539. T-cell-mediated immune response
+4540. Telomerase
+4541. Telomere
+4542. Telophase
+4543. Temperate
+4544. Temperature gradient gel electrophoresis
+4545. Temperature-sensitive mutant
+4546. Template
+4547. Terminalization
+4548. Termination
+4549. Terminator
+4550. Terminator gene
+4551. Terpenoid
+4552. Tertiary structure
+4553. Test tube
+4554. Testa
+4555. Testis
+4556. Testosterone
+4557. Tetracycline
+4558. Tetraploid
+4559. Tetrasomic
+4560. Thermal cycler
+4561. Thermotherapy
+4562. Thiamine
+4563. Thigmotropism
+4564. Thioredoxin
+4565. Thymidine
+4566. Thymine
+4567. Ti plasmid
+4568. Tiller
+4569. Tissue
+4570. Titre
+4571. Tolerance
+4572. Toxin
+4573. Trans configuration
+4574. Trans test
+4575. Transcript
+4576. Transcription
+4577. Transcriptional control
+4578. Transcriptome
+4579. Transduction
+4580. Transfection
+4581. Transfer ribonucleic acid
+4582. Transferase
+4583. Transformation
+4584. Transgene
+4585. Transgenesis
+4586. Transgenic
+4587. Translation
+4588. Translational control
+4589. Translocation
+4590. Transmissible
+4591. Transmission
+4592. Transposable element
+4593. Transposase
+4594. Transposition
+4595. Transposon
+4596. Transposon tagging
+4597. Triploid
+4598. Tris buffer
+4599. Trisomic
+4600. Tritium
+4601. Trophic level
+4602. Trophoblast
+4603. True breeding
+4604. Trypsin
+4605. Tuber
+4606. Tumor suppressor gene
+4607. Tumorigenesis
+4608. Turgor
+4609. Twin
+4610. Two-dimensional gel electrophoresis
+4611. Uracil
+4612. Urea
+4613. Urethane
+4614. Uridine
+4615. Uridine triphosphate
+4616. Vaccination
+4617. Vaccine
+4618. Vacuole
+4619. Vagina
+4620. Validation
+4621. Valine
+4622. Van der Waals force
+4623. Variable expressivity
+4624. Variable number tandem repeat
+4625. Variable region
+4626. Variance
+4627. Variant
+4628. Variation
+4629. Variegation
+4630. Variety
+4631. Vascular
+4632. Vascular bundle
+4633. Vascular cambium
+4634. Vector
+4635. Vegetative
+4636. Vegetative cell
+4637. Vegetative propagation
+4638. Vein
+4639. Vermiculite
+4640. Vernalization
+4641. Vessel
+4642. Viability
+4643. Viable
+4644. Viral
+4645. Virion
+4646. Viroid
+4647. Virulence
+4648. Virus
+4649. Virus-free
+4650. Vitamin
+4651. Vitrification
+4652. Vivipary
+4653. Volatile
+4654. W chromosome
+4655. Wall
+4656. Wax
+4657. Western blotting
+4658. Wet weight
+4659. Wild type
+4660. Wilt
+4661. Wood
+4662. Wound
+4663. Wound hormone
+4664. Wound response
+4665. X chromosome
+4666. X-ray
+4667. X-ray crystallography
+4668. Xanthophyll
+4669. Xenia
+4670. Xenograft
+4671. Xenotransplantation
+4672. Xerophyte
+4673. Xylem
+4674. Y chromosome
+4675. Yeast
+4676. Yield
+4677. Yolk
+4678. Z scheme
+4679. Zeatin
+4680. Zebra
+4681. Zero
+4682. Zeta potential
+4683. Zinc
+4684. Zinc finger
+4685. Zona pellucida
+4686. Zoo
+4687. Zoology
+4688. Zygote
+4689. Zygotene
+4690. Zymogram
+4691. Environment
+4692. Cultivation
+4693. Breeding Method
+4694. Bioinformatics
+4695. Gene ID or Accession Number
+4696. Species/Host
+4697. Family
+4698. Protein Family/Domain
+4699. Encoded Protein
+4700. Subcellular Localization
+4701. Gene Name
+4702. Pathogen Name
+4703. Pathogen Type
+4704. Disease Caused
+4705. Physiological Race/Isolate for Research
+4706. Upstream Gene
+4707. Upstream Regulation Mode and Direction
+4708. Downstream Target Gene
+4709. Downstream Regulation Mode and Direction
+4710. Interacting Protein
+4711. Interaction Mode and Functional Impact
+4712. Regulation/Interaction Validation Method
+4713. Molecular Mechanism of Action
+4714. Tissue Expression Specificity
+4715. Genetic Origin/Evolutionary Mechanism
+4716. Superior Haplotype in Natural Population
+4717. Superior Haplotype Frequency
+4718. QTLs or GWAS Region
+4719. Natural Variation
+4720. Distal Regulation
+4721. Epigenetic Modification
+4722. Overexpression
+4723. Superior Allele
+4724. microRNA
+4725. PTI/ETI
+4726. Type of Disease Resistance Mechanism
+4727. Genome-Wide Association Study (GWAS)
+4728. Genomic Selection
+4729. Copy Number Variation (CNV)
+4730. Structural Variation (SV)
+4731. Genome Rearrangement
+4732. Near-Isogenic Line (NIL)
+4733. Recombinant Inbred Line (RIL)
+4734. Marker Density
+4735. Marker Effect Estimation
+4736. Genotype Imputation
+4737. Haplotype Analysis
+4738. Pedigree Reconstruction
+4739. Functional Enrichment Analysis
+4740. Pathway Analysis
+4741. Gene Co-expression Network
+4742. Regulatory Network Analysis
+4743. Linkage Analysis
+4744. Comparative Gene
+4745. Gene Editing (CRISPR/Cas)
+4746. Gene Drive
+4747. Synthetic Biology
+4748. High-Throughput Sequencing
+4749. Long-Read Sequencing
+4750. Single-Cell Sequencing
+4751. Gene Sequence
+4752. Gene Expression Level
+4753. Gene Mutation
+4754. Gene Polymorphism
+4755. Gene Copy Number
+4756. Gene Regulatory Network
+4757. Gene Function Annotation
+4758. Genome Variation
+4759. Promoter Activity
+4760. Intron Splicing
+4761. Exon Sequence
+4762. Non-coding Region
+4763. Chromosome Structure
+4764. Gene Mapping
+4765. Recombination Frequency
+4766. Gene Flow
+4767. Neutral Evolution
+4768. Gene Duplication
+4769. Gene Cloning Method
+4770. Genome Corresponding to Gene ID
+4771. Phenotype Classification
+4772. Gene-Phenotype Relationship
+4773. Pleiotropy and Trait Trade-off
+4774. Core Functional Validation Method
+4775. Key Discovery Method
+4776. Disease Resistance Trait
+4777. Evaluation
+4778. Phenotyping Method
+4779. Field Experiment Conducted
+4780. Field Experiment Location
+4781. Phenotypic Plasticity Index
+4782. Phenotypic Stability Parameter
+4783. Phenotypic Prediction Model
+4784. Nutritional Quality
+4785. Protein Content
+4786. Amino Acid Composition
+4787. Fatty Acid Composition
+4788. Vitamin Content
+4789. Mineral Content
+4790. Starch Properties
+4791. Gluten Properties
+4792. Fiber Quality
+4793. Grain Size
+4794. Shape Trait
+4795. Color Trait
+4796. Glossiness
+4797. Yield Trait
+4798. Quality Trait
+4799. Resistance Trait
+4800. Morphological Trait
+4801. Physiological Trait
+4802. Biochemical Trait
+4803. Developmental Trait
+4804. Adaptive Trait
+4805. Stress Tolerance Trait
+4806. Nutrient Content
+4807. Metabolite
+4808. Enzyme Activity
+4809. Hormone Level
+4810. Cell Wall Composition
+4811. Chlorophyll Content
+4812. Root Trait
+4813. Stem Trait
+4814. Leaf Trait
+4815. Floral Trait
+4816. Fruit Trait
+4817. Seed Trait
+4818. Growth Rate
+4819. Flowering Time
+4820. Dormancy Trait
+4821. Nitrogenase Activity
+4822. Nodule Size
+4823. Nodule Number
+4824. Nodulation
+4825. Symbiotic Nitrogen Fixation
+4826. Associative Nitrogen Fixation
+4827. High Protein
+4828. High Starch
+4829. High Oil
+4830. Superior Amino Acid
+4831. Insect Resistance
+4832. Disease Resistance
+4833. Saline-Alkali Tolerance
+4834. Heat Tolerance
+4835. Drought Tolerance
+4836. Environmental Response
+4837. Ear Rot Resistance
+4838. High Density Tolerance
+4839. High Combining Ability
+4840. Developmental Stage/Tissue/Treatment Condition
+4841. Resistance Donor/Susceptible Parent
+4842. Region
+4843. Ontology Label
+4844. Sample Source
+4845. Phenotypic Plasticity
+4846. Abiotic Stress
+4847. Drought Stress
+4848. Salt Stress
+4849. Temperature Stress
+4850. Light Stress
+4851. Heavy Metal Stress
+4852. pH Stress
+4853. Pest Stress
+4854. Weed Competition
+4855. Pest and Disease Pressure
+4856. Climate Change Factor
+4857. CO2 Concentration
+4858. Extreme Weather
+4859. Seasonal Variation
+4860. Temperature Condition
+4861. Humidity Condition
+4862. Light Intensity
+4863. Soil Type
+4864. pH Level
+4865. Salt Content
+4866. Heavy Metal Content
+4867. Water Condition
+4868. Altitude
+4869. Latitude
+4870. Microbial Community
+4871. Symbiotic Relationship
+4872. Competitive Relationship
+4873. Predatory Relationship
+4874. Pollinator
+4875. Transmission Route
+4876. Niche
+4877. Food Chain
+4878. Energy Flow
+4879. Material Cycle
+4880. Ecological Stability
+4881. Soil NPK Nutrient Content
+4882. Sampling Method
+4883. Sampling Location
+4884. Breeding Application Direction
+4885. Breeding Application Validation
+4886. Breeding Application Potential (10-point scale)
+4887. Germplasm Evaluation
+4888. Transgenic Receptor Material
+4889. Genetic Population Type
+4890. Cultivation
+4891. Nutrition
+4892. Key Regulated Metabolite
+4893. Metabolite ID or Classification Number
+4894. Annotated Metabolic Pathway
+4895. Enzyme Kinetics Parameters
+4896. Metabolite Content
+4897. Metabolite Function
+4898. Breeding Model/Platform
+4899. Resource ID
+4900. Population Type
+4901. Planting Depth
+4902. Row Spacing Configuration
+4903. Fertilization Scheme
+4904. Irrigation Regime
+4905. Field Management
+4906. Harvest Time
+4907. Storage Condition
+4908. Seed Treatment
+4909. Crop Rotation System
+4910. Intercropping Pattern
+4911. Mulching Method
+4912. Pruning Technique
+4913. Grafting Technique
+4914. Rapid Propagation
+4915. Germplasm Preservation
+4916. Parent Selection
+4917. Cross-Testing
+4918. Combining Ability Test
+4919. Heritability Estimation
+4920. Conventional Breeding Methods
+4921. Modern Molecular Breeding Techniques
+4922. Ploidy Breeding Techniques
+4923. Mutagenesis Breeding Techniques
+4924. Germplasm Resource Management
+4925. Population Genetics Basics
+4926. Breeding Population Construction
+4927. Conventional Breeding
+4928. Backcross Breeding
+4929. Selfing Breeding
+4930. Distant Hybridization
+4931. Heterosis
+4932. Combining Ability Analysis
+4933. Single Seed Descent
+4934. Second Cycle Line Breeding
+4935. Marker-Assisted Selection (MAS)
+4936. Molecular Breeding
+4937. Digital Breeding
+4938. Precision Breeding
+4939. Smart Breeding
+4940. Accelerated Breeding
+4941. Gene Editing
+4942. Cell Breeding
+4943. Chromosome Engineering
+4944. Radiation Breeding
+4945. Chemical Mutagenesis
+4946. Laser Breeding
+4947. Ion Beam Breeding
+4948. Plasma Breeding
+4949. Ultrasonic Breeding
+4950. Magnetic Field Breeding
+4951. Germplasm Supplementation
+4952. Exotic Germplasm
+4953. Farmer's Variety
+4954. Effective Population Size
+4955. Population Differentiation Index (Fst)
+4956. Nucleotide Diversity (π)
+4957. F2 Population
+4958. Doubled Haploid Population
+4959. Permanent F2 Population
+4960. Single Segment Substitution Lines (SSSLs)
+4961. Nested Association Mapping (NAM) Population
+4962. Multi-parent Advanced Generation Inter-Cross (MAGIC) Population
+4963. Breeding Accelerator
+4964. Generation of Germplasm Material
+4965. Basic Bioinformatics Concepts
+4966. Gene and Transcriptome Information
+4967. Proteomics Information
+4968. Functional Annotation and Ontology
+4969. Metabolomics Information
+4970. Epigenetics Information
+4971. Bioinformatics Knowledge Annotation Type
+4972. Research Conclusion / Inference Statement (Conclusion Semantics)
+4973. Sequencing Platform
+4974. Library Construction Method
+4975. Data Processing Method
+4976. Chromatin Accessibility
+4977. Chromatin Conformation (Hi-C)
+4978. Open Chromatin Region (OCR)
+4979. Topologically Associating Domain (TAD)
+4980. Chromatin Loop
+4981. Chromatin Compartment (A/B compartment)
+4982. Cis-regulatory Element
+4983. Trans-acting Factor
+4984. Chromatin Interaction
+4985. Methylation Modification
+4986. Histone Modification
+4987. Genome Version, Storage Location
+4988. Genome Assembly Method
+4989. Genome Annotation Method
+4990. Structural Variation Detection Between Genomes
+4991. Chromosome Structure Partitioning
+4992. Centromere Analysis
+4993. Telomere Analysis
+4994. Genome Annotation Result
+4995. Sequencing Data for Assembled Genome
+4996. Transcriptome Raw Data Storage Location
+4997. Transcriptome Alignment Genome Version
+4998. Differentially Expressed Genes and Identification Method
+4999. Co-expression Network
+5000. Functional Enrichment
+5001. Data Type
+5002. Sample Source (Species, Experimental Treatment, Sampling Tissue)
+5003. General Biological Principles
+5004. Conclusions on Specific Biological Questions
+5005. Upstream/Downstream Regulation
+5006. Paper Logic
+5007. Problem/Question
+5008. Experimental Method
+5009. Data Processing
+5010. Direct Inference Conclusion
+5011. Indirect Inference Conclusion
+5012. Relationship Between Results (Parallel, Upstream/Downstream)
+5013. Regulated Phenotype
+5014. Basic Concepts of Cultivation and Breeding
+5015. Breeding Theory and Application
+5016. Genetic Breeding Technology
+5017. Cultivation Techniques and Field Management
+5018. Cropping Systems and Patterns
+5019. Propagation Techniques
+5020. Metabolism and Biochemical Analysis
+5021. Planting Region
+5022. Planting Area
+5023. Breeding Objective
+5024. Basic Gene Information and Annotation
+5025. Gene Structure and Sequence Features
+5026. Protein and Molecular Structure
+5027. Gene Expression and Regulation
+5028. Interactions and Pathways/Mechanisms
+5029. Genetic Variation and Polymorphism
+5030. Population Genetics and Evolution
+5031. Genetic Analysis and Mapping (including Location/Map/Metrics)
+5032. Breeding and Genetic Improvement
+5033. Plant Pathology and Samples/Materials
+5034. Bioinformatics and Data Analysis (Workflow)
+5035. Evidence and Provenance
+5036. Annotation Item
+5037. Data Source
+5038. Intron Splicing/Alternative Splicing
+5039. Gene Structure Annotation GFF
+5040. Chromosomal Structural Location of Gene (Arm/Centromere, etc.)
+5041. Gene Location Corresponding to Protein Domain
+5042. Base Content
+5043. Gene Fusion
+5044. Encoded Protein Sequence
+5045. Protein 3D Structure
+5046. Key Amino Acid Site
+5047. Small Peptide / microPeptide / smallPeptide
+5048. Expression Modification State/Site
+5049. Gene Expression Location
+5050. Gene Expression Location Mapping Method
+5051. RNAi
+5052. Protein-Protein Interaction
+5053. Protein-DNA Interaction
+5054. PTI/ETI (Pattern-Triggered/Effector-Triggered Immunity)
+5055. Allelic Variation Type
+5056. SNP (Single Nucleotide Polymorphism)
+5057. InDel (Insertion/Deletion Marker)
+5058. Copy Number Variation (CNV)
+5059. Structural Variation (SV)
+5060. Sequence/Structural Variation
+5061. SSR (Simple Sequence Repeat)
+5062. Linkage Disequilibrium (LD)
+5063. Population Diversity
+5064. Gene/Genotype Frequency
+5065. Selective Sweep Region
+5066. Highly Differentiated Region Between Populations
+5067. Gene Physical Location
+5068. QTLs or GWAS Region
+5069. Genome-Wide Association Study (GWAS)
+5070. TWAS
+5071. Genetic Map
+5072. Physical Map
+5073. Genomic Selection
+5074. Tag SNP
+5075. Polymorphism Information Content (PIC)
+5076. Chromosome Segment Substitution Line (CSSL)
+5077. Near-Isogenic Line (NIL)
+5078. Recombinant Inbred Line (RIL)
+5079. Molecular Marker Breeding
+5080. Vector Backbone
+5081. Sampling Material/Time/Part/Treatment
+5082. Alignment
+5083. Genome Annotation
+5084. Genome Assembly
+5085. Genome Comparative Analysis
+5086. Synteny Analysis
+5087. Phylogenetic Tree Construction
+5088. Function/Structure Prediction
+5089. Evidence Code (ECO)
+5090. Data Link (SRA/GEO/ENA/AE)
+5091. Germplasm Level Information
+5092. Single Gene Level Information
+5093. Genome Level Information
+5094. Basic Concepts and Theories of Phenotype
+5095. Phenotype Research Methods and Technologies
+5096. High-Throughput Phenotyping Technologies
+5097. Phenotype Ontology and Data Standardization
+5098. Agronomic Traits and Yield Quality
+5099. Resistance and Adaptive Traits
+5100. Nutritional Quality and Biochemical Composition
+5101. Morphological Traits and Organ Characteristics
+5102. Physiological and Biochemical Traits
+5103. Developmental and Temporal Traits
+5104. Gene-Trait Influence
+5105. High-Throughput Technology
+5106. High-Throughput Phenotyping
+5107. Image-Based Phenotyping
+5108. Spectral Phenotyping
+5109. Phenotype Ontology ID
+5110. Structural Part
+5111. Ontology Mapping
+5112. Seeds per Pod
+5113. Kernels per Row
+5114. 100-Grain Weight
+5115. Ear Weight / Kernel Weight per Ear
+5116. Grain Weight per Plant
+5117. Plot Yield
+5118. Test Weight
+5119. Ear Length / Ear Width / Kernel Rows per Ear
+5120. Adaptive Trait
+5121. Insect Resistance / Disease Resistance / Ear Rot Resistance
+5122. Drought Tolerance / Saline-Alkali Tolerance / Heat Tolerance
+5123. Disease Name (Controlled Vocabulary)
+5124. Aspergillus Ear Rot
+5125. Black Ear Rot
+5126. Black Kernel Rot
+5127. Sarocladium Ear Rot
+5128. Charcoal Ear Rot
+5129. Cladosporium Ear Rot
+5130. Common Smut
+5131. Ergot
+5132. False Smut
+5133. Fusarium Ear Rot / Pink Ear Rot
+5134. Gibberella Ear Rot / Red Ear Rot
+5135. Gray Ear Rot
+5136. Head Smut
+5137. Nigrospora Ear Rot / Dry Ear Rot
+5138. Penicillium Ear Rot
+5139. Red Kernel Disease
+5140. Rhizoctonia Ear Rot
+5141. Rhizopus Ear Rot
+5142. Sclerotium Ear Rot
+5143. Microdochium Ear Rot
+5144. Shuck Rot
+5145. Trichoderma Ear Rot
+5146. Trichothecium Ear Rot
+5147. Fatty Acid Composition / Oil Content
+5148. Starch Content / Starch Properties
+5149. (Derived Labels: High Protein / High Oil / High Starch / Superior Amino Acid)
+5150. Shape Trait / Color Trait / Glossiness
+5151. Plant Height
+5152. Leaf Angle
+5153. Ear Height
+5154. Ear Tipping
+5155. Husk Layer Number
+5156. Leaf Number
+5157. Cob Diameter / Cob Length / Cob Weight
+5158. Tassel Main Axis Length / Branch Number
+5159. Growth Stages (Emergence/Jointing/Tasseling/Silking/Pollination/Initial Flowering/Full Flowering/Grain Filling/Milk Stage/Dough Stage/Maturity)
+5160. Upstream/Downstream Regulatory Relationships and Evidence
+5161. Phenotype is spatiotemporally specific, a time-series, a phenotypic cycle from seed to seed, at different times
+5162. Basic Environmental Concepts and Classification
+5163. Experimental Design and Condition Control
+5164. Abiotic Stress Environment
+5165. Biotic Stress Environment
+5166. Climate and Atmospheric Environment
+5167. Soil Environment
+5168. Geographical and Spatial Environment
+5169. Biological Communities and Ecological Relationships
+5170. Ecosystem Function
+5171. Economic Impact
+5172. Stress Type
+5173. CO₂ Concentration
+5174. Heterosis
+5175. Maize Supplement
+5176. Soybean Database
+5177. Plant Database
+5178. Plant Comparative Genomics
+5179. Arabidopsis Phenotype Database
+5180. Legume Genomics Research Platform
+5181. Metabolomics Database
+5182. Public Database
+5183. Plant Nitrogen Fixation Phenotype Database
+5184. Transcription Factor Database
+5185. Published Plant Genomes Summary
+5186. Legume Database
+5187. Paddy
+5188. African Rice
+5189. Spelt Wheat
+5190. Highland Barley
+5191. Maize
+5192. Grain Corn
+5193. High-Lysine Corn
+5194. Rapeseed
+5195. Peanut
+5196. Sunflower Seed
+5197. Potato
+5198. Sweet Potato
+5199. Yam
+5200. Hops
+5201. Arabidopsis thaliana
+5202. Tomato
+5203. Cherry Tomato
+5204. Cucumber
+5205. Pumpkin / Squash
+5206. Bell Pepper
+5207. Chinese Cabbage
+5208. Pak Choi
+5209. Cabbage
+5210. Cabbage
+5211. Broccoli
+5212. Lettuce
+5213. Daikon
+5214. Pear
+5215. Table Grape
+5216. Citrus
+5217. Orange
+5218. Mandarin Orange
+5219. Blueberry
+5220. Mango
+5221. Orchid
+5222. Carnation
+5223. Pig / Swine / Hog
+5224. Domestic Pig
+5225. Wild Boar
+5226. Duroc
+5227. Landrace
+5228. Large White
+5229. Hampshire
+5230. Pietrain
+5231. Meishan Pig
+5232. Erhualian Pig
+5233. Rongchang Pig
+5234. Bama Xiang Pig
+5235. F1 Crossbred Pig
+5236. Three-way Crossbred Pig
+5237. Cattle / Bovine
+5238. Yellow Cattle
+5239. Dairy Cattle
+5240. Beef Cattle
+5241. Dual-Purpose Cattle
+5242. Yak
+5243. Water Buffalo
+5244. Holstein
+5245. Jersey
+5246. Guernsey
+5247. Angus
+5248. Hereford
+5249. Simmental
+5250. Limousin
+5251. Charolais
+5252. Wagyu
+5253. Qinchuan Cattle
+5254. Luxi Cattle
+5255. Nanyang Cattle
+5256. Sheep / Goat
+5257. Sheep
+5258. Goat
+5259. Small-tailed Han Sheep
+5260. Hu Sheep
+5261. Tan Sheep
+5262. Mongolian Sheep
+5263. Tibetan Sheep
+5264. Merino
+5265. Dorper
+5266. Suffolk
+5267. Texel
+5268. Boer Goat
+5269. Saanen Goat
+5270. Alpine Goat
+5271. Nubian Goat
+5272. Cashmere Goat
+5273. Liaoning Cashmere Goat
+5274. Inner Mongolia Cashmere Goat
+5275. Horse
+5276. Domestic Horse
+5277. Mongolian Horse
+5278. Arabian Horse
+5279. Thoroughbred
+5280. Warmblood
+5281. Donkey / Ass
+5282. Mule
+5283. Camel
+5284. Bactrian Camel
+5285. Dromedary Camel
+5286. Alpaca
+5287. Llama
+5288. Chicken
+5289. Domestic Chicken
+5290. Layer Chicken
+5291. Broiler Chicken
+5292. Yellow-feathered Chicken
+5293. White-feathered Chicken
+5294. 817 Broiler
+5295. Indigenous Chicken Breed
+5296. White Leghorn
+5297. Rhode Island Red
+5298. Cornish
+5299. White Plymouth Rock
+5300. Beijing You Chicken
+5301. Langshan Chicken
+5302. Silkie
+5303. Duck
+5304. Peking Duck
+5305. Shaoxing Duck
+5306. Jinding Duck
+5307. Gaoyou Duck
+5308. Cherry Valley Duck
+5309. Muscovy Duck
+5310. Goose
+5311. Lion-head Goose
+5312. Taihu Goose
+5313. Huoyan Goose
+5314. Landes Goose
+5315. Turkey
+5316. Pigeon / Dove
+5317. Quail
+5318. Ostrich
+5319. Partridge
+5320. Honey Bee
+5321. Chinese Honey Bee
+5322. Italian Honey Bee
+5323. Silkworm
+5324. Mulberry Silkworm
+5325. Tussah Silkworm
+5326. Mouse / Rat
+5327. Rat
+5328. Laboratory Mouse / Rat
+5329. House Mouse
+5330. C57BL/6 Mouse
+5331. BALB/c Mouse
+5332. ICR Mouse
+5333. NOD Mouse
+5334. Sprague-Dawley (SD) Rat
+5335. Wistar Rat
+5336. Fischer 344 Rat
+5337. Guinea Pig
+5338. Hamster
+5339. Syrian Hamster
+5340. Golden Hamster
+5341. Chinese Hamster
+5342. Rabbit
+5343. New Zealand White Rabbit
+5344. Japanese White Rabbit
+5345. Chinchilla Rabbit
+5346. Dog
+5347. Beagle
+5348. Cat
+5349. Non-human Primate
+5350. Rhesus Macaque
+5351. Cynomolgus Monkey / Crab-eating Macaque
+5352. Zebrafish
+5353. African Clawed Frog
+5354. Caenorhabditis elegans (C. elegans)
+5355. Human
+5356. Human
+5357. Homo sapiens
+5358. Case
+5359. Control
+5360. Healthy Control
+5361. Individual
+5362. Sample
+5363. Blood Sample
+5364. Tissue Sample
+5365. Disease
+5366. Cancer
+5367. Balaenoptera musculus
+5368. Macaca mulatta
+5369. Canis lupus familiaris
+5370. Loxodonta africana
+5371. Ursus thibetanus
+5372. Ailuropoda melanoleuca
+5373. Panthera leo
+5374. Panthera tigris

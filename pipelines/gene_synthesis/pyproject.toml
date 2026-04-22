@@ -1,0 +1,12 @@
+[project]
+name = "gene-synthesis"
+version = "1.0.0"
+description = "Gene literature QA generation from Neo4j + LLM"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.65.0",
+]

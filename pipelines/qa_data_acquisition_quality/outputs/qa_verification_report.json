@@ -1,0 +1,14 @@
+{
+  "total_qa_pairs": 4,
+  "valid_verifications": 4,
+  "passing_rate": 1.0,
+  "average_scores": {
+    "accuracy": 5.0,
+    "relevance": 5.0,
+    "completeness": 5.0,
+    "clarity": 4.95,
+    "total": 5.0
+  },
+  "passing_count": 4,
+  "failing_count": 0
+}

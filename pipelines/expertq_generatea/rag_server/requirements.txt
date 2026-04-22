@@ -1,0 +1,11 @@
+# Bio RAG Server dependencies
+# Uses Biopython Entrez for PubMed search - no Elasticsearch required
+
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+loguru>=0.7.0
+httpx>=0.25.0
+requests>=2.31.0
+biopython>=1.81
+python-dotenv>=1.0.0

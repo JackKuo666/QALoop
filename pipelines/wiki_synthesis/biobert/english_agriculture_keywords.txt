@@ -1,0 +1,5565 @@
+agriculture
+primitive agriculture
+ancient agriculture
+traditional agriculture
+modern agriculture
+blue agriculture
+extensive agriculture
+intensive agriculture
+natural agriculture
+inorganic agriculture
+organic agriculture
+characteristic agriculture
+export-oriented agriculture
+contract farming
+multifunctional agriculture
+nutrition sensitive agriculture
+ecological agriculture
+sustainable agriculture
+green agriculture
+multi-storied agriculture
+protected agriculture
+industrialized farming
+irrigation farming
+dryland farming
+rainfed farming
+mountain farming
+grassland farming
+plateau agriculture
+suburban farming
+urban agriculture
+precision agriculture
+digital agriculture
+smart agriculture
+low-carbon agriculture
+creative agriculture
+agritourism
+crop
+root
+stem
+leaf
+flower
+fruit
+pericarp
+seed
+grain crop
+economic crop
+horticultural crop
+aquatic crop
+vegetable crop
+fiber crop
+bast fiber crop
+sugar crop
+oil-bearing crop
+aromatic crop
+spice crop
+dye crop
+medicinal crop
+tropical crop
+field crop
+protected crop
+annual crop
+perennial crop
+spring sown crop
+summer sown crop
+autumn sown crop
+summer harvesting crop
+autumn harvesting crop
+overwintering crop
+drought tolerant crop
+waterlogging tolerant crop
+salt tolerant crop
+pioneer crop
+cover crop
+tuber crop
+root crop
+food crop
+feed crop
+industrial crop
+green manure crop
+nitrogen-fixing crop
+farmland
+high yield farmland
+medium-low yield field
+well-facilitated farmland
+permanent basic farm
+paddy land
+dryland
+grainfield
+vegetable fields
+orchard
+forest land
+grassland
+rubble land
+terrace
+dam field
+flat dam field
+platform
+reserve farmland
+black soil land
+red and yellow soil
+irrigated land
+saline-alkali land
+agronomy
+basic agronomy
+crop science
+horticulture
+pomology, fruit science
+vegetable science
+agricultural biology
+plant protection
+agricultural entomology
+plant pathology
+crop genetics
+principles of crop breeding
+crop morphology
+crop physiology
+crop ecology
+crop cultivation and geoponics
+herbology
+agro-environmentology
+agro-edaphology
+agricultural ecology
+agricultural microbiology
+agricultural phenology
+agricultural physics
+agricultural chemistry
+agricultural meteorology
+agricultural water conservancy
+agricultural geography
+agricultural engineering science
+agricultural machinery science
+crop seed science
+agricultural information
+bioinformatics
+agricultural information analytics
+agricultural modeling
+agricultural system engineering
+agricultural regional planning
+agricultural regional development
+management of agricultural economy
+agricultural economics
+rural economics
+rural finance
+agricultural statistics
+rural public finance
+rural demography
+rural sociology
+rural cooperative economics
+agricultural technology economics
+agricultural extension
+agribusiness operation and management
+agricultural insurance
+agricultural informatics
+Twenty-Four Solar Terms
+Beginning of Spring
+First Rainfall
+Hibernator Awakening
+Spring Equinox
+Fresh Green
+Grain Rain
+Beginning of Summer
+Approaching Fullness
+Harvesting and Sowing
+Summer Solstice
+Minor Heat
+Major Heat
+Beginning of Autumn
+Heat Withdraws
+White Dew
+Autumnal Equinox
+Cold Dew
+First Frost
+Beginning of Winter
+First Snow
+First Snow Cover
+Winter Solstice
+Minor Cold
+Major Cold
+agricultural test
+field trial
+test site
+test region
+experimental design
+experimental plot
+treatment
+control test
+comparative test
+varietal yield test
+split-plot test
+regional test
+duplicate tests
+block
+randomized block
+plot arrangement
+systematic arrangement
+randomized arrangement
+marginal effect
+stochastic model
+fixed model
+mixed model
+mathematical simulation
+law of chance
+background survey
+agronomic character
+agricultural resources
+virtual agricultural resources
+agricultural planning
+agricultural zoning
+agriculture industrial park
+agriculture demonstration zone
+agriculture park
+agricultural mechanization
+agricultural industrialization
+agriculture informatization
+agricultural modernization
+agricultural engineering
+agriculture infrastructure
+agricultural science and technology innovation
+agrotechnology popularization
+agriculture products
+agricultural inputs
+agriculture products supply and demand
+food security
+food quantitative security
+food qualitative security
+food nutritional security
+agricultural risk
+agrobiodiversity
+ecosystem of cropland
+arable land red line
+ecological compensation for cultivated land
+green development of agriculture
+carbon cycle
+nitrogen cycle
+water cycle
+agricultural management entity
+agricultural Cooperation Organization
+rural land transfer
+farming system
+rural revitalization
+agricultural cultural heritage
+cereal crop
+rice
+wild rice
+common wild rice
+Medicinal wild rice
+wild rice with warts
+cultivated rice
+Asian cultivated rice
+African cultivated rice
+deep water rice
+floating rice
+aerobic rice
+early rice
+semilate rice
+late rice
+single cropping rice
+double cropping rice
+ratoon rice
+perennial rice
+hsien rice
+keng rice
+glutinous rice
+hybrid rice
+three-line hybrid rice
+two-line hybrid rice
+transplanting rice
+direct-seeding rice
+wheat
+einkorn wheat
+emmer wheat
+turgidum wheat
+durum wheat
+timopheevi wheat
+spelt wheat
+club wheat
+common wheat
+winter wheat
+spring wheat
+hard wheat
+soft wheat
+strong gluten wheat
+medium gluten wheat
+weak gluten wheat
+waxy wheat
+colored-grain wheat
+barley, Hordeum vulgare (L.) Bowden
+two-rowed barley
+intermedium barley
+multi-rowed barley
+hulled barley
+naked barley
+malting barley
+rye, Secale cereale L.
+triticale, Secale sylvestre Host
+oat, Avena sativa L.
+hulled oat
+naked oat
+corn, maize
+flint corn
+dent corn
+semi dent corn
+pop corn
+sweet corn
+waxy corn
+sweet plus waxy corn
+soft corn
+high oil corn
+baby corn
+spring corn
+summer corn
+hybrid corn
+mechanical grain harvesting corn
+silage corn
+sorghum, Sorghum bicolor (L.) Moench
+glutinous sorghum
+sweet sorghum
+hybrid sorghum
+millet, foxtail millet
+pearl millet
+broomcorn millet
+finger millet
+job's tears
+buckwheat, Fagopyrum esculentum Moench
+tartary buckwheat
+common buckwheat
+winged buckwheat
+rice buckwheat
+quinoa, Chenopodium quinoa Willd.
+white quinoa
+red quinoa
+black quinoa
+grain amaranth
+legume crops
+soybean
+wild soybean
+semi-wild soybean
+cultivated soybean
+spring soybean
+summer soybean
+yellow soybean
+black soybean
+broad bean
+pea, Pisum sativum L.
+pink-flowered pea
+pink-flowered pea
+mung bean
+red bean
+bean, kidney bean
+cowpea
+lentil, Lens culinaris Medic.
+lupine, Lupinus micranthus Guss.
+rice bean
+chickpea, Cicer arietinum Linn
+velvet bean
+lima bean
+pigeonpea, Cajanus cajan (Linn.) Millsp.
+root and tuber crops
+potato, Solanum tuberosum L.
+sweet potato
+common yam
+winged yam
+yambean
+dasheen
+leopard-palm, Amorphophallus rivieri Durieu
+jerusalemartichoke, Helianthus tuberosus L.
+fragrant taro
+forage crop of legume family
+pinto peanut
+erect milkvetch
+sweetclover-like milkvetch
+Chinese milkvetch
+intermediate peashrub
+korshinskii peashrub
+microphylla peashrub
+Cassia nictitans (L.) Moench
+roundleaf sensitive pea
+butterfly pea
+crown vetch
+zarzabacoa galana
+east goatsrue
+wild soybean
+himalaya Kudzu
+shrubby sweetvetch
+smooth shrubby sweetvetch
+slenderbranch sweetvetch
+pink-flower indigo
+bicolor bush clover
+dahurian bushclover
+rush bushclover
+beautiful bushclover
+white leadtree
+baines lotononis
+purple bean
+horse gram, Macrotyloma uniflorum (Lam.) Verdc.
+sickle alfalfa
+black medick
+burclover, Medicago polymorpha L.
+alfalfa, Medicago sativa L.
+variegated alfalfa
+ruthenia medic
+white sweet clover
+yellow sweet clover
+velvetbean, Mucuna pruriens (L.) DC.
+sainfoin, Onobrychis viciaefolia Scop.
+Oxytropis caerulea (Pall.) DC.
+kudzu
+tropical kudzu
+emperor's candlesticks
+vetchleaf sophora
+stylo, Stylosanthes guianensis (Aubl)Sw.
+caribbean stylo
+shrubby stylo
+white tephrosia
+crimson clover
+wild clover
+red clover
+white clover
+broadleaf vetch
+ribbed vetch
+bird vetch
+oriental vetch
+common vetch
+narrowleaved vetch
+two-leaved vetch
+winter vetch
+forage crop of grass family
+far east achnatherum
+crested wheatgrass
+hybrid wheatgrass
+desert wheatgrass
+michno wheatgrass
+Mongolian wheatgrass
+digitate goldenbeard
+palisade signalgrass
+decumbent signalgrass
+Brachiaria dictyoneura (Fig. & De Not.) Stapf
+palisade grass
+rescuegrass, Bromus catharticus Vahl.
+fringed bromegrass
+smooth bromegrass
+awnless cleistogenes
+bermudagrass, Cynodon dactylon (Linn.) Pers.
+orchardgrass, Dactylis glomerata L.
+barnyardgrass, Echinochloa crus-galli (L.) Beauv.
+shortawn wildryegrass
+drooping wildryegrass
+Siberian wildryegrass
+quackgrass, Elytrigia repens (Linn.) Nevski
+maire lovegrass
+teosinte, Euchlaena mexicana Schrad.
+tall fescue
+Chinese fescue
+south-western helictotrichon
+compressed hemarthria
+common velvetgrass
+thoroldiana, Kengyilia thoroldiana (Oliver) J.L. Yang et al.
+rigidula, Kengyilia rigidula (Keng) J.L. Yang et al.
+sheepgrass, Leymus chinensis (Trin.) Tzvel.
+pabo leymus
+festulolium, Lolium perenne ×Festuca arundinacea
+Italian ryegrass
+perennial ryegrass
+molassesgrass, Melinis minutiflora Beauv.
+guineagrass, Panicum maximum Jacq.
+ditch millet
+vasey's grass
+Chinese fountaingrass
+pearl millet
+pennisetum, Pennisetum americanum ×P. purpureum
+kikuygrass, Pennisetum cladestinum Hochstetter ex Chiovenda
+mission grass
+napiergrass, Pennisetum purpureum Schum.
+reed canargrass
+timothy, Phleum pratense L.
+Russian wildrye
+Korean alkaligrass
+thinflower alkaligrass
+ciliate roegneria
+common roegneria
+oliganthous roegneria
+strict roegneria
+roegneria, Roegneria turczaninovii (Drob.) Nevski
+African bristlegrass
+sorghum sudangrass hybrid
+sudangrass, Sorghum sudanense (Piper) Stapf
+zoysiagrass, Zoysia japonica Steud.
+other forage crop
+red amaranth
+slim amaranth
+prince-of-wales feather
+rajgeera
+fodder beet
+creeping inchplant
+eurotia arborescens
+cordate leaf ceratoides
+winter fat
+chicory, Cichorium intybus L.
+cymose buckwheat
+polycephalous ixeris
+forage kochia
+Indian lettuce
+raphanistrum-like radish
+rumex, Rumex patientia × R. tianschanicus
+perfoliate rosinweed
+comfrey, Symphytum officinale L.
+feed ramie
+cotton
+upland cotton
+sea-island cotton
+Asiatic cotton
+herbaceous cotton
+natural color cotton
+transgenic pest-resistant cotton
+cotton growing regions in China
+cotton boll
+bolls formed at three growth periods
+seed cotton
+lint
+lint percentage
+raw cotton
+cotton seed
+cotton linter
+mature fiber
+immature fiber
+cotton cultivation mode
+growing cotton in saline-alkali soil
+dense-short-early cotton planting
+growing cotton with plastic-mulching
+machine picked cotton
+pruning of cotton plant
+China cotton growth index
+cleanliness
+saw ginned cotton
+roller ginned cotton
+cotton seed delinting
+cotton notarial inspection
+calibration cotton standard sample
+preparation quality
+color grade
+cotton grade
+upper half mean length
+uniformity index
+breaking tenacity
+micronaire
+fineness
+breaking elongation
+cotton maturity
+reflectance degree
+yellowness
+spinning consistency index
+cotton seed cake
+cottonseed meal
+gossypol
+Cotton Price Index
+Cotton Futures
+bast fiber crops
+raw fiber
+fiber content in fresh stem
+leaf fiber crops
+multi-utilization of bast and leaf fiber crops
+hard fiber
+Ramie
+green cuttings propagation
+ramie of first cut
+darkened stem
+degumed ramie
+Flax, Linum usitatissimum L.
+flax straw
+retted flax straw
+fiber content in straw
+dew retting of flax
+scutched bast fiber
+tow
+Hemp, Cannabis sativa L.
+industrial hemp
+whole female hemp
+cannabinoids
+corchorus, Jute
+hibiscus cannabinus, Kenaf
+agave
+sisal
+Apocynum L. Dogbane
+morus Linn.
+Morus alba var. pendula Dipp.
+seedling mulberry
+mulberry pruning
+oilseed rape
+rapeseed
+oil mustard
+turnip rape
+ethiopian mustard
+spring rapeseed
+winter rapeseed
+semi-winter rapeseed
+ornamental rapeseed
+polima cytoplasmic male sterile line
+direct sowing rapeseed
+establishment in autumn
+flowering with no seed setting
+resynthesized rapeseed
+erucic acid
+glucosinolate
+double high rapeseed
+double low rapeseed
+high oleic acid rapeseed
+high oil content rapeseed
+pod shattering resistant rapeseed
+high density tolerant rapeseed
+peanut, groundnut
+Arachis hypogaea var. hypogaea
+Arachis hypogaea var. hirsuta
+Arachis hypogaea var. Vulgaris
+Arachis hypogaea var. fastigiata
+O / L ratio
+spring sown peanut
+summer sown peanut
+peg
+high-oil peanut
+high oleic acid peanut
+sesame, Sesamum indicum L.
+sesame capsule
+summer sesame
+autumn sesame
+high oil content sesamin
+sesame oil
+sunflower, Helianthus annus L.
+oilseed sunflower
+confectionery sunflower
+ornamental sunflower
+high-oleic varieties
+castor, Ricinus communis L.
+castor oil
+beet, Beta vulgaris L.
+sugar beet
+sea beet
+vegetative growth period of sugarbeet
+reproductive growth period of sugarbeet
+beet root
+single embryo seed
+multi-embryo seed
+sectional mechanical harvesting
+combined mechanical harvesting
+sugarcane, Saccharum officinarum L.
+milling cane
+energy cane
+chewing cane
+ratoon sugarcane
+safflower
+safflower oil
+vanilla
+Vanilla planifolia Ames
+Vanilla pompona Schiede
+Vanilla tahitensis
+star anise
+cinnamon
+cinnamon bark
+tobacco
+Nicotiana tobacco L.
+Nicotiana rustica L.
+wild tobacco
+flue-cured tobacco
+sun-cured tobacco
+air-cured tobacco
+maryland tobacco
+burley tobacco
+cigar tobacco
+oriental tobacco
+tobacco quality
+coffee
+arabica coffee
+robusta coffee
+liberica coffee
+coffee bean
+cacao, Theobroma cacao L.
+cocoa beans
+natural rubber
+cassava
+cassava starch
+coconut, Cocos nucifera L.
+oil palm
+Elaeis guinensis
+Elaeis oleifera
+pepper, Piper Nigrum L.
+fruit tree
+deciduous fruit tree
+evergreen fruit tree
+fruit bagging
+chinese white pear
+Chinese sand pear
+European pear
+Ussurian pear
+Callery pear
+brichleaf pear
+apple
+crabapple, Malus asiatica Nakai
+pearleaf crabapple
+siberian crabapple
+Kaido crabapple
+Chinese flowering crabapple
+hawthorn, Crataegus pinnatifida Bge.
+loquat, Eriobotrya japonica Lindl.
+Chinese quince
+quince, Cydonia oblonga Mill.
+peach, Prunus persica (L.) Batsch
+flat peach
+smooth pit peach
+David peach
+nectarine, Prunus persica L.
+Chinese plum
+European plum
+American plum
+mei, Prunus mume Sieb. et Zucc.
+apricot, Prunus armeniaca L.
+almond, Prunus dulcis L.
+cherry, Cerasus pseudocerasus (Lindl.) G.
+wweet cherry
+sour cherry
+nanking cherry
+strawberry, Fragaria ananassa Duch.
+Chilean strawberry
+raspberry, Rubus spp.
+blackberry, Rubus L.
+gooseberry, Ribes sativum
+currant, Ribes spp.
+Roxburgh rose
+mandarin, Citrus reticulata Blanco
+Satsuma mandarin
+sweet orange
+sour orange
+Ichang papeda
+pummelo, Citrus maxima (Burm.) Merril
+grapefruit, Citrus paradise Macf.
+lemon, Citrus limon (L.) Burm. f.
+canton lemon
+lime, Citrus aurantifolia Swingle
+calamondin, Citrus microcarpa Bge.
+Mauritius parade
+Honghe papeda
+citron, Citrus medica L.
+finger citron
+round kumquat
+oval kumquat
+wompee, Clausena lansium (Lour.) Skeels
+trifoliate orange
+grape, Vitis spp.
+European grape
+fox grape
+ussurian grape
+persimmon, Diospyros kaki L.
+dateplum, Diospyros lotus L.
+Chinese date
+spine date
+oleaster, Elaeagnus angustifolia L.
+pomegranate, Punica granatum L.
+fig, Ficus carica L.
+Chinese gooseberry
+kiwiberry, Actinidia arguta (Sieb. et Zucc.) Planch. ex Miq.
+blueberry, Vaccinium spp.
+linberry, Vaccinium vitis-idaea L.
+bog blueberry
+persian walnut
+cathay hickory
+pecan, Carya pecan Engl. et Fraebn.
+Chinese chestnut
+siberian hazelnut
+filbert, Corylus avellana L.
+Chinese torreya
+ginkgo, Ginkgo biloba L.
+white Chinese olive
+black Chinese olive
+banana, Musa nana Lour.
+silk banana
+Pisang Awak banana
+plantain banana
+carambola, Averrhoa carambola L.
+bayberry, Myrica rubra Sieb. et Zucc.
+longan, Dimocarpus longan Lour Sapindaceae
+litchi, Lichi chinensis Sonn.
+mango
+date palm
+pineapple, Ananas comosus (L.) Merr
+jack fruit
+papaya, Carica papaya L.
+guava, Psidium guajava L.
+sugarapple, Annona squamosa L.
+durian, Durio zibethinus Murr.
+rose-apple, Syzegium jambos Alston (Eugenia jambos L.)
+cashew
+avocado, Persea Americana Mill.
+rambutan, Nephelium lappaceum L.
+mangosteen, Garcinia mangostana L.
+sapodilla, Achras sapota L.
+tamarind, Tamarindus indica L.
+emblic leafflower
+pistachio, Pistacia vera L.
+macadamia nut
+fructus momordicae
+wax apple
+green jujube
+pitaya, Hylocereus undulatus Britt.
+passion fruit
+olive, Olea europaea L.
+wood of shinyleaf yellow-horn
+mulberry, Morus alba Linn.
+scion
+rootstock
+dwarfing rootstock
+semi-dwarfing rootstock
+semi-vigorous rootstock
+vigorous rootstock
+graft
+propagation by seeds
+asexual reproduction
+layerage
+cuttage
+root sucker propagation
+grafting propagation
+vegetable
+root and stem vegetable
+leaf vegetable
+flower vegetable
+fruit vegetable
+condiment vegetable
+sprouting vegetable
+wild vegetable
+rare vegetable
+protected vegetable
+cole vegetable
+cabbage
+red cabbage
+savoy cabbage
+brussels sprouts
+cauliflower
+broccoli
+Chinese kale
+kohlrabi
+kale
+broccolini
+Chinese cabbage group
+Chinese cabbage
+pak-choi
+Wuta-tsai
+choy sum
+tai-tsai
+turnip
+rutabaga
+mustard vegetable
+solanaceous vegetable
+tomato
+eggplant
+pepino
+pepper
+Physalis
+okra
+leguminous vegetable
+common bean
+vegetable soybean
+asparagus bean
+sugar pod garden pea
+Lablab
+scarlet runner bean
+winged bean
+sword bean
+gourd vegetable
+cucumber
+muskmelon
+cantaloupe
+snake melon
+oriental pickling melon
+watermelon
+pumpkin
+winter squash
+summersquash
+bottle gourd
+wax gourd
+hairy gourd
+luffa-smooth loofah
+luffa-angled loofah
+bitter gourd
+chayote
+edible snake gourd
+fig-leaf gourd
+allium vegetable
+welsh onion
+onion
+shallot
+chive
+bounching onion
+storey onion
+leek
+Mongolian wild onion
+Chinese chive
+Chinese onion
+garlic
+tuber and tuberous rooted vegetable
+Chinese artichoke
+Chinese yam
+ginger
+taro
+elephant-foot yam
+edible canna
+potato bean
+thomson kudzu
+aquatic vegetable
+lotus
+water bamboo
+Chinese arrowhead
+Chinese water chestnut
+gordon euryale
+water caltrop
+watercress
+water shield
+water dropwort
+common cattail
+kelp
+laver
+radish
+shepherd's purse
+horse-radish
+rorippa
+cornuted pugionium
+carrot
+celery
+celeriac
+parsley
+parsnip
+fennel
+florence fennel
+coriander
+dill
+spinach
+garden beet
+leaf beet
+amaranth
+purslane
+great burdock
+salsify
+leaf lettuce
+stem lettuce
+head lettuce
+romaine lettuce
+endive
+common sowthistle
+garland chrysanthemum
+coltsfoot
+artichoke
+vegetable chrysanthemum
+gynura
+Indian kalimeris herb
+dandelion
+seleng wormwood
+water spinach
+Chinese mallow
+malabar spinach
+New Zealand spinach
+[California] burclover
+sweet basil
+purple common perilla
+wrinkled gianthyssop
+garden orach
+bamboo shoot
+Chinese mahogang
+daylily
+asparagus
+mioga ginger
+vileplume
+houttuynia cordata
+medlar
+garden rhubarb
+balloon flower
+vetch
+hairyvein agrimony
+flower fern
+bracken [fern]
+fa-tsai, hair weeds
+edible mushroom
+white button mushroom
+honey mushroom
+hairy wood ear
+wood ear
+king bolete
+shaggy mane
+trooping Cordyceps
+poplar fieldcap
+winter mushroom
+reishi
+hen of the woods
+lion's mane mushroom
+beech mushroom
+black forest mushroom
+fried chicken mushroom
+morel
+golden ear
+veiled stink horn
+butterscotch mushroom
+king oyster mushroom
+oyster mushroom
+phoenix mushroom
+bailinggu
+sanghuang mushroom
+cauliflower mushroom
+wine cap mushroom
+snow fungus
+matsutake
+truffle
+Chinese mushroom
+floral crop
+perennial flower
+bulb flower
+aquatic flower
+ornamental fern
+cacti and succulent flowers
+ornamental grass
+daisy
+pot marigold
+China-aster
+blue-bottle
+common cosmos
+florists cineraria
+marigold
+French marigold
+common zinnia
+gerbera
+dahlia
+chrysanthemum
+spike gay feather
+Chinese pink
+carnation
+petunia
+cockscomb
+common globe-amaranth
+rose moss
+common snapdragon
+monkeyflower
+toadflax
+foxglove
+brahmi
+angelonia
+common garden coleus
+scarlet sage
+sage
+sky-blue sage
+false dragonhead
+lavender
+bergamot
+rosemary
+ground ivy
+common stock
+common wallflower
+orychophragmus
+sweet alyssum
+bell flower
+lobelia
+pansy
+viola cornuta
+common garden verbena
+bouquet larkspur
+Asian virginsbower
+european clumbine
+persian buttercup
+poppy anemone
+busy lizzie
+New Guinea impatiens
+drunk butterfly
+vinca rose
+desert rose
+sweet pea
+sensitive plant
+primrose
+cyclamen
+begonia
+tuberous begonia
+four-o'clock
+great bougainvillea
+broomsedge
+corn poppy
+California poppy
+sealflower
+cypress vine
+morning glory
+tillandsias
+ornamental bromeliad
+saxifrage
+alumroot
+hydrangea
+prairie gentian
+summer perennial phlox
+shining bird of paradise
+bird of paradise flower
+African violet
+gloxinia
+storksbill
+hollyhock
+sea lavender
+evening primrose
+dayflower
+anthurium
+calla lily
+variable tuftroot
+devil's ivy
+Asian taro
+fragrant plantainlily
+daylily
+torch lily
+nipponlily
+creeping liriope
+dwarf lilyturf
+lily
+crown imperial
+tulip
+star of bethelem
+grape hyacinth
+African lily
+giant onion
+Chinese water bamboo
+tufted bracketplant
+aspargus
+asparagus ferm
+aloe
+wart plant
+blackberry lily
+Chinese small iris
+iris
+jade cicada flower
+freesia
+gladiolus
+saffron crocus
+herbaceous peony
+tree peony
+sedum
+lineare stonecrop
+showy stonecrop
+stonecrop
+mother of millons
+kalanchoe
+Chinese narcissus
+common daffodil
+red spider lily
+amaryllis
+tuberose
+rainflower
+spider lily
+peruvian lily
+kafir lily
+hyacinth
+lily of the valley
+bowstring-hemp
+canna
+pink sorrel
+rose
+rugosa rose
+mei flower
+false spirea
+common camellia
+Yunnan camellia
+poinsettia
+Sweet Osmanthus
+jasmine
+Azalea
+cape jasmine
+maranta
+spring orchid
+faber cymbidium
+sword-leaved cymbidium
+Chinese cymbidium
+cymbidium kanran
+dendrobium
+moth orchid
+cactus
+agave
+bottle palm
+living stone
+water lily
+tea
+puer tea
+pubilimba tea
+Da chang tea
+Dali tea
+crassicolumna tea
+gymnogyna tea
+natural selection
+crop origin
+crop origin center
+diversity center
+secondary center of origin
+domestication
+wild relatives
+crop introduction
+cryopreservation
+molecular evolution
+molecular clock
+molecular phylogenetics
+micro-evolution
+macro-evolution
+neutral mutation
+genome evolution
+gene evolution
+chromosomal evolution
+adaptive evolution
+evolutionary biology
+evolutionary distance
+evolutionary rate
+concerted evolution
+reproductive isolation
+positive selection
+negative selection
+selection sweep
+molecular domestication
+artificial domestication
+de-domestication
+domestication gene
+domesticaion trait
+speed domestication
+re-wild crops
+ecotype
+ecogenotype
+biodiversity
+genetic drift
+genetic migration
+germplasm
+basic collection
+core collection
+mini core collcetion
+genetic richness
+polymorphic information content
+genetic uniformity
+genetic specificity
+genetic accumulativeness
+genetic vulnerability
+germplasm enhancement
+orthodox seed
+recalcitrant seed
+germplasm nursery
+accession
+gene library
+genetic integrity
+genetic erosion
+passport data
+gene bank
+gene pool
+micropropagation
+germplasm storage
+ex situ conservation
+in situ conservation
+in vitro conservation
+germplasm resource
+genetic resource
+gene resource
+qualitative trait
+quantitative trait
+heritability
+qualitative inheritance
+quantitative inheritance
+transgressive inheritance
+karyotype
+haplotype
+addition line
+substitution line
+translocation line
+euploid
+aneuploid
+diploid
+amphiploid
+amphidiploid
+autotetraploid
+allotetraploid
+allohexaploid
+autopolyploid
+allopolyploid
+haploid
+haploid breeding
+polyhaploid
+autopolyhaploid
+polyploid
+polyploid breeding
+somatic doubling
+union of unreduced gametes
+polyspermy
+pollen culture
+anther culture
+embryo culture
+tissue culture
+organ culture
+cell culture
+protoplast culture
+embryo grafting
+substitution
+transition
+transversion
+frameshift
+duplication
+replication
+additive effect
+additive genetic variance
+non-additive effect
+dominant
+complete dominance
+incomplete dominance
+dominant lethal
+recessive
+recessive lethal
+complementary effect
+gene transfer
+non-homologous chromosome
+genotype
+genotype frequency
+phenotype
+relative character
+pleiotropism
+multigenic effect
+allele
+multi-allele
+genomic imprinting
+pedigree
+pedigree analysis
+karyomixis
+karyolysis
+homogeneity
+heterogeneity
+somatogamy
+continuous distribution
+discontinuous distribution
+xenia
+metaxenia
+sexual reproduction
+line
+advanced line
+donor
+recipient
+parental generation
+progeny
+offspring
+male parent
+female parent
+random mating
+natural outbreeding rate
+law of independent assortment
+law of segregation
+law of linked inheritance
+linkage group
+duplicate effect
+inhibition effect
+cross
+hybrid breeding
+hybrid
+first filial
+hybrid combination
+heterosis
+heterosis depression
+over-standard heterosis
+over-parent heterosis
+mid-parent heterosis
+mitochondrial complementation
+pure line
+pure line cultivar
+pure line breeding
+permanent F population
+test cross
+test cross cultivar
+tester
+single cross
+single cross hybrid
+double cross
+double cross hybrid
+three-way cross
+tetracross
+top cross
+reciprocal cross
+inbreeding
+inbreeding coefficient
+inbreeding depression
+outbreeding
+selfing
+selfing line
+Sn selection
+near-isogenic line
+outcrossing
+intercrossing
+backcross
+recurrent parent
+nonrecurrent parent
+backcross recombinant inbred line
+recombinant inbred line
+backcross inbred line
+stepwise backcross
+convergent backcross
+advanced backcross QTL analysis
+full-sib mating
+half-sib mating
+multiple male-parental cross
+intergeneric hybridization
+interspecific hybridization
+intervarietal hybridization
+diallel hybridization
+composite hybridization
+convergent hybridization
+introgressive hybridization
+genetic introgression lines
+polycross
+sexual hybridization
+vegetative hybridization
+nucleo-cytoplasmic hybrid
+cytoplasmic hybrid
+nucleo-cytoplasmic interaction
+early generation test
+progeny test
+general combining ability
+specific combining ability
+synthetic cultivar
+second cycle line
+cultivar adaptability
+intervarietal hybrid
+hybrid cultivar
+composite cultivar
+multi-line cultivar
+compatible
+compatibility
+incompatibility
+self-compatibility
+self-incompatibillity
+cross-compatibility
+cross-incompatibility
+cytoplasmic incompatibility
+gametophytic self-incompatibility system
+sporophytic self-incompatibility system
+crossability
+cross fertilization
+hybrid sterility
+self-fertility
+self-sterility
+pollen sterility
+male sterility
+cytoplasmic male sterility
+nucleus male sterility
+genotype-environmental male sterility
+cytoplasmic-nucleic male sterility
+sporophyte male sterility
+gametophyte male sterility
+female sterility
+male sterile line
+genic male sterile line
+restorer gene
+restorer line
+maintainer line
+three-line hybrid
+emasculation
+pollination
+double fertilization
+open pollination
+supplementary pollination
+cross pollination
+self-pollination
+self-fertilization
+artificial pollination
+mixed pollination
+bud pollination
+controlled pollination
+pollen mentor
+predominantly self-pollinating
+selection
+selection breeding
+selection index
+selection intensity
+selection response
+selection differential
+hitchhiking effects
+reciprocal recurrent selection
+directional selection
+successive selection
+disruptive selection
+convergent selection
+individual plant selection
+bud selection
+gametic selection
+line selection
+bulk selection
+modified bulk selection
+single trait selection
+multiple trait selection
+seedling lines
+pedigree method
+ear-to-row method
+plant-to-row method
+boll-to-row method
+breeding nursery
+ideotype
+genetic gain
+population
+population buffering
+population bottleneck effect
+natural population
+artificial population
+population improvement
+population cultivar
+mass selection
+recurrent selection
+single seed descent
+derived line method
+modified pedigree method
+line × tester method
+shuttle breeding
+bulk breeding
+breeding for disease resistance
+major-gene resistance
+minor-gene resistance
+polygenic resistance
+horizontal resistance
+vertical resistance
+slow disease
+all stage resistance
+adult-plant resistance
+durable resistance
+breeding for insect resistance
+breeding for stress tolerance
+host-pathogen population interactions resistance
+breeding for quality
+combination breeding
+plant architecture breeding
+spontaneous mutation
+biochemical mutation
+cytoplasmic mutation
+bud mutation
+mutation spectrum
+mutation pressure
+mutation breeding
+space mutagenesis
+mutagenic effect
+opaque mutant [corn]
+clone
+vegetative propagation
+androgenesis
+parthenogenesis
+adventitious embryony
+apospory
+apomixis
+diplospory
+clonal cultivar
+crop genomics
+genome
+reference genome
+draft genome
+golden genome
+pan-genome
+graph-based genome
+graph-based pan-genome
+comparative genomics
+crop transcriptomics
+proteomics
+crop metabolomics
+crop cytomics
+single-cell omics
+epigenomics
+phenomics
+chromosomics
+mutagenomics
+mirnomics
+glycomics
+lipidomics
+secretomics
+signalomics
+thiolomics
+chloroplast omics
+connectomics
+micromorphomics
+microbiomics
+multi-omics
+multi-dimensional omics
+3D genomics
+spatial transcriptomics
+spatial proteomics
+translatome
+degradome
+breeding by design
+breeding by molecular design
+breeding by genomics-design
+genome-assisted breeding
+biotechnological breeding
+transgenic breeding
+speed breeding
+de novo domestication
+smart breeding
+breeding by big data
+biofortification breeding
+trans-kingdom improvement
+second generation sequence technology
+high fidelity reads
+sequencing by synthesis
+clone by clone
+genome annotation
+high-throughput genotyping
+house-keeping gene
+inducible gene
+repressible gene
+modifying gene
+co-regulated genes
+gene family
+multigene family
+gene interaction
+transcriptional factor
+transposable elements
+DNA transponson
+enhancer
+enhancer trapping
+gene introduction
+intergenomic invasion
+recombination hotspot
+repeat sequence
+deletion
+chromosomal rearrangement
+chromosomal structure variation
+chromosomal segment substitution line
+matrix attachment region
+structural domain
+quantitative trait loci
+major effect QTL
+minor effect QTL
+linkage map
+high-resolution linkage map
+interval mapping
+composite interval mapping
+multiple interval mapping
+inclusive composite interval mapping
+molecular marker
+map-based cloning
+marker assisted selection
+single marker analysis
+gene expression
+expression pattern
+ectopic expression
+resetting of expression
+juvenility resetting region
+serial analysis of gene expression
+expressed sequence tag sequencing technique
+gene introgression
+gene silencing
+trans-kingdom gene silence
+gene writing
+gene rapid-evolution
+association analysis
+genome-wide association study
+transcriptome-wide association study
+proteome-wide association study
+spurious association
+plant memory
+protein post-translational modification
+immunoblotting
+electronphoretic mobility shift assay
+epigenetic phenomena
+epiallele
+epigenetic analysis
+epigenetic recombinant inbred line
+liquid chip
+allele-specific PCR
+anchor probe
+neighbor-joining method
+foreground selection
+background selection
+breeding element
+gene site-directed mutagenesis
+insertion mutation
+forward mutation
+reverse mutation
+yeast artificial chromosome
+cell line
+multi-gene transformation
+sequential re-transformation
+embryoid
+variety
+variety regionalization
+variety replacement
+variety identification
+variety certification
+variety registration
+landrace
+improved variety
+commercial variety
+introduced variety
+breeder seed
+foundation seed
+foundation seed nursery
+breeder's seed
+pre-basic seed
+basic seed
+registered seed
+certified seed
+commercial seed
+seed production technology
+hybrid seed production technique
+distance isolation
+time isolation
+propagation coefficient
+seed purification
+rogueing
+seed longevity
+seed inspection
+seed quarantine
+seed identification
+seed testing
+varietal purity
+purity testing
+seed admixture
+seed plumpness
+seed moisture content
+seed volume weight
+seed specific weight
+seed vigor
+vigor test
+germination test
+seed germination rate
+seed germination vigor
+seed reservation
+seed deterioration
+air drying
+heat drying
+storage period
+seed storage
+seed granary
+seed cleaning
+seed disinfection
+seed dressing
+seed dormancy
+stratification
+seed certification
+record filling of introduced cultivar
+recepient cultivar
+breeder right
+owner of breeder right
+variety distincness
+variety uniformity
+variety stability
+DNA finger-print test
+seed registrition system
+initial variety
+essential derived variety
+three-nursery system
+four-stage seed-production system
+seed label
+seed lot
+seed quality certification
+single seed sowing
+seed coating
+seed health
+artificial seed
+seed industry
+seed company
+seed standardization
+seed enhancement
+standard germination
+stressed germination
+accelerated aging germination
+cold soak germination
+radicle protrusion
+seed germination
+seedling vigour
+crop growth
+vegetative growth
+reproductive growth
+growth curve
+growth center
+crop development
+photomorphogenesis
+phytochrome
+phasic development
+vernalization
+photoperiodism
+tillering ability
+tiller polarization
+productive tiller
+unproductive tiller
+productive tiller percentage
+flower bud differentiation
+panicle [spike] primordium differentiation
+apical dominance
+synchronous organ growth
+leafing interval
+leafing rate
+leaf age
+remaining leaf number
+leaf age index
+leaf age model
+root length density
+specific root length
+root and shoot ratio
+crop senescence
+early senescence
+unfavorably-delayed senescence
+early maturity
+late maturity
+physiological maturity
+growth stage
+trefoil stage
+tillering stage
+over-wintering stage
+jointing stage
+booting stage
+heading stage
+bolting stage
+flowering stage
+silking stage
+anthesis-silking interval
+pod-setting stage
+pod-filling stage
+filling stage
+maturing stage
+milky ripe
+waxy ripe
+yellow ripe
+full ripe
+growth analysis
+relative growth rate
+crop growth rate
+net assimilation rate
+crop growth status
+crop appearance
+stem strength
+morphological plasticity
+plant growth regulator
+biological yield
+economic yield
+harvest index
+yield components
+yield stability
+yield potential
+photosynthetic performance
+C3 crop
+C4 crop
+leaf area index
+optimum leaf area
+leaf area duration
+leaf inclination
+specific leaf area
+specific leaf weight
+functional leaf
+stay green character
+photosynthetic efficiency
+quantum efficiency
+carboxylation efficiency
+photosynthetic rate
+respiration rate
+respiratory coefficient
+photorespiration
+photosynthetic potential
+net photosynthesis
+canopy photosynthesis
+ribulose-1,5-bisphosphate carboxylase/oxygenase
+light compensation point
+light saturation point
+CO2 compensation point
+CO2 saturation point
+midday depression of photosynthesis
+stomatal conductance
+stomatal limitation
+non-stomatal limitation
+photosynthetically active radiation
+radiation use efficiency
+light interception rate
+extinction coefficient
+canopy-air temperature difference
+crop population
+crop population structure
+light distribution in population
+canopy structure
+spike density
+self-regulation of population
+crop population quality
+self-thinning
+dry matter accumulation
+dry matter translocation
+structural matter
+Nonstructural matter
+assimilate partitioning
+metabolic source
+metabolic sink
+sink organ
+sink capacity
+sink activity
+sink strength
+source strength
+source-sink relation
+grain-leaf area ratio
+floret fertility
+seed abortion
+grain filling
+superior grain
+inferior grain
+grain growth rate
+grain growth duration
+source-sink interaction of grain yield
+source limitation of grain yield
+sink limitation of grain yield
+carbon metabolism
+nitrogen metabolism
+grain uniformity
+endosperm texture
+horny endosperm
+farinaceous endosperm
+aleurone layer
+brown rice percentage
+head rice percentage
+chalkiness
+chalkiness degree
+chalky grain rate
+flour yield
+starch granule
+amylose
+amylopectin
+flour water absorption rate
+starch gelatinization
+breakdown
+peak viscosity
+gluten
+gluten strength
+dough rheological properties
+protein component
+albumin
+globulin
+gliadin
+glutenin
+glutenin macropolymer
+oil body
+fiber fineness
+fiber strength
+fiber specific strength
+biofortification
+secondary metabolite
+stress
+stress resistance
+molecular mechanism of stress resistance
+stress adaptation
+stress cross adaptation
+stress avoidance
+stress tolerance
+stress priming
+stress-resistance hardening
+stress response
+stress reversibility
+strain repairing
+stress signal
+proline
+polyamine
+betaine
+salicylic acid
+fructan
+calmodulin
+protein kinase
+phytohormone
+membrane stability
+light stress
+photoinhibition
+photodamage
+photoprotection
+chilling resistance
+cold resistance
+freezing resistance
+chilling hardening
+low temperature-induced protein
+antifreeze protein
+heat tolerance
+heat shock protein
+molecular chaperone
+salt injury
+acid injury
+alkali injury
+salt tolerance
+acid and alkaline tolerance
+oxidative stress
+reactive oxygen species
+membrane lipid peroxidation
+malondiadehyde
+superoxide dismutase
+catalase
+peroxidase
+ascorbate
+glutathione
+trehalose
+waterlogging tolerance
+drought resistance
+drought avoidance
+drought prevention
+drought tolerance
+wilting coefficient
+drought-induced protein
+late embryogenesis abundant protein
+water metabolism
+water potential
+osmosis
+osmotic regulation
+aquaporin
+root pressure
+active absorption of water
+passive absorption of water
+crop water balance
+transpiration
+transpiration efficiency
+transpiration coefficient
+stomatal transpiration
+stomatal regulation
+physiological drought
+physiological water requirement of crop
+ecological water requirement of crop
+critical period of crop water requirement
+nutrient reutilization
+transporter
+high-affinity transporter
+low-affinity transporter
+nutrient absorption efficiency
+nutrient internal efficiency
+nutrient use efficiency
+nitrogen harvest index
+integrative physiology of crop
+multi-omics integration
+gene-environment-management interaction
+crop ecophysiology
+crop cultivation physiology
+multiobjective collaboration
+crop system simulation
+gene-to-phenotype modelling
+crop growth simulation
+virtual plant
+phyllochron
+photothermal quotient
+potential grain size
+maximum nitrogen concentration
+critical nitrogen concentration
+nitrogen nutrition index
+normalized difference vegetation index
+cropping system
+crop composition and distribution
+sole cropping
+multiple cropping
+sequential cropping
+intercropping
+relay cropping
+mixed cropping
+strip cropping
+multistory cropping
+land equivalent ratio
+dense planting effect
+nutrient homogeneity effect
+boundary effect
+complementarity effect
+allelopathic effect
+multistory cropping and raising
+regenerate crop
+cropping index
+maturation cropping
+monocropping
+multiple cropping
+fallow
+shifting cultivation
+crop rotation
+rotation cycle
+legume gramineae rotation
+paddy upland rotation
+grass crop rotation
+replanting
+replanting problem
+previous crop with its stubble field
+previous crop
+later crop
+alternate cropping
+soil improving crops
+soil depleting crop
+ecological adaptability
+crop ecological factors
+farmland potential productivity
+land potential productivity
+primary production
+secondary production
+crop livestocks integration
+crop cultivation
+stubbling
+pregermination
+dry rice nursery
+presowing treatment
+sowing rate
+seeding date
+seeding density
+sowing method
+broadcast sowing
+drill sowing
+hole seeding
+direct sowing
+dry seeded rice
+minimum sowing
+drilling width
+row spacing
+plant spacing
+temporary planting
+thinning
+final singling
+hardening of seedling
+weed control
+hilling
+seedling nursery
+seedling bed
+formulated fertilization
+agronomic water saving
+engineering water saving
+management water saving
+biological water saving
+chemical regulation
+precise cultivation of crop
+clean cultivation of crop
+adverse resistant cultivation
+crop growing period
+long day crop
+short day crop
+day neutral crop
+chimonophilous crop
+thermophilic crop
+alternate yield
+indeterminate growth
+determinate growth
+cuttage
+layering
+division propagation
+budding grafting
+branch grafting
+root grafting
+multiple rootstock grafting
+stock scion interaction
+pinch
+pruning
+fruit thinning
+flower thinning
+leaves thinning
+tissue culture reproduction
+grafting affinity
+seedling stock
+interstock
+vigorous stock
+seedling
+grafting seedling
+own rooted seedlings
+factory nursery
+nutrition pot seedling
+plug seedling
+seedling nursery
+dwarfing culture
+field culture
+trellis culture
+soilless culture
+protected culture
+grass mulching culture
+transplantation
+girdling
+tree forming
+hanging
+flower and fruit protection
+pinching
+lateral branch pruning
+plant training
+framing
+branch traction
+branch binding
+branch holding
+substrate culture
+hydroponics
+aeroponics
+virus free seedling propagation
+soil tillage
+plough layer
+land preparation
+basic tillage
+plow tillage
+subsoiling
+rotary tillage
+surface tillage
+harrowing
+dragging
+intertillage
+packing compacting
+bedding
+ridging
+leveling
+soil tillage system
+soil tillage practice
+ridge cultivation
+flat planting
+minimum tillage reduced tillage
+no tillage
+contour tillage contour ploughing
+conservation tillage
+plastic mulching
+straw mulching
+straw returning
+soil productivity
+improving soil fertilitivity
+soil fertilizer
+soil
+soil science
+pedosphere
+soil resource
+soil fertility
+soil age
+natural soil
+cultivated soil
+soil management
+digital soil
+soil information system
+soil quality
+soil physics
+soil bulk density
+soil specific gravity
+soil compaction
+soil solid phase
+soil liquid phase
+soil gas phase
+soil structure
+crumb structure
+soil micromorphology
+soil aggregate
+soil heat exchange
+soil heat capacity
+soil heat conduction
+soil heat diffusivity
+soil heat balance
+soil heat flux
+soil moisture
+soil water content
+field capacity
+wilting point
+soil water potential
+matric potential
+osmotic potential
+gravitational potential
+soil water suction
+soil water stress
+soil infiltration
+water balance
+soil drainage
+soil evaporation
+soil hydraulic conductivity
+saturated hydraulic conductivity
+moisture characteristic curve
+soil solution
+soil permeability
+solute transfer
+soil salt
+soil conductance
+mechanical composition
+sand
+soil texture
+sand
+clay
+loam
+spatial variability
+soil profile
+profile pattern
+surface soil layer
+subsurface layer
+substratum
+plow pan
+diagnostic horizon
+soil new formations
+soil intrusions
+irregular calcareous concretions
+spectrum of soil
+soil remote sensing
+soil air
+soil aeration
+soil respiration
+gas exchange
+soil solute transfer
+soil solute diffusion
+soil chemistry
+soil pH
+soil acidity
+soil alkalinity
+soil salt content
+soil nutrient
+water soluble nutrient
+acid soluble nutrient
+difficultly soluble nutrient
+slowly available nutrient
+available nutrient
+non available nutrient
+soil buffering
+soil buffer capacity
+soil potential acidity
+lime requirement
+soil colloid
+permanent charge
+variable charge
+diffused double layer
+specific adsorption
+non specific adsorption
+soil desorption
+cation exchange capacity
+base saturation percentage
+physisorption
+chemical adsorption
+exchange adsorption
+competitive adsorption
+soil mineral
+clay mineral
+kaolinite
+montmorillonite
+illite
+crystalline mineral
+noncrystalline material
+soil surface chemistry
+soil specific surface area
+soil organic matter
+soil humus
+humification
+isohumic coefficient
+mineralization coefficient
+humic acid
+humic acid
+fulvic acid
+carbon pool in soil
+soil carbon sink
+soil carbon source
+soil carbon sequestration
+carbon sequestration efficiency
+soil carbon in microbe
+soil organic carbon
+soil geography
+soil specimen
+soil forming process
+soil genesis
+weathering
+soil forming factor
+parent material
+soil succession
+gleyization
+pseudogleyization
+garillization
+elviating process
+deposition process
+salinization
+alkalization
+calcification
+podzolization
+genetic horizon
+organic horizon
+humus horizon
+eluvial horizon
+illuvial horizon
+soil distribution
+general detailed soil survey
+soil cartography
+zonality soil
+non zonality soil
+soil classification
+genetic soil classification
+soil taxonomy
+red earth
+yellow earth
+brown earth
+cinnamon soil
+black soil
+purplish soil
+steletal soil
+fluvo aquic soil
+Shajiang black soil
+solonchak
+solonetz
+saline alkali soil
+authro sol
+paddy soil
+histosol
+soil biology
+soil biochemistry
+nitrogen mineralization
+nitrogen biological immobilization
+soil nitrogen cycle
+soil carbon cycle
+soil sulphur cycle
+soil phosphorus cycle
+soil microorganism
+soil microbiomics
+soil fungus
+soil bacterium
+arbuscular mycorrhiza
+azotobacteria
+phosphobacteria
+potassium bacteria
+microbe for promoting plant growth
+soil archae
+ammonium oxidizing archae
+ammonium oxidizing bacteria
+ammonifying bacteria
+nitrifying bacteria
+Denitrifying microbe
+soil animal
+soil food web
+soil microbial diversity
+soil ecosystem
+soil amelioration soil improvement
+Akanthomyces lecanii
+nucleopolyhedrovirus
+oligosaccharide
+invasive alien species
+biological invasion
+indigenous species
+alien species
+naturalized species
+introduction pathway
+risk assessment for alien invasive species
+interspecies competitive displacement
+emergency management and elimination
+ecological restoration
+fall armyworm
+codling moth
+colorado potato beetle
+tomato leafminer
+rice water weevil
+oriental fruit fly
+solenopsis mealybug
+red fire ant
+American serpentine leaf miner
+amazonian smail
+potato golden nematode
+beet cyst nematode
+banana burrowing nematode
+wheat common bunt
+scab of cucurbits
+fusarium wilt Fusarium oxysporum
+sunflower phoma black stem
+pear fire blight
+bacterial fruit blotch
+bacterial canker of tomato
+bacterial canker of kiwifruit
+potato mop top virus
+maize chlorotic mottle virus
+plum pox virus
+tomato brown rugose fruit virus
+Johnson grass
+damel ryegrass
+Tauschs goatgrass
+ragweed
+weed
+annual weed
+biennial weed
+perennial weed
+grass weed
+common crabgrass
+goosegrass
+wild oat
+shortawn foxtail
+American sloughgrass
+Japanese foxtail
+barnyard grass
+Chinese sprangletop
+knotgrass
+sedge weed
+variable flatsedge
+broadleaf weed
+redroot pigweed
+lambsquarters
+Canada thistle
+field sowthistle
+Asiatic dayflower
+Bunges smartweed
+tropical white weed
+smallflower galinso ga
+flixweed
+false cleavers
+threeleaf arrowhead
+oval leaf pondweed
+weed community
+rodent Pest
+rodents
+brown rat
+house mouse
+oriental house rat
+striped field mouse
+greater long tailed hamster
+striped dwarf hamster
+agricultural finance and insurance
+agricultural insurance
+agricultural credit
+agricultural subsidy
+rural finance
+agricultural investment
+agricultural futures
+agricultural risk management
+agricultural policy
+grain storage and purchase policy
+minimum purchase price policy
+target price policy
+agricultural support and protection policy
+rural revitalization strategy
+rural land system reform
+rural collective property rights reform
+agricultural socialized services
+farmer specialized cooperatives
+family farm
+agricultural industrialization leading enterprise
+new agricultural management entity
+agricultural science and technology innovation system
+agricultural technology extension system
+modern agricultural industry technology system
+agricultural internet of things
+agricultural big data
+agricultural artificial intelligence
+agricultural robot
+agricultural drone
+agricultural sensor
+agricultural blockchain
+agricultural cloud computing
+agricultural 5G technology
+agricultural informatization
+agricultural e-commerce
+agricultural product e-commerce
+rural e-commerce
+agricultural brand building
+agricultural product quality and safety
+agricultural product traceability system
+green food
+organic food
+geographical indication product
+agricultural product certification
+good agricultural practices
+agricultural standardization
+agricultural resources and environmental protection
+agricultural non-point source pollution
+agricultural waste resource utilization
+cultivated land protection
+permanent basic farmland
+farmland water conservancy construction
+water-saving irrigation
+agricultural climate resources
+agricultural meteorological disaster
+agricultural biodiversity
+globally important agricultural heritage systems
+agricultural international cooperation
+Belt and Road agricultural cooperation
+agricultural outward investment
+agricultural product international trade
+agricultural technical assistance
+South-South cooperation
+agricultural sustainable development
+circular agriculture
+climate-smart agriculture
+agricultural adaptation to climate change
+agricultural mitigation of climate change
+agricultural ecological civilization construction
+high-quality agricultural development
+modern agriculture construction
+agricultural and rural modernization
+urban-rural integrated development
+rural living environment improvement
+rural infrastructure construction
+rural public services
+rural education
+rural medical care
+rural elderly care
+rural culture
+rural sports
+rural tourism
+sightseeing agriculture
+experiential agriculture
+plant factory
+vertical farming
+soilless cultivation
+aeroponics
+tissue culture
+A (adenine)
+Ab ( antibody)
+ABC model
+abiotic
+abscisic acid
+abzyme
+acaricide
+ACC synthase
+acceptor control
+acceptor junction site
+accessory bud
+acclimatization
+acellular
+acentric chromosome
+acetyl coenzyme A
+acyl carrier protein
+acquired
+acrylicity
+acrocentric
+acropetal
+activated charcoal
+active transport
+acute transfection
+adaptation
+additive genes
+adenine
+adenosine
+adenosine diphosphate
+adenosine monophosphate
+adenosine triphosphate
+adenovirus
+adenylic acid
+adoptive immunization
+adventitious
+aerobe
+aerobic
+aerobic respiration
+affinity chromatography
+affinity tag
+aflatoxins
+agar
+agarose
+agarose gel electrophoresis
+aggregate
+agonist
+Agrobacterium
+Agrobacterium rhizogenes
+Agrobacterium tumefaciens
+Agrobacterium tumefaciens-mediated transformation
+airlift fermenter
+albinism
+albino
+aleurone
+algal biomass
+alginate
+alkylating agent
+allele frequency
+allele-specific amplification
+allelic exclusion
+allelomorph
+allelopathy
+allergen
+allogamy
+allogenic
+allometric
+allopatric
+allopatric speciation
+allosome
+allosteric control
+allosteric enzyme
+allosteric regulation
+allosteric site
+allosteric transition
+allotype
+allozygote
+allozyme
+alternative messenger RNA splicing
+Alu sequences
+amber stop codon
+amino acid
+aminoacyl site
+aminoacyl transfer ribonucleic acid synthetase
+amitosis
+amniocentesis
+amnion
+amniotic fluid
+amorph
+amphimixis
+ampicillin
+amplicon
+amplification
+amplified fragment length polymorphism
+amplify
+amylase
+amylolytic
+anabolic pathway
+anabolism
+anaerobe
+anaerobic
+anaerobic digestion
+anaerobic respiration
+analogous
+anaphase
+anchor gene
+androgen
+androgenesis
+angiogenesis
+angiogenin
+angiosperm
+animal cell immobilization
+animal cloning
+anneal
+annual
+anonymous deoxyribonucleic acid marker
+antagonism
+antagonist
+anther
+anthesis
+anthocyanin
+antiauxin
+antibiosis
+antibiotic
+antibiotic resistance
+antibiotic resistance marker gene
+antibody
+antibody binding site
+antibody class
+antibody structure
+antibody-mediated immune response
+anticlinal
+anticoding strand
+anticodon
+antigen
+antigenic determinant
+antigenic switching
+antihaemophilic globulin
+anti-idiotype antibody
+antimicrobial agent
+antinutrient
+anti-oncogene
+antioxidant
+antiparallel orientation
+antisense deoxyribonucleic acid
+antisense gene
+antisense ribonucleic acid
+antisense therapy
+antiseptic
+antiserum
+anti-terminator
+antitranspirant
+antixenosis
+apex
+apical cell
+apical meristem
+apoenzyme
+apomixis
+apoptosis
+aptamer
+aquaculture
+Arabidopsis
+arbitrarily primed polymerase chain reaction
+artificial embryo implantation
+artificial insemination
+artificial medium
+arbitrary primer
+Archaea
+artificial selection
+ascites
+ascospore
+ascus
+aseptic
+asexual
+asexual embryogenesis
+asexual propagation
+asexual reproduction
+assay
+assortative mating
+assortment
+asymmetric hybrid
+asynapsis
+attenuated vaccine
+attenuation
+attenuator
+aureofacin
+authentic protein
+autocatalysis
+autocatalytic reaction
+autoclave
+autogenous control
+auto-immune disease
+auto-immunity
+autologous cells
+autolysis
+autonomous
+autonomously replicating segment
+autoradiograph
+autosome
+autotroph
+auxin
+auxin-cytokinin ratio
+auxotroph
+availability
+avidin
+avidity
+avirulence gene
+axenic culture
+axillary bud
+axillary bud proliferation
+B cell
+B chromosome
+B lymphocyte
+bacillus
+Bacillus thuringiensis
+back mutation
+bacterial artificial chromosome
+bacterial toxin
+bactericide
+bacteriocin
+bacteriophage
+bacteriostat
+bacterium
+baculovirus
+baculovirus expression vector
+balanced lethal system
+balanced polymorphism
+barnase
+Barr body
+barstar protein
+basal
+base
+base analogue
+base pair
+base substitution
+basic fibroblast growth factor
+basipetal
+basophil
+batch culture
+batch fermentation
+bench-scale process
+beta-DNA
+beta-galactosidase
+beta-glucuronidase
+beta-lactamase
+beta-sitosterol
+biennial
+bifunctional vector
+binary vector system
+binding
+bio-accumulation
+bio-assay
+bio-augmentation
+bioavailability
+biocatalysis
+biochip
+biocontrol
+bioconversion
+biodegradable
+biodegrade
+biodesulphurization
+bio-energetics
+bio-engineering
+bio-enrichment
+bio-ethics
+biofilms
+biofuel
+biogas
+bio-informatics
+bioleaching
+biolistics
+biological ageing
+biological containment
+biological control
+biological diversity
+biological oxygen demand
+biologics
+bioluminescence
+biomagnification
+biomass
+biomass concentration
+biome
+biometry
+biomimetic materials
+biopesticide
+biopharming
+biopiracy
+biopolymer
+bioprocess
+bioreactor
+biorecovery
+bioremediation
+biosafety
+biosafety protocol
+biosensor
+biosilk
+biosorbents
+biosphere
+biosynthesis
+biosynthetic antibody binding sites
+biotechnology
+biotic factor
+biotic stress
+biotin
+biotin labelling
+biotinylated-deoxyribonucleic acid
+biotope
+biotoxin
+biotransformation
+bivalent
+blast cell
+blastocyst
+blastomere
+blastula
+bleeding
+blot
+blunt end
+blunt-end cut
+blunt-end ligation
+boring platform
+bound water
+bovine growth hormone
+bovine somatotrophin
+bovine spongiform encephalopathy
+bract
+breed
+breed at risk
+breeding
+breeding value
+brewer's yeast
+bridge
+broad-host-range plasmid
+broad-sense heritability
+broodstock
+browning
+bubble column fermenter
+bud
+bulked segregant analysis
+buoyant density
+bud sport
+budding
+C
+CAAT box
+cabinet
+callipyge
+callus
+callus culture
+cambial zone
+cambium
+candidate gene
+candidate-gene strategy
+canola
+cap
+catabolite activator protein
+cap site
+capacitation
+capillary electrophoresis
+cleaved amplified polymorphic sequence
+capsid
+capsule
+carbohydrate
+carboxypeptidase
+carcinogen
+carcinoma
+carotene
+carotenoid
+carpel
+carrier
+carrier deoxyribonucleic acid
+carrier molecule
+Cartagena protocol
+casein
+casein hydrolysate
+cassette
+catabolic pathway
+catabolism
+catabolite repression
+catalysis
+catalyst
+catalytic antibody
+catalytic ribonucleic acid
+catalytic site
+cauliflower mosaic virus
+cauliflower mosaic virus 355 promoter
+caulogenesis
+Convention on Biological Diversity
+covalently-closed circular deoxyribonucleic acid
+cluster of differentiation molecules
+complementary deoxyribonucleic acid
+complementary deoxyribonucleic acid clone
+complementary deoxyribonucleic acid cloning
+complementary deoxyribonucleic acid library
+complementarity-determining regions
+cell
+cell cycle
+cell differentiation
+cell division
+cell fusion
+cell generation time
+cell hybridization
+cell membrane
+cell number
+cell plate
+cell sap
+cell selection
+cell sorter
+cell strain
+cell suspension
+cell wall
+cell-free protein synthesis
+cell-free transcription
+cell-free translation
+cell-mediated immune response
+cellular oncogene
+cellulase
+cellulose
+cellulose nitrate
+cellulosome
+centiMorgan
+central dogma
+central mother cell
+centre of origin
+centrifugation
+centrifuge
+centriole
+centromere
+centrosome
+cephem-type antibiotic
+chain terminator
+Chakrabarty decision
+chaperone
+chaperonin
+character
+characterization
+charcoal
+chelate
+chemical mutagen
+chemically-defined medium
+chemiluminescence
+chemostat
+chemotaxis
+chemotherapy
+chiasma
+chimera
+chimeroplasty
+chimeric deoxyribonucleic acid
+chimeric gene
+chimeric protein
+chimeric selectable marker gene
+chip
+chitin
+chitinase
+chloramphenicol
+chlorenchyma
+chlorophyll
+chloroplast
+chloroplast deoxyribonucleic acid
+chloroplast transit peptide
+chlorosis
+chromatin fibre
+chromatography
+chromocentre
+chromogenic substrate
+chromomeres
+chromonema
+chromoplast plastid
+chromosomal aberration
+chromatid
+chromatin
+chromosomal integration site
+chromosomal polymorphism
+chromosome
+chromosome aberration
+chromosome banding
+chromosome jumping
+chromosome landing
+chromosome mutation
+chromosome theory of inheritance
+chromosome walking
+chymosin
+ciliate
+cilium
+circadian
+circularization
+cis-configuration
+cis-heterozygote
+cis-acting protein
+cis-acting sequence
+cistron
+class switching
+cleave
+cline
+clonal propagation
+clonal selection
+clone
+clone bank
+cloned strain or line
+cloning
+cloning site
+cloning vector
+cloning vehicle
+closed continuous culture
+coat protein
+coccus
+co-cloning
+coconut milk
+co-culture
+Codex Alimentarius Commission
+coding
+coding sequence
+coding strand
+co-dominance
+co-dominant alleles
+codon
+codon optimization
+co-enzyme
+co-evolution
+co-factor
+co-fermentation
+cohesive end
+coincidence
+co-integrate
+co-integrate vector system
+colchicine
+coleoptile
+coleorhiza
+co-linearity
+collenchyma
+colony
+colony hybridization
+combinatorial library
+combining site
+commensalism
+companion cell
+comparative mapping
+comparative positional candidate gene
+competent
+complement proteins
+complementarity
+complementary
+complementary entity
+complementary genes
+complementary homopolymeric tailing
+complementation
+complementation test
+complete digest
+composite transposon
+compound chromosome
+concatener
+concordance
+conditional lethal mutation
+conditioning
+conformation
+conidium
+conjugation
+conjugative functions
+consanguinity
+consensus sequence
+conservation
+conserved sequence
+constant domains
+constitutive
+constitutive gene
+constitutive promoter
+constitutive synthesis
+construct
+contained use
+containment
+contaminant
+contig
+continuous culture
+continuous fermentation
+continuous variation
+controlled environment
+controlling element
+conversion
+coordinate repression
+copy deoxyribonucleic acid
+copy number
+co-repressor
+corpus
+correlation
+cortex
+cos ends
+cos sites
+co-segregation
+cosmid
+co-suppression
+cot curve
+co-transfection
+co-transformation
+cotyledon
+coupling
+covalently-closed circular deoxyribonucleic acid
+CP4 enolpyruvyl-shikimate-3-phosphate synthase
+cross hybridization
+cross pollination efficiency
+cross-breeding
+crossing over
+crossing-over unit
+cross-over
+crown
+crown gall
+cry proteins
+cryobiological preservation
+cryogenic
+cryopreservation
+cryoprotectant
+cryptic
+cytidine triphosphate
+cultigen
+cultivar
+culture
+culture alteration
+culture medium
+culture room
+curing
+cut
+cuticle
+cutting
+cybrid
+cyclic adenosine monophosphate
+cyclodextrin
+cycloheximide
+cytidine
+cytidylic acid
+cytochrome
+cytochrome p450
+cytogenetics
+cytokine
+cytokinesis
+cytokinin
+cytology
+cytolysis
+cytoplasm
+cytoplasmic genes
+cytoplasmic inheritance
+cytoplasmic organelles
+cytosine
+cytosol
+cytotoxic T cell
+cytotoxicity
+cytotype
+D loop
+dA - dT tailing
+single domain antibody
+DNA amplification fingerprinting
+Dalton
+directed amplification of minisatellite DNA
+Darwinian cloning
+deoxyadenosine triphosphate
+deoxycytidine triphosphate
+di-deoxynucleotide
+death phase
+deceleration phase
+de-differentiation
+defective virus
+deficiency
+defined
+degeneracy
+degeneration
+dehalogenation
+dehiscence
+dehydrogenase
+dehydrogenation
+de-ionized water
+deliberate release
+delta endotoxins
+deme
+demineralise
+denature
+denatured deoxyribonucleic acid
+denatured protein
+denaturing gradient gel electrophoresis
+dendrimer
+denitrification
+density gradient centrifugation
+deoxyadenosine
+deoxycytidine
+deoxyguanosine
+deoxyribonuclease
+deoxyribonucleic acid
+deoxyribonucleoside
+deoxyribonucleotide
+deoxyribose
+deoxythymidine
+derepression
+derivative
+desiccant
+desoxyribonucleic acid
+desulphurization
+detergent
+determinate growth
+determination
+determined
+development
+deviation
+dextrin
+dG - dC tailing
+deoxyguanosine triphosphate
+diagnostic procedure
+diakinesis
+dialysis
+diazotroph
+dicentric chromosome
+dichogamy
+dicot
+dicotyledon
+differential centrifugation
+differential display
+differentially permeable
+differentiation
+diffusion
+digest
+dihaploid
+dihybrid
+dimmer
+dimethyl sulphoxide
+dimorphism
+dinucleotide
+dioccious
+diplochromosome
+diplonema
+diplotene
+direct embryogenesis
+direct organogenesis
+direct repeat
+directed mutagenesis
+directional cloning
+disaccharide
+disarm
+discontinuous variation
+discordant
+disease resistance
+disease-free
+disease-indexing
+disinfection
+disinfestation
+disjunction
+disomic
+disomy
+dispense
+disrupter gene
+dissecting microscope
+dissection
+distillation
+disulphide bond
+disulphide bridge
+ditype
+diurnal
+dizygotic twins
+deoxyribonucleic acid amplification
+deoxyribonucleic acid amplification fingerprinting
+deoxyribonucleic acid chip
+deoxyribonucleic acid cloning
+deoxyribonucleic acid construct
+deoxyribonucleic acid delivery system
+deoxyribonucleic acid diagnostics
+deoxyribonucleic acid fingerprint
+deoxyribonucleic acid fingerprinting
+deoxyribonucleic acid helicase
+deoxyribonucleic acid hybridization
+deoxyribonucleic acid ligase
+deoxyribonucleic acid micro-array
+deoxyribonucleic acid polymerase
+deoxyribonucleic acid polymorphism
+deoxyribonucleic acid primase
+deoxyribonucleic acid probe
+deoxyribonucleic acid profile
+deoxyribonucleic acid repair
+deoxyribonucleic acid replication
+deoxyribonucleic acid sequencing
+deoxyribonucleic acid topo-isomerase
+deoxyribonucleic acid transformation
+deoxyribonucleic acid vaccine
+Dolly
+domain
+dominance
+dominant
+dominant acting oncogene
+dominant marker selection
+dominant selectable marker
+donor junction site
+donor plant
+dormancy
+dosage compensation
+double crossing-over
+double helix
+double recessive
+double-stranded complementary deoxyribonucleic acid
+double-stranded deoxyribonucleic acid
+doubling time
+down promoter mutation
+down-regulate
+downstream
+downstream processing
+drift
+Drosophila melanogaster
+drug
+drug delivery
+deoxythymidine triphosphate
+dual culture
+duplex deoxyribonucleic acid
+duplication
+dry weight
+E site
+Escherichia coli
+estimated breeding value
+Enzyme Commission number
+ecdysone
+eclosion
+ecological diversity
+ecosystem
+ectopic
+edible vaccine
+editing
+ethylenediaminetetraacetic acid
+essential derivation of varieties
+effector cells
+effector molecule
+egg
+external guide sequence
+enzyme immuno-assay
+elastin
+electro-blotting
+electrochemical sensor
+electron microscope
+electrophoresis
+electroporation
+enzyme-linked immunosorbent assay
+elite tree
+elongation factors
+embryo
+embryo cloning
+embryo culture
+embryo multiplication and transfer
+embryo rescue
+embryo sac
+embryo sexing
+embryo splitting
+embryo storage
+embryo technology
+embryo transfer
+embryogenesis
+embryonic stem cells
+emission wavelength
+encapsidation
+encapsulating agents
+encapsulation
+encode
+endangered species
+endemic
+end-labelling
+endocrine gland
+endocrine interference
+endocytosis
+endoderm
+endodermis
+endogamy
+endogenous
+endomitosis
+endonuclease
+endophyte
+endoplasmic reticulum
+endopolyploidy
+endoprotease
+endoreduplication
+endosperm
+endosperm mother cell
+endotoxin
+end-product inhibition
+enhancer element
+enhancer sequence
+enolpyruvyl-shikimate-3-phosphate synthase
+enterotoxin
+enucleated ovum
+enzyme
+enzyme bioreactor
+enzyme electrode
+enzyme immunoassay
+enzyme kinetics
+enzyme stabilization
+expected progeny difference
+epicotyl
+epidermis
+epigenesis
+epigenetic variation
+epinasty
+epiphyte
+episome
+epistasis
+epitope
+epizootic
+enolpyruvyl-shikimate-3-phosphate synthase
+equational division
+equilibrium density gradient centrifugation
+Erlenmeyer flask
+essential amino acid
+essential element
+essential nutrient
+essential requirement
+expressed sequence tag
+established culture
+estimated breeding value
+estrogen
+ethanol
+ethephon
+ethidium bromide
+ethyl alcohol
+ethylene
+etiolation
+economic trait locus
+eucaryote
+eukaryotic
+euchromatin
+eugenics
+eukaryote
+evapotranspiration
+evolution
+ex-situ conservation
+ex vitro
+ex vivo gene therapy
+excinuclease
+excision
+excision repair
+excitation wavelength
+excrete
+exit site
+exonuclease III
+exocrine gland
+exodeoxyribonuclease III
+exogamy
+exogenous
+exogenous deoxyribonucleic acid
+exon
+exon amplification
+exonuclease
+exopolysaccharide
+exotoxin
+expected progeny difference
+explant
+explant donor
+explantation
+explosion method
+exponential phase
+export
+express
+expression library
+expression system
+expression vector
+expressivity
+extension
+extrachromosomal
+extrachromosomal inheritance
+extranuclear genes
+exude
+F factor
+first filial generation
+second filial generation
+antigen binding fragment
+fluorescence-activated cell sorting
+factorial mating
+facultative anaerobe
+flavin adenine dinucleotide
+false fruit
+false negative
+false positive
+farm animal genetic resources
+farmers’ privilege
+farmers’ rights
+fascicle
+fragment crystallizable
+fed-batch fermentation
+feedback inhibition
+fermentation
+fermentation substrates
+fermenter
+fertile
+fertility factor
+fertilization
+fertilizer
+fetus
+Feulgen staining
+fluorescence immuno-assay
+fibril
+fibroblasts
+fibrous root
+filial generation
+filter bioreactor
+filter sterilization
+filtration
+fingerprinting
+fluorescence in situ hybridization
+fission
+fitness
+flanking region
+fluorescence-activated cell sorting
+fluorescent probe
+flocculant
+flush end
+floccule
+flush-end cut
+filial generations
+foetus
+fog
+fold-back
+folded genome
+follicle
+follicle stimulating hormone
+food processing enzyme
+forced cloning
+foreign deoxyribonucleic acid
+formulation
+forskolin
+fortify
+fouling
+founder animal
+founder principle
+four-base cutter
+fractionation
+fragment
+frameshift mutation
+free water
+free-living conditions
+freeze preservation
+freeze-dry
+fresh weight
+friable
+follicle stimulating hormone
+functional food
+functional gene cloning
+functional genomics
+fungicide
+fungus
+Fusarium species
+fusion biopharmaceuticals
+fusion gene
+fusion protein
+fusion toxin
+fusogenic agent
+G
+G cap
+G protein
+galactomannan
+gall
+gamete
+gamete and embryo storage
+gametic disequilibrium
+gametic equilibrium
+gametoclone
+gametogenesis
+gametophyte
+gametophytic incompatibility
+gap
+gapped deoxyribonucleic acid
+gas transfer
+gastrula
+guanine-cytosine island
+guanosine diphosphate
+gel
+gel electrophoresis
+gel filtration
+gelatine
+gelatinization
+Gelrite
+genetically engineered microorganism
+gene
+gene resources conservation
+gene addition
+gene amplification
+gene cloning
+gene construct
+gene conversion
+gene flow
+gene frequency
+gene gun
+gene imprinting
+gene insertion
+gene interaction
+gene knockout
+gene linkage
+gene machine
+gene mapping
+gene modification
+gene pool
+gene probe
+gene recombination
+gene regulation
+gene replacement
+gene sequencing
+gene shears
+gene splicing
+gene stacking
+gene therapy
+gene tracking
+gene translocation
+genera
+generally regarded as safe
+generation time
+generative
+generative nucleus
+genet
+genetic assimilation
+genetic code
+genetic complementation
+genetic disease
+genetic distance
+genetic distancing
+genetic diversity
+genetic engineering
+genetic equilibrium
+genetic fingerprinting
+genetic gain
+genetic heterogeneity
+genetic immunization
+genetic information
+genetic linkage
+genetic map
+genetic mapping
+genetic marker
+genetic pollution
+genetic polymorphism
+genetic relatedness
+genetic resources
+genetic selection
+genetic transformation
+genetic use restriction technology
+genetic variation
+genetically engineered organism
+genetically modified organism
+genetics
+genomic library
+genomics
+genus
+geotropism
+germ
+germ cell
+germ cell gene therapy
+germ layer
+germ line
+germ line cell
+germ line gene therapy
+germicide
+germinal epithelium
+germination
+gestation
+green fluorescent protein
+growth hormone
+gibberellins
+gland
+glaucous
+globulins
+good laboratory practice
+glucocorticoid
+glucose invertase
+glucose isomerase
+glycosinolates
+glucuronidase
+gluten
+glycoalkaloids
+glycoform
+glycolysis
+glycoprotein
+glycoprotein remodelling
+glycosylation
+glyphosate
+glyphosate oxidase
+glyphosate oxidoreductase
+genetically modified food
+genetically modified organism
+guanosine monophosphate
+good manufacturing practice
+biogas
+golden rice
+Golgi apparatus
+gonad
+G-protein coupled receptor
+graft
+graft chimera
+graft hybrid
+graft inoculation test
+graft union
+grafting
+graft-versus-host disease
+Gram staining
+granum
+generally regarded as safe
+gratuitous inducer
+gravitropism
+green revolution
+Gro-lux
+growth cabinet
+growth factor
+growth inhibitor
+growth phase
+growth rate
+growth regulator
+growth retardant
+growth ring
+growth substance
+guanosine triphosphate
+guanine
+guanosine
+guanylic acid
+guard cell
+guide ribonucleic acid
+guide sequence
+gus gene
+gymnosperm
+gynandromorph
+gynogenesis
+gyrase
+human
+habituation
+human artificial chromosome
+haemoglobin
+haemolymph
+haemophilia
+hairpin loop
+hairy root culture
+hairy root disease
+halophyte
+hanging droplet technique
+haplotype
+hemizygous
+hapten
+haptoglobin
+hardening off
+Hardy-Weinberg equilibrium
+harvesting
+heat therapy
+helix
+helminth
+helper cell
+helper plasmid
+helper T cell
+helper T lymphocyte
+helper virus
+hemicellulase
+hemicellulose
+hemizygous
+hemoglobin
+hemolymph
+hemophilia
+high efficiency particulate air filter
+herbicide
+herbicide resistance
+heredity
+hermaphrodite
+heteroallele
+heterochromatin
+heteroduplex
+heteroduplex analysis
+heterogametic
+heterogeneous nuclear ribonucleic acid
+heterokaryon
+heterologous
+heterologous probe
+heterologous protein
+heteroplasmy
+heteroploid
+heteropyknosis
+heterotroph
+heterotrophic
+heterozygous
+heterozygote
+high frequency recombination
+human growth hormone
+high throughput screening
+histocompatibility
+histocompatibility complex
+histoglobulin
+histology
+histone
+human-leukocyte-antigen system
+Hogness box
+hollow fibre
+holoenzyme
+holometabolous
+homeobox
+homeodomain
+homeotic genes
+homeotic mutation
+homollele
+homodimer
+homoduplex deoxyribonucleic acid
+homeologous
+homogametic
+homogenotization
+homokaryon
+homologous
+homozygote
+homologous recombination
+hormone
+homology
+host
+homomultimer
+host-specific toxin
+homoplasmy
+homopolymer
+hot spot
+homopolymeric tailing
+human serum albumin
+homozygous
+human-leukocyte-antigen system
+hybrid arrested translation
+hybrid cell
+hybrid dysgenesis
+hybrid released translation
+hybrid seed
+hybrid selection
+hybrid vigour
+hybridization
+hybridoma
+hydrogen-uptake positive
+hydrolysis
+hydrophobic interaction
+hydroponics
+hygromycin
+hyperploid
+hypersensitive response
+hypersensitive site
+hypertonic
+hypervariable region
+hypervariable segment
+hypocotyls
+hypomorph
+hypoplastic
+hypoploid
+hypothalamic peptides
+hypotonic
+integration-excision region
+intracytoplasmic sperm injection
+identical twin
+idiogram
+idiotype
+immunoglobulin A / immunoglobulin D / immunoglobulin G / immunoglobulin E / immunoglobulin M
+internal guide sequence / intergenic spacer
+imaginal disc
+imbibition
+immediate early gene
+immobilized cells
+immortalization
+immortalizing oncogene
+immune response
+immunity
+immunization
+immunoaffinity chromatography
+immunoassay
+immunochemical control
+immunodiagnostics
+immunogen
+immunogenicity
+immunoglobulin
+immunoprophylaxis
+immunosensor
+immunosuppression
+immunosuppressor
+immunotherapy
+immunotoxin
+impeller
+in silico
+in situ
+in situ colony hybridization
+in-situ conservation
+in situ hybridization
+in situ plaque hybridization
+in vitro
+in vitro embryo production
+in vitro fertilization
+in vitro maturation
+in vitro mutagenesis
+in vitro transcription
+in vitro translation
+in vivo
+in vivo gene therapy
+inactivated agent
+inbred line
+inbreeding depression
+inclusion body
+incompatibility
+incompatibility group
+incomplete digest
+incomplete penetrance
+incubation
+incubator
+indehiscent
+independent assortment
+indeterminate growth
+indirect embryogenesis
+indirect organogenesis
+inducer
+inducible
+inducible enzyme
+inducible promoter
+induction
+induction media
+inembryonation
+infection
+infectious agent
+infiltrate
+inflorescence
+inheritance
+inhibitor
+initial Cells
+initiation
+initiation codon
+initiation factor
+inoculate
+inoculation cabinet
+inoculum
+inorganic compound
+inositol
+inositol lipid
+insecticide
+insert
+insertion element
+insertion sequence
+insertion site
+instability
+insulin
+integrating vector
+integration
+intercellular space
+interfascicular cambium
+interference
+Interferon
+Intergeneric
+Intergenic
+Interkinesis
+Internal guide sequence
+Internode
+Interphase
+Intersex
+Interspecific
+Intervarietal
+Intracellular
+Intragenic
+Intramolecular
+Intraspecific
+Introduction
+Introgression
+Intron
+Inulin
+Invagination
+Invariant
+Inversion
+Involucre
+Iodine
+Ion
+Ion channel
+Ion exchange
+Ionic bond
+Ionizing radiation
+Isoagglutinin
+Isoallele
+Isoantibody
+Isoantigen
+Isochromosome
+Isocitrate
+Isodiametric
+Isoelectric focusing
+Isoelectric point
+Isoenzyme
+Isogamy
+Isogenic
+Isograft
+Isohaplont
+Isolation
+Isoleucine
+Isomer
+Isomerase
+Isometric
+Isoprene
+Isotonic
+Isotope
+Isotropic
+Iteroparity
+Jelly
+Junk deoxyribonucleic acid
+Juvenile hormone
+Juvenility
+Karyogram
+Karyotype
+Killer T cell
+Killer toxin
+Kinin
+Knockout
+Labelling
+Lac operon
+Lag phase
+Lambda phage
+Late gene
+Lateral bud
+Lateral meristem
+Leader peptide
+Leader sequence
+Leaf abscission
+Leaf primordium
+Leaky mutant
+Lectin
+Leghemoglobin
+Lethal gene
+Lethal mutation
+Library
+Ligand
+Ligation
+Light repair
+Lignin
+Linkage
+Linkage disequilibrium
+Linkage map
+Linker
+Lipase
+Lipid
+Liposome
+Locus
+Logarithmic phase
+Long-day plant
+Long-terminal repeat
+Lymphocyte
+Lymphokine
+Lysis
+Lysogen
+Lysogenic
+Lysogeny
+Lysosome
+Lysozyme
+Lytic
+Lytic cycle
+Lytic response
+Macronutrient
+Macrophage
+Major gene
+Major histocompatibility complex
+Mapping
+Marker
+Marker gene
+Marker-assisted selection
+Maternal effect
+Maternal inheritance
+Mating
+Mating system
+Maturation
+Media
+Medium
+Meiosis
+Melting
+Membrane
+Membrane bioreactor
+Meristem
+Meristem culture
+Meristem tip culture
+Messenger ribonucleic acid
+Metabolism
+Metabolite
+Metallothionein
+Metaphase
+Microarray
+Microbe
+Microbial pesticide
+Microbody
+Microcarrier
+Microfibril
+Microinjection
+Micronutrient
+Microorganism
+Microprojectile
+Microprojectile bombardment
+Micropropagation
+Microspore
+Microspore culture
+Microtubule
+Middle lamella
+Mineral
+Minimal medium
+Minimum inoculum size
+Minisatellite deoxyribonucleic acid
+Mitochondrion
+Mitosis
+Mixed culture
+Molting
+Monoclonal antibody
+Monocot
+Monocotyledon
+Monoculture
+Monoecious
+Monogenic
+Monolayer
+Monomer
+Monosaccharide
+Monosomic
+Monovalent
+Morphogenesis
+Morphology
+Mosaic
+Motif
+Mouse
+Multicellular
+Multienzyme system
+Multifactorial
+Multiple alleles
+Multiple cloning site
+Multiple ovulation and embryo transfer
+Multipotent
+Mutagen
+Mutagenesis
+Mutant
+Mutation
+Mutation breeding
+Mycelium
+Mycorrhiza
+Myeloma
+Narrow-sense heritability
+Native
+Necrosis
+Nectar
+Negative control
+Negative selection
+Nematode
+Neoplasm
+Nested primers
+Neurotransmitter
+Nick
+Nick translation
+Nitrate reductase
+Nitrogen fixation
+Nitrogenase
+Nodule
+Non-disjunction
+Non-histone chromosomal proteins
+Non-Mendelian inheritance
+Non-parental ditype
+Non-recombinant
+Non-recurrent parent
+Nonsense codon
+Nonsense mutation
+Northern blotting
+Nuclear envelope
+Nuclear matrix
+Nuclear pore
+Nuclear transfer
+Nuclease
+Nucleic acid
+Nucleoid
+Nucleolar organizer
+Nucleolus
+Nucleoplasm
+Nucleoprotein
+Nucleoside
+Nucleosome
+Nucleotide
+Nucleus
+Nullisomic
+Null mutation
+Nutrient
+Nutrient medium
+Oestrogen
+Oils
+Oligonucleotide
+Oncogene
+Oncogenic
+Oocyte
+Oogenesis
+Open continuous culture
+Open reading frame
+Operator
+Operon
+Organ
+Organelle
+Organic
+Organism
+Organogenesis
+Origin of replication
+Ornamental
+Orthologous genes
+Osmotic pressure
+Ovary
+Overhang
+Overlapping genes
+Ovule
+Oxidation
+Oxidative phosphorylation
+Oxygenase
+Pachytene
+Palindromic sequence
+Pandemic
+Paralogous genes
+Parasexual cycle
+Parasite
+Parathyroid hormone
+Parental ditype
+Parthenocarpy
+Partial digest
+Passage
+Passive immunity
+Pasteurization
+Pathogen
+Pathogenesis
+Pathogenesis-related proteins
+Pathogenicity
+Pathotype
+Penetrance
+Peptide
+Peptide bond
+Peptidyl site
+Perennial
+Perfect flower
+Periclinal
+Pericycle
+Peroxisome
+Pest
+Pesticide
+Petiole
+Phage
+Phagocytosis
+Phenotype
+Phenotypic variance
+Pheromone
+Phloem
+Phosphatase
+Phosphodiester bond
+Phospholipid
+Phosphorylation
+Photoperiod
+Photophosphorylation
+Photosynthesis
+Phototropism
+Phycobilin
+Phylogeny
+Physical map
+Phytoalexin
+Phytosterol
+Pigment
+Pilus
+Pinocytosis
+Pistil
+Pith
+Placenta
+Plant
+Plant breeding
+Plant cell culture
+Plant genetic resources
+Plant variety protection
+Plaque
+Plasma
+Plasma cell
+Plasmagene
+Plasmalemma
+Plasmid
+Plasmodesma
+Plasmogamy
+Plasmolysis
+Plastid
+Plastoquinone
+Plate
+Pleiotropy
+Ploidy
+Plug
+Point mutation
+Polar body
+Polar nucleus
+Pollen
+Pollen tube
+Polyacrylamide gel electrophoresis
+Polyadenylation
+Polycistronic messenger ribonucleic acid
+Polyclonal antibody
+Polyembryony
+Polygene
+Polymer
+Polymerase
+Polymerase chain reaction
+Polymorphism
+Polynucleotide
+Polypeptide
+Polysaccharide
+Polysome
+Polyunsaturated fatty acid
+Position effect
+Positional candidate gene
+Positional cloning
+Positive control
+Positive selection
+Post-transcriptional modification
+Post-translational modification
+Pre-filter
+Precipitation
+Precursor
+Prenatal diagnosis
+Primary immune response
+Primary meristem
+Primary structure
+Primer
+Prion
+Probe
+Product
+Proembryo
+Proenzyme
+Prokaryote
+Prolactin
+Promoter
+Promoter gene
+Proofreading
+Prophage
+Prophase
+Proplastid
+Protease
+Protein
+Protein engineering
+Proteinase
+Proteolysis
+Proteome
+Protocorm
+Protoplast
+Protoplast fusion
+Prototroph
+Protozoa
+Provirus
+Pseudocarp
+Pseudogene
+Puberty
+Puff
+Pulmonary
+Purification
+Purine
+Putative
+Pyrimidine
+Pyrogen
+Quantitative trait locus
+Quaternary structure
+Race
+Radial symmetry
+Radiation hybrid
+Radioimmunoassay
+Radioisotope
+Random amplified polymorphic deoxyribonucleic acid
+Random primer
+Reading frame
+Reagent
+Recalcitrant
+Receptor
+Recessive
+Reciprocal translocation
+Recombinant
+Recombinant deoxyribonucleic acid
+Recombinant protein
+Recombination
+Recombination fraction
+Recombinational hot spot
+Recovery
+Regeneration
+Regulator gene
+Regulatory sequence
+Release factor
+Remediation
+Renaturation
+Replica plating
+Replication fork
+Replicon
+Reporter gene
+Repression
+Repressor
+Reproduction
+Reproductive cloning
+Resistance
+Resolution
+Respiration
+Response element
+Resting potential
+Restriction enzyme
+Restriction fragment
+Restriction fragment length polymorphism
+Restriction map
+Restriction site
+Reticulocyte
+Retrotransposon
+Retrovirus
+Reverse genetics
+Reverse mutation
+Reverse transcriptase
+Reverse transcription
+Ribonuclease
+Ribonucleic acid
+Ribonucleic acid editing
+Ribonucleic acid polymerase
+Ribonucleic acid processing
+Ribose
+Ribosomal binding site
+Ribosomal ribonucleic acid
+Ribosome
+Ribozyme
+Rickets
+Rigor mortis
+Ri plasmid
+Root cap
+Root culture
+Root hair
+Root nodule
+Root tip
+Rough endoplasmic reticulum
+Round
+Rous sarcoma virus
+R plasmid
+r-selection
+Rubisco
+Rust
+S phase
+Sacculus
+Salinity
+Sap
+Saprophyte
+Satellite
+Satellite deoxyribonucleic acid
+Saturation
+Scaffold
+Scale-up
+Scanning electron microscope
+Sclerenchyma
+Screening
+Secondary immune response
+Secondary structure
+Secretin
+Secretion
+Seed bank
+Segregation
+Selectable marker
+Selection coefficient
+Selection pressure
+Self-assembly
+Self-fertilization
+Self-incompatibility
+Self-replication
+Semen
+Semi-conservative replication
+Seminal
+Sense strand
+Sensitization
+Sepal
+Sequence
+Sequence homology
+Sequence tagged site
+Sequencing
+Serine
+Serology
+Serum
+Serum albumin
+Sex chromosome
+Sex determination
+Sex linkage
+Sex pilus
+Sexual reproduction
+Shoot
+Shoot apex
+Shoot tip culture
+Short-day plant
+Shotgun cloning
+Shuttle vector
+Sieve tube
+Signal peptide
+Signal recognition particle
+Signal transduction
+Silencing
+Silent mutation
+Similarity
+Single cell line
+Single cell protein
+Single nucleotide polymorphism
+Single-cell culture
+Single-strand binding protein
+Sink
+Site-directed mutagenesis
+Site-specific recombination
+Slow-release
+Smooth endoplasmic reticulum
+Sodium dodecyl sulphate polyacrylamide gel electrophoresis
+Softwood
+Soma
+Somatic
+Somatic cell
+Somatic cell embryogenesis
+Somatic cell genetics
+Somatic cell hybrid panel
+Somatic hybridization
+Somatic mutation
+Somatostatin
+Somatotrophin
+Southern blotting
+Species
+Specificity
+Sperm
+Spermatid
+Spermatocyte
+Spermatogenesis
+Spermatogonium
+Spermatozoon
+Spheroplast
+Spike
+Spikelet
+Spindle
+Spleen
+Split gene
+Sporangium
+Spore
+Sporophyte
+Sporulation
+Stabilizing selection
+Stacked genes
+Stamen
+Standard
+Start codon
+Stem cell
+Sterile
+Sterility
+Sterilization
+Steroid
+Sticky end
+Stigma
+Stock
+Stolon
+Stoma
+Stop codon
+Strain
+Streptavidin
+Streptomycin
+Stress
+Stress protein
+Structural gene
+Style
+Sub-cloning
+Sub-species
+Substrate
+Succession
+Sucrose
+Sugar
+Supercoil
+Superfemale
+Supergene
+Superinfection
+Superior
+Supermale
+Superovulation
+Suppressor
+Suppressor mutation
+Surrogate
+Susceptibility
+Suspension culture
+Symbiosis
+Sympatric
+Sympatric speciation
+Symplast
+Synapsis
+Synaptonemal complex
+Synergid
+Synergism
+Synteny
+Synthesis
+Synthetic
+Systemic
+Systemic acquired resistance
+T cell
+T lymphocyte
+T-DNA
+Tandem repeat
+Tap root
+Target
+Targeting
+TATA box
+Taxon
+Taxonomy
+T-cell-mediated immune response
+Telomerase
+Telomere
+Telophase
+Temperate
+Temperature gradient gel electrophoresis
+Temperature-sensitive mutant
+Template
+Terminalization
+Termination
+Termination codon
+Terminator
+Terminator gene
+Terpenoid
+Tertiary structure
+Test tube
+Testa
+Testis
+Testosterone
+Tetracycline
+Tetraploid
+Tetrasomic
+Thermal cycler
+Thermotherapy
+Thiamine
+Thigmotropism
+Thioredoxin
+Thymidine
+Thymine
+Ti plasmid
+Tiller
+Tissue
+Titre
+Tolerance
+Toxin
+Trace element
+Trait
+Trans configuration
+Trans test
+Transcript
+Transcription
+Transcription factor
+Transcriptional control
+Transcriptome
+Transduction
+Transfection
+Transfer ribonucleic acid
+Transferase
+Transformation
+Transgene
+Transgenesis
+Transgenic
+Transgenic organism
+Translation
+Translational control
+Translocation
+Transmissible
+Transmission
+Transplant
+Transposable element
+Transposase
+Transposition
+Transposon
+Transposon tagging
+Triploid
+Tris buffer
+Trisomic
+Tritium
+Trophic level
+Trophoblast
+True breeding
+Trypsin
+Tuber
+Tumor
+Tumor suppressor gene
+Tumorigenesis
+Turgor
+Twin
+Two-dimensional gel electrophoresis
+Uracil
+Urea
+Urethane
+Uridine
+Uridine triphosphate
+Vaccination
+Vaccine
+Vacuole
+Vagina
+Validation
+Valine
+Van der Waals force
+Variable expressivity
+Variable number tandem repeat
+Variable region
+Variance
+Variant
+Variation
+Variegation
+Variety
+Vascular
+Vascular bundle
+Vascular cambium
+Vector
+Vegetative
+Vegetative cell
+Vegetative propagation
+Vehicle
+Vein
+Vermiculite
+Vernalization
+Vessel
+Viability
+Viable
+Viral
+Virion
+Viroid
+Virulence
+Virus
+Virus-free
+Vitamin
+Vitrification
+Vivipary
+Volatile
+W chromosome
+Wall
+Wax
+Western blotting
+Wet weight
+Wild type
+Wilt
+Wood
+Wound
+Wound hormone
+Wound response
+X chromosome
+X-ray
+X-ray crystallography
+Xanthophyll
+Xenia
+Xenograft
+Xenotransplantation
+Xerophyte
+Xylem
+Y chromosome
+Yeast
+Yield
+Yolk
+Z scheme
+Zea mays
+Zeatin
+Zebra
+Zero
+Zeta potential
+Zinc
+Zinc finger
+Zona pellucida
+Zoo
+Zoology
+Zygote
+Zygotene
+Zymogen
+Zymogram
+Environment
+Cultivation
+Breeding Method
+Bioinformatics
+Gene ID or Accession Number
+Species/Host
+Family
+Protein Family/Domain
+Encoded Protein
+Subcellular Localization
+Gene Name
+Pathogen Name
+Pathogen Type
+Disease Caused
+Physiological Race/Isolate for Research
+Upstream Gene
+Upstream Regulation Mode and Direction
+Downstream Target Gene
+Downstream Regulation Mode and Direction
+Interacting Protein
+Interaction Mode and Functional Impact
+Regulation/Interaction Validation Method
+Molecular Mechanism of Action
+Tissue Expression Specificity
+Genetic Origin/Evolutionary Mechanism
+Superior Haplotype in Natural Population
+Superior Haplotype Frequency
+QTLs or GWAS Region
+Natural Variation
+Distal Regulation
+Epigenetic Modification
+Overexpression
+Superior Allele
+microRNA
+PTI/ETI
+Type of Disease Resistance Mechanism
+Genome-Wide Association Study (GWAS)
+Genomic Selection
+Single Nucleotide Polymorphism (SNP)
+Copy Number Variation (CNV)
+Structural Variation (SV)
+Genome Rearrangement
+Chromosome Segment Substitution Line (CSSL)
+Near-Isogenic Line (NIL)
+Recombinant Inbred Line (RIL)
+Linkage Disequilibrium (LD)
+Marker Density
+Marker Effect Estimation
+Genotype Imputation
+Haplotype Analysis
+Pedigree Reconstruction
+Functional Enrichment Analysis
+Pathway Analysis
+Gene Co-expression Network
+Regulatory Network Analysis
+Marker-Assisted Selection (MAS)
+Linkage Analysis
+Comparative Gene
+Gene Editing (CRISPR/Cas)
+Gene Drive
+Synthetic Biology
+High-Throughput Sequencing
+Long-Read Sequencing
+Single-Cell Sequencing
+Gene Sequence
+Gene Expression Level
+Gene Mutation
+Gene Polymorphism
+Gene Copy Number
+Gene Regulatory Network
+Gene Function Annotation
+Genome Variation
+Promoter Activity
+Intron Splicing
+Exon Sequence
+Non-coding Region
+Chromosome Structure
+Gene Mapping
+Recombination Frequency
+Gene Flow
+Neutral Evolution
+Gene Duplication
+Gene Cloning Method
+Genome Corresponding to Gene ID
+Phenotype Classification
+Gene-Phenotype Relationship
+Molecular Mechanism
+Pleiotropy and Trait Trade-off
+Core Functional Validation Method
+Key Discovery Method
+Agronomic Trait
+Disease Resistance Trait
+Evaluation
+Phenotyping Method
+Field Experiment Conducted
+Field Experiment Location
+Phenotypic Plasticity Index
+Phenotypic Stability Parameter
+Phenotypic Prediction Model
+Nutritional Quality
+Protein Content
+Amino Acid Composition
+Fatty Acid Composition
+Vitamin Content
+Mineral Content
+Starch Properties
+Gluten Properties
+Fiber Quality
+Grain Size
+Shape Trait
+Color Trait
+Glossiness
+Yield Trait
+Quality Trait
+Resistance Trait
+Morphological Trait
+Physiological Trait
+Biochemical Trait
+Developmental Trait
+Adaptive Trait
+Stress Tolerance Trait
+Nutrient Content
+Metabolite
+Enzyme Activity
+Hormone Level
+Cell Wall Composition
+Chlorophyll Content
+Root Trait
+Stem Trait
+Leaf Trait
+Floral Trait
+Fruit Trait
+Seed Trait
+Growth Rate
+Flowering Time
+Maturity Period
+Dormancy Trait
+Nitrogenase Activity
+Nodule Size
+Nodule Number
+Nodulation
+Symbiotic Nitrogen Fixation
+Associative Nitrogen Fixation
+High Protein
+High Starch
+High Oil
+Superior Amino Acid
+Insect Resistance
+Disease Resistance
+Saline-Alkali Tolerance
+Heat Tolerance
+Drought Tolerance
+Environmental Response
+Ear Rot Resistance
+High Density Tolerance
+High Combining Ability
+Developmental Stage/Tissue/Treatment Condition
+Resistance Donor/Susceptible Parent
+Region
+Ontology Label
+Sample Source
+Phenotypic Plasticity
+Abiotic Stress
+Drought Stress
+Salt Stress
+Temperature Stress
+Light Stress
+Heavy Metal Stress
+pH Stress
+Pest Stress
+Weed Competition
+Pest and Disease Pressure
+Climate Change Factor
+CO2 Concentration
+Extreme Weather
+Seasonal Variation
+Temperature Condition
+Humidity Condition
+Light Intensity
+Soil Type
+pH Level
+Salt Content
+Heavy Metal Content
+Water Condition
+Altitude
+Latitude
+Microbial Community
+Symbiotic Relationship
+Competitive Relationship
+Predatory Relationship
+Pollinator
+Transmission Route
+Niche
+Food Chain
+Energy Flow
+Material Cycle
+Ecological Stability
+Soil NPK Nutrient Content
+Sampling Method
+Sampling Location
+Breeding Application Direction
+Breeding Application Validation
+Breeding Application Potential (10-point scale)
+Germplasm Evaluation
+Transgenic Receptor Material
+Genetic Population Type
+Cultivation
+Nutrition
+Key Regulated Metabolite
+Metabolite ID or Classification Number
+Annotated Metabolic Pathway
+Enzyme Kinetics Parameters
+Metabolite Content
+Metabolite Function
+Breeding Model/Platform
+Resource ID
+Population Type
+Sowing Density
+Planting Depth
+Row Spacing Configuration
+Fertilization Scheme
+Irrigation Regime
+Field Management
+Harvest Time
+Storage Condition
+Seed Treatment
+Crop Rotation System
+Intercropping Pattern
+Mulching Method
+Pruning Technique
+Grafting Technique
+Rapid Propagation
+Germplasm Preservation
+Parent Selection
+Cross Combination
+Cross-Testing
+Combining Ability Test
+Heritability Estimation
+Conventional Breeding Methods
+Modern Molecular Breeding Techniques
+Biotechnology Breeding
+Ploidy Breeding Techniques
+Mutagenesis Breeding Techniques
+Germplasm Resource Management
+Population Genetics Basics
+Breeding Population Construction
+Conventional Breeding
+Backcross Breeding
+Selfing Breeding
+Distant Hybridization
+Heterosis
+Combining Ability Analysis
+Single Seed Descent
+Second Cycle Line Breeding
+Marker-Assisted Selection (MAS)
+Genomic Selection
+Molecular Design Breeding
+Molecular Breeding
+Digital Breeding
+Precision Breeding
+Smart Breeding
+Accelerated Breeding
+Gene Editing
+Cell Breeding
+Chromosome Engineering
+Radiation Breeding
+Chemical Mutagenesis
+Laser Breeding
+Ion Beam Breeding
+Plasma Breeding
+Ultrasonic Breeding
+Magnetic Field Breeding
+Germplasm Supplementation
+Core Germplasm
+Mini-Core Germplasm
+Germplasm Innovation
+Exotic Germplasm
+Wild Relative
+Farmer's Variety
+Effective Population Size
+Population Differentiation Index (Fst)
+Nucleotide Diversity (π)
+Population Structure
+F2 Population
+Doubled Haploid Population
+Permanent F2 Population
+Single Segment Substitution Lines (SSSLs)
+Nested Association Mapping (NAM) Population
+Multi-parent Advanced Generation Inter-Cross (MAGIC) Population
+Breeding Accelerator
+Generation of Germplasm Material
+Basic Bioinformatics Concepts
+Gene and Transcriptome Information
+Proteomics Information
+Functional Annotation and Ontology
+Metabolomics Information
+Epigenetics Information
+Bioinformatics Knowledge Annotation Type
+Research Conclusion / Inference Statement (Conclusion Semantics)
+Sequencing Platform
+Library Construction Method
+Data Processing Method
+Chromatin Accessibility
+Chromatin Conformation (Hi-C)
+Open Chromatin Region (OCR)
+Topologically Associating Domain (TAD)
+Chromatin Loop
+Chromatin Compartment (A/B compartment)
+Cis-regulatory Element
+Trans-acting Factor
+Chromatin Interaction
+Methylation Modification
+Histone Modification
+Genome Version, Storage Location
+Genome Assembly Method
+Genome Annotation Method
+Structural Variation Detection Between Genomes
+Chromosome Structure Partitioning
+Centromere Analysis
+Telomere Analysis
+Mitochondria
+Genome Annotation Result
+Sequencing Data for Assembled Genome
+Transcriptome Raw Data Storage Location
+Transcriptome Alignment Genome Version
+Differentially Expressed Genes and Identification Method
+Co-expression Network
+Functional Enrichment
+Data Type
+Sample Source (Species, Experimental Treatment, Sampling Tissue)
+General Biological Principles
+Conclusions on Specific Biological Questions
+Upstream/Downstream Regulation
+Paper Logic
+Problem/Question
+Experimental Method
+Data Processing
+Direct Inference Conclusion
+Indirect Inference Conclusion
+Relationship Between Results (Parallel, Upstream/Downstream)
+Regulated Phenotype
+Basic Concepts of Cultivation and Breeding
+Breeding Theory and Application
+Genetic Breeding Technology
+Cultivation Techniques and Field Management
+Cropping Systems and Patterns
+Propagation Techniques
+Metabolism and Biochemical Analysis
+Cultivation and Breeding
+Planting Region
+Planting Area
+Breeding Objective
+Basic Gene Information and Annotation
+Gene Structure and Sequence Features
+Protein and Molecular Structure
+Gene Expression and Regulation
+Interactions and Pathways/Mechanisms
+Genetic Variation and Polymorphism
+Population Genetics and Evolution
+Genetic Analysis and Mapping (including Location/Map/Metrics)
+Breeding and Genetic Improvement
+Plant Pathology and Samples/Materials
+Bioinformatics and Data Analysis (Workflow)
+Evidence and Provenance
+Annotation Item
+Data Source
+Intron Splicing/Alternative Splicing
+Gene Structure Annotation GFF
+Chromosomal Structural Location of Gene (Arm/Centromere, etc.)
+Gene Location Corresponding to Protein Domain
+Base Content
+Gene Fusion
+Encoded Protein Sequence
+Protein 3D Structure
+Key Amino Acid Site
+Small Peptide / microPeptide / smallPeptide
+Expression Modification State/Site
+Gene Expression Location
+Gene Expression Location Mapping Method
+RNAi
+Protein-Protein Interaction
+Protein-DNA Interaction
+PTI/ETI (Pattern-Triggered/Effector-Triggered Immunity)
+Allelic Variation Type
+SNP (Single Nucleotide Polymorphism)
+InDel (Insertion/Deletion Marker)
+Copy Number Variation (CNV)
+Structural Variation (SV)
+Sequence/Structural Variation
+SSR (Simple Sequence Repeat)
+Linkage Disequilibrium (LD)
+Population Diversity
+Gene/Genotype Frequency
+Selective Sweep Region
+Highly Differentiated Region Between Populations
+Gene Physical Location
+QTLs or GWAS Region
+Genome-Wide Association Study (GWAS)
+TWAS
+Genetic Map
+Physical Map
+Genomic Selection
+Tag SNP
+Polymorphism Information Content (PIC)
+Chromosome Segment Substitution Line (CSSL)
+Near-Isogenic Line (NIL)
+Recombinant Inbred Line (RIL)
+Molecular Marker Breeding
+Marker-Assisted Selection
+Transgenic
+Vector Backbone
+Sampling Material/Time/Part/Treatment
+Alignment
+Genome Annotation
+Genome Assembly
+Genome Comparative Analysis
+Synteny Analysis
+Phylogenetic Tree Construction
+Function/Structure Prediction
+Evidence Code (ECO)
+Data Link (SRA/GEO/ENA/AE)
+Germplasm Level Information
+Single Gene Level Information
+Genome Level Information
+Basic Concepts and Theories of Phenotype
+Phenotype Research Methods and Technologies
+High-Throughput Phenotyping Technologies
+Phenotype Ontology and Data Standardization
+Agronomic Traits and Yield Quality
+Resistance and Adaptive Traits
+Nutritional Quality and Biochemical Composition
+Morphological Traits and Organ Characteristics
+Physiological and Biochemical Traits
+Developmental and Temporal Traits
+Gene-Trait Influence
+High-Throughput Technology
+High-Throughput Phenotyping
+Image-Based Phenotyping
+Spectral Phenotyping
+Phenotype Ontology ID
+Structural Part
+Ontology Mapping
+Seeds per Pod
+Kernels per Row
+100-Grain Weight
+Ear Weight / Kernel Weight per Ear
+Grain Weight per Plant
+Plot Yield
+Test Weight
+Ear Length / Ear Width / Kernel Rows per Ear
+Adaptive Trait
+Insect Resistance / Disease Resistance / Ear Rot Resistance
+Drought Tolerance / Saline-Alkali Tolerance / Heat Tolerance
+Disease Name (Controlled Vocabulary)
+Aspergillus Ear Rot
+Black Ear Rot
+Black Kernel Rot
+Sarocladium Ear Rot
+Charcoal Ear Rot
+Cladosporium Ear Rot
+Common Smut
+Ergot
+False Smut
+Fusarium Ear Rot / Pink Ear Rot
+Gibberella Ear Rot / Red Ear Rot
+Gray Ear Rot
+Head Smut
+Nigrospora Ear Rot / Dry Ear Rot
+Penicillium Ear Rot
+Red Kernel Disease
+Rhizoctonia Ear Rot
+Rhizopus Ear Rot
+Sclerotium Ear Rot
+Microdochium Ear Rot
+Shuck Rot
+Trichoderma Ear Rot
+Trichothecium Ear Rot
+Fatty Acid Composition / Oil Content
+Starch Content / Starch Properties
+(Derived Labels: High Protein / High Oil / High Starch / Superior Amino Acid)
+Shape Trait / Color Trait / Glossiness
+Plant Height
+Leaf Angle
+Ear Height
+Ear Tipping
+Husk Layer Number
+Leaf Number
+Cob Diameter / Cob Length / Cob Weight
+Tassel Main Axis Length / Branch Number
+Growth Stages (Emergence/Jointing/Tasseling/Silking/Pollination/Initial Flowering/Full Flowering/Grain Filling/Milk Stage/Dough Stage/Maturity)
+Candidate Gene (GWAS/TWAS/QTL)
+Upstream/Downstream Regulatory Relationships and Evidence
+Phenotype is spatiotemporally specific, a time-series, a phenotypic cycle from seed to seed, at different times
+Basic Environmental Concepts and Classification
+Experimental Design and Condition Control
+Abiotic Stress Environment
+Biotic Stress Environment
+Climate and Atmospheric Environment
+Soil Environment
+Geographical and Spatial Environment
+Biological Communities and Ecological Relationships
+Ecosystem Function
+Economic Impact
+Stress Type
+CO₂ Concentration
+Heterosis
+Maize Supplement
+Soybean Database
+Plant Database
+Plant Comparative Genomics
+Arabidopsis Phenotype Database
+Legume Genomics Research Platform
+Metabolomics Database
+Public Database
+Plant Nitrogen Fixation Phenotype Database
+Transcription Factor Database
+Published Plant Genomes Summary
+Legume Database
+Paddy
+Japonica Rice
+Indica Rice
+African Rice
+Common Wheat / Bread Wheat
+Spelt Wheat
+Triticale
+Barley
+Highland Barley
+Oats
+Rye
+Maize / Corn
+Maize
+Grain Corn
+Popcorn
+High-Oil Corn
+High-Lysine Corn
+Soybean
+Edamame
+Rapeseed
+Rapeseed
+Rapeseed (Brassica napus)
+Indian Mustard (Brassica juncea)
+Field Mustard (Brassica rapa)
+Sesame
+Peanut / Groundnut
+Peanut
+Sunflower
+Sunflower Seed
+Sea Island Cotton / Pima Cotton
+Flax
+Jute
+Potato
+Potato
+Sweet Potato
+Yam
+Sugarcane
+Sugar Beet
+Hops
+Arabidopsis thaliana
+Arabidopsis thaliana
+Tomato
+Cherry Tomato
+Cucumber
+Melon
+Hami Melon
+Pumpkin / Squash
+Zucchini / Courgette
+Chili Pepper
+Bell Pepper
+Eggplant / Aubergine
+Chinese Cabbage
+Napa Cabbage
+Pak Choi
+Cabbage
+Cabbage
+Broccoli
+Lettuce
+Daikon
+Chinese Chive / Leek
+Welsh Onion / Scallion
+Pear
+Peach
+Nectarine
+Plum
+Apricot
+Japanese Apricot / Mume
+Cherry
+Grape
+Table Grape
+Citrus
+Orange
+Mandarin Orange
+Pomelo
+Lemon
+Strawberry
+Blueberry
+Raspberry
+Banana
+Mango
+Lychee
+Longan
+Pineapple
+Pitaya / Dragon Fruit
+Kiwifruit
+Rose
+Modern Rose
+Orchid
+Carnation
+Pig / Swine / Hog
+Domestic Pig
+Wild Boar
+Duroc
+Landrace
+Large White
+Hampshire
+Pietrain
+Meishan Pig
+Erhualian Pig
+Rongchang Pig
+Bama Xiang Pig
+F1 Crossbred Pig
+Three-way Crossbred Pig
+Cattle / Bovine
+Yellow Cattle
+Dairy Cattle
+Beef Cattle
+Dual-Purpose Cattle
+Yak
+Water Buffalo
+Holstein
+Jersey
+Guernsey
+Angus
+Hereford
+Simmental
+Limousin
+Charolais
+Wagyu
+Qinchuan Cattle
+Luxi Cattle
+Nanyang Cattle
+Sheep / Goat
+Sheep
+Goat
+Small-tailed Han Sheep
+Hu Sheep
+Tan Sheep
+Mongolian Sheep
+Tibetan Sheep
+Merino
+Dorper
+Suffolk
+Texel
+Boer Goat
+Saanen Goat
+Alpine Goat
+Nubian Goat
+Cashmere Goat
+Liaoning Cashmere Goat
+Inner Mongolia Cashmere Goat
+Horse
+Domestic Horse
+Mongolian Horse
+Arabian Horse
+Thoroughbred
+Warmblood
+Donkey / Ass
+Mule
+Camel
+Bactrian Camel
+Dromedary Camel
+Alpaca
+Llama
+Chicken
+Domestic Chicken
+Layer Chicken
+Broiler Chicken
+Yellow-feathered Chicken
+White-feathered Chicken
+817 Broiler
+Indigenous Chicken Breed
+White Leghorn
+Rhode Island Red
+Cornish
+White Plymouth Rock
+Beijing You Chicken
+Langshan Chicken
+Silkie
+Duck
+Peking Duck
+Shaoxing Duck
+Jinding Duck
+Gaoyou Duck
+Cherry Valley Duck
+Muscovy Duck
+Goose
+Lion-head Goose
+Taihu Goose
+Huoyan Goose
+Landes Goose
+Turkey
+Pigeon / Dove
+Quail
+Ostrich
+Partridge
+Honey Bee
+Chinese Honey Bee
+Italian Honey Bee
+Silkworm
+Mulberry Silkworm
+Tussah Silkworm
+Mouse / Rat
+Rat
+Laboratory Mouse / Rat
+House Mouse
+C57BL/6 Mouse
+BALB/c Mouse
+ICR Mouse
+NOD Mouse
+Sprague-Dawley (SD) Rat
+Wistar Rat
+Fischer 344 Rat
+Guinea Pig
+Hamster
+Syrian Hamster
+Golden Hamster
+Chinese Hamster
+Rabbit
+New Zealand White Rabbit
+Japanese White Rabbit
+Chinchilla Rabbit
+Dog
+Beagle
+Cat
+Non-human Primate
+Rhesus Macaque
+Cynomolgus Monkey / Crab-eating Macaque
+Zebrafish
+African Clawed Frog
+Fruit Fly / Drosophila
+Caenorhabditis elegans (C. elegans)
+Human
+Human
+Homo sapiens
+Case
+Control
+Healthy Control
+Individual
+Sample
+Blood Sample
+Tissue Sample
+Disease
+Cancer
+Sus scrofa
+Bos taurus
+Ovis aries
+Equus caballus
+Capra hircus
+Equus asinus
+Balaenoptera musculus
+Mus musculus
+Macaca mulatta
+Canis lupus familiaris
+Felis catus
+Camelus dromedarius
+Loxodonta africana
+Ursus thibetanus
+Gallus gallus
+Anas platyrhynchos
+Anser cygnoides
+Oryctolagus cuniculus
+Ailuropoda melanoleuca
+Panthera leo
+Panthera tigris

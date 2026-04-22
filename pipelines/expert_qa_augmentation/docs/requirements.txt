@@ -1,0 +1,120 @@
+# =========================================
+# Agricultural QA Dataset Generation System
+# Requirements for SFT Dataset Generation
+# =========================================
+
+# ================================
+# Core ML/AI Frameworks
+# ================================
+torch>=2.0.0
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+accelerate>=0.20.0
+
+# ================================
+# API Clients & HTTP Libraries
+# ================================
+openai>=1.3.0
+anthropic>=0.3.0
+aiohttp>=3.8.0
+requests>=2.31.0
+urllib3>=2.0.0
+
+# ================================
+# Data Processing & Analysis
+# ================================
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+PyYAML>=6.0
+
+# ================================
+# Environment & Configuration
+# ================================
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# ================================
+# Utilities & Formatting
+# ================================
+tqdm>=4.65.0
+rich>=13.0.0
+
+# ================================
+# Optional: Advanced Features
+# ================================
+# Uncomment for large-scale embedding deduplication with FAISS
+# faiss-cpu>=1.7.0
+
+# Uncomment for FAISS GPU support (requires CUDA)
+# faiss-gpu>=1.7.0
+
+# ================================
+# Development & Testing (Optional)
+# ================================
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
+# pre-commit>=3.0.0
+
+# ================================
+# Installation Notes
+# ================================
+#
+# Basic Installation:
+#   pip install -r requirements.txt
+#
+# GPU Support for PyTorch:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+# FAISS GPU Support:
+#   pip install faiss-gpu  # Requires CUDA
+#
+# For M1/M2 Mac users:
+#   pip install torch torchvision
+#   # FAISS for Apple Silicon is experimental, consider alternative solutions
+#
+# Development Setup:
+#   pip install -r requirements.txt
+#   pip install -e .  # Install in editable mode
+#   pre-commit install  # Set up pre-commit hooks
+#
+# ================================
+# System Requirements
+# ================================
+#
+# Minimum Requirements:
+# - Python 3.8+
+# - 8GB RAM
+# - 10GB disk space
+#
+# Recommended:
+# - Python 3.10+
+# - 16GB+ RAM
+# - NVIDIA GPU with 8GB+ VRAM (for faster inference)
+# - 50GB+ disk space (for model cache and large datasets)
+#
+# ================================
+# Feature Dependencies
+# ================================
+#
+# Core Features (always installed):
+# - Basic QA generation
+# - Strategy selection
+# - Text processing
+#
+# Optional Features:
+# - FAISS: Large-scale semantic deduplication
+# - GPU acceleration: Faster model inference
+# - RAG integration: Retrieval-augmented generation
+#
+# ================================
+# Compatibility Notes
+# ================================
+#
+# - torch and transformers versions should be compatible
+# - sentence-transformers requires torch to be installed first
+# - FAISS requires specific system dependencies on some platforms
+# - Some packages may require specific Python versions

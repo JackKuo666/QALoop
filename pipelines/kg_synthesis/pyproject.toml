@@ -1,0 +1,16 @@
+[project]
+name = "kg-synthesis"
+version = "1.0.0"
+description = "Knowledge graph QA generation from Neo4j triplets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "neo4j>=5.0.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "sentence-transformers>=2.2.0",
+    "pandas>=2.0.0",
+    "requests>=2.28.0",
+    "networkx>=3.0.0",
+]

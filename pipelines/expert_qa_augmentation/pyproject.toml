@@ -1,0 +1,26 @@
+[project]
+name = "expert-qa-augmentation"
+version = "1.0.0"
+description = "Agricultural expert QA augmentation with 20+ strategies"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "openai>=1.3.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.65.0",
+    "aiohttp>=3.8.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+rag = [
+    "torch>=2.0.0",
+    "sentence-transformers>=2.2.0",
+]
+dev = [
+    "pytest>=7.0.0",
+]

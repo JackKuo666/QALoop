@@ -1,0 +1,12 @@
+[project]
+name = "paper-synthesis"
+version = "1.0.0"
+description = "Academic paper QA generation from Markdown papers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=1.0.0",
+]

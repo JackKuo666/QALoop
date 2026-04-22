@@ -1,0 +1,7 @@
+timestamp,req_id,model_used,status,error_type,message,attempt,used_search,latency_s,input_tokens,output_tokens,total_tokens,rag_used,rag_documents_count
+2026-04-20 11:16:42,2ffc2fa4,gpt-5.2,success,,,1,False,46.58,624,2735,3359,False,0
+2026-04-20 11:17:52,5c8e8c05,gpt-5.2,success,,,1,False,51.67,631,3016,3647,False,0
+2026-04-20 11:18:58,24c6e306,gpt-5.2,success,,,1,False,48.01,636,2907,3543,False,0
+2026-04-20 11:19:30,d76624f3,gpt-5.2,success,,,1,False,11.47,635,623,1258,False,0
+2026-04-20 11:20:33,49f46204,gpt-5.2,success,,,1,False,59.39,639,3217,3856,False,0
+2026-04-20 11:21:20,f4a42da5,gpt-5.2,success,,,1,False,27.81,632,1337,1969,False,0

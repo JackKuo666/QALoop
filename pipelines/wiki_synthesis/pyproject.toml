@@ -1,0 +1,22 @@
+[project]
+name = "wiki-synthesis"
+version = "1.0.0"
+description = "Wikipedia corpus QA generation with keyword/BERT filtering"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=1.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+bert = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+]
+dev = [
+    "pytest>=7.0.0",
+]

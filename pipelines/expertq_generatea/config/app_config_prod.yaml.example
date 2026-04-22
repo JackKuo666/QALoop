@@ -1,0 +1,140 @@
+# 生产环境配置文件模板
+# 请复制此文件为 app_config_prod.yaml 并填入真实配置
+
+es:
+  host: http://localhost:9200
+  username: elastic
+  password: "${ES_PASSWORD}"  # 通过环境变量设置
+  pubmed_index: pubmed25nv3
+  vector_index: bio_rag_v1
+  personal_index: user_rag_v1
+
+llm:
+  model: gpt-4o
+  api_key_qwen: "${QWEN_API_KEY}"  # 通过环境变量设置
+  base_url_qwen: https://dashscope.aliyuncs.com/compatible-mode/v1
+  max_tokens: 1024
+  temperature: 0.7
+  api_key: "${OPENAI_API_KEY}"  # 通过环境变量设置
+  base_url: "${OPENAI_BASE_URL}"  # 通过环境变量设置
+
+qa-llm:
+  main:
+    model: deepseek-r1
+    api_key: "${DEEPSEEK_API_KEY}"  # 通过环境变量设置
+    base_url: https://api.deepseek.com/v1
+    max_tokens: 1024
+    temperature: 0.7
+  backup:
+    model: qwen-plus-latest
+    api_key: "${QWEN_API_KEY}"  # 通过环境变量设置
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 1024
+    temperature: 0.7
+
+rewrite-llm:
+  backup:
+    model: gpt-4o
+    api_key: "${OPENAI_API_KEY}"  # 通过环境变量设置
+    base_url: "${OPENAI_BASE_URL}"  # 通过环境变量设置
+    max_tokens: 1024
+    temperature: 0.7
+  main:
+    model: qwen-plus-latest
+    api_key: "${QWEN_API_KEY}"  # 通过环境变量设置
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 1024
+    temperature: 0.7
+
+hypothetical-answer-llm:
+  main:
+    model: qwen-plus-latest
+    api_key: "${QWEN_API_KEY}"  # 通过环境变量设置
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    max_tokens: 1024
+    temperature: 0.7
+  backup:
+    model: gpt-4o
+    api_key: "${OPENAI_API_KEY}"  # 通过环境变量设置
+    base_url: "${OPENAI_BASE_URL}"  # 通过环境变量设置
+    max_tokens: 1024
+    temperature: 0.7
+
+recall:
+  pubmed_topk: 30
+  es_topk: 30
+
+qa-topk:
+  personal_vector: 40
+  pubmed: 10
+  web: 5
+
+qa-prompt-max-token:
+  max_tokens: 120000
+
+embedding:
+  server: "${EMBEDDING_SERVER_URL}"  # 通过环境变量设置
+  batch_size: 32
+
+redis:
+  host: localhost
+  port: 6379
+  user: default
+  password: "${REDIS_PASSWORD}"  # 通过环境变量设置
+
+milvus:
+  uri: "${MILVUS_URI}"  # 通过环境变量设置
+  token: "${MILVUS_TOKEN}"  # 通过环境变量设置
+  collection_name: bio_rag_v3
+  personal_index_name: user_rag_prod
+
+file_service:
+  base_url: "http://file-service"
+  download_path: "/getFileDownloadUrl"
+  get_info_path: "/getFileInfos"
+  cache_ttl: 600
+
+chat:
+  rag_prompt: |
+    # The following contents are the search results related to the user's message:
+        {search_results}
+        In the search results I provide to you, each result is formatted as [document X begin]...[document X end], where X represents the numerical index of each article.
+        When responding, please keep the following points in mind:
+        - Today is {cur_date}.
+        - Not all content in the search results is closely related to the user's question. You need to evaluate and filter the search results based on the question.
+        - If all the search results are irrelevant, please answer the question by yourself  professionally and concisely.
+        - The search results may focus only on a few points, use the information it provided, but do not favor those points in your answer, reason and answer by yourself all-sidedly with full consideration.
+        - For listing-type questions (e.g., listing all flight information), try to limit the answer to 10 key points and inform the user that they can refer to the search sources for complete information. Prioritize providing the most complete and relevant items in the list. Avoid mentioning content not provided in the search results unless necessary.
+        - If the response is lengthy, structure it well and summarize it in paragraphs. If a point-by-point format is needed, try to limit it to 5 points and merge related content.
+        - For objective Q&A, if the answer is very brief, you may add one or two related sentences to enrich the content.
+        - Choose an appropriate and visually appealing format for your response based on the user's requirements and the content of the answer, ensuring strong readability.
+        - Your answer should synthesize information from multiple relevant documents.
+        - Unless the user requests otherwise, your response should be in the same language as the user's question.
+        # The user's message is:
+        {question}
+        - The content should be concise and direct, and you MUST include proper citations using ONLY "[bdd-rag-citation:X]" format reference marks to indicate the sources of your information. Do NOT use any other citation formats such as [document X], [Author, Year], or parenthetical bibliographical references.
+        - Your responses should never include any emojis inside "[]". I need the content within [] to be clean and formatted exactly as I request.
+
+hypothetical_answer:
+  prompt: |
+    # Role Definition
+      You are an information retrieval specialist. Your task is to generate hypothetical answers for query vectorization optimization.
+    # Core Instructions
+      Generate a **HYPOTHETICAL ANSWER** based on user queries that must:
+      1. **Maximize information density** - Cover core intent with key entities, terminology, and related concepts
+      2. **Maintain structural discipline** - Use objective, expository writing style (third-person perspective)
+      3. **Control token length** - Contain 2-4 complete sentences (40-70 tokens exactly)
+      4. **Expand semantics** - Include relevant synonyms, hypernyms, and contextual scenarios
+      5. **Prioritize retrieval over facts** - Accuracy is not required; focus on vectorization-friendly expressions
+    # Generation Rules
+    - If query is ambiguous: Respond: "Clarification needed: Please refine your query"
+    - For sensitive topics: Respond: "Query containment alert: Suggest reformulating"
+    - Language style: Technical documentation tone (avoid colloquialisms)
+    # Output Format
+    STRICTLY use this JSON structure:
+    {
+      "query": "Original user query",
+      "hypothetical_answer": "Generated answer text"
+    }
+    # The user's message is:
+      {query}

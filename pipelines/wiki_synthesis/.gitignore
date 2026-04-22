@@ -39,5 +39,6 @@ tmp/
 *.bak
 *.swp
 
-# Lock files (optional)
-# uv.lock
+# Large model files (provide via HF link)
+*.bin
+best_model.bin

@@ -2,6 +2,12 @@
 
 A full-lifecycle toolkit for QA data: from generation and annotation to evaluation.
 
+## System Architecture
+
+![QALoop System Architecture](platform/seed/figure1.png)
+
+The diagram above shows the end-to-end QALoop workflow: heterogeneous agricultural sources are routed through source-adaptive QA synthesis pipelines into a candidate QA pool, then validated on the **Expert Validation Platform** (`platform/`). A feedback and iteration engine closes the loop; outputs include curated training QA, an independent benchmark, and downstream model evaluation.
+
 ## Project Structure
 
 ```

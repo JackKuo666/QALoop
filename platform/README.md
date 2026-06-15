@@ -128,6 +128,10 @@ client = OpenAI(
 
 ## System Overview
 
+![QALoop System Architecture](seed/figure1.png)
+
+The diagram above shows the full QALoop workflow. This platform corresponds to the **Expert Validation Platform** stage — receiving candidate QA pairs from upstream synthesis pipelines and supporting human quality review, feedback, and export.
+
 This repository covers **data import → schema configuration → multi-user annotation → statistics/analysis → export**. It does not include built-in "automatic QA generation" or "automatic model scoring/evaluation" modules; these can be integrated via upstream/downstream systems.
 
 ```mermaid

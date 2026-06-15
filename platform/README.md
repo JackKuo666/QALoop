@@ -9,210 +9,210 @@ pinned: false
 
 # QA Annotation System
 
-面向 **问答（QA）数据协作标注与质量管理** 的 Web 应用：多用户任务流、可配置的标注量表（Schema）、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。适合作为数据构建流水线中的「人工标注与质检」环节，与外部的 QA 生成、模型评测等工具链组合使用。
+A web application for **collaborative QA data annotation and quality management**: multi-user task workflows, configurable annotation schemas, statistics and export, plus optional **LLM-assisted review of annotation notes**. Designed as the human annotation and quality-check stage in a data pipeline, to be combined with external QA generation and model evaluation tools.
 
-## Demo 使用说明
+## Demo Usage
 
-本 Space 为演示环境，**开箱即用，无需手动配置 Secrets**。
+This Space is a demo environment — **works out of the box with no manual Secrets configuration**.
 
-### 登录
+### Login
 
-打开 Space 页面后，登录表单会**自动填入**默认管理员账号，直接点击「登录」即可体验。
+When you open the Space page, the login form is **pre-filled** with the default admin credentials. Click "Login" to start exploring.
 
-| 项目 | 默认值 |
-|------|--------|
-| 管理员用户名 | `admin` |
-| 管理员密码 | `123456` |
+| Item | Default |
+|------|---------|
+| Admin username | `admin` |
+| Admin password | `123456` |
 
-### 快速体验流程
+### Quick Demo Flow
 
-登录后已预置示例项目与 QA 数据，可直接：
+After login, sample projects and QA data are pre-loaded. You can:
 
-1. **浏览项目 / 数据集** — 管理后台查看预置的「测试」项目及 QA 对
-2. **查看标注配置** — 已有评分、单选等标注维度
-3. **领取并标注** — 切换到用户中心完成任务
-4. **查看分析 / 导出** — 查看标注进度与 LLM 分析报告，导出结果
+1. **Browse projects / datasets** — View the pre-loaded "Test" project and QA pairs in the admin dashboard
+2. **View annotation configs** — Explore existing rating, single-select, and other annotation dimensions
+3. **Claim and annotate** — Switch to the user center to complete tasks
+4. **View analysis / export** — Check annotation progress, LLM analysis reports, and export results
 
-如需从零搭建，也可自行创建项目、配置量表并导入 JSON / CSV。
+To build from scratch, you can also create projects, configure schemas, and import JSON / CSV data yourself.
 
-### Demo 示例数据（`seed/demo.sql`）
+### Demo Sample Data (`seed/demo.sql`)
 
-HF Space 首次启动且数据库为空时，`scripts/space_init.py` 会自动导入 `seed/demo.sql`（SQLite 文本导出，可进 git；HF 不接受二进制 `.db`）。
+On first HF Space startup with an empty database, `scripts/space_init.py` automatically imports `seed/demo.sql` (SQLite text dump, git-friendly; HF does not accept binary `.db` files).
 
-| 说明 | 内容 |
-|------|------|
-| 预置内容 | 1 个项目、3 个数据集、50 条 QA、标注配置及示例标注结果 |
-| LLM 配置 | 预填 Base URL 与 `gpt-5.1`；API Key 通过 `LLM_API_KEY` 环境变量注入，**不写入 sql** |
-| 运行时数据 | 导入后写入容器内 `/data/annotations.db`，网页上的修改只改运行时库 |
-| 与 sql 的关系 | **网页操作不会回写 `demo.sql`**；更新 Demo 需手动导出并 push |
+| Item | Details |
+|------|---------|
+| Pre-loaded content | 1 project, 3 datasets, 50 QA pairs, annotation configs, and sample annotation results |
+| LLM config | Pre-filled Base URL and `gpt-5.1`; API Key injected via `LLM_API_KEY` env var, **not written to sql** |
+| Runtime data | After import, written to `/data/annotations.db` inside the container; web UI changes only affect the runtime DB |
+| Relation to sql | **Web UI actions do not write back to `demo.sql`**; updating Demo data requires manual export and push |
 
-更新 Demo 数据示例：
+Example for updating Demo data:
 
 ```bash
-# 从本地运行时库导出（注意脱敏 llm_api_key）
+# Export from local runtime DB (remember to redact llm_api_key)
 sqlite3 ../data/annotations.db ".dump" > seed/demo.sql
 git add seed/demo.sql && git commit -m "Update demo seed" && git push space main
 ```
 
-关闭自动导入：设置环境变量 `SEED_DEMO_DATA=false`。
+To disable auto-import: set environment variable `SEED_DEMO_DATA=false`.
 
-### 注册普通用户
+### Registering Regular Users
 
-当前为 `production` 模式：新用户可自行注册，但需管理员在「用户管理」中**手动启用**后才能标注。
+Currently in `production` mode: new users can self-register, but must be **manually enabled** by an admin in "User Management" before they can annotate.
 
-### Demo 默认配置
+### Demo Default Configuration
 
-| 配置项 | 默认值 | 说明 |
-|--------|--------|------|
-| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT 签名密钥（Demo 用，勿用于正式部署） |
-| `ADMIN_USERNAME` | `admin` | 首次启动自动创建的管理员 |
-| `ADMIN_PASSWORD` | `123456` | 管理员密码 |
-| `DB_DIR` | `/data` | 数据库存储目录 |
-| `ENVIRONMENT` | `production` | 新注册用户需管理员启用 |
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT signing key (Demo only, do not use in production) |
+| `ADMIN_USERNAME` | `admin` | Admin auto-created on first startup |
+| `ADMIN_PASSWORD` | `123456` | Admin password |
+| `DB_DIR` | `/data` | Database storage directory |
+| `ENVIRONMENT` | `production` | New registrations require admin enablement |
 
-> **安全提示**：以上为公开 Demo 配置，请勿存放真实敏感数据。正式部署时请通过 HF Secrets 覆盖 `SECRET_KEY` 和 `ADMIN_PASSWORD`。
+> **Security note**: The above are public Demo settings. Do not store real sensitive data. For production deployment, override `SECRET_KEY` and `ADMIN_PASSWORD` via HF Secrets.
 
-## 部署到 Hugging Face Spaces
+## Deploy to Hugging Face Spaces
 
-1. 在 [Hugging Face](https://huggingface.co/new-space) 创建 Space，SDK 选择 **Docker**
-2. 将 `platform/` 目录内容推送到 Space 仓库（可只上传 platform 子目录作为仓库根目录）
-3. **Demo 场景无需配置 Secrets**，直接构建即可运行
-4. 正式部署时，在 Space **Settings → Repository secrets** 中覆盖：
+1. Create a Space on [Hugging Face](https://huggingface.co/new-space), SDK type **Docker**
+2. Push the contents of `platform/` to the Space repository (you can upload only the platform subdirectory as the repo root)
+3. **No Secrets needed for Demo** — build and run directly
+4. For production deployment, override in Space **Settings → Repository secrets**:
 
-| Secret | Demo 默认 | 说明 |
-|--------|-----------|------|
-| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT 密钥，正式环境请改为随机字符串 |
-| `ADMIN_USERNAME` | `admin` | 首次启动自动创建的管理员用户名 |
-| `ADMIN_PASSWORD` | `123456` | 管理员密码（至少 6 位） |
+| Secret | Demo Default | Description |
+|--------|--------------|-------------|
+| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT key; use a random string in production |
+| `ADMIN_USERNAME` | `admin` | Admin username auto-created on first startup |
+| `ADMIN_PASSWORD` | `123456` | Admin password (at least 6 characters) |
 
-5. 可选 **Variables**：
+5. Optional **Variables**:
 
-| Variable | 默认值 | 说明 |
-|----------|--------|------|
-| `DB_DIR` | `/data` | SQLite 数据目录（Dockerfile 已默认设为 `/data`） |
-| `ENVIRONMENT` | `production` | 新注册用户需管理员启用 |
-| `LLM_BASE_URL` | `http://43.159.131.233:3001/v1` | LLM API Base URL（OpenAI 兼容） |
-| `LLM_MODEL_NAME` | `gpt-5.1` | LLM 模型名称 |
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `DB_DIR` | `/data` | SQLite data directory (Dockerfile defaults to `/data`) |
+| `ENVIRONMENT` | `production` | New registrations require admin enablement |
+| `LLM_BASE_URL` | `http://43.159.131.233:3001/v1` | LLM API Base URL (OpenAI-compatible) |
+| `LLM_MODEL_NAME` | `gpt-5.1` | LLM model name |
 
-6. **LLM 分析（可选）**：在 Space **Settings → Repository secrets** 中设置：
+6. **LLM Analysis (optional)**: Set in Space **Settings → Repository secrets**:
 
-| Secret | 说明 |
-|--------|------|
-| `LLM_API_KEY` | LLM API Token（启动时自动写入系统配置） |
+| Secret | Description |
+|--------|-------------|
+| `LLM_API_KEY` | LLM API Token (auto-written to system config on startup) |
 
-Demo 已预填 Base URL 与模型名，对应 OpenAI 兼容调用：
+Demo pre-fills Base URL and model name for OpenAI-compatible calls:
 
 ```python
 from openai import OpenAI
 
 client = OpenAI(
     base_url="http://43.159.131.233:3001/v1",
-    api_key="your-token",  # 在 HF Secrets 中设置 LLM_API_KEY
+    api_key="your-token",  # Set LLM_API_KEY in HF Secrets
 )
 # model: gpt-5.1
 ```
 
-7. Space 构建完成后访问页面，用 `admin` / `123456` 登录即可使用
+7. After the Space build completes, visit the page and log in with `admin` / `123456`
 
-> **注意**：免费 Space 休眠重启后，若未启用持久化存储，标注数据可能丢失。Demo 展示用途无碍；正式协作标注建议自建服务器部署。
+> **Note**: On free Spaces, annotation data may be lost after sleep/restart if persistent storage is not enabled. Fine for Demo purposes; for production collaborative annotation, deploy on your own server.
 
-## 要点
+## Highlights
 
-- **项目与数据集** — 项目级组织，支持 JSON / CSV 导入与导出
-- **灵活标注配置** — 评分、分类、文本、单选/多选、二元；可选理由与置信度字段
-- **协作与权限** — 超级用户管理后台；普通用户领取任务并标注；JWT 认证
-- **分析与导出** — 标注进度与统计分析；结果可按配置简化导出
-- **可选 LLM** — OpenAI 兼容 Chat API，默认 `http://43.159.131.233:3001/v1` + `gpt-5.1`；Token 通过 `LLM_API_KEY` 环境变量注入
-- **种子问题** — 预置问题模板，按类型/子类管理
-- **界面语言** — 中英文（i18n）
+- **Projects and datasets** — Project-level organization with JSON / CSV import and export
+- **Flexible annotation configs** — Rating, category, text, single/multi-select, binary; optional reason and confidence fields
+- **Collaboration and permissions** — Superuser admin dashboard; regular users claim tasks and annotate; JWT auth
+- **Analysis and export** — Annotation progress and statistics; configurable simplified export
+- **Optional LLM** — OpenAI-compatible Chat API, default `http://43.159.131.233:3001/v1` + `gpt-5.1`; Token injected via `LLM_API_KEY` env var
+- **Seed questions** — Predefined question templates organized by type/subtype
+- **UI language** — Chinese and English (i18n)
 
-## 系统概览
+## System Overview
 
-本仓库覆盖 **数据导入 → 配置量表 → 多人标注 → 统计/分析 → 导出**；不包含内置的「自动 QA 生成」或「模型自动打分评测」模块，二者可通过上游/下游系统接入。
+This repository covers **data import → schema configuration → multi-user annotation → statistics/analysis → export**. It does not include built-in "automatic QA generation" or "automatic model scoring/evaluation" modules; these can be integrated via upstream/downstream systems.
 
 ```mermaid
 flowchart LR
-  subgraph external [外部可选]
-    Gen[QA 生成]
-    Eval[模型评测]
+  subgraph external [External Optional]
+    Gen[QA Generation]
+    Eval[Model Evaluation]
   end
-  subgraph app [本系统]
-    Import[导入数据集]
-    Config[标注配置]
-    Ann[人工标注]
-    Stats[统计与分析]
-    Export[导出结果]
+  subgraph app [This System]
+    Import[Import Dataset]
+    Config[Annotation Config]
+    Ann[Human Annotation]
+    Stats[Statistics & Analysis]
+    Export[Export Results]
   end
   Gen -.-> Import
   Import --> Config --> Ann --> Stats --> Export
   Export -.-> Eval
 ```
 
-## 可配置量表示例
+## Configurable Schema Example
 
-标注维度与字段名由管理员在 **标注配置** 中定义，而非产品写死。若研究与论文中采用多维质量量表（如事实性、完整性等），可通过多条 `score` / `category` 等配置实现。以下为 **示意 JSON**（导出结构以实际配置为准）：
+Annotation dimensions and field names are defined by admins in **Annotation Config**, not hardcoded in the product. If your research uses multi-dimensional quality scales (e.g., factuality, completeness), implement them via multiple `score` / `category` configs. Below is an **illustrative JSON** (actual export structure depends on your config):
 
 ```json
 {
-  "question": "什么是抗旱性状？",
-  "answer": "抗旱性状是指植物在干旱条件下维持生长和产量的能力。",
+  "question": "What is drought resistance?",
+  "answer": "Drought resistance refers to a plant's ability to maintain growth and yield under drought conditions.",
   "annotations": {
     "factuality_score": 5,
     "completeness_score": 4,
-    "notes": "解释正确但可补充机制层面细节"
+    "notes": "Correct explanation but could add mechanistic details"
   }
 }
 ```
 
-## 技术栈
+## Tech Stack
 
-- **后端**: Python 3.12+ / FastAPI / SQLAlchemy / SQLite
-- **前端**: 原生 HTML + JS + CSS（无框架）
-- **认证**: JWT（SHA-256 客户端哈希）
-- **包管理**: uv
+- **Backend**: Python 3.12+ / FastAPI / SQLAlchemy / SQLite
+- **Frontend**: Vanilla HTML + JS + CSS (no framework)
+- **Auth**: JWT (SHA-256 client-side hashing)
+- **Package manager**: uv
 
-## 环境要求
+## Requirements
 
 - Python >= 3.12
-- [uv](https://docs.astral.sh/uv/)（Python 包管理工具）
+- [uv](https://docs.astral.sh/uv/) (Python package manager)
 
-## 快速开始
+## Quick Start
 
-### 1. 克隆项目
+### 1. Clone the Repository
 
 ```bash
 git clone <repo-url>
 cd qa-annotation
 ```
 
-### 2. 安装依赖
+### 2. Install Dependencies
 
 ```bash
-# 安装 uv（如果没有）
+# Install uv (if not already installed)
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# 创建虚拟环境并安装所有依赖
+# Create virtual environment and install all dependencies
 uv sync
 
-# 如需开发工具（pre-commit 等）
+# For dev tools (pre-commit, etc.)
 uv sync --group dev
 ```
 
-### 3. 配置环境变量
+### 3. Configure Environment Variables
 
-创建 `.env` 文件：
+Create a `.env` file:
 
 ```bash
 cp .env.example .env
 ```
 
-然后编辑 `.env`，**必须修改 `SECRET_KEY`**：
+Then edit `.env` and **must update `SECRET_KEY`**:
 
 ```ini
-# 必填
+# Required
 SECRET_KEY=your-random-secret-key-here
 
-# 可选（以下为默认值）
+# Optional (defaults below)
 ENVIRONMENT=development
 HOST=0.0.0.0
 PORT=8000
@@ -220,156 +220,156 @@ RELOAD=false
 TOKEN_EXPIRE_DAYS=7
 ```
 
-| 变量 | 必填 | 说明 | 默认值 |
-|------|------|------|--------|
-| `SECRET_KEY` | 是 | JWT 密钥，生产环境务必修改为随机字符串 | - |
-| `ENVIRONMENT` | 否 | `development` 或 `production` | `development` |
-| `HOST` | 否 | 监听地址 | `0.0.0.0` |
-| `PORT` | 否 | 监听端口 | `8000` |
-| `RELOAD` | 否 | 是否启用热重载（开发用） | `false` |
-| `TOKEN_EXPIRE_DAYS` | 否 | Token 过期天数 | `7` |
+| Variable | Required | Description | Default |
+|----------|----------|-------------|---------|
+| `SECRET_KEY` | Yes | JWT key; must be a random string in production | - |
+| `ENVIRONMENT` | No | `development` or `production` | `development` |
+| `HOST` | No | Listen address | `0.0.0.0` |
+| `PORT` | No | Listen port | `8000` |
+| `RELOAD` | No | Enable hot reload (for development) | `false` |
+| `TOKEN_EXPIRE_DAYS` | No | Token expiration in days | `7` |
 
-> 生产环境下新注册用户默认禁用，需管理员手动启用。
+> In production, newly registered users are disabled by default and require manual admin enablement.
 
-### 4. 创建超级用户
+### 4. Create Superuser
 
 ```bash
-# 交互式创建（推荐）
+# Interactive creation (recommended)
 python scripts/create_superuser.py
 
-# 通过命令行参数创建
+# Create via command-line arguments
 python scripts/create_superuser.py --username admin --password yourpassword
 ```
 
-### 5. 启动服务
+### 5. Start the Server
 
 ```bash
-# 方式一：直接运行
+# Option 1: Direct run
 uvicorn qa_annotate.main:app --reload --host 0.0.0.0 --port 8000
 
-# 方式二：通过入口点（需要先 uv sync）
+# Option 2: Via entry point (requires uv sync first)
 qa
 ```
 
-启动后访问 `http://localhost:8000`，使用超级用户账号登录。API 文档：`http://localhost:8000/docs`。
+After startup, visit `http://localhost:8000` and log in with the superuser account. API docs: `http://localhost:8000/docs`.
 
-## 使用指南
+## User Guide
 
-### 管理员工作流
+### Admin Workflow
 
-1. **登录** — 使用超级用户账号登录，进入管理后台
-2. **创建项目** — 设置名称和描述
-3. **创建标注配置** — 定义任务类型（评分、分类、文本、单选、多选、二元），以及是否要求理由/置信度
-4. **关联配置到项目** — 将标注配置关联到项目，支持排序
-5. **导入数据集** — 上传 JSON 或 CSV 格式的 QA 数据
-6. **管理用户** — 创建/启用/禁用标注员账号
-7. **配置 LLM（可选）** — 在「系统配置」中填写下列键值（存入数据库，**不是** `.env`）：
+1. **Login** — Log in with superuser account, enter admin dashboard
+2. **Create project** — Set name and description
+3. **Create annotation config** — Define task type (rating, category, text, single-select, multi-select, binary), and whether reason/confidence fields are required
+4. **Link config to project** — Associate annotation configs with projects, with ordering support
+5. **Import dataset** — Upload QA data in JSON or CSV format
+6. **Manage users** — Create/enable/disable annotator accounts
+7. **Configure LLM (optional)** — Fill in the following keys in "System Config" (stored in database, **not** `.env`):
 
-   | 配置键 | 说明 |
-   |--------|------|
+   | Config Key | Description |
+   |------------|-------------|
    | `llm_api_key` | LLM API Key |
-   | `llm_base_url` | Base URL（如 `https://api.openai.com/v1`） |
-   | `llm_model_name` | 模型名称（如 `gpt-4o`） |
+   | `llm_base_url` | Base URL (e.g., `https://api.openai.com/v1`) |
+   | `llm_model_name` | Model name (e.g., `gpt-4o`) |
 
-   可使用「测试连接」验证。当前实现主要用于 **汇总分析标注备注**；不配置不影响核心标注功能。
+   Use "Test Connection" to verify. Current implementation is mainly for **summarizing and analyzing annotation notes**; core annotation works without LLM config.
 
-8. **查看分析** — 标注进度、统计与（若已配置）LLM 分析报告
+8. **View analysis** — Annotation progress, statistics, and (if configured) LLM analysis reports
 
-### 标注员工作流
+### Annotator Workflow
 
-1. **注册/登录** — 开发环境注册后通常可直接使用；生产环境需管理员启用账号
-2. **领取任务** — 在「可用任务」中领取数据集
-3. **执行标注** — 按配置填写各字段
-4. **我的任务** — 查看与跟进进度
+1. **Register/Login** — In development, registered users can usually annotate immediately; in production, admin must enable the account
+2. **Claim task** — Claim a dataset from "Available Tasks"
+3. **Annotate** — Fill in fields according to config
+4. **My tasks** — View and track progress
 
-### 权限说明（概要）
+### Permissions (Summary)
 
-| 能力 | 超级用户 | 普通用户 |
-|------|----------|----------|
-| 管理后台（项目、数据集、用户、系统配置等） | 是 | 否 |
-| 领取任务并提交标注 | 是 | 是（需启用） |
+| Capability | Superuser | Regular User |
+|------------|-----------|--------------|
+| Admin dashboard (projects, datasets, users, system config, etc.) | Yes | No |
+| Claim tasks and submit annotations | Yes | Yes (must be enabled) |
 
-超级用户同时具备普通用户的活跃身份，需要时也可参与标注。
+Superusers also have an active regular user identity and can participate in annotation when needed.
 
-### 数据格式
+### Data Format
 
-**导入 QA 数据集（JSON）**：
+**Import QA dataset (JSON)**:
 
 ```json
 [
   {
-    "question": "问题内容",
-    "answer": "回答内容"
+    "question": "Question content",
+    "answer": "Answer content"
   }
 ]
 ```
 
-支持额外字段，可在项目配置中指定需要展示的 extra 字段。
+Extra fields are supported; specify which extra fields to display in project config.
 
-## 项目结构
+## Project Structure
 
 ```
 qa_annotate/
-├── api/               # FastAPI 路由模块
-│   ├── analysis.py    # 标注结果分析与 LLM 相关接口
-│   ├── annotation.py  # 标注配置与结果
-│   ├── auth.py        # 认证与权限
-│   ├── dataset.py     # 数据集管理
-│   ├── project.py     # 项目管理
-│   ├── seed_question.py  # 种子问题
-│   ├── system_config.py  # 系统配置
-│   └── user.py        # 用户管理
-├── database/          # 数据库层
-│   ├── base.py        # 引擎、会话、初始化
-│   ├── models.py      # SQLAlchemy ORM 模型
-│   └── crud.py        # CRUD 操作
-├── schema/            # Pydantic 请求/响应模型
-├── services/          # 业务服务（如 LLM 调用）
-├── utils/             # 工具函数（密码哈希等）
-├── config.py          # 全局配置（pydantic-settings）
-├── html/              # HTML 页面
+├── api/               # FastAPI router modules
+│   ├── analysis.py    # Annotation result analysis and LLM endpoints
+│   ├── annotation.py  # Annotation configs and results
+│   ├── auth.py        # Authentication and permissions
+│   ├── dataset.py     # Dataset management
+│   ├── project.py     # Project management
+│   ├── seed_question.py  # Seed questions
+│   ├── system_config.py  # System configuration
+│   └── user.py        # User management
+├── database/          # Database layer
+│   ├── base.py        # Engine, session, initialization
+│   ├── models.py      # SQLAlchemy ORM models
+│   └── crud.py        # CRUD operations
+├── schema/            # Pydantic request/response models
+├── services/          # Business services (e.g., LLM calls)
+├── utils/             # Utilities (password hashing, etc.)
+├── config.py          # Global config (pydantic-settings)
+├── html/              # HTML pages
 ├── static/
 │   ├── js/            # JavaScript
-│   ├── css/           # 样式表
-│   └── locales/       # i18n 翻译文件
-└── main.py            # 应用入口
+│   ├── css/           # Stylesheets
+│   └── locales/       # i18n translation files
+└── main.py            # Application entry point
 ```
 
-## 数据库备份
+## Database Backup
 
 ```bash
-# 手动备份
+# Manual backup
 python scripts/backup_db.py
 
-# 定期备份（每 12 小时）
+# Scheduled backup (every 12 hours)
 python scripts/backup_db.py --schedule --interval 12
 ```
 
-## 开发
+## Development
 
 ```bash
-# 安装开发依赖
+# Install dev dependencies
 uv sync --group dev
 
-# 安装 pre-commit hooks
+# Install pre-commit hooks
 pre-commit install
 
-# 代码检查与格式化
+# Lint and format
 ruff check --fix .
 ruff format .
 ```
 
-## 研究与引用
+## Research and Citation
 
-若本系统或配套数据集用于发表论文，建议在文中说明：**标注维度与指南版本**、**导出格式与字段含义**，并在此补充论文标题、会议/期刊与 BibTeX（待发表时可先占位「即将更新」）。
+If you use this system or accompanying datasets in a publication, please describe in the paper: **annotation dimensions and guideline version**, **export format and field meanings**, and add the paper title, venue, and BibTeX here (placeholder "coming soon" if not yet published).
 
-## Roadmap（设想）
+## Roadmap
 
-- 多标注员一致性指标（IAA）与对拍工具
-- 主动学习或优先级队列（与任务领取结合）
-- 更丰富的链式推理 / 多片段标注展示（视需求扩展 Schema 与 UI）
-- 多模态字段展示（若数据集中包含图片等 URL）
+- Inter-annotator agreement (IAA) metrics and adjudication tools
+- Active learning or priority queue (integrated with task claiming)
+- Richer chain-of-thought / multi-segment annotation display (extend Schema and UI as needed)
+- Multimodal field display (if datasets include image URLs, etc.)
 
 ## License
 
-Private
+MIT

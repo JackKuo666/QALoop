@@ -1,66 +1,66 @@
 # QALoop
 
-QA 数据全生命周期工具集：从生成、标注到评测。
+A full-lifecycle toolkit for QA data: from generation and annotation to evaluation.
 
-## 项目结构
+## Project Structure
 
 ```
 QALoop/
-├── platform/      # 标注与评测平台（FastAPI Web 应用）
-├── pipelines/     # QA 生成 Pipeline 集合
-├── examples/      # 使用示例与样例数据
-├── docs/          # 文档
+├── platform/      # Annotation and evaluation platform (FastAPI web app)
+├── pipelines/     # QA generation pipeline collection
+├── examples/      # Usage examples and sample data
+├── docs/          # Documentation
 └── README.md
 ```
 
-## 模块说明
+## Modules
 
-### platform/ — 标注与评测平台
+### platform/ — Annotation and Evaluation Platform
 
-基于 FastAPI 的多用户协作标注平台，支持项目/数据集管理、灵活的标注配置（评分、分类、文本、单选/多选、二元）、统计分析与导出。可选集成 LLM 对标注备注进行智能分析。
+A multi-user collaborative annotation platform built on FastAPI. It supports project and dataset management, flexible annotation configurations (rating, classification, text, single/multi-select, binary), statistical analysis, and export. Optionally integrates LLM-based intelligent analysis of annotation notes.
 
-详见 [platform/README.md](platform/README.md)。
+See [platform/README.md](platform/README.md) for details.
 
-### pipelines/ — QA 生成 Pipeline
+### pipelines/ — QA Generation Pipelines
 
-独立的 QA 数据生成流水线集合，每个 Pipeline 负责从特定数据源生成 QA 对。
+A collection of standalone QA data generation pipelines. Each pipeline generates QA pairs from a specific data source.
 
-### examples/ — 使用示例
+### examples/ — Usage Examples
 
-导入数据格式、Pipeline 配置示例等。
+Import data formats, pipeline configuration examples, and more.
 
-### docs/ — 文档
+### docs/ — Documentation
 
-架构设计、API 文档、部署指南等。
+Architecture design, API documentation, deployment guides, and more.
 
-## 快速开始
+## Quick Start
 
-### 启动标注平台
+### Launch the Annotation Platform
 
 ```bash
 cd platform
 
-# 安装依赖
+# Install dependencies
 uv sync
 
-# 配置环境变量
+# Configure environment variables
 cp .env.example .env
-# 编辑 .env，修改 SECRET_KEY
+# Edit .env and update SECRET_KEY
 
-# 创建超级用户
+# Create superuser
 python scripts/create_superuser.py
 
-# 启动
+# Start the server
 uvicorn qa_annotate.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-详见 [platform/README.md](platform/README.md)。
+See [platform/README.md](platform/README.md) for details.
 
-## 环境要求
+## Requirements
 
 - Python >= 3.12
 - [uv](https://docs.astral.sh/uv/)
 
 ## License
 
-Private
+MIT

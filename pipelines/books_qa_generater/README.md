@@ -1,89 +1,91 @@
-# 图书章节拆分与QA生成工具使用说明
+# Book Chapter Splitting and QA Generation Tool Guide
 
-本工具集用于处理图书文件，先按目录进行章节拆分，然后生成问答对（QA）用于模型训练。
+This toolkit processes book files by splitting them into chapters by table of contents, then generating question-answer (QA) pairs for model training.
 
-## 工具概述
+## Tool Overview
 
-本工具集包含三个主要脚本：
+This toolkit includes three main scripts:
 
-1. **`chapter_statistics.py`** - 章节统计模块，提供章节拆分核心功能
-2. **`books_section_splite.py`** - 章节拆分脚本，调用`chapter_statistics.py`进行章节拆分
-3. **`jsonBook_QAgenrator_v2.py`** - QA生成脚本，基于拆分后的章节生成问答对
+1. **`chapter_statistics.py`** - Chapter statistics module providing core chapter splitting functionality
+2. **`books_section_splite.py`** - Chapter splitting script that calls `chapter_statistics.py` for splitting
+3. **`jsonBook_QAgenrator_v2.py`** - QA generation script that generates QA pairs from split chapters
 
-## 核心创新点
+## Core Innovations
 
-### 1. 目录结构感知章节拆分
+### 1. TOC-Aware Chapter Splitting
 
-传统方法按字符数或固定长度切分，导致章节内容不完整。本工具基于 Markdown 目录结构（`#`、`##`、`###` 等标题标记）智能识别章节边界：
+Traditional methods split by character count or fixed length, leaving chapter content incomplete. This tool intelligently identifies chapter boundaries from Markdown structure (`#`, `##`, `###` heading markers):
 
 ```
-图书 Markdown
-    ↓ 检测目录标记
-识别章节层级结构
-    ↓ 按标题切分
-保留完整章节内容
+Book Markdown
+    ↓ Detect TOC markers
+Identify chapter hierarchy
+    ↓ Split by headings
+Preserve complete chapter content
 ```
 
-- **层级保留**：支持多级标题（章/节/小节）
-- **标题提取**：自动识别章节标题和层级关系
-- **上下文完整**：确保每个章节内容连续完整
+- **Hierarchy preservation**: Supports multi-level headings (chapter/section/subsection)
+- **Title extraction**: Automatically identifies chapter titles and hierarchy
+- **Context integrity**: Ensures each chapter content is continuous and complete
 
-### 2. 图书专用问答模板
+### 2. Book-Specific QA Templates
 
-针对教科书类图书设计了专门的问答生成模板：
+Dedicated QA generation templates designed for textbook-style books:
 
-| 模板类型 | 适用场景 | 示例 |
+| Template Type | Use Case | Example |
 |---------|---------|------|
-| 事实性问答 | 概念定义、数据指标 | 水稻亩产量是多少？ |
-| 原理性问答 | 机制解释、因果关系 | 光合作用如何影响作物产量？ |
-| 方法性问答 | 操作步骤、技术要点 | 如何进行水稻旱育秧？ |
-| 比较性问答 | 差异对比、优劣势分析 | 籼稻与粳稻有何区别？ |
+| Factual QA | Concept definitions, data metrics | 水稻亩产量是多少？ |
+| Principle QA | Mechanism explanation, causality | 光合作用如何影响作物产量？ |
+| Method QA | Procedure steps, technical points | 如何进行水稻旱育秧？ |
+| Comparative QA | Difference comparison, pros/cons | 籼稻与粳稻有何区别？ |
 
-### 3. 层次化质量控制
+### 3. Hierarchical Quality Control
 
 ```
 ┌─────────────────────────────────────┐
-│           章节级质量控制              │
-│  长度过滤、格式验证、重复检测         │
+│        Chapter-level QC             │
+│  Length filter, format validation,  │
+│  duplicate detection                │
 ├─────────────────────────────────────┤
-│           段落级质量控制              │
-│  内容密度评估、主题相关性判断          │
+│        Paragraph-level QC           │
+│  Content density, topic relevance   │
 ├─────────────────────────────────────┤
-│           问答级质量控制              │
-│  多维度评分（长度/相关性/完整性...）  │
+│        QA-level QC                  │
+│  Multi-dimensional scoring          │
+│  (length/relevance/completeness...) │
 └─────────────────────────────────────┘
 ```
 
-- **长度评分**：评估问答长度是否适中
-- **相关性评分**：判断问答与原文的相关程度
-- **完整性评分**：检查答案是否完整回答问题
-- **逻辑性评分**：验证问答的逻辑连贯性
+- **Length scoring**: Evaluates whether QA length is appropriate
+- **Relevance scoring**: Assesses QA relevance to source text
+- **Completeness scoring**: Checks whether answers fully address questions
+- **Logic scoring**: Validates logical coherence of QA pairs
 
-### 4. SimHash 高效去重
+### 4. SimHash Efficient Deduplication
 
-针对海量图书内容（可达数十万章节），采用 SimHash 算法实现高效相似度去重：
+For large-scale book content (hundreds of thousands of chapters), SimHash enables efficient similarity-based deduplication:
 
-| 特性 | 说明 |
+| Feature | Description |
 |------|------|
-| 算法 | SimHash + Hamming 距离 |
-| 阈值 | 可配置（默认 6，越小越严格） |
-| 效率 | O(n) 时间复杂度 |
-| 效果 | 有效去除表达相近的重复问答 |
+| Algorithm | SimHash + Hamming distance |
+| Threshold | Configurable (default 6; lower = stricter) |
+| Efficiency | O(n) time complexity |
+| Effect | Effectively removes near-duplicate QA with similar phrasing |
 
-### 5. Curriculum Stage 自动分配
+### 5. Automatic Curriculum Stage Assignment
 
-根据问答的难度自动分配训练阶段，实现课程的渐进式学习：
+Automatically assigns training stages by QA difficulty for progressive curriculum learning:
 
-| 阶段 | 难度 | 特征 |
+| Stage | Difficulty | Characteristics |
 |------|------|------|
-| Stage 1 | 基础 | 单一事实、简单问答 |
-| Stage 2 | 中级 | 多知识点关联、解释性问答 |
-| Stage 3 | 高级 | 复杂推理、综合分析 |
+| Stage 1 | Basic | Single facts, simple QA |
+| Stage 2 | Intermediate | Multi-knowledge links, explanatory QA |
+| Stage 3 | Advanced | Complex reasoning, comprehensive analysis |
 
-### 6. 多维度质量过滤
+### 6. Multi-Dimensional Quality Filtering
 
 ```bash
-# 启用完整质量过滤流程
+# Enable full quality filtering pipeline
 python jsonBook_QAgenrator_v2.py \
     --enable-quality-filter \
     --min-quality-score 75.0 \
@@ -91,169 +93,169 @@ python jsonBook_QAgenrator_v2.py \
     --simhash-dedup-hamming 5
 ```
 
-- **质量阈值过滤**：可设置最小质量分数阈值
-- **多样性过滤**：避免相似问答重复生成
-- **可组合使用**：各过滤步骤可独立启用/禁用
+- **Quality threshold filtering**: Set minimum quality score threshold
+- **Diversity filtering**: Avoid generating similar duplicate QA
+- **Composable**: Each filtering step can be enabled/disabled independently
 
-## 工作流程
+## Workflow
 
 ```
-图书Markdown文件
+Book Markdown file
     ↓
-[步骤1] books_section_splite.py (调用 chapter_statistics.py)
+[Step 1] books_section_splite.py (calls chapter_statistics.py)
     ↓
-章节拆分后的JSON文件 (输出到 books_ChapterSection/)
+Split chapter JSON files (output to books_ChapterSection/)
     ↓
-[步骤2] jsonBook_QAgenrator_v2.py
+[Step 2] jsonBook_QAgenrator_v2.py
     ↓
-QA问答对JSON文件 (输出到 output/)
+QA pair JSON files (output to output/)
 ```
 
-## 安装依赖
+## Install Dependencies
 
 ```bash
-# 使用 uv 安装依赖（推荐）
+# Install dependencies with uv (recommended)
 uv sync
 
-# 或使用 pip
+# Or use pip
 pip install -r requirements.txt
 ```
 
-## 使用步骤
+## Usage Steps
 
-### 步骤1：章节拆分
+### Step 1: Chapter Splitting
 
-使用 `books_section_splite.py` 脚本将图书按照目录结构进行章节拆分。
+Use the `books_section_splite.py` script to split books by table-of-contents structure.
 
-#### 基本用法
+#### Basic Usage
 
 ```bash
-# 方式1：处理单个文件（通过命令行参数指定）
+# Method 1: Process a single file (via command-line argument)
 python books_section_splite.py /path/to/book.md
 
-# 方式2：处理多个文件
+# Method 2: Process multiple files
 python books_section_splite.py /path/to/book1.md /path/to/book2.md
 
-# 方式3：使用默认输入文件（如果脚本中有配置）
+# Method 3: Use default input file (if configured in script)
 python books_section_splite.py
 ```
 
-#### 输入说明
+#### Input Notes
 
-- **输入格式**：Markdown文件（.md）
-- **输入来源**：
-  - 命令行参数指定的文件路径
-  - 或脚本中配置的默认文件路径
+- **Input format**: Markdown files (.md)
+- **Input source**:
+  - File paths specified via command-line arguments
+  - Or default file paths configured in the script
 
-#### 输出说明
+#### Output Notes
 
-- **输出目录**：`./books_ChapterSection/`
-- **输出格式**：JSON文件（JSONL格式，每行一个JSON对象）
-- **输出内容**：每个章节包含以下字段：
+- **Output directory**: `./books_ChapterSection/`
+- **Output format**: JSON files (JSONL format, one JSON object per line)
+- **Output content**: Each chapter includes the following fields:
   ```json
   {
-    "books_ID": "图书ID（文件名）",
-    "chapter_title": "章节标题",
-    "context": "章节文本内容",
-    "length": 章节长度（字符数）
+    "books_ID": "Book ID (filename)",
+    "chapter_title": "Chapter title",
+    "context": "Chapter text content",
+    "length": "Chapter length (character count)"
   }
   ```
 
-#### 工作原理
+#### How It Works
 
-`books_section_splite.py` 脚本会：
-1. 读取输入的Markdown文件
-2. 调用 `chapter_statistics.py` 中的 `BookProcessor` 类
-3. 使用 `split_by_chapters()` 方法识别和拆分章节
-4. 将每个章节保存为JSON格式
+The `books_section_splite.py` script:
+1. Reads input Markdown files
+2. Calls the `BookProcessor` class in `chapter_statistics.py`
+3. Uses the `split_by_chapters()` method to identify and split chapters
+4. Saves each chapter as JSON
 
-### 步骤2：生成QA问答对
+### Step 2: Generate QA Pairs
 
-使用 `jsonBook_QAgenrator_v2.py` 脚本基于拆分后的章节生成问答对。
+Use the `jsonBook_QAgenrator_v2.py` script to generate QA pairs from split chapters.
 
-#### 使用示例数据快速测试
+#### Quick Test with Sample Data
 
 ```bash
 uv run python jsonBook_QAgenrator_v2.py --input examples/sample_books.jsonl --output output/
 ```
 
-#### 基本用法
+#### Basic Usage
 
 ```bash
-# 使用默认输入目录（books_ChapterSection/）
+# Use default input directory (books_ChapterSection/)
 python jsonBook_QAgenrator_v2.py
 
-# 指定输入目录
+# Specify input directory
 python jsonBook_QAgenrator_v2.py --input /path/to/books_ChapterSection
 
-# 指定输入和输出路径
+# Specify input and output paths
 python jsonBook_QAgenrator_v2.py --input /path/to/input --output /path/to/output.jsonl
 
-# 指定目标图书ID（只处理特定图书）
+# Specify target book IDs (process only selected books)
 python jsonBook_QAgenrator_v2.py --target-ids 9787040599398 9787040470406
 ```
 
-#### 主要参数说明
+#### Main Parameters
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |------|------|--------|------|
-| `--input` | str | `books_ChapterSection/` | 输入路径：可为JSONL文件或包含多个JSON/JSONL的目录 |
-| `--output` | str | 自动生成 | 输出JSONL文件路径（不指定时自动生成到`output/`目录） |
-| `--model` | str | None | 使用的模型名称 |
-| `--max-q-per-chunk` | int | None | 每章节最大问答数 |
-| `--target-ids` | list | [] | 目标图书ID列表（只处理指定的图书） |
-| `--sample-strategy` | flag | False | 使用采样策略 |
-| `--max-curriculum-stage` | int | None | curriculum最大阶段（1/2/3，None表示不限制） |
-| `--enable-quality-filter` | flag | False | 启用质量过滤 |
-| `--min-quality-score` | float | 60.0 | 最小质量分数阈值 |
-| `--enable-diversity-filter` | flag | False | 启用多样性过滤 |
-| `--simhash-dedup-hamming` | int | 6 | SimHash去重阈值（越小越严格） |
+| `--input` | str | `books_ChapterSection/` | Input path: JSONL file or directory with multiple JSON/JSONL files |
+| `--output` | str | Auto-generated | Output JSONL file path (auto-generated to `output/` if not specified) |
+| `--model` | str | None | Model name |
+| `--max-q-per-chunk` | int | None | Max QA pairs per chapter |
+| `--target-ids` | list | [] | Target book ID list (process only specified books) |
+| `--sample-strategy` | flag | False | Use sampling strategy |
+| `--max-curriculum-stage` | int | None | Max curriculum stage (1/2/3; None = no limit) |
+| `--enable-quality-filter` | flag | False | Enable quality filtering |
+| `--min-quality-score` | float | 60.0 | Minimum quality score threshold |
+| `--enable-diversity-filter` | flag | False | Enable diversity filtering |
+| `--simhash-dedup-hamming` | int | 6 | SimHash dedup threshold (lower = stricter) |
 
-#### 输入说明
+#### Input Notes
 
-- **输入格式**：JSON或JSONL文件
-- **输入目录**：`books_ChapterSection/`（步骤1的输出目录）
-- **输入内容**：包含 `books_ID`、`chapter_title`、`context`、`length` 字段的JSON对象
+- **Input format**: JSON or JSONL files
+- **Input directory**: `books_ChapterSection/` (Step 1 output directory)
+- **Input content**: JSON objects with `books_ID`, `chapter_title`, `context`, `length` fields
 
-#### 输出说明
+#### Output Notes
 
-- **输出目录**：`output/`
-- **输出格式**：JSONL文件（每行一个QA问答对）
-- **输出内容**：包含问题、答案、推理链等信息的问答对
+- **Output directory**: `output/`
+- **Output format**: JSONL file (one QA pair per line)
+- **Output content**: QA pairs with question, answer, reasoning chain, and related fields
 
-#### 高级功能
+#### Advanced Features
 
-1. **质量评估**：自动对生成的QA进行质量评分
-2. **去重功能**：使用SimHash算法去除重复的问答对
-3. **质量过滤**：可设置最小质量分数阈值，过滤低质量QA
-4. **多样性过滤**：启用多样性过滤，提高QA的多样性
-5. **统计报告**：自动生成详细的统计报告文件
+1. **Quality assessment**: Automatically scores generated QA
+2. **Deduplication**: Uses SimHash to remove duplicate QA pairs
+3. **Quality filtering**: Filter low-quality QA by minimum score threshold
+4. **Diversity filtering**: Improve QA diversity
+5. **Statistics report**: Automatically generates detailed statistics report
 
-## 完整示例
+## Complete Examples
 
-### 示例1：处理单个图书文件
+### Example 1: Process a Single Book File
 
 ```bash
-# 步骤1：拆分章节
+# Step 1: Split chapters
 python books_section_splite.py ./books_md/9787040599398.md
 
-# 步骤2：生成QA（处理上一步生成的所有JSON文件）
+# Step 2: Generate QA (process all JSON files from previous step)
 python jsonBook_QAgenrator_v2.py --input ./books_ChapterSection
 
-# 或者只处理特定图书
+# Or process only a specific book
 python jsonBook_QAgenrator_v2.py --input ./books_ChapterSection --target-ids 9787040599398
 ```
 
-### 示例2：批量处理多个图书文件
+### Example 2: Batch Process Multiple Book Files
 
 ```bash
-# 步骤1：批量拆分章节
+# Step 1: Batch split chapters
 python books_section_splite.py \
     /path/to/book1.md \
     /path/to/book2.md \
     /path/to/book3.md
 
-# 步骤2：生成所有图书的QA
+# Step 2: Generate QA for all books
 python jsonBook_QAgenrator_v2.py \
     --input ./books_ChapterSection \
     --enable-quality-filter \
@@ -261,13 +263,13 @@ python jsonBook_QAgenrator_v2.py \
     --enable-diversity-filter
 ```
 
-### 示例3：使用质量过滤和多样性过滤
+### Example 3: Quality and Diversity Filtering
 
 ```bash
-# 步骤1：拆分章节（同上）
+# Step 1: Split chapters (same as above)
 python books_section_splite.py /path/to/book.md
 
-# 步骤2：生成QA，启用质量过滤和多样性过滤
+# Step 2: Generate QA with quality and diversity filtering enabled
 python jsonBook_QAgenrator_v2.py \
     --input ./books_ChapterSection \
     --enable-quality-filter \
@@ -277,107 +279,107 @@ python jsonBook_QAgenrator_v2.py \
     --max-q-per-chunk 10
 ```
 
-## 目录结构
+## Directory Structure
 
 ```
 .
-├── chapter_statistics.py          # 章节统计模块（核心拆分逻辑）
-├── books_section_splite.py         # 章节拆分脚本
-├── jsonBook_QAgenrator_v2.py       # QA生成脚本
-├── books_md/                       # 原始图书Markdown文件目录
-├── books_ChapterSection/           # 章节拆分后的JSON文件目录（步骤1输出）
-└── output/                         # QA问答对输出目录（步骤2输出）
+├── chapter_statistics.py          # Chapter statistics module (core splitting logic)
+├── books_section_splite.py         # Chapter splitting script
+├── jsonBook_QAgenrator_v2.py       # QA generation script
+├── books_md/                       # Original book Markdown files
+├── books_ChapterSection/           # Split chapter JSON files (Step 1 output)
+└── output/                         # QA pair output directory (Step 2 output)
 ```
 
-## 注意事项
+## Notes
 
-1. **依赖环境**：
+1. **Environment dependencies**:
    - Python 3.x
-   - 需要安装必要的依赖包（pandas, openpyxl等）
-   - `jsonBook_QAgenrator_v2.py` 需要配置OpenAI API密钥（通过`.env`文件）
+   - Required packages (pandas, openpyxl, etc.)
+   - `jsonBook_QAgenrator_v2.py` requires OpenAI API key (via `.env` file)
 
-2. **文件路径**：
-   - 确保输入文件路径正确
-   - 输出目录会自动创建，无需手动创建
+2. **File paths**:
+   - Ensure input file paths are correct
+   - Output directories are created automatically; no manual creation needed
 
-3. **处理顺序**：
-   - **必须先执行步骤1（章节拆分）**，再执行步骤2（QA生成）
-   - 步骤2的输入必须是步骤1的输出
+3. **Processing order**:
+   - **Step 1 (chapter splitting) must run first**, then Step 2 (QA generation)
+   - Step 2 input must be Step 1 output
 
-4. **性能考虑**：
-   - 大文件处理可能需要较长时间
-   - 建议先处理少量文件测试流程
+4. **Performance**:
+   - Large files may take considerable time
+   - Test with a small file set first
 
-5. **错误处理**：
-   - 如果某个文件处理失败，脚本会记录错误并继续处理其他文件
-   - 检查日志输出以了解处理状态
+5. **Error handling**:
+   - If a file fails, the script logs the error and continues with other files
+   - Check log output for processing status
 
-## 故障排查
+## Troubleshooting
 
-1. **找不到输入文件**：
-   - 检查文件路径是否正确
-   - 确认文件是否存在且有读取权限
+1. **Input file not found**:
+   - Verify file path is correct
+   - Confirm file exists and is readable
 
-2. **章节拆分失败**：
-   - 检查Markdown文件格式是否正确
-   - 确认文件编码为UTF-8
+2. **Chapter splitting failed**:
+   - Check Markdown file format
+   - Confirm file encoding is UTF-8
 
-3. **QA生成失败**：
-   - 检查API密钥配置是否正确
-   - 确认输入JSON文件格式正确
-   - 查看日志了解具体错误信息
+3. **QA generation failed**:
+   - Check API key configuration
+   - Confirm input JSON file format
+   - Review logs for specific errors
 
-## 联系与支持
+## Contact and Support
 
-如有问题或建议，请联系项目维护者。
+For questions or suggestions, contact the project maintainer.
 
-## 管线流程图
+## Pipeline Flow Diagram
 
-以下是完整的处理管线流程图，展示了从原始图书文件到最终QA问答对的完整处理过程：
+The complete processing pipeline from raw book files to final QA pairs:
 
 ```mermaid
 flowchart TD
-    A[图书Markdown文件<br/>.md格式] --> B[books_section_splite.py<br/>章节拆分脚本]
-    B --> C{调用核心模块}
-    C --> D[chapter_statistics.py<br/>BookProcessor类]
-    D --> E[split_by_chapters方法]
+    A[Book Markdown file<br/>.md format] --> B[books_section_splite.py<br/>Chapter splitting script]
+    B --> C{Call core module}
+    C --> D[chapter_statistics.py<br/>BookProcessor class]
+    D --> E[split_by_chapters method]
 
-    E --> F[目录检测与解析]
-    F --> G[章节标题识别]
-    G --> H[章节内容提取]
-    H --> I[文本清理与格式化]
+    E --> F[TOC detection and parsing]
+    F --> G[Chapter title identification]
+    G --> H[Chapter content extraction]
+    H --> I[Text cleaning and formatting]
 
-    I --> J[章节JSON文件<br/>books_ChapterSection/]
-    J --> K[输出格式:<br/>books_ID<br/>chapter_title<br/>context<br/>length]
+    I --> J[Chapter JSON files<br/>books_ChapterSection/]
+    J --> K[Output format:<br/>books_ID<br/>chapter_title<br/>context<br/>length]
 
-    K --> L[jsonBook_QAgenrator_v2.py<br/>QA生成脚本]
-    L --> M[读取章节JSON文件]
-    M --> N[章节内容处理]
+    K --> L[jsonBook_QAgenrator_v2.py<br/>QA generation script]
+    L --> M[Read chapter JSON files]
+    M --> N[Chapter content processing]
 
-    N --> O{选择生成模式}
-    O -->|推理链模式| P[提取推理链]
-    O -->|简单模式| Q[直接生成QA]
+    N --> O{Select generation mode}
+    O -->|Reasoning chain mode| P[Extract reasoning chain]
+    O -->|Simple mode| Q[Generate QA directly]
 
-    P --> R[构建推理链提示词]
-    R --> S[调用LLM生成推理链]
-    S --> T[将推理链转换为QA]
+    P --> R[Build reasoning chain prompt]
+    R --> S[Call LLM to generate reasoning chain]
+    S --> T[Convert reasoning chain to QA]
 
-    Q --> U[构建QA生成提示词]
-    U --> V[调用LLM生成QA]
+    Q --> U[Build QA generation prompt]
+    U --> V[Call LLM to generate QA]
 
-    T --> W[QA质量评估]
+    T --> W[QA quality assessment]
     V --> W
 
-    W --> X{QualityScorer<br/>质量评分}
-    X --> Y[长度评分]
-    X --> Z[相关性评分]
-    X --> AA[完整性评分]
-    X --> AB[逻辑性评分]
-    X --> AC[清晰度评分]
-    X --> AD[学术规范性评分]
-    X --> AE[推理链质量评分]
+    W --> X{QualityScorer<br/>Quality scoring}
+    X --> Y[Length score]
+    X --> Z[Relevance score]
+    X --> AA[Completeness score]
+    X --> AB[Logic score]
+    X --> AC[Clarity score]
+    X --> AD[Academic norm score]
+    X --> AE[Reasoning chain quality score]
 
-    Y --> AF[综合质量分数]
+    Y --> AF[Overall quality score]
     Z --> AF
     AA --> AF
     AB --> AF
@@ -385,29 +387,29 @@ flowchart TD
     AD --> AF
     AE --> AF
 
-    AF --> AG{质量过滤<br/>可选}
-    AG -->|启用| AH[过滤低质量QA<br/>min_quality_score]
-    AG -->|禁用| AI[保留所有QA]
+    AF --> AG{Quality filter<br/>optional}
+    AG -->|Enabled| AH[Filter low-quality QA<br/>min_quality_score]
+    AG -->|Disabled| AI[Keep all QA]
 
-    AH --> AJ[SimHash去重<br/>可选]
+    AH --> AJ[SimHash dedup<br/>optional]
     AI --> AJ
 
-    AJ --> AK{多样性过滤<br/>可选}
-    AK -->|启用| AL[提高QA多样性]
-    AK -->|禁用| AM[保留所有QA]
+    AJ --> AK{Diversity filter<br/>optional}
+    AK -->|Enabled| AL[Improve QA diversity]
+    AK -->|Disabled| AM[Keep all QA]
 
-    AL --> AN[采样策略<br/>可选]
+    AL --> AN[Sampling strategy<br/>optional]
     AM --> AN
 
-    AN --> AO{Curriculum阶段<br/>可选}
-    AO -->|启用| AP[按难度分配阶段<br/>1/2/3]
-    AO -->|禁用| AQ[不限制阶段]
+    AN --> AO{Curriculum stage<br/>optional}
+    AO -->|Enabled| AP[Assign stage by difficulty<br/>1/2/3]
+    AO -->|Disabled| AQ[No stage limit]
 
-    AP --> AR[最终QA输出]
+    AP --> AR[Final QA output]
     AQ --> AR
 
-    AR --> AS[QA JSONL文件<br/>output/]
-    AS --> AT[输出格式:<br/>question<br/>answer<br/>reasoning_steps<br/>quality_score<br/>curriculum_stage<br/>等]
+    AR --> AS[QA JSONL file<br/>output/]
+    AS --> AT[Output format:<br/>question<br/>answer<br/>reasoning_steps<br/>quality_score<br/>curriculum_stage<br/>etc.]
 
     style A fill:#e1f5ff
     style J fill:#fff4e1
@@ -421,27 +423,27 @@ flowchart TD
     style AO fill:#ffebee
 ```
 
-### 流程说明
+### Flow Notes
 
-1. **输入阶段**：原始图书Markdown文件（.md格式）
+1. **Input stage**: Raw book Markdown files (.md format)
 
-2. **章节拆分阶段**：
-   - `books_section_splite.py` 作为入口脚本
-   - 调用 `chapter_statistics.py` 中的 `BookProcessor` 类
-   - 执行目录检测、章节识别、内容提取等核心功能
-   - 输出JSON格式的章节文件
+2. **Chapter splitting stage**:
+   - `books_section_splite.py` as entry script
+   - Calls `BookProcessor` class in `chapter_statistics.py`
+   - Performs TOC detection, chapter identification, content extraction
+   - Outputs chapter files in JSON format
 
-3. **QA生成阶段**：
-   - `jsonBook_QAgenrator_v2.py` 读取章节JSON文件
-   - 支持两种生成模式：推理链模式和简单模式
-   - 调用LLM（OpenAI API）生成问答对
+3. **QA generation stage**:
+   - `jsonBook_QAgenrator_v2.py` reads chapter JSON files
+   - Supports two modes: reasoning chain mode and simple mode
+   - Calls LLM (OpenAI API) to generate QA pairs
 
-4. **质量处理阶段**（可选）：
-   - **质量评估**：使用 `QualityScorer` 对QA进行多维度评分
-   - **质量过滤**：根据最小质量分数阈值过滤低质量QA
-   - **去重处理**：使用SimHash算法去除重复的QA
-   - **多样性过滤**：提高QA的多样性
-   - **采样策略**：可选的采样策略
-   - **Curriculum阶段**：按难度分配训练阶段（1/2/3）
+4. **Quality processing stage** (optional):
+   - **Quality assessment**: Multi-dimensional scoring via `QualityScorer`
+   - **Quality filtering**: Filter low-quality QA by minimum score threshold
+   - **Deduplication**: Remove duplicate QA via SimHash
+   - **Diversity filtering**: Improve QA diversity
+   - **Sampling strategy**: Optional sampling strategy
+   - **Curriculum stage**: Assign training stages by difficulty (1/2/3)
 
-5. **输出阶段**：最终生成包含完整信息的QA JSONL文件
+5. **Output stage**: Final QA JSONL files with complete information

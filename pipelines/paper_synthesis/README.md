@@ -1,98 +1,98 @@
-# PaperQAGenerator v9.3 - 智能比例控制版本
+# PaperQAGenerator v9.3 - Intelligent Ratio Control Edition
 
-## 📋 项目简介
+## 📋 Project Overview
 
-PaperQAGenerator 是一个从学术论文（Markdown格式）自动生成高质量问答对（QA）的智能系统。该系统专为农业与生命科学领域设计，支持两阶段推理链生成，能够自动从论文中提取知识并生成可用于大模型SFT训练的问答对。
+PaperQAGenerator is an intelligent system that automatically generates high-quality question-answer (QA) pairs from academic papers (Markdown format). Designed for agriculture and life sciences, it supports two-stage reasoning chain generation, automatically extracting knowledge from papers and producing QA pairs suitable for LLM SFT training.
 
-### 核心特性
+### Core Features
 
-- ✅ **两阶段推理链生成**：所有section都使用推理链生成，确保问答对具有逻辑推理过程
-- ✅ **智能比例控制**：自动控制编号问题的比例（默认最多10%），平衡简洁性与复杂性
-- ✅ **高质量过滤**：多维度质量检查，过滤不符合要求的问答对
-- ✅ **批量处理**：支持从Excel文件批量读取ID列表，并发处理多篇论文
-- ✅ **实时统计**：显示处理进度、LLM调用次数、生成问答对数量等实时统计信息
-- ✅ **断点续传**：支持从已有输出文件继续处理，自动跳过已处理的论文
+- ✅ **Two-stage reasoning chain generation**: All sections use reasoning chain generation to ensure QA pairs include logical reasoning steps
+- ✅ **Intelligent ratio control**: Automatically controls the proportion of numbered questions (default max 10%), balancing simplicity and complexity
+- ✅ **High-quality filtering**: Multi-dimensional quality checks to filter out non-compliant QA pairs
+- ✅ **Batch processing**: Supports reading ID lists from Excel files and concurrent processing of multiple papers
+- ✅ **Real-time statistics**: Displays processing progress, LLM call count, generated QA count, and other live metrics
+- ✅ **Checkpoint resume**: Supports continuing from existing output files, automatically skipping already-processed papers
 
-## 🎯 主要功能模块
+## 🎯 Main Functional Modules
 
-### 1. LLM调用模块
-- 集成Anthropic Responses API和OpenAI Chat Completions API
-- 支持多种模型（gpt-5.1、gpt-oss-120b等）
-- 自动提取思维链（CoT）内容
-- 线程安全的调用计数器
+### 1. LLM Call Module
+- Integrates Anthropic Responses API and OpenAI Chat Completions API
+- Supports multiple models (gpt-5.1, gpt-oss-120b, etc.)
+- Automatically extracts Chain of Thought (CoT) content
+- Thread-safe call counter
 
-### 2. 文本预处理模块
-- 从Markdown论文中智能提取章节
-- 自动识别并跳过论文标题、参考文献等无关内容
-- 支持章节合并和优先级排序
-- 基础文本清洗（删除图片、表格、公式等）
+### 2. Text Preprocessing Module
+- Intelligently extracts sections from Markdown papers
+- Automatically identifies and skips paper titles, references, and other irrelevant content
+- Supports section merging and priority sorting
+- Basic text cleaning (removes images, tables, formulas, etc.)
 
-### 3. 两阶段推理链生成模块
-- **第一阶段**：从章节文本抽取推理链（3-7个逻辑步骤）
-- **第二阶段**：将推理链转化为需要多步推理的问答对
-- 所有section都使用推理链生成，确保问答对具有推理过程
+### 3. Two-Stage Reasoning Chain Generation Module
+- **Stage 1**: Extract reasoning chains from section text (3–7 logical steps)
+- **Stage 2**: Convert reasoning chains into QA pairs requiring multi-step reasoning
+- All sections use reasoning chain generation to ensure QA pairs include reasoning steps
 
-### 4. 编号问题比例控制模块
-- 智能控制编号问题（①②③等）的比例（默认最多10%）
-- 对编号问题进行严格质量检查：
-  - 问题长度不超过250字符
-  - 编号点不超过2个
-  - 每个编号点内容不超过20字符
-  - 不使用冗余引导词
+### 4. Numbered Question Ratio Control Module
+- Intelligently controls the proportion of numbered questions (①②③, etc.; default max 10%)
+- Strict quality checks for numbered questions:
+  - Question length ≤ 250 characters
+  - No more than 2 numbered points
+  - Each numbered point content ≤ 20 characters
+  - No redundant lead-in phrases
 
-### 5. 智能质量过滤模块
-- 违禁短语检测（如"文中指出"、"本文认为"等）
-- 研究依赖性检查（避免依赖特定论文的表述）
-- 作者信息过滤
-- 假设/已知条件数量检查
-- 答案复述问题检查
-- 未提及具体案例检查
+### 5. Intelligent Quality Filtering Module
+- Forbidden phrase detection (e.g., "文中指出", "本文认为", etc.)
+- Research dependency checks (avoids phrasing tied to a specific paper)
+- Author information filtering
+- Assumption/known-condition count checks
+- Answer-repeats-question checks
+- Unmentioned specific case checks
 
-### 6. 文件处理模块
-- 从Excel文件读取ID列表（支持AL列和AM列）
-- 支持相对路径查找
-- 自动在多个搜索路径中查找Markdown文件
-- 生成未找到文件的汇总报告
+### 6. File Processing Module
+- Reads ID lists from Excel files (supports columns AL and AM)
+- Supports relative path lookup
+- Automatically searches for Markdown files across multiple search paths
+- Generates summary reports for files not found
 
-### 7. 质量控制模块
-- 难度分级（easy/medium/hard）
-- 标签分类（concept、mechanism、method、result等）
-- 智能采样策略（按难度配比和标签多样性）
+### 7. Quality Control Module
+- Difficulty grading (easy/medium/hard)
+- Tag classification (concept, mechanism, method, result, etc.)
+- Intelligent sampling strategy (by difficulty ratio and tag diversity)
 
-## 📦 系统要求
+## 📦 System Requirements
 
 - Python 3.7+
-- 依赖包：
-  - `pandas` - Excel文件处理
-  - `openai` - LLM API调用
-  - `python-dotenv` - 环境变量管理
+- Dependencies:
+  - `pandas` - Excel file processing
+  - `openai` - LLM API calls
+  - `python-dotenv` - Environment variable management
 
-## ⚙️ 安装和配置
+## ⚙️ Installation and Configuration
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
-### 安装
+### Installation
 
 ```bash
-# 使用 uv 安装依赖（推荐）
+# Install dependencies with uv (recommended)
 uv sync
 
-# 或使用 pip
+# Or use pip
 pip install -r requirements.txt
 ```
 
-### 2. 环境配置
+### 2. Environment Configuration
 
-在脚本同目录下创建 `.env` 文件，配置API密钥：
+Create a `.env` file in the same directory as the script and configure API keys:
 
 ```env
 OPENAI_API_KEY=${OPENAI_API_KEY}
-API_BASE_URL=https://api.openai.com/v1  # 可选，默认使用OpenAI标准端点
+API_BASE_URL=https://api.openai.com/v1  # Optional; defaults to OpenAI standard endpoint
 ```
 
-### 3. 配置搜索路径
+### 3. Configure Search Paths
 
-在脚本中修改 `SEARCH_BASE_PATHS` 变量，设置Markdown文件的搜索路径：
+Modify the `SEARCH_BASE_PATHS` variable in the script to set Markdown file search paths:
 
 ```python
 SEARCH_BASE_PATHS = [
@@ -102,79 +102,79 @@ SEARCH_BASE_PATHS = [
 ]
 ```
 
-## 🚀 使用方法
+## 🚀 Usage
 
-### 快速开始（使用示例数据）
+### Quick Start (Using Sample Data)
 
 ```bash
 uv run python PaperQAGenerator_v9.3.py --search-paths examples/
 ```
 
-### 基本用法
+### Basic Usage
 
-1. **准备Excel文件**
-   - Excel文件需要包含AL列（第38列）和AM列（第39列）
-   - AL列和AM列可以包含文件ID或相对路径
-   - B列（第2列）可以包含物种信息（可选）
+1. **Prepare Excel File**
+   - Excel file must contain column AL (column 38) and column AM (column 39)
+   - Columns AL and AM can contain file IDs or relative paths
+   - Column B (column 2) can contain species information (optional)
 
-2. **修改主程序配置**
+2. **Modify Main Program Configuration**
 
-在脚本的 `if __name__ == "__main__":` 部分修改以下参数：
+In the script's `if __name__ == "__main__":` section, modify the following parameters:
 
 ```python
-excel_path = "/path/to/your/excel.xlsx"  # Excel文件路径
-output_jsonl = "/path/to/output.jsonl"   # 输出JSONL文件路径
-not_found_file = "/path/to/not_found.txt"  # 未找到文件列表
-max_q_per_section = 5  # 每个章节生成的问题数
+excel_path = "/path/to/your/excel.xlsx"  # Excel file path
+output_jsonl = "/path/to/output.jsonl"   # Output JSONL file path
+not_found_file = "/path/to/not_found.txt"  # Not-found file list
+max_q_per_section = 5  # Questions per section
 ```
 
-3. **运行脚本**
+3. **Run the Script**
 
 ```bash
 python PaperQAGenerator_v9.3.py
 ```
 
-### 参数说明
+### Parameter Reference
 
-| 参数 | 说明 | 默认值 |
+| Parameter | Description | Default |
 |------|------|--------|
-| `excel_path` | Excel文件路径（包含ID列表） | - |
-| `output_jsonl` | 输出JSONL文件路径 | - |
-| `not_found_file` | 未找到文件的ID列表文件 | - |
-| `not_found_excel` | 未找到文件的Excel汇总 | - |
-| `max_q_per_section` | 每个章节生成的最大问题数 | 5 |
-| `by_section` | 是否按章节处理 | True |
-| `model` | 使用的LLM模型 | gpt-5.1 |
-| `max_workers` | 最大并发线程数 | 64 |
+| `excel_path` | Excel file path (contains ID list) | - |
+| `output_jsonl` | Output JSONL file path | - |
+| `not_found_file` | Not-found file ID list | - |
+| `not_found_excel` | Excel summary of not-found files | - |
+| `max_q_per_section` | Max questions generated per section | 5 |
+| `by_section` | Process by section | True |
+| `model` | LLM model to use | gpt-5.1 |
+| `max_workers` | Max concurrent threads | 64 |
 
-### 高级配置
+### Advanced Configuration
 
-#### 修改编号问题比例
+#### Adjust Numbered Question Ratio
 
-在脚本中修改 `MAX_NUMBERED_RATIO` 变量：
-
-```python
-MAX_NUMBERED_RATIO = 0.1  # 默认10%，可调整为0.05（5%）或0.2（20%）
-```
-
-#### 修改章节长度限制
+Modify the `MAX_NUMBERED_RATIO` variable in the script:
 
 ```python
-MAX_SECTION_LENGTH = 200  # 最大章节长度
-MIN_SECTION_LENGTH_FOR_PROCESSING = 200  # 最小处理长度
+MAX_NUMBERED_RATIO = 0.1  # Default 10%; can be set to 0.05 (5%) or 0.2 (20%)
 ```
 
-#### 修改过生成因子
+#### Adjust Section Length Limits
 
 ```python
-OVER_GENERATE_FACTOR = 1.5  # 过生成因子，用于后续采样
+MAX_SECTION_LENGTH = 200  # Max section length
+MIN_SECTION_LENGTH_FOR_PROCESSING = 200  # Min processing length
 ```
 
-## 📤 输出格式
+#### Adjust Over-Generation Factor
 
-### JSONL格式
+```python
+OVER_GENERATE_FACTOR = 1.5  # Over-generation factor for subsequent sampling
+```
 
-每行一个JSON对象，包含以下字段：
+## 📤 Output Format
+
+### JSONL Format
+
+One JSON object per line, containing the following fields:
 
 ```json
 {
@@ -182,8 +182,8 @@ OVER_GENERATE_FACTOR = 1.5  # 过生成因子，用于后续采样
   "paper_id": "论文ID",
   "question": "问题内容",
   "answer": "答案内容",
-  "reasoning_steps": ["Step 1: ...", "Step 2: ..."],  // 第一阶段推理链
-  "question_cot": "完整的推理过程描述",  // 第二阶段推理链
+  "reasoning_steps": ["Step 1: ...", "Step 2: ..."],  // Stage 1 reasoning chain
+  "question_cot": "完整的推理过程描述",  // Stage 2 reasoning chain
   "final_conclusion": "最终结论",
   "difficulty": "easy|medium|hard",
   "tags": ["concept", "mechanism", ...],
@@ -197,158 +197,158 @@ OVER_GENERATE_FACTOR = 1.5  # 过生成因子，用于后续采样
 }
 ```
 
-### 输出文件说明
+### Output File Description
 
-- **output.jsonl**：生成的问答对（JSONL格式）
-- **not_found_ids.txt**：未找到文件的ID列表
-- **not_found_ids.xlsx**：未找到文件的Excel汇总（包含原始Excel中的完整行信息）
+- **output.jsonl**: Generated QA pairs (JSONL format)
+- **not_found_ids.txt**: List of IDs for files not found
+- **not_found_ids.xlsx**: Excel summary of not-found files (includes full row info from original Excel)
 
-## 🔍 质量控制规则
+## 🔍 Quality Control Rules
 
-### 违禁短语
+### Forbidden Phrases
 
-系统会自动检测并过滤包含以下违禁短语的问答对：
-- "文中指出"、"本文认为"、"该研究表明"等指代论文的表述
-- "作者认为"、"作者信息"等作者相关表述
-- "根据给定内容"、"根据文本内容"等依赖文本的表述
+The system automatically detects and filters QA pairs containing these forbidden phrases:
+- Paper-referencing phrases such as "文中指出", "本文认为", "该研究表明"
+- Author-related phrases such as "作者认为", "作者信息"
+- Text-dependent phrases such as "根据给定内容", "根据文本内容"
 
-### 编号问题限制
+### Numbered Question Limits
 
-包含编号的问题需要满足：
-- 问题长度 ≤ 250字符
-- 编号点数量 ≤ 2个
-- 每个编号点内容 ≤ 20字符
-- 不使用"已知："、"基于以下信息："等冗余引导词
+Numbered questions must satisfy:
+- Question length ≤ 250 characters
+- Number of numbered points ≤ 2
+- Content per numbered point ≤ 20 characters
+- No redundant lead-ins such as "已知：", "基于以下信息："
 
-### 假设/已知条件限制
+### Assumption/Known-Condition Limits
 
-- 条件句数量 ≤ 1个
-- 分号+冒号总计 ≤ 3个
-- 引导词数量 ≤ 2个
-- 不能以条件句开头
+- Conditional clause count ≤ 1
+- Semicolon + colon total ≤ 3
+- Lead-in word count ≤ 2
+- Cannot start with a conditional clause
 
-## 📊 实时统计
+## 📊 Real-Time Statistics
 
-运行时会显示实时统计信息（每60秒更新一次）：
+During execution, live statistics are displayed (updated every 60 seconds):
 
 ```
 📊 实时统计 | 运行时长: 01:23:45 | LLM调用: 1234 次 | 已处理论文: 50 篇 | 问答对总数: 250 个
 ```
 
-## 🔄 断点续传
+## 🔄 Checkpoint Resume
 
-系统支持断点续传功能：
+The system supports checkpoint resume:
 
-1. 如果输出JSONL文件已存在，系统会自动读取已处理的paper_id
-2. 在本次运行中自动跳过已处理的论文
-3. 如果未找到文件列表已存在，也会自动跳过这些ID的文件查找
+1. If the output JSONL file already exists, the system automatically reads processed `paper_id` values
+2. Already-processed papers are skipped in the current run
+3. If the not-found file list already exists, file lookup for those IDs is also skipped
 
-## ⚠️ 注意事项
+## ⚠️ Notes
 
-1. **API限流**：大量并发请求可能导致API限流，建议根据实际情况调整 `max_workers` 参数
-2. **文件路径**：确保Excel文件中的路径格式正确，支持相对路径和绝对路径
-3. **内存使用**：处理大量论文时可能占用较多内存，建议监控系统资源
-4. **网络连接**：需要稳定的网络连接以调用LLM API
+1. **API rate limiting**: High concurrency may trigger API rate limits; adjust `max_workers` based on your situation
+2. **File paths**: Ensure path formats in the Excel file are correct; both relative and absolute paths are supported
+3. **Memory usage**: Processing large numbers of papers may consume significant memory; monitor system resources
+4. **Network connection**: A stable network connection is required for LLM API calls
 
-## 🐛 常见问题
+## 🐛 FAQ
 
-### Q: 为什么有些论文没有生成问答对？
+### Q: Why did some papers not generate QA pairs?
 
-A: 可能的原因：
-- 论文内容过短（少于200字符）
-- 章节被跳过（如参考文献、致谢等）
-- 生成的问答对未通过质量检查
-- 文件未找到
+A: Possible reasons:
+- Paper content too short (fewer than 200 characters)
+- Sections skipped (e.g., references, acknowledgments)
+- Generated QA pairs failed quality checks
+- File not found
 
-### Q: 如何调整生成的问题数量？
+### Q: How do I adjust the number of generated questions?
 
-A: 修改 `max_q_per_section` 参数。注意：系统会过生成（乘以 `OVER_GENERATE_FACTOR`），然后进行采样，最终数量可能略少于设定值。
+A: Modify the `max_q_per_section` parameter. Note: the system over-generates (multiplied by `OVER_GENERATE_FACTOR`), then samples, so the final count may be slightly below the configured value.
 
-### Q: 编号问题比例如何控制？
+### Q: How is the numbered question ratio controlled?
 
-A: 系统会自动控制编号问题的比例，通过 `is_acceptable_numbered_question()` 函数进行严格检查。如需调整比例，修改 `MAX_NUMBERED_RATIO` 变量。
+A: The system automatically controls the ratio via strict checks in `is_acceptable_numbered_question()`. To adjust the ratio, modify `MAX_NUMBERED_RATIO`.
 
-### Q: 如何处理未找到的文件？
+### Q: How do I handle files that were not found?
 
-A: 系统会自动生成 `not_found_ids.txt` 和 `not_found_ids.xlsx` 文件，包含所有未找到文件的ID和相关信息。
+A: The system automatically generates `not_found_ids.txt` and `not_found_ids.xlsx` with all not-found IDs and related information.
 
-## 📝 版本历史
+## 📝 Version History
 
-- **v9.5** (2025-12-15): 智能比例控制版本
-  - 新增编号问题比例控制（默认10%）
-  - 优化编号问题质量检查
-  - 实时统计编号问题比例
+- **v9.5** (2025-12-15): Intelligent ratio control edition
+  - Added numbered question ratio control (default 10%)
+  - Optimized numbered question quality checks
+  - Real-time numbered question ratio statistics
 
-- **v9.4**: 取消推理链使用次数限制，所有section都使用推理链生成
+- **v9.4**: Removed reasoning chain usage limits; all sections use reasoning chain generation
 
-- **v9.3**: 两阶段推理链生成版本
+- **v9.3**: Two-stage reasoning chain generation edition
 
-## 👥 作者
+## 👥 Author
 
 Claude Code
 
-## 📄 许可证
+## 📄 License
 
-本项目仅供内部使用。
+This project is for internal use only.
 
 ---
 
-## 📈 系统流程图
+## 📈 System Flow Diagram
 
 ```mermaid
 flowchart TD
-    A[开始] --> B[读取Excel文件]
-    B --> C[提取ID列表<br/>AL列和AM列]
-    C --> D{检查输出文件<br/>是否存在?}
-    D -->|是| E[读取已处理ID列表]
-    D -->|否| F[创建新输出文件]
-    E --> G[过滤已处理ID]
+    A[Start] --> B[Read Excel file]
+    B --> C[Extract ID list<br/>columns AL and AM]
+    C --> D{Output file<br/>exists?}
+    D -->|Yes| E[Read processed ID list]
+    D -->|No| F[Create new output file]
+    E --> G[Filter processed IDs]
     F --> G
-    G --> H[初始化线程池<br/>max_workers=64]
-    H --> I[并发处理每个ID]
+    G --> H[Initialize thread pool<br/>max_workers=64]
+    H --> I[Process each ID concurrently]
 
-    I --> J[查找Markdown文件]
-    J --> K{文件是否存在?}
-    K -->|否| L[记录未找到ID]
-    K -->|是| M[读取Markdown文件]
+    I --> J[Find Markdown file]
+    J --> K{File exists?}
+    K -->|No| L[Record not-found ID]
+    K -->|Yes| M[Read Markdown file]
 
-    M --> N[文本预处理]
-    N --> O[提取章节<br/>split_md_into_sections]
-    O --> P{章节数量}
-    P -->|=1| Q[按全文处理]
-    P -->|>1| R[按章节处理]
+    M --> N[Text preprocessing]
+    N --> O[Extract sections<br/>split_md_into_sections]
+    O --> P{Section count}
+    P -->|=1| Q[Process full text]
+    P -->|>1| R[Process by section]
 
-    Q --> S[生成推理型问答对]
-    R --> T[遍历每个章节]
+    Q --> S[Generate reasoning QA pairs]
+    R --> T[Iterate each section]
     T --> S
 
-    S --> U[两阶段推理链生成]
-    U --> V[第一阶段:抽取推理链]
-    V --> W[第二阶段:生成问答对]
-    W --> X[质量检查]
+    S --> U[Two-stage reasoning chain generation]
+    U --> V[Stage 1: Extract reasoning chain]
+    V --> W[Stage 2: Generate QA pairs]
+    W --> X[Quality check]
 
-    X --> Y{通过检查?}
-    Y -->|否| Z[过滤问答对]
-    Y -->|是| AA[检查编号问题比例]
+    X --> Y{Passed check?}
+    Y -->|No| Z[Filter QA pair]
+    Y -->|Yes| AA[Check numbered question ratio]
 
-    AA --> AB{编号问题<br/>比例是否超限?}
-    AB -->|是| AC[过滤编号问题]
-    AB -->|否| AD[保留问答对]
+    AA --> AB{Numbered question<br/>ratio exceeded?}
+    AB -->|Yes| AC[Filter numbered questions]
+    AB -->|No| AD[Keep QA pair]
     AC --> AD
 
-    AD --> AE[智能采样<br/>按难度和标签]
-    AE --> AF[写入JSONL文件]
-    AF --> AG[更新统计信息]
+    AD --> AE[Intelligent sampling<br/>by difficulty and tags]
+    AE --> AF[Write to JSONL file]
+    AF --> AG[Update statistics]
 
-    Z --> AH[跳过]
+    Z --> AH[Skip]
     L --> AH
-    AG --> AI{所有ID<br/>处理完成?}
+    AG --> AI{All IDs<br/>processed?}
     AH --> AI
 
-    AI -->|否| I
-    AI -->|是| AJ[生成未找到文件汇总]
-    AJ --> AK[输出最终统计]
-    AK --> AL[结束]
+    AI -->|No| I
+    AI -->|Yes| AJ[Generate not-found file summary]
+    AJ --> AK[Output final statistics]
+    AK --> AL[End]
 
     style A fill:#e1f5ff
     style AL fill:#e1f5ff
@@ -357,18 +357,18 @@ flowchart TD
     style AF fill:#e1ffe1
 ```
 
-### 流程图说明
+### Flow Diagram Notes
 
-1. **输入阶段**：从Excel文件读取ID列表，支持断点续传
-2. **文件查找**：在多个搜索路径中查找Markdown文件
-3. **文本处理**：提取章节，进行文本清洗
-4. **问答生成**：使用两阶段推理链生成问答对
-5. **质量控制**：多维度质量检查和编号问题比例控制
-6. **输出阶段**：写入JSONL文件，生成统计报告
+1. **Input stage**: Read ID list from Excel file; supports checkpoint resume
+2. **File lookup**: Search for Markdown files across multiple search paths
+3. **Text processing**: Extract sections and perform text cleaning
+4. **QA generation**: Generate QA pairs using two-stage reasoning chains
+5. **Quality control**: Multi-dimensional quality checks and numbered question ratio control
+6. **Output stage**: Write to JSONL file and generate statistics report
 
-### 关键模块说明
+### Key Module Notes
 
-- **两阶段推理链生成**：先抽取推理链，再转化为问答对
-- **质量检查**：违禁短语、研究依赖性、编号问题限制等
-- **智能采样**：按难度配比和标签多样性进行采样
-- **并发处理**：使用线程池并发处理多篇论文，提高效率
+- **Two-stage reasoning chain generation**: Extract reasoning chain first, then convert to QA pairs
+- **Quality checks**: Forbidden phrases, research dependency, numbered question limits, etc.
+- **Intelligent sampling**: Sample by difficulty ratio and tag diversity
+- **Concurrent processing**: Thread pool for concurrent paper processing to improve efficiency

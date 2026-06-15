@@ -1,165 +1,165 @@
-# 农业问答数据集生成系统 (Agricultural QA Dataset Generation System)
+# Agricultural QA Dataset Generation System
 
-## 项目概述
+## Project Overview
 
-本项目是一个专为农业领域设计的高质量问答数据集生成系统，用于为农业大语言模型提供监督微调（SFT）训练数据。系统支持多种生成策略，具备智能去重、质量控制和RAG（检索增强生成）集成等功能。
+This project is a high-quality question-answer dataset generation system designed for the agricultural domain, providing supervised fine-tuning (SFT) training data for agricultural large language models. The system supports multiple generation strategies with intelligent deduplication, quality control, and RAG (Retrieval-Augmented Generation) integration.
 
-## 主要特性
+## Key Features
 
-### 🚀 核心功能
-- **多样化生成策略**: 支持 20+ 种生成方法，包括释义、推理、对比分析、假设场景等
-- **智能策略选择**: 基于内容特点自动选择最佳生成策略
-- **多物种覆盖**: 支持玉米、大豆、水稻、油菜、小麦、畜禽、合成生物技术等
-- **RAG集成**: 支持检索增强生成，提高答案准确性和相关性
-- **嵌入去重**: 基于语义相似度的智能去重机制
-- **质量控制**: 多维度质量评估和过滤机制
+### 🚀 Core Capabilities
+- **Diverse generation strategies**: 20+ generation methods including paraphrasing, reasoning, comparative analysis, hypothetical scenarios, and more
+- **Intelligent strategy selection**: Automatically selects the best generation strategy based on content characteristics
+- **Multi-species coverage**: Supports corn, soybean, rice, rapeseed, wheat, livestock, synthetic biotechnology, and more
+- **RAG integration**: Retrieval-augmented generation for improved answer accuracy and relevance
+- **Embedding deduplication**: Intelligent deduplication based on semantic similarity
+- **Quality control**: Multi-dimensional quality assessment and filtering
 
-### 🎯 生成策略
-- **释义与重述** (Paraphrase)
-- **详细阐述** (Elaboration)
-- **视角转换** (Perspective Shift)
-- **多轮对话** (Multi-turn)
-- **跨物种迁移** (Cross-species)
-- **反向推理** (Reverse Reasoning)
-- **创新应用** (Innovative Application)
-- **对比分析** (Comparative Analysis)
-- **未来情景** (Future Scenario)
-- **假设性场景** (Hypothetical)
-- **反事实推理** (Counterfactual)
-- **元问题** (Meta Question)
-- **时间维度变化** (Temporal Shift)
-- **空间维度变化** (Spatial Shift)
-- **跨学科融合** (Discipline Cross)
-- **尺度变化** (Scale Change)
-- **时序分析** (Time Series)
-- **因果链条** (Causal Chain)
-- **对话变体** (Dialogue Variation)
-- **种子深化** (Seed Deepening)
+### 🎯 Generation Strategies
+- **Paraphrase**
+- **Elaboration**
+- **Perspective Shift**
+- **Multi-turn**
+- **Cross-species**
+- **Reverse Reasoning**
+- **Innovative Application**
+- **Comparative Analysis**
+- **Future Scenario**
+- **Hypothetical**
+- **Counterfactual**
+- **Meta Question**
+- **Temporal Shift**
+- **Spatial Shift**
+- **Discipline Cross**
+- **Scale Change**
+- **Time Series**
+- **Causal Chain**
+- **Dialogue Variation**
+- **Seed Deepening**
 
-## 项目结构
+## Project Structure
 
 ```
 agri_sft_ds/
-├── src/                          # 源代码
-│   ├── core/                     # 核心生成模块
-│   │   ├── qa_generator_v2.py       # QA生成器主文件
-│   │   ├── main_batch.py            # 批处理入口
-│   │   └── batch_processor.py       # 批处理器
-│   ├── optimization/              # 优化与增强
-│   │   ├── intelligent_strategy_selector.py  # 智能策略选择器
-│   │   ├── enhanced_strategy_selector.py     # 增强策略选择器
-│   │   ├── prompt_enhancer.py       # 提示增强器
-│   │   ├── STRATEGY_BALANCER.py     # 策略平衡器
-│   │   └── Self-awareness_dialogue_expansion.py  # 对话扩展优化器
-│   ├── quality/                   # 去重与质量控制
-│   │   ├── embedding_deduplicator.py   # 嵌入去重器
-│   │   ├── deduplicate_qa.py          # QA去重工具
-│   │   └── rag_cache.py               # RAG缓存系统
-│   └── runs/                      # 扩展与运行
-│       ├── run_expansion_from_dir.py      # 目录扩展脚本
-│       ├── run_expansion_from_expert.py   # 专家模式扩展
-│       ├── rag_async_optimization.py      # RAG异步优化
-│       └── rag_cache_integration.py       # RAG缓存集成
+├── src/                          # Source code
+│   ├── core/                     # Core generation modules
+│   │   ├── qa_generator_v2.py       # Main QA generator
+│   │   ├── main_batch.py            # Batch processing entry point
+│   │   └── batch_processor.py       # Batch processor
+│   ├── optimization/              # Optimization and enhancement
+│   │   ├── intelligent_strategy_selector.py  # Intelligent strategy selector
+│   │   ├── enhanced_strategy_selector.py     # Enhanced strategy selector
+│   │   ├── prompt_enhancer.py       # Prompt enhancer
+│   │   ├── STRATEGY_BALANCER.py     # Strategy balancer
+│   │   └── Self-awareness_dialogue_expansion.py  # Dialogue expansion optimizer
+│   ├── quality/                   # Deduplication and quality control
+│   │   ├── embedding_deduplicator.py   # Embedding deduplicator
+│   │   ├── deduplicate_qa.py          # QA deduplication tool
+│   │   └── rag_cache.py               # RAG cache system
+│   └── runs/                      # Expansion and execution
+│       ├── run_expansion_from_dir.py      # Directory expansion script
+│       ├── run_expansion_from_expert.py   # Expert mode expansion
+│       ├── rag_async_optimization.py      # RAG async optimization
+│       └── rag_cache_integration.py       # RAG cache integration
 │
-├── config/                       # 配置文件
-│   ├── config.yaml                  # 主配置
-│   ├── config.py                    # 配置管理
-│   ├── generation_ratios_config.yaml # 生成比例配置
-│   └── .env                         # 环境变量
+├── config/                       # Configuration files
+│   ├── config.yaml                  # Main config
+│   ├── config.py                    # Config management
+│   ├── generation_ratios_config.yaml # Generation ratio config
+│   └── .env                         # Environment variables
 │
-├── data/                         # 数据文件
-│   ├── raw/                        # 原始数据
-│   │   ├── agri_keywords.xlsx          # 农业关键词
-│   │   ├── domain_task.xlsx           # 领域任务
-│   │   ├── domain_task_expert.xlsx    # 专家领域任务
+├── data/                         # Data files
+│   ├── raw/                        # Raw data
+│   │   ├── agri_keywords.xlsx          # Agricultural keywords
+│   │   ├── domain_task.xlsx           # Domain tasks
+│   │   ├── domain_task_expert.xlsx    # Expert domain tasks
 │   │   ├── domain_task_expert_updated.xlsx
-│   │   ├── 专家问题_扩增CoT.xlsx       # 专家问题CoT扩增
-│   │   └── 单个水稻种子问题测试.xlsx    # 水稻测试数据
-│   ├── processed/                # 处理后的数据
-│   │   └── rag_cache/                # RAG缓存
-│   └── qa/                       # QA数据文件
+│   │   ├── 专家问题_扩增CoT.xlsx       # Expert question CoT expansion
+│   │   └── 单个水稻种子问题测试.xlsx    # Rice test data
+│   ├── processed/                # Processed data
+│   │   └── rag_cache/                # RAG cache
+│   └── qa/                       # QA data files
 │       ├── 油菜_answers.jsonl
 │       └── 玉米_answers.jsonl
 │
-├── output/                       # 输出文件
-│   ├── output_expert_expanded_*/     # 专家扩展输出
-│   └── output_全部物种_expanded_*/   # 全部物种扩展输出
+├── output/                       # Output files
+│   ├── output_expert_expanded_*/     # Expert expansion output
+│   └── output_全部物种_expanded_*/   # All-species expansion output
 │
-├── docs/                         # 文档
-│   ├── README.md                     # 项目说明文档
+├── docs/                         # Documentation
+│   ├── README.md                     # Project documentation
 │   ├── run_expansion_from_dir_README.md
 │   ├── run_expansion_from_expert_README.md
-│   └── requirements.txt              # 依赖列表
+│   └── requirements.txt              # Dependency list
 │
-├── tests/                        # 测试文件（待添加）
+├── tests/                        # Tests (to be added)
 │
-├── scripts/                      # 辅助脚本（待添加）
+├── scripts/                      # Utility scripts (to be added)
 │
-├── .gitignore                    # Git忽略配置
-└── MANIFEST.in                   # 打包清单
+├── .gitignore                    # Git ignore config
+└── MANIFEST.in                   # Package manifest
 ```
 
-## 环境要求
+## Requirements
 
 - Python 3.8+
-- 依赖包（安装方法见下方）
-- OpenAI API Key 或兼容的 API 服务
-- RAG服务（可选，用于检索增强）
+- Dependencies (see installation below)
+- OpenAI API Key or compatible API service
+- RAG service (optional, for retrieval augmentation)
 
-## 安装与配置
+## Installation and Configuration
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-主要依赖包括：
-- `openai` - OpenAI API客户端
-- `torch` - PyTorch深度学习框架
+Main dependencies:
+- `openai` - OpenAI API client
+- `torch` - PyTorch deep learning framework
 - `transformers` - Hugging Face Transformers
-- `aiohttp` - 异步HTTP客户端
-- `pydantic` - 数据验证
-- `scikit-learn` - 机器学习库
-- `sentence-transformers` - 句子嵌入
+- `aiohttp` - Async HTTP client
+- `pydantic` - Data validation
+- `scikit-learn` - Machine learning library
+- `sentence-transformers` - Sentence embeddings
 
-### 2. 配置API密钥
+### 2. Configure API Key
 
-编辑 `.env` 文件，添加你的API密钥：
+Edit the `.env` file and add your API key:
 
 ```bash
 OPENAI_API_KEY=${OPENAI_API_KEY}
 ```
 
-### 3. 配置参数
+### 3. Configure Parameters
 
-编辑 `config.yaml` 文件，根据需要调整参数：
+Edit `config.yaml` to adjust parameters as needed:
 
 ```yaml
-# 模型配置
+# Model config
 model_name: "gpt-5.1"
-api_base: "${OPENAI_BASE_URL}"  # 通过环境变量设置
-api_key: "${OPENAI_API_KEY}"    # 通过环境变量设置
+api_base: "${OPENAI_BASE_URL}"  # Set via environment variable
+api_key: "${OPENAI_API_KEY}"    # Set via environment variable
 max_retries: 3
 request_timeout: 60
 
-# 生成参数
+# Generation parameters
 default_variants_per_seed: 2
 default_batch_size: 10
 temperature: 0.7
 
-# 质量参数
+# Quality parameters
 min_question_length: 10
 min_answer_length: 40
 max_question_length: 500
 max_answer_length: 8000
 ```
 
-## 使用方法
+## Usage
 
-### 基础使用
+### Basic Usage
 
-#### 1. 使用主批处理脚本
+#### 1. Main Batch Script
 
 ```bash
 python src/core/main_batch.py \
@@ -169,7 +169,7 @@ python src/core/main_batch.py \
     --batch_size 10
 ```
 
-#### 2. 从目录扩展生成
+#### 2. Directory Expansion
 
 ```bash
 python src/runs/run_expansion_from_dir.py \
@@ -179,7 +179,7 @@ python src/runs/run_expansion_from_dir.py \
     --max_qa_pairs 10000
 ```
 
-#### 3. 专家模式扩展
+#### 3. Expert Mode Expansion
 
 ```bash
 python src/runs/run_expansion_from_expert.py \
@@ -188,15 +188,15 @@ python src/runs/run_expansion_from_expert.py \
     --config config/generation_ratios_config.yaml
 ```
 
-### 高级功能
+### Advanced Features
 
-#### 启用RAG检索增强
+#### Enable RAG Retrieval Augmentation
 
 ```python
 from src.core.main_batch import RAGClient
 
 rag_client = RAGClient()
-# 配置RAG服务地址
+# Configure RAG service URL
 rag_config = {
     'url': 'http://localhost:9487/retrieve',
     'timeout': 300,
@@ -204,152 +204,152 @@ rag_config = {
 }
 ```
 
-#### 自定义生成策略
+#### Custom Generation Strategies
 
-编辑 `config/generation_ratios_config.yaml` 文件，自定义各子类别权重：
+Edit `config/generation_ratios_config.yaml` to customize subcategory weights:
 
 ```yaml
 subspecies_ratios:
   基础理论问答: 1.0
   物种特异性知识问答: 1.2
   育种方案设计与评估: 1.0
-  # ... 更多配置
+  # ... more config
 ```
 
-#### 使用嵌入去重
+#### Embedding Deduplication
 
 ```python
 from src.quality.embedding_deduplicator import get_global_deduplicator
 
 deduplicator = get_global_deduplicator()
-# 去重后的QA对
+# Deduplicated QA pairs
 unique_qa_pairs = deduplicator.deduplicate(qa_pairs)
 ```
 
-## 输出格式
+## Output Format
 
-生成的QA数据集为JSONL格式，每行包含一个QA对：
+Generated QA datasets are in JSONL format, one QA pair per line:
 
 ```json
 {
-  "question": "问题内容",
-  "answer": "答案内容",
+  "question": "Question content",
+  "answer": "Answer content",
   "metadata": {
-    "category": "类别",
-    "difficulty": "难度",
-    "tags": ["标签1", "标签2"],
-    "generation_method": "生成策略",
+    "category": "Category",
+    "difficulty": "Difficulty",
+    "tags": ["tag1", "tag2"],
+    "generation_method": "Generation strategy",
     "quality_score": 0.95,
-    "species": "物种",
-    "subspecies": "子类别"
+    "species": "Species",
+    "subspecies": "Subcategory"
   }
 }
 ```
 
-## 配置说明
+## Configuration
 
-### 生成比例配置
+### Generation Ratio Config
 
-`config/generation_ratios_config.yaml` 文件控制：
-- 物种权重配置
-- 子类别权重配置
-- 生成策略参数
-- 质量控制阈值
-- 输出控制选项
+`config/generation_ratios_config.yaml` controls:
+- Species weight configuration
+- Subcategory weight configuration
+- Generation strategy parameters
+- Quality control thresholds
+- Output control options
 
-### 质量控制
+### Quality Control
 
-系统提供多层次质量控制：
-- 长度过滤（最小/最大字符数）
-- 语义相似度去重
-- 策略平衡器
-- 智能质量评估
+Multi-level quality control:
+- Length filtering (min/max character count)
+- Semantic similarity deduplication
+- Strategy balancer
+- Intelligent quality assessment
 
-### RAG集成
+### RAG Integration
 
-可选的RAG服务集成：
-- 支持本地或远程RAG服务
-- 异步检索优化
-- 缓存机制提升性能
-- 可配置重试策略
+Optional RAG service integration:
+- Supports local or remote RAG services
+- Async retrieval optimization
+- Cache mechanism for performance
+- Configurable retry strategy
 
-## 性能优化
+## Performance Optimization
 
-### 批处理优化
-- 支持批量生成
-- 异步并发处理
-- 智能速率限制
-- 失败重试机制
+### Batch Processing
+- Batch generation support
+- Async concurrent processing
+- Intelligent rate limiting
+- Failure retry mechanism
 
-### 内存优化
-- 流式处理大文件
-- 缓存机制
-- 垃圾回收优化
+### Memory Optimization
+- Streaming for large files
+- Caching mechanism
+- Garbage collection optimization
 
-## 监控与日志
+## Monitoring and Logging
 
-系统提供详细的日志记录：
-- 生成进度跟踪
-- 质量评估日志
-- 错误诊断信息
-- 性能指标统计
+Detailed logging includes:
+- Generation progress tracking
+- Quality assessment logs
+- Error diagnostics
+- Performance metrics
 
-## 故障排除
+## Troubleshooting
 
-### 常见问题
+### Common Issues
 
-1. **API调用失败**
-   - 检查API密钥配置
-   - 验证API服务地址
-   - 查看网络连接
+1. **API call failures**
+   - Check API key configuration
+   - Verify API service URL
+   - Check network connectivity
 
-2. **生成质量不佳**
-   - 调整temperature参数
-   - 增加variants_per_seed数量
-   - 启用RAG检索增强
+2. **Poor generation quality**
+   - Adjust temperature parameter
+   - Increase variants_per_seed
+   - Enable RAG retrieval augmentation
 
-3. **内存不足**
-   - 减小batch_size
-   - 启用流式处理
-   - 清理缓存
+3. **Out of memory**
+   - Reduce batch_size
+   - Enable streaming processing
+   - Clear cache
 
-4. **去重效果不理想**
-   - 调整相似度阈值
-   - 检查嵌入模型
-   - 验证输入数据质量
+4. **Suboptimal deduplication**
+   - Adjust similarity threshold
+   - Check embedding model
+   - Verify input data quality
 
-## 扩展开发
+## Extension Development
 
-### 添加新的生成策略
+### Adding New Generation Strategies
 
-1. 在 `src/core/qa_generator_v2.py` 中添加新的 `GenerationMethod`
-2. 实现对应的生成逻辑
-3. 更新 `METHOD_NAME_MAP` 映射
+1. Add a new `GenerationMethod` in `src/core/qa_generator_v2.py`
+2. Implement the corresponding generation logic
+3. Update the `METHOD_NAME_MAP` mapping
 
-### 自定义质量评估
+### Custom Quality Assessment
 
-1. 继承 `QualityConfig` 类
-2. 实现自定义评估逻辑
-3. 在生成流程中集成
+1. Extend the `QualityConfig` class
+2. Implement custom evaluation logic
+3. Integrate into the generation pipeline
 
-### 集成新的数据源
+### Integrating New Data Sources
 
-1. 实现数据加载器
-2. 支持新的文件格式
-3. 更新 `config/` 目录下的配置参数
+1. Implement a data loader
+2. Support new file formats
+3. Update configuration under `config/`
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。
+This project is licensed under the MIT License.
 
-## 贡献指南
+## Contributing
 
-欢迎提交 Issue 和 Pull Request 来改进项目。
+Issues and Pull Requests are welcome.
 
-## 联系方式
+## Contact
 
-如有问题，请通过 GitHub Issues 联系我们。
+For questions, please use GitHub Issues.
 
 ---
 
-**注意**: 请确保在使用前遵守相关的数据使用条款和API服务协议。
+**Note**: Ensure compliance with relevant data usage terms and API service agreements before use.

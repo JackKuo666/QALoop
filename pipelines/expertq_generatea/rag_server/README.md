@@ -1,36 +1,36 @@
 # Bio RAG Server (No Elasticsearch Required)
 
-基于 **Biopython Entrez API** 的 PubMed 检索服务，无需 Elasticsearch。
+PubMed retrieval service based on the **Biopython Entrez API** — no Elasticsearch required.
 
-## 特性
+## Features
 
-- **PubMed 直接检索**：使用 NCBI Entrez API，无需外部数据库
-- **FastAPI 服务**：高性能异步 API
-- **零外部依赖**：无需 Elasticsearch、Milvus、Redis
+- **Direct PubMed retrieval**: Uses NCBI Entrez API, no external database needed
+- **FastAPI service**: High-performance async API
+- **Zero external dependencies**: No Elasticsearch, Milvus, or Redis
 
-## 快速开始
+## Quick Start
 
 ```bash
 cd rag_server
 pip install -r requirements.txt
 python main.py
-# 或
+# or
 bash run.sh
 ```
 
-服务运行在 `http://localhost:9487`
+Service runs at `http://localhost:9487`
 
-## 与 seed_Q_generate_A_v2.py 配合使用
+## Using with seed_Q_generate_A_v2.py
 
-RAG Server 可为问答生成提供文献检索支持：
+The RAG Server provides literature retrieval support for QA generation:
 
 ```bash
-# 1. 启动 RAG Server（后台运行）
+# 1. Start RAG Server (background)
 cd rag_server
 python main.py &
 sleep 3
 
-# 2. 运行 QA 生成（启用 RAG）
+# 2. Run QA generation (with RAG enabled)
 cd ..
 python seed_Q_generate_A_v2.py \
   --input examples/sample_input.json \
@@ -39,22 +39,22 @@ python seed_Q_generate_A_v2.py \
   --model gpt-5.1
 ```
 
-### RAG 工作流程
+### RAG Workflow
 
-1. 用户问题 → `seed_Q_generate_A_v2.py`
-2. 问题 → `fetch_documents()` → RAG Server (`localhost:9487`)
-3. RAG Server → PubMed 检索 → 返回文献列表
-4. 文献上下文 → LLM 生成带引用的答案
+1. User question → `seed_Q_generate_A_v2.py`
+2. Question → `fetch_documents()` → RAG Server (`localhost:9487`)
+3. RAG Server → PubMed retrieval → Returns document list
+4. Document context → LLM generates citation-backed answer
 
-## API 端点
+## API Endpoints
 
-### 健康检查
+### Health Check
 ```bash
 GET /health
 # Response: {"status":"healthy","service":"bio-rag-server"}
 ```
 
-### 文档检索
+### Document Retrieval
 ```bash
 POST /retrieve
 Content-Type: application/json
@@ -68,7 +68,7 @@ Content-Type: application/json
 }
 ```
 
-### 响应示例
+### Response Example
 ```json
 {
   "success": true,
@@ -86,43 +86,43 @@ Content-Type: application/json
 }
 ```
 
-### 流式聊天（待实现）
+### Streaming Chat (Not Yet Implemented)
 ```bash
 POST /stream-chat
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 rag_server/
-├── main.py                 # FastAPI 应用入口
+├── main.py                 # FastAPI application entry point
 ├── dto/
-│   └── bio_document.py     # 文档数据模型
+│   └── bio_document.py     # Document data model
 ├── service/
 │   ├── pubmed_api.py       # Biopython Entrez API
-│   └── rag.py              # RAG 服务编排
+│   └── rag.py              # RAG service orchestration
 ├── search_service/
-│   ├── base_search.py      # 搜索服务基类
-│   └── pubmed_search.py    # PubMed 搜索实现
+│   ├── base_search.py      # Search service base class
+│   └── pubmed_search.py    # PubMed search implementation
 ├── routers/
-│   └── sensor.py           # API 路由
+│   └── sensor.py           # API routes
 └── utils/
-    ├── bio_logger.py       # 日志配置
-    └── snowflake_id.py     # ID 生成
+    ├── bio_logger.py       # Logging configuration
+    └── snowflake_id.py     # ID generation
 ```
 
-## 依赖
+## Dependencies
 
 - Python 3.10+
 - Biopython >= 1.81 (Entrez API)
 - FastAPI >= 0.104.0
 - uvicorn >= 0.24.0
 
-## 与旧版区别
+## Differences from Legacy Version
 
-| 特性 | 旧版 (ES) | 新版 (Biopython) |
-|------|-----------|-------------------|
-| PubMed 检索 | Elasticsearch | NCBI Entrez API |
-| 外部依赖 | ES + Milvus + Redis | 仅网络 |
-| 配置复杂度 | 高 | 低 |
-| 启动速度 | 慢 | 快 |
+| Feature | Legacy (ES) | New (Biopython) |
+|---------|-------------|-----------------|
+| PubMed retrieval | Elasticsearch | NCBI Entrez API |
+| External dependencies | ES + Milvus + Redis | Network only |
+| Configuration complexity | High | Low |
+| Startup speed | Slow | Fast |

@@ -1,50 +1,50 @@
-# 学位论文SFT问答对生成器
+# Thesis SFT QA Pair Generator
 
-## 项目简介
+## Project Overview
 
-`demo_thesis_QA_genrator_v2.py` 是一个专门针对学位论文的SFT（Supervised Fine-Tuning）问答对生成器。该工具能够自动读取学位论文文本，按章节拆分，并生成高质量的问答对，适用于大模型SFT训练。
+`demo_thesis_QA_genrator_v2.py` is an SFT (Supervised Fine-Tuning) QA pair generator designed specifically for academic theses. This tool automatically reads thesis text, splits it by chapter, and generates high-quality QA pairs suitable for large-model SFT training.
 
-## 系统流程图
+## System Flowcharts
 
-### SFT问答对生成流程
+### SFT QA Pair Generation Flow
 
 ```mermaid
 flowchart TD
-    A[读取学位论文JSONL] --> B[ThesisProcessor章节分割]
-    B --> C{识别章节格式}
-    C -->|Markdown| D1[Markdown分割]
-    C -->|LaTeX| D2[LaTeX分割]
-    C -->|中文| D3[中文章节分割]
-    C -->|英文| D4[英文章节分割]
-    C -->|论文特有| D5[论文章节分割]
-    C -->|其他| D6[智能回退分割]
+    A[Read thesis JSONL] --> B[ThesisProcessor chapter splitting]
+    B --> C{Detect chapter format}
+    C -->|Markdown| D1[Markdown splitting]
+    C -->|LaTeX| D2[LaTeX splitting]
+    C -->|Chinese| D3[Chinese chapter splitting]
+    C -->|English| D4[English chapter splitting]
+    C -->|Thesis-specific| D5[Thesis chapter splitting]
+    C -->|Other| D6[Smart fallback splitting]
     
-    D1 --> E[过滤非核心章节]
+    D1 --> E[Filter non-core chapters]
     D2 --> E
     D3 --> E
     D4 --> E
     D5 --> E
     D6 --> E
     
-    E --> F[并行处理各章节]
+    E --> F[Process chapters in parallel]
     F --> G[SFTQuestionGenerator]
-    G --> H[阶段1: 推理链抽取]
-    H --> I[调用LLM API]
-    I --> J[提取推理链JSON]
-    J --> K[阶段2: 推理链转问答]
-    K --> L[调用LLM API]
-    L --> M[生成问答对]
+    G --> H[Stage 1: Reasoning chain extraction]
+    H --> I[Call LLM API]
+    I --> J[Extract reasoning chain JSON]
+    J --> K[Stage 2: Reasoning chain to QA]
+    K --> L[Call LLM API]
+    L --> M[Generate QA pairs]
     
-    M --> N[质量评分QualityScorer]
-    N --> O[SimHash去重]
-    O --> P{启用多样性过滤?}
-    P -->|是| Q[推理多样性过滤]
-    P -->|否| R[质量过滤]
+    M --> N[Quality scoring QualityScorer]
+    N --> O[SimHash deduplication]
+    O --> P{Enable diversity filter?}
+    P -->|Yes| Q[Reasoning diversity filter]
+    P -->|No| R[Quality filter]
     Q --> R
     
-    R --> S[Curriculum Stage分配]
-    S --> T[难度配比采样]
-    T --> U[保存SFT问答对]
+    R --> S[Curriculum Stage assignment]
+    S --> T[Difficulty ratio sampling]
+    T --> U[Save SFT QA pairs]
     
     style A fill:#e1f5ff
     style U fill:#c8e6c9
@@ -53,30 +53,30 @@ flowchart TD
     style N fill:#ffccbc
 ```
 
-### 客观题生成流程
+### Objective Question Generation Flow
 
 ```mermaid
 flowchart TD
-    A[读取学位论文JSONL] --> B[ThesisProcessor章节分割]
-    B --> C[过滤非核心章节]
-    C --> D[计算题型分布]
-    D --> E[为章节分配题型]
+    A[Read thesis JSONL] --> B[ThesisProcessor chapter splitting]
+    B --> C[Filter non-core chapters]
+    C --> D[Compute question type distribution]
+    D --> E[Assign question types per chapter]
     
-    E --> F{启用两阶段推理链?}
-    F -->|是| G[ObjectiveReasoningQuestionGenerator]
-    F -->|否| H[ObjectiveQuestionGenerator]
+    E --> F{Enable two-stage reasoning chain?}
+    F -->|Yes| G[ObjectiveReasoningQuestionGenerator]
+    F -->|No| H[ObjectiveQuestionGenerator]
     
-    G --> I[阶段1: 推理链抽取]
-    I --> J[调用LLM API]
-    J --> K[提取推理链]
-    K --> L[阶段2: 推理链转客观题]
-    L --> M[生成单选题/多选题/判断题]
+    G --> I[Stage 1: Reasoning chain extraction]
+    I --> J[Call LLM API]
+    J --> K[Extract reasoning chain]
+    K --> L[Stage 2: Reasoning chain to objective questions]
+    L --> M[Generate single-choice / multiple-choice / true-false questions]
     
-    H --> N[直接生成客观题]
+    H --> N[Generate objective questions directly]
     N --> M
     
-    M --> O[验证题目格式]
-    O --> P[保存客观题]
+    M --> O[Validate question format]
+    O --> P[Save objective questions]
     
     style A fill:#e1f5ff
     style P fill:#c8e6c9
@@ -84,23 +84,23 @@ flowchart TD
     style L fill:#fff9c4
 ```
 
-### 两阶段推理链生成详细流程
+### Two-Stage Reasoning Chain Generation (Detailed)
 
 ```mermaid
 flowchart LR
-    A[章节文本] --> B[阶段1: 推理链抽取]
-    B --> C[LLM分析章节内容]
-    C --> D[提取3-7步推理链]
-    D --> E[生成支持事实]
-    E --> F[生成潜在问题模板]
-    F --> G[推理链JSON]
+    A[Chapter text] --> B[Stage 1: Reasoning chain extraction]
+    B --> C[LLM analyzes chapter content]
+    C --> D[Extract 3-7 step reasoning chain]
+    D --> E[Generate supporting facts]
+    E --> F[Generate potential question templates]
+    F --> G[Reasoning chain JSON]
     
-    G --> H[阶段2: 推理链转问答]
-    H --> I[LLM基于推理链生成]
-    I --> J[生成问题]
-    I --> K[生成答案]
-    I --> L[生成CoT思维链]
-    J --> M[完整问答对]
+    G --> H[Stage 2: Reasoning chain to QA]
+    H --> I[LLM generates based on reasoning chain]
+    I --> J[Generate question]
+    I --> K[Generate answer]
+    I --> L[Generate CoT chain of thought]
+    J --> M[Complete QA pair]
     K --> M
     L --> M
     
@@ -109,150 +109,150 @@ flowchart LR
     style M fill:#c8e6c9
 ```
 
-### 质量评估与过滤流程
+### Quality Evaluation and Filtering Flow
 
 ```mermaid
 flowchart TD
-    A[生成的问答对] --> B[QualityScorer质量评分]
-    B --> C[长度评分]
-    B --> D[完整性评分]
-    B --> E[逻辑性评分]
-    B --> F[清晰度评分]
-    B --> G[学术合规性评分]
-    B --> H[推理链评分]
+    A[Generated QA pairs] --> B[QualityScorer quality scoring]
+    B --> C[Length score]
+    B --> D[Completeness score]
+    B --> E[Logical coherence score]
+    B --> F[Clarity score]
+    B --> G[Academic compliance score]
+    B --> H[Reasoning chain score]
     
-    C --> I[加权计算总分]
+    C --> I[Weighted total score]
     D --> I
     E --> I
     F --> I
     G --> I
     H --> I
     
-    I --> J{总分 >= 阈值?}
-    J -->|否| K[过滤低质量]
-    J -->|是| L[SimHash去重]
+    I --> J{Total score >= threshold?}
+    J -->|No| K[Filter low quality]
+    J -->|Yes| L[SimHash deduplication]
     
-    L --> M[计算文本哈希]
-    M --> N{汉明距离 <= 6?}
-    N -->|是| O[标记为重复]
-    N -->|否| P[保留]
+    L --> M[Compute text hash]
+    M --> N{Hamming distance <= 6?}
+    N -->|Yes| O[Mark as duplicate]
+    N -->|No| P[Keep]
     
-    P --> Q{启用多样性过滤?}
-    Q -->|是| R[推理模式相似度检测]
-    Q -->|否| S[最终输出]
-    R --> T{推理模式相似?}
-    T -->|是| O
-    T -->|否| S
+    P --> Q{Enable diversity filter?}
+    Q -->|Yes| R[Reasoning pattern similarity detection]
+    Q -->|No| S[Final output]
+    R --> T{Similar reasoning pattern?}
+    T -->|Yes| O
+    T -->|No| S
     
     style B fill:#ffccbc
     style I fill:#fff9c4
     style S fill:#c8e6c9
 ```
 
-### 章节分割策略流程
+### Chapter Splitting Strategy Flow
 
 ```mermaid
 flowchart TD
-    A[原始论文文本] --> B[文本预处理]
-    B --> C[尝试Markdown分割]
-    C --> D{成功?}
-    D -->|是| E[返回Markdown chunks]
-    D -->|否| F[尝试LaTeX分割]
+    A[Raw thesis text] --> B[Text preprocessing]
+    B --> C[Try Markdown splitting]
+    C --> D{Success?}
+    D -->|Yes| E[Return Markdown chunks]
+    D -->|No| F[Try LaTeX splitting]
     
-    F --> G{成功?}
-    G -->|是| H[返回LaTeX chunks]
-    G -->|否| I[尝试中文章节分割]
+    F --> G{Success?}
+    G -->|Yes| H[Return LaTeX chunks]
+    G -->|No| I[Try Chinese chapter splitting]
     
-    I --> J{成功?}
-    J -->|是| K[返回中文chunks]
-    J -->|否| L[尝试英文章节分割]
+    I --> J{Success?}
+    J -->|Yes| K[Return Chinese chunks]
+    J -->|No| L[Try English chapter splitting]
     
-    L --> M{成功?}
-    M -->|是| N[返回英文chunks]
-    M -->|否| O[尝试论文特有章节分割]
+    L --> M{Success?}
+    M -->|Yes| N[Return English chunks]
+    M -->|No| O[Try thesis-specific chapter splitting]
     
-    O --> P{成功?}
-    P -->|是| Q[返回论文chunks]
-    P -->|否| R[智能回退分割]
+    O --> P{Success?}
+    P -->|Yes| Q[Return thesis chunks]
+    P -->|No| R[Smart fallback splitting]
     
-    R --> S[返回回退chunks]
+    R --> S[Return fallback chunks]
     
-    E --> T[后处理: 合并小chunks]
+    E --> T[Post-process: merge small chunks]
     H --> T
     K --> T
     N --> T
     Q --> T
     S --> T
     
-    T --> U[识别章节类型]
-    U --> V[过滤非核心章节]
-    V --> W[最终chunks列表]
+    T --> U[Identify chapter types]
+    U --> V[Filter non-core chapters]
+    V --> W[Final chunk list]
     
     style A fill:#e1f5ff
     style W fill:#c8e6c9
     style T fill:#fff9c4
 ```
 
-## 核心特性
+## Core Features
 
-### 📚 学位论文优化
-- 识别学位论文特有章节（摘要、引言、文献综述、方法、结果、讨论、结论）
-- 增强学术性内容处理
-- 优化实验结果和讨论部分的推理链生成
-- 支持图表和公式的语义处理
+### 📚 Thesis Optimization
+- Recognizes thesis-specific chapters (abstract, introduction, literature review, methods, results, discussion, conclusion)
+- Enhanced handling of academic content
+- Optimized reasoning chain generation for experimental results and discussion sections
+- Supports semantic processing of figures, tables, and formulas
 
-### 🔗 推理链生成
-- **两阶段推理链生成**：先生成推理过程，再生成答案
-- **Thinking模式**：支持内部思考过程生成
-- **推理多样性过滤**（可选）：避免相似推理路径
+### 🔗 Reasoning Chain Generation
+- **Two-stage reasoning chain generation**: generate the reasoning process first, then generate the answer
+- **Thinking mode**: supports internal thinking process generation
+- **Reasoning diversity filter** (optional): avoids similar reasoning paths
 
-### 🎯 多种题目类型
-- **SFT问答对**：适用于监督微调的标准问答格式
-- **客观评测题**：
-  - 单选题（200题）
-  - 多选题（100题）
-  - 判断题（100题）
+### 🎯 Multiple Question Types
+- **SFT QA pairs**: standard QA format for supervised fine-tuning
+- **Objective evaluation questions**:
+  - Single-choice (200 questions)
+  - Multiple-choice (100 questions)
+  - True/false (100 questions)
 
-### ✨ 质量控制
-- **自动质量评分**：对生成的问答对进行质量评估
-- **质量过滤**：可设置最低质量阈值过滤低质量内容
-- **去重机制**：使用SimHash算法进行相似内容去重
+### ✨ Quality Control
+- **Automatic quality scoring**: evaluates the quality of generated QA pairs
+- **Quality filtering**: set a minimum quality threshold to filter low-quality content
+- **Deduplication**: uses SimHash algorithm for similar content deduplication
 
-### ⚡ 高性能
-- **并行处理**：支持多线程并发处理
-- **缓存机制**：章节分割结果缓存，提升效率
-- **成本统计**：实时监控Token使用量和成本
+### ⚡ High Performance
+- **Parallel processing**: supports multi-threaded concurrent processing
+- **Caching**: caches chapter splitting results to improve efficiency
+- **Cost tracking**: real-time monitoring of token usage and cost
 
-## 安装依赖
+## Install Dependencies
 
 ```bash
-# 使用 uv 安装依赖（推荐）
+# Install dependencies with uv (recommended)
 uv sync
 
-# 或使用 pip
+# Or use pip
 pip install openai python-dotenv
 
-# 可选依赖
-pip install tqdm  # 进度条显示
-pip install reasoning_diversity  # 推理多样性过滤
+# Optional dependencies
+pip install tqdm  # Progress bar display
+pip install reasoning_diversity  # Reasoning diversity filter
 ```
 
-## 环境配置
+## Environment Configuration
 
-创建 `.env` 文件并配置以下环境变量：
+Create a `.env` file and configure the following environment variables:
 
 ```bash
-# 必需配置
+# Required
 OPENAI_API_KEY=${OPENAI_API_KEY}
 
-# 可选配置
-OPENAI_BASE_URL=https://api.openai.com/v1  # 默认值
-DEFAULT_MODEL=gpt-4o-mini  # 默认模型
+# Optional
+OPENAI_BASE_URL=https://api.openai.com/v1  # Default value
+DEFAULT_MODEL=gpt-4o-mini  # Default model
 ```
 
-## 使用方法
+## Usage
 
-### 使用示例数据快速测试
+### Quick Test with Sample Data
 
 ```bash
 uv run python demo_thesis_QA_genrator_v2.py \
@@ -260,7 +260,7 @@ uv run python demo_thesis_QA_genrator_v2.py \
     --output output/
 ```
 
-### 基本用法
+### Basic Usage
 
 ```bash
 python demo_thesis_QA_genrator_v2.py \
@@ -271,7 +271,7 @@ python demo_thesis_QA_genrator_v2.py \
     --workers-chunk 10
 ```
 
-### 生成客观评测题
+### Generate Objective Evaluation Questions
 
 ```bash
 python demo_thesis_QA_genrator_v2.py \
@@ -281,7 +281,7 @@ python demo_thesis_QA_genrator_v2.py \
     --workers-thesis 6
 ```
 
-### 启用质量过滤
+### Enable Quality Filtering
 
 ```bash
 python demo_thesis_QA_genrator_v2.py \
@@ -291,7 +291,7 @@ python demo_thesis_QA_genrator_v2.py \
     --min-quality-score 70.0
 ```
 
-### 启用推理多样性过滤
+### Enable Reasoning Diversity Filtering
 
 ```bash
 python demo_thesis_QA_genrator_v2.py \
@@ -301,102 +301,102 @@ python demo_thesis_QA_genrator_v2.py \
     --simhash-dedup-hamming 6
 ```
 
-## 命令行参数
+## Command-Line Arguments
 
-### 基础参数
+### Basic Parameters
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |------|------|--------|------|
-| `--input` | string | - | **必需**。输入的学位论文JSONL文件路径 |
-| `--output` | string | - | **必需**。输出文件路径或目录 |
-| `--model` | string | gpt-4o-mini | 使用的模型名称 |
-| `--max-q-per-chunk` | int | 5 | 每个chunk生成的最大问题数 |
-| `--qa-per-chunk` | int | 5 | 每个章节生成的问题数（推荐使用此参数） |
+| `--input` | string | - | **Required**. Path to input thesis JSONL file |
+| `--output` | string | - | **Required**. Output file path or directory |
+| `--model` | string | gpt-4o-mini | Model name to use |
+| `--max-q-per-chunk` | int | 5 | Maximum number of questions per chunk |
+| `--qa-per-chunk` | int | 5 | Number of questions per chapter (recommended) |
 
-### 模式选择
+### Mode Selection
 
-| 参数 | 说明 |
+| Parameter | Description |
 |------|------|
-| `--mode sft` | 生成SFT问答对（默认模式） |
-| `--mode objective` | 生成客观评测题 |
+| `--mode sft` | Generate SFT QA pairs (default mode) |
+| `--mode objective` | Generate objective evaluation questions |
 
-### 并行处理
+### Parallel Processing
 
-| 参数 | 默认值 | 说明 |
+| Parameter | Default | Description |
 |------|--------|------|
-| `--workers-thesis` | 6 | 并行处理的论文数量 |
-| `--workers-chunk` | 10 | 每篇论文并行处理的章节数量 |
+| `--workers-thesis` | 6 | Number of theses to process in parallel |
+| `--workers-chunk` | 10 | Number of chapters to process in parallel per thesis |
 
-### 质量控制
+### Quality Control
 
-| 参数 | 默认值 | 说明 |
+| Parameter | Default | Description |
 |------|--------|------|
-| `--enable-quality-filter` | False | 启用质量过滤 |
-| `--min-quality-score` | 70.0 | 最低质量分数阈值 |
-| `--enable-diversity-filter` | False | 启用推理多样性过滤 |
-| `--simhash-dedup-hamming` | 6 | SimHash去重的汉明距离阈值 |
+| `--enable-quality-filter` | False | Enable quality filtering |
+| `--min-quality-score` | 70.0 | Minimum quality score threshold |
+| `--enable-diversity-filter` | False | Enable reasoning diversity filtering |
+| `--simhash-dedup-hamming` | 6 | SimHash deduplication Hamming distance threshold |
 
-### 上下文设置
+### Context Settings
 
-| 参数 | 默认值 | 说明 |
+| Parameter | Default | Description |
 |------|--------|------|
-| `--context-length` | 10000 | 上下文长度限制 |
-| `--qa-floor` | 80 | 每篇论文生成QA的最小数量 |
-| `--qa-cap` | 120 | 每篇论文生成QA的最大数量 |
+| `--context-length` | 10000 | Context length limit |
+| `--qa-floor` | 80 | Minimum number of QA pairs per thesis |
+| `--qa-cap` | 120 | Maximum number of QA pairs per thesis |
 
-### Thinking模式
+### Thinking Mode
 
-| 参数 | 说明 |
+| Parameter | Description |
 |------|------|
-| `--enable-thinking` | 启用Thinking模式（默认开启） |
-| `--no-thinking` | 禁用Thinking模式 |
-| `--enable-api-thinking-objective` | 客观题模式启用Thinking模式（默认开启） |
-| `--no-api-thinking-objective` | 客观题模式禁用Thinking模式 |
-| `--enable-prompt-reasoning-objective` | 客观题模式启用两阶段推理链（默认关闭） |
-| `--no-prompt-reasoning-objective` | 客观题模式禁用两阶段推理链 |
+| `--enable-thinking` | Enable Thinking mode (on by default) |
+| `--no-thinking` | Disable Thinking mode |
+| `--enable-api-thinking-objective` | Enable Thinking mode for objective questions (on by default) |
+| `--no-api-thinking-objective` | Disable Thinking mode for objective questions |
+| `--enable-prompt-reasoning-objective` | Enable two-stage reasoning chain for objective questions (off by default) |
+| `--no-prompt-reasoning-objective` | Disable two-stage reasoning chain for objective questions |
 
-### 成本统计
+### Cost Tracking
 
-| 参数 | 默认值 | 说明 |
+| Parameter | Default | Description |
 |------|--------|------|
-| `--input-price` | 1.2500 | 输入token价格（$/百万tokens） |
-| `--output-price` | 10.0000 | 输出token价格（$/百万tokens） |
+| `--input-price` | 1.2500 | Input token price ($/million tokens) |
+| `--output-price` | 10.0000 | Output token price ($/million tokens) |
 
-## 输入格式
+## Input Format
 
-输入文件应为JSONL格式，每行包含一篇学位论文：
+The input file should be in JSONL format, with one thesis per line:
 
 ```json
 {
   "id": "thesis_001",
-  "text": "学位论文全文内容...",
+  "text": "Full thesis content...",
   "source": "proquest_papers"
 }
 ```
 
-或使用简化格式：
+Or use the simplified format:
 
 ```json
 {
   "id": "thesis_001",
-  "text": "学位论文全文内容...",
+  "text": "Full thesis content...",
   "label": "proquest_papers"
 }
 ```
 
-## 输出格式
+## Output Format
 
-### SFT问答对格式
+### SFT QA Pair Format
 
 ```json
 {
   "question_id": "q_001",
   "chunk_id": "chunk_001",
-  "chunk_title": "第一章 引言",
-  "question": "研究背景是什么？",
-  "answer": "研究背景是...",
-  "context": "上下文内容...",
-  "reasoning_chain": "推理过程...",
+  "chunk_title": "Chapter 1 Introduction",
+  "question": "What is the research background?",
+  "answer": "The research background is...",
+  "context": "Context content...",
+  "reasoning_chain": "Reasoning process...",
   "question_type": "open_ended",
   "source_id": "chunk_001",
   "metadata": {
@@ -406,154 +406,154 @@ python demo_thesis_QA_genrator_v2.py \
 }
 ```
 
-### 客观题格式
+### Objective Question Format
 
 ```json
 {
   "question_id": "obj_001",
   "question_type": "single_choice",
-  "question": "以下哪个是机器学习的主要特点？",
-  "options": ["A. 基于规则", "B. 数据驱动", "C. 人工编程", "D. 固定逻辑"],
+  "question": "Which of the following is a main characteristic of machine learning?",
+  "options": ["A. Rule-based", "B. Data-driven", "C. Manual programming", "D. Fixed logic"],
   "answer": "B",
-  "explanation": "机器学习是一种数据驱动的方法...",
-  "reasoning_chain": "推理过程...",
-  "context": "上下文内容...",
+  "explanation": "Machine learning is a data-driven approach...",
+  "reasoning_chain": "Reasoning process...",
+  "context": "Context content...",
   "chunk_id": "chunk_001",
-  "chunk_title": "第一章 引言"
+  "chunk_title": "Chapter 1 Introduction"
 }
 ```
 
-## 核心类说明
+## Core Classes
 
 ### 1. ThesisProcessor
-负责学位论文的章节分割和预处理。
-- 支持Markdown、LaTeX、中英文等多种格式的章节识别
-- 智能过滤参考文献、致谢、附录等非核心章节
-- 提供缓存机制提升处理效率
+Handles thesis chapter splitting and preprocessing.
+- Supports chapter recognition for Markdown, LaTeX, Chinese, English, and other formats
+- Intelligently filters non-core chapters such as references, acknowledgments, and appendices
+- Provides caching to improve processing efficiency
 
 ### 2. SFTQuestionGenerator
-生成SFT问答对的主要类。
-- 基于论文内容生成开放式问答
-- 支持两阶段推理链生成
-- 提供推理多样性过滤
+Main class for generating SFT QA pairs.
+- Generates open-ended QA based on thesis content
+- Supports two-stage reasoning chain generation
+- Provides reasoning diversity filtering
 
 ### 3. ObjectiveQuestionGenerator
-专门生成客观评测题的类。
-- 生成单选、多选、判断三种题型
-- 支持Thinking模式和两阶段推理链
-- 自动生成选项和解释
+Class dedicated to generating objective evaluation questions.
+- Generates single-choice, multiple-choice, and true/false question types
+- Supports Thinking mode and two-stage reasoning chain
+- Automatically generates options and explanations
 
 ### 4. QualityScorer
-质量评分器。
-- 对生成的问答对进行多维度评分
-- 支持质量过滤机制
-- 提供评分标准可配置
+Quality scorer.
+- Multi-dimensional scoring of generated QA pairs
+- Supports quality filtering
+- Configurable scoring criteria
 
 ### 5. ObjectiveReasoningQuestionGenerator
-客观推理题生成器。
-- 专门生成需要推理的客观题
-- 结合论文内容和推理能力测试
+Objective reasoning question generator.
+- Generates objective questions that require reasoning
+- Combines thesis content with reasoning ability assessment
 
-## 性能优化
+## Performance Optimization
 
-### 并行处理策略
-- **论文级别并行**：同时处理多篇论文
-- **章节级别并行**：每篇论文内并行处理多个章节
-- **线程池管理**：使用ThreadPoolExecutor管理资源
+### Parallel Processing Strategy
+- **Thesis-level parallelism**: process multiple theses simultaneously
+- **Chapter-level parallelism**: process multiple chapters in parallel within each thesis
+- **Thread pool management**: uses ThreadPoolExecutor for resource management
 
-### 缓存机制
-- 章节分割结果缓存（最多100条）
-- MD5哈希验证缓存有效性
-- 自动清理过期缓存
+### Caching
+- Chapter splitting result cache (up to 100 entries)
+- MD5 hash validation for cache validity
+- Automatic cleanup of expired cache entries
 
-### 去重策略
-- **SimHash算法**：高效检测相似内容
-- **汉明距离阈值**：可配置相似度判断标准
-- **多维度去重**：问题、答案、推理链分别去重
+### Deduplication Strategy
+- **SimHash algorithm**: efficient detection of similar content
+- **Hamming distance threshold**: configurable similarity criteria
+- **Multi-dimensional deduplication**: deduplicate questions, answers, and reasoning chains separately
 
-## 成本估算
+## Cost Estimation
 
-系统提供详细的Token使用统计和成本计算：
+The system provides detailed token usage statistics and cost calculation:
 
 ```
-Token 使用统计
+Token Usage Statistics
 ======================================
-总API调用次数: 120
-输入 tokens: 1,250,000
-输出 tokens: 125,000
-总 tokens: 1,375,000
+Total API calls: 120
+Input tokens: 1,250,000
+Output tokens: 125,000
+Total tokens: 1,375,000
 
-成本统计
+Cost Statistics
 ======================================
-输入成本: $1.5625 (1.2500/百万tokens)
-输出成本: $1.2500 (10.0000/百万tokens)
-总成本: $2.8125
-平均每条记录成本: $0.023438
+Input cost: $1.5625 (1.2500/million tokens)
+Output cost: $1.2500 (10.0000/million tokens)
+Total cost: $2.8125
+Average cost per record: $0.023438
 ```
 
-## 日志输出
+## Logging
 
-系统提供详细的日志记录，包括：
-- 处理进度跟踪
-- 错误和异常信息
-- 性能统计指标
-- 成本消耗详情
+The system provides detailed logging, including:
+- Processing progress tracking
+- Error and exception information
+- Performance statistics
+- Cost consumption details
 
-日志文件：`thesis_qa_generator.log`
+Log file: `thesis_qa_generator.log`
 
-## 最佳实践
+## Best Practices
 
-### 1. 参数调优
-- **QA数量控制**：合理设置`--qa-floor`和`--qa-cap`平衡数据量与质量
-- **并行度设置**：根据机器性能调整`--workers-thesis`和`--workers-chunk`
-- **上下文长度**：根据模型限制调整`--context-length`
+### 1. Parameter Tuning
+- **QA quantity control**: set `--qa-floor` and `--qa-cap` appropriately to balance data volume and quality
+- **Parallelism**: adjust `--workers-thesis` and `--workers-chunk` based on machine performance
+- **Context length**: adjust `--context-length` according to model limits
 
-### 2. 质量提升
-- 启用`--enable-quality-filter`过滤低质量内容
-- 使用`--enable-diversity-filter`提升推理多样性
-- 根据需要调整`--min-quality-score`阈值
+### 2. Quality Improvement
+- Enable `--enable-quality-filter` to filter low-quality content
+- Use `--enable-diversity-filter` to improve reasoning diversity
+- Adjust the `--min-quality-score` threshold as needed
 
-### 3. 成本控制
-- 监控`--input-price`和`--output-price`设置
-- 使用缓存机制避免重复处理
-- 合理设置并行度避免过度调用API
+### 3. Cost Control
+- Monitor `--input-price` and `--output-price` settings
+- Use caching to avoid reprocessing
+- Set parallelism appropriately to avoid excessive API calls
 
-### 4. 批量处理
-- 使用目标ID过滤：`--target-ids thesis_001 thesis_002`
-- 分批处理大规模数据
-- 定期保存中间结果
+### 4. Batch Processing
+- Use target ID filtering: `--target-ids thesis_001 thesis_002`
+- Process large datasets in batches
+- Save intermediate results periodically
 
-## 常见问题
+## FAQ
 
-### Q: 如何提高问答质量？
-A: 启用质量过滤（`--enable-quality-filter`），提高质量阈值（`--min-quality-score`），并启用推理多样性过滤。
+### Q: How can I improve QA quality?
+A: Enable quality filtering (`--enable-quality-filter`), raise the quality threshold (`--min-quality-score`), and enable reasoning diversity filtering.
 
-### Q: 如何减少生成时间？
-A: 增加并行线程数（`--workers-thesis`和`--workers-chunk`），但注意API速率限制。
+### Q: How can I reduce generation time?
+A: Increase parallel thread counts (`--workers-thesis` and `--workers-chunk`), but watch API rate limits.
 
-### Q: 如何控制成本？
-A: 监控Token使用量，使用更经济的模型（如gpt-4o-mini），并启用缓存机制。
+### Q: How can I control cost?
+A: Monitor token usage, use a more economical model (e.g. gpt-4o-mini), and enable caching.
 
-### Q: 支持哪些论文格式？
-A: 支持Markdown、LaTeX、中英文等多种格式的学位论文，系统会自动识别章节结构。
+### Q: Which thesis formats are supported?
+A: Supports Markdown, LaTeX, Chinese, English, and other thesis formats; the system automatically detects chapter structure.
 
-### Q: 生成的问答对如何用于SFT训练？
-A: 输出格式符合SFT训练标准，可直接用于OpenAI、Anthropic等平台的fine-tuning。
+### Q: How are the generated QA pairs used for SFT training?
+A: The output format conforms to SFT training standards and can be used directly for fine-tuning on platforms such as OpenAI and Anthropic.
 
-## 版本信息
+## Version Information
 
-- **当前版本**：v2.0 (v1.4)
-- **作者**：Claude Code
-- **更新日期**：2025-01-22
+- **Current version**: v2.0 (v1.4)
+- **Author**: Claude Code
+- **Last updated**: 2025-01-22
 
-## 许可证
+## License
 
-本项目遵循MIT许可证。
+This project is licensed under the MIT License.
 
-## 贡献
+## Contributing
 
-欢迎提交Issue和Pull Request来改进项目。
+Issues and Pull Requests are welcome to improve the project.
 
-## 联系方式
+## Contact
 
-如有问题，请通过GitHub Issues联系。
+For questions, please reach out via GitHub Issues.

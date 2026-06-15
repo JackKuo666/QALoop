@@ -1,95 +1,95 @@
-# QA对质量验证工具
+# QA Pair Quality Verification Tool
 
-## 项目概述
+## Project Overview
 
-QA对质量验证工具是一个基于大语言模型（LLM）的问答对质量评估系统。该工具使用Qwen3等大语言模型对问答对进行多维度、细粒度的质量评估，不仅提供评分，还生成详细的分析报告和改进建议。
+The QA Pair Quality Verification Tool is a question-answer pair quality assessment system powered by large language models (LLM). It uses LLMs such as Qwen3 to perform multi-dimensional, fine-grained quality evaluation of QA pairs, providing not only scores but also detailed analysis reports and improvement suggestions.
 
-### 核心价值
+### Core Value
 
-- **生成式评估**：不同于传统的分类器方法，使用LLM生成详细的评估报告
-- **多维度评估**：从准确性、相关性、完整性、清晰度四个维度进行综合评估
-- **可解释性强**：保留完整的模型评估文本，便于理解和追溯
-- **工程化设计**：支持批量处理、检查点保存、统计分析等实用功能
+- **Generative evaluation**: Unlike traditional classifier approaches, uses LLM to generate detailed evaluation reports
+- **Multi-dimensional assessment**: Comprehensive evaluation across accuracy, relevance, completeness, and clarity
+- **Strong interpretability**: Retains full model evaluation text for understanding and traceability
+- **Production-ready design**: Supports batch processing, checkpoint saving, statistical analysis, and other practical features
 
-## 主要特性
+## Key Features
 
-### ✨ 核心功能
+### ✨ Core Capabilities
 
-1. **多维度质量评估**
-   - 准确性（Accuracy）：评估答案是否正确、准确
-   - 相关性（Relevance）：评估回答是否直接回应问题
-   - 完整性（Completeness）：评估回答是否完整、全面
-   - 清晰度（Clarity）：评估回答是否清晰、易懂
+1. **Multi-dimensional quality assessment**
+   - Accuracy: Evaluates whether answers are correct and accurate
+   - Relevance: Evaluates whether responses directly address the question
+   - Completeness: Evaluates whether responses are complete and comprehensive
+   - Clarity: Evaluates whether responses are clear and easy to understand
 
-2. **智能评估流程**
-   - 结构化提示工程：通过精心设计的prompt引导模型输出标准化格式
-   - 自动评分提取：从模型回复中智能提取结构化评分数据
-   - 思维链推理：支持启用thinking模式，提升评估质量
+2. **Intelligent evaluation workflow**
+   - Structured prompt engineering: Carefully designed prompts guide standardized model output
+   - Automatic score extraction: Intelligently extracts structured scoring data from model responses
+   - Chain-of-thought reasoning: Supports thinking mode to improve evaluation quality
 
-3. **批量处理能力**
-   - 支持批量验证QA对
-   - 可配置批次大小，适应不同资源环境
-   - 自动进度显示
+3. **Batch processing**
+   - Supports batch QA pair verification
+   - Configurable batch size for different resource environments
+   - Automatic progress display
 
-4. **数据安全保障**
-   - 增量检查点机制：每处理10个样本自动保存中间结果
-   - 断点续传支持：避免长时间运行导致的数据丢失
-   - 完善的错误处理：单条失败不影响整体流程
+4. **Data safety**
+   - Incremental checkpoint mechanism: Automatically saves intermediate results every 10 samples
+   - Checkpoint/resume support: Prevents data loss from long-running jobs
+   - Robust error handling: Single-item failures do not affect the overall workflow
 
-5. **统计分析报告**
-   - 自动生成多维度统计报告
-   - 通过率分析
-   - 各维度平均分统计
-   - 可视化友好的报告格式
+5. **Statistical analysis reports**
+   - Automatically generates multi-dimensional statistical reports
+   - Pass rate analysis
+   - Average scores per dimension
+   - Visualization-friendly report format
 
-## 项目结构
+## Project Structure
 
 ```
 data_quality/
-├── verify_qa_local.py      # 主程序文件
-├── call_api.py             # API调用封装模块
-├── README.md               # 项目说明文档
-├── outputs/                # 输出目录（自动创建）
-│   ├── checkpoints/        # 检查点文件
-│   └── qa_verification_report.json  # 统计报告
-└── requirements.txt        # 依赖包列表（需创建）
+├── verify_qa_local.py      # Main program
+├── call_api.py             # API call wrapper module
+├── README.md               # Project documentation
+├── outputs/                # Output directory (auto-created)
+│   ├── checkpoints/        # Checkpoint files
+│   └── qa_verification_report.json  # Statistical report
+└── requirements.txt        # Dependency list (to be created)
 ```
 
-## 安装与配置
+## Installation and Configuration
 
-### 环境要求
+### Requirements
 
 - Python 3.8+
-- CUDA支持的GPU（推荐，用于本地模型推理）
-- 或可访问的LLM API服务
+- CUDA-enabled GPU (recommended for local model inference)
+- Or accessible LLM API service
 
-### 安装步骤
+### Installation Steps
 
-1. **克隆或下载项目**
+1. **Clone or download the project**
 
 ```bash
 cd /path/to/QA_data/script/data_quality
 ```
 
-2. **安装Python依赖**
+2. **Install Python dependencies**
 
 ```bash
-# 使用 uv 安装依赖（推荐）
+# Install dependencies with uv (recommended)
 uv sync
 
-# 或使用 pip
+# Or use pip
 pip install -r requirements.txt
 ```
 
-如果没有requirements.txt文件，可以手动安装：
+If no requirements.txt exists, install manually:
 
 ```bash
 pip install torch transformers tqdm jsonlines openai pathlib
 ```
 
-3. **依赖包说明**
+3. **Dependency notes**
 
-创建 `requirements.txt` 文件，包含以下内容：
+Create a `requirements.txt` file with:
 
 ```txt
 torch>=2.0.0
@@ -99,27 +99,27 @@ jsonlines>=3.1.0
 openai>=1.0.0
 ```
 
-### 配置说明
+### Configuration
 
-#### API配置
+#### API Configuration
 
-工具通过API调用LLM模型，需要配置以下参数：
+The tool calls LLM models via API. Configure the following parameters:
 
-1. **模型API地址**：修改 `verify_qa_local.py` 中的 `MODEL_PATH`
+1. **Model API endpoint**: Edit `MODEL_PATH` in `verify_qa_local.py`
    ```python
    MODEL_PATH = "http://your-api-endpoint/v1"
    ```
 
-2. **模型名称**：修改 `MODEL_NAME`
+2. **Model name**: Edit `MODEL_NAME`
    ```python
    MODEL_NAME = "qwen3-30b-a3b-instruct-2507"
    ```
 
-3. **API密钥**：如果需要，在 `Qwen3QAVerifier` 初始化时传入 `key` 参数
+3. **API key**: If required, pass the `key` parameter when initializing `Qwen3QAVerifier`
 
-#### 数据格式要求
+#### Data Format Requirements
 
-输入文件应为JSONL格式，每行一个JSON对象，包含以下字段：
+Input files should be JSONL format with one JSON object per line containing:
 
 ```json
 {
@@ -128,67 +128,67 @@ openai>=1.0.0
 }
 ```
 
-可选字段：
-- `input`: 输入上下文（如果有）
+Optional fields:
+- `input`: Input context (if applicable)
 
-## 使用方法
+## Usage
 
-### 基本使用
+### Basic Usage
 
-1. **准备输入数据**
+1. **Prepare input data**
 
-确保你的QA数据文件是JSONL格式，例如 `QA_quality_test.jsonl`：
+Ensure your QA data file is JSONL format, e.g. `QA_quality_test.jsonl`:
 
 ```jsonl
 {"instruction": "什么是机器学习？", "output": "机器学习是人工智能的一个分支..."}
 {"instruction": "Python如何读取文件？", "output": "可以使用open()函数..."}
 ```
 
-2. **使用示例数据快速测试**
+2. **Quick test with sample data**
 
 ```bash
 uv run python verify_qa_local.py --input examples/sample_qa.jsonl --output output/verified.jsonl
 ```
 
-3. **修改配置参数**
+3. **Modify configuration parameters**
 
-编辑 `verify_qa_local.py` 中的 `main()` 函数：
+Edit the `main()` function in `verify_qa_local.py`:
 
 ```python
 MODEL_NAME=${MODEL_NAME}
 MODEL_PATH=${MODEL_PATH}
 QA_FILE = "/path/to/your/qa_data.jsonl"
 OUTPUT_FILE = "/path/to/output/verified_qa.jsonl"
-BATCH_SIZE = 3  # 根据API限制和资源调整
+BATCH_SIZE = 3  # Adjust based on API limits and resources
 ```
 
-4. **运行验证**
+4. **Run verification**
 
 ```bash
 python verify_qa_local.py
 ```
 
-### 高级用法
+### Advanced Usage
 
-#### 作为模块使用
+#### Use as a Module
 
 ```python
 from verify_qa_local import Qwen3QAVerifier
 
-# 初始化验证器
+# Initialize verifier
 verifier = Qwen3QAVerifier(
     model_name="qwen3-30b-a3b-instruct-2507",
     model_path="http://your-api-endpoint/v1",
     key=os.getenv("OPENAI_API_KEY")
 )
 
-# 验证单个QA对
+# Verify a single QA pair
 result = verifier.verify_single(
     instruction="什么是深度学习？",
     output="深度学习是机器学习的一个子领域..."
 )
 
-# 批量验证
+# Batch verification
 qa_pairs = [
     {"instruction": "问题1", "output": "回答1"},
     {"instruction": "问题2", "output": "回答2"},
@@ -196,33 +196,33 @@ qa_pairs = [
 results = verifier.verify_batch(qa_pairs, batch_size=2)
 ```
 
-#### 自定义评估阈值
+#### Custom Evaluation Threshold
 
-修改 `verify_single` 方法中的通过阈值：
+Modify the pass threshold in the `verify_single` method:
 
 ```python
-"is_passing": scores['total'] >= 3.5  # 修改为其他阈值，如3.0或4.0
+"is_passing": scores['total'] >= 3.5  # Change to other thresholds, e.g. 3.0 or 4.0
 ```
 
-#### 调整生成参数
+#### Adjust Generation Parameters
 
-修改 `__init__` 方法中的 `generation_config`：
+Modify `generation_config` in the `__init__` method:
 
 ```python
 self.generation_config = {
-    "max_new_tokens": 1024,      # 最大生成token数
-    "temperature": 0.3,          # 温度参数（0-1，越低越确定）
-    "top_p": 0.9,                # nucleus sampling参数
-    "do_sample": True,           # 是否采样
-    "repetition_penalty": 1.1,   # 重复惩罚
+    "max_new_tokens": 1024,      # Max generated tokens
+    "temperature": 0.3,          # Temperature (0-1, lower = more deterministic)
+    "top_p": 0.9,                # Nucleus sampling parameter
+    "do_sample": True,           # Whether to sample
+    "repetition_penalty": 1.1,   # Repetition penalty
 }
 ```
 
-### 输出说明
+### Output Description
 
-#### 验证结果格式
+#### Verification Result Format
 
-每个QA对的验证结果包含：
+Each QA pair verification result contains:
 
 ```json
 {
@@ -242,9 +242,9 @@ self.generation_config = {
 }
 ```
 
-#### 统计报告
+#### Statistical Report
 
-运行完成后会生成 `outputs/qa_verification_report.json`：
+After completion, `outputs/qa_verification_report.json` is generated:
 
 ```json
 {
@@ -263,86 +263,86 @@ self.generation_config = {
 }
 ```
 
-## 使用示例
+## Usage Examples
 
-### 示例1：评估农业领域QA数据
+### Example 1: Evaluate Agricultural QA Data
 
 ```python
-# 配置
+# Configuration
 MODEL_NAME = "qwen3-30b-a3b-instruct-2507"
 MODEL_PATH = "http://your-api-endpoint/v1"
 QA_FILE = "agriculture_qa.jsonl"
 OUTPUT_FILE = "agriculture_qa_verified.jsonl"
 BATCH_SIZE = 5
 
-# 运行
+# Run
 python verify_qa_local.py
 ```
 
-### 示例2：快速测试少量样本
+### Example 2: Quick Test on a Small Sample
 
 ```python
-# 在main()函数中，可以先加载少量数据进行测试
+# In main(), load a small subset for testing first
 qa_pairs = []
 with jsonlines.open(QA_FILE) as f:
     for i, item in enumerate(f):
-        if i >= 10:  # 只处理前10条
+        if i >= 10:  # Process only first 10 entries
             break
         qa_pairs.append(item)
 ```
 
-## 注意事项
+## Notes
 
-1. **API限制**：注意API的速率限制，适当调整 `BATCH_SIZE`
-2. **网络稳定性**：确保API服务稳定，工具已包含超时和重试机制
-3. **数据格式**：确保输入JSONL格式正确，字段名匹配
-4. **存储空间**：检查点文件会占用一定空间，定期清理旧文件
-5. **评分提取**：如果模型输出格式变化，可能需要调整 `extract_scores` 方法
+1. **API limits**: Watch API rate limits; adjust `BATCH_SIZE` accordingly
+2. **Network stability**: Ensure API service is stable; the tool includes timeout and retry mechanisms
+3. **Data format**: Ensure input JSONL format is correct and field names match
+4. **Storage space**: Checkpoint files consume disk space; clean up old files periodically
+5. **Score extraction**: If model output format changes, you may need to adjust the `extract_scores` method
 
-## 故障排除
+## Troubleshooting
 
-### 常见问题
+### Common Issues
 
-1. **导入错误：找不到 call_api 模块**
-   - 确保 `call_api.py` 在同一目录下
-   - 检查Python路径配置
+1. **Import error: call_api module not found**
+   - Ensure `call_api.py` is in the same directory
+   - Check Python path configuration
 
-2. **API连接失败**
-   - 检查 `MODEL_PATH` 是否正确
-   - 验证网络连接和API服务状态
-   - 确认API密钥是否正确
+2. **API connection failure**
+   - Verify `MODEL_PATH` is correct
+   - Check network connectivity and API service status
+   - Confirm API key is correct
 
-3. **评分提取失败**
-   - 检查模型输出格式是否符合预期
-   - 查看 `model_response` 字段确认模型回复内容
-   - 可能需要调整 `extract_scores` 方法的解析逻辑
+3. **Score extraction failure**
+   - Check whether model output format matches expectations
+   - Inspect `model_response` field to confirm model reply content
+   - You may need to adjust parsing logic in the `extract_scores` method
 
-4. **内存不足**
-   - 减小 `BATCH_SIZE`
-   - 使用API服务而非本地模型
+4. **Out of memory**
+   - Reduce `BATCH_SIZE`
+   - Use API service instead of local model
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。
+This project is licensed under the MIT License.
 
-## 联系方式
+## Contact
 
-如有问题或建议，请通过以下方式联系：
-- 邮箱：[huangbc@zhejianglab.org]
-- 项目维护者：[BC Huang]
+For questions or suggestions, contact:
+- Email: [huangbc@zhejianglab.org]
+- Maintainer: [BC Huang]
 
-## 更新日志
+## Changelog
 
 ### v1.0.0 (2026-01-30)
-- 初始版本发布
-- 支持多维度QA对质量评估
-- 实现批量处理和检查点机制
-- 添加统计分析功能
+- Initial release
+- Multi-dimensional QA pair quality assessment
+- Batch processing and checkpoint mechanism
+- Statistical analysis features
 
-## 致谢
+## Acknowledgments
 
-- 感谢之芽团队，感谢所有贡献者的支持。
+- Thanks to the Zhiyá team and all contributors for their support.
 
 ---
 
-**注意**：本工具依赖于外部LLM API服务，使用前请确保已正确配置API访问权限。
+**Note**: This tool depends on external LLM API services. Ensure API access is properly configured before use.

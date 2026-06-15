@@ -1,109 +1,109 @@
-# Wiki 问答对生成 Pipeline
+# Wiki QA Pair Generation Pipeline
 
-本代码库实现了从维基百科（Wiki）语料生成农业领域基础知识问答对的自动化流程。
+This repository implements an automated pipeline for generating foundational agricultural knowledge QA pairs from Wikipedia (Wiki) corpus data.
 
-## 核心流程
+## Core Workflow
 
 ```
-全量 Wiki 语料
+Full Wiki corpus
         ↓
-   BioBERT 农业分类模型筛选
+   BioBERT agricultural classification model filtering
         ↓
-   泛农业内容筛选（约 76 万条）
+   Broad agricultural content filtering (~760K entries)
         ↓
-   Qwen-flash 模型质量筛选
+   Qwen-flash model quality filtering
         ↓
-   高质量内容筛选（约 1.95 万条）
+   High-quality content filtering (~19.5K entries)
         ↓
-      去重处理
+      Deduplication
         ↓
-   最终用于生成（约 1.94 万条）
+   Final generation set (~19.4K entries)
         ↓
-   GPT/LLM 生成农业领域问答对
+   GPT/LLM agricultural QA pair generation
         ↓
-   约 2.9 万对问答
+   ~29K QA pairs
 ```
 
-## 依赖资源
+## Required Resources
 
-### BioBERT 模型
+### BioBERT Model
 
-需要下载预训练的 BioBERT 分类模型：
+Download the pre-trained BioBERT classification model:
 
 ```bash
-# 创建模型目录
+# Create model directories
 mkdir -p biobert/models
 mkdir -p biobert/data
 
-# 下载模型文件 (约 413MB)
-# 将 best_model.bin 放入 biobert/models/
+# Download model file (~413MB)
+# Place best_model.bin in biobert/models/
 
-# 准备关键词文件
-# 将 中国农业关键词.xlsx 放入 biobert/data/
+# Prepare keyword file
+# Place 中国农业关键词.xlsx in biobert/data/
 ```
 
-### Wiki 数据
+### Wiki Data
 
-将预处理后的 Wiki 数据放入 `data/wiki_filtered/` 目录：
+Place preprocessed Wiki data in the `data/wiki_filtered/` directory:
 
 ```bash
 mkdir -p data/wiki_filtered
-# 放置 JSON 格式的 Wiki 数据
+# Place JSON-format Wiki data
 ```
 
-## 快速开始
+## Quick Start
 
-### 1. 环境准备
+### 1. Environment Setup
 
 ```bash
 cd wiki_synthesis
 uv sync
 
-# 配置 API 密钥
+# Configure API keys
 cp .env.example .env
-# 编辑 .env 文件，设置 OPENAI_API_KEY 和 QWEN_API_KEY
+# Edit .env and set OPENAI_API_KEY and QWEN_API_KEY
 ```
 
-### 2. 运行问答生成
+### 2. Run QA Generation
 
 ```bash
-# 使用样本数据测试
+# Test with sample data
 python test_wiki_v2.py
 
-# 使用完整数据集
+# Run on full dataset
 python wiki_qa_bert_qw_v4.py
 ```
 
-### 3. 配置数据源
+### 3. Configure Data Source
 
-修改 `wiki_qa_bert_qw_v4.py` 中的路径配置：
+Edit path settings in `wiki_qa_bert_qw_v4.py`:
 
 ```python
-# 数据源目录（通过环境变量配置）
+# Data source directory (configured via environment variable)
 WIKI_DATA_DIR = os.getenv("WIKI_DATA_DIR", "./data/wiki_filtered")
 
-# 运行模式：stage2（跳过 Qwen 判定，直接生成 QA）
+# Run mode: stage2 (skip Qwen judgment, generate QA directly)
 RUN_MODE = "stage2"
 
-# 处理范围
+# Processing range
 FILE_START_INDEX = 1
-FILE_END_INDEX = None  # None 表示处理全部
+FILE_END_INDEX = None  # None means process all
 ```
 
-## 数据源路径
+## Data Source Path
 
-数据通过 BERT + Qwen 两阶段筛选得到，来源可以是：
-- 预处理后的 Wikipedia 中文语料库
-- 自定义清洗过的文本数据
+Data is obtained through a two-stage BERT + Qwen filtering pipeline. Sources may include:
+- Preprocessed Chinese Wikipedia corpus
+- Custom cleaned text data
 
-配置数据目录（见 `.env.example`）：
+Configure the data directory (see `.env.example`):
 ```
 WIKI_DATA_DIR=./data/wiki_filtered
 ```
 
-## 输出格式
+## Output Format
 
-生成的问答对保存为 JSONL 格式：
+Generated QA pairs are saved in JSONL format:
 
 ```json
 {
@@ -116,82 +116,82 @@ WIKI_DATA_DIR=./data/wiki_filtered
 }
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 wiki_synthesis/
-├── wiki_qa_bert_qw_v4.py       # 主程序（BERT+Qwen筛选 → GPT生成）
-├── test_wiki_v2.py             # 测试脚本（样本数据测试）
-├── arg_kw.xlsx                # 关键词表
+├── wiki_qa_bert_qw_v4.py       # Main program (BERT+Qwen filtering → GPT generation)
+├── test_wiki_v2.py             # Test script (sample data testing)
+├── arg_kw.xlsx                # Keyword table
 ├── examples/
-│   ├── sample_data_v2/        # 样本数据（水稻.json, 玉米.json, 油菜.json）
-│   └── output_v2_test.jsonl   # 测试输出
-├── biobert/                   # BERT 模型代码（用于预筛选）
+│   ├── sample_data_v2/        # Sample data (水稻.json, 玉米.json, 油菜.json)
+│   └── output_v2_test.jsonl   # Test output
+├── biobert/                   # BERT model code (for pre-filtering)
 └── README.md
 ```
 
-## 核心特性
+## Core Features
 
-- **两阶段筛选**：BioBERT + Qwen 预筛选农业相关内容
-- **高质量生成**：基于 GPT-5.1 生成带推理链的问答对
-- **原子化事实**：每个问答针对单一知识点
-- **真实性原则**：严格基于文本内容，严禁编造
-- **断点续传**：支持配额用尽后恢复处理
+- **Two-stage filtering**: BioBERT + Qwen pre-filtering for agricultural content
+- **High-quality generation**: GPT-5.1-based QA pairs with reasoning chains
+- **Atomic facts**: Each QA pair targets a single knowledge point
+- **Factual integrity**: Strictly based on source text; no fabrication allowed
+- **Checkpoint/resume**: Supports resuming after quota exhaustion
 
-## 核心创新点
+## Key Innovations
 
-### 1. 两阶段预筛选机制
+### 1. Two-Stage Pre-Filtering Mechanism
 
-| 阶段 | 方法 | 筛选目标 | 数据量 |
+| Stage | Method | Filtering Goal | Data Volume |
 |------|------|---------|--------|
-| 第一阶段 | BioBERT 农业分类模型 | 识别农业相关内容 | 936万 → 76万 |
-| 第二阶段 | Qwen-flash 质量判定 | 筛选高质量内容 | 76万 → 1.95万 |
+| Stage 1 | BioBERT agricultural classification model | Identify agricultural content | 9.36M → 760K |
+| Stage 2 | Qwen-flash quality judgment | Filter high-quality content | 760K → 19.5K |
 
-这种组合筛选策略在保证内容质量的同时，将数据量压缩至原始的 **0.2%**，大幅降低后续生成成本。
+This combined filtering strategy compresses data to **0.2%** of the original volume while maintaining content quality, significantly reducing downstream generation costs.
 
-### 2. 专用农业分类模型
+### 2. Dedicated Agricultural Classification Model
 
-- **领域定制**：基于 BioBERT 针对农业领域微调
-- **多层次分类**：支持泛农业、专业农业、超级严格等多种分类标准
-- **关键词增强**：结合 5000+ 农业专业关键词，提升分类精度
-- **阈值可调**：支持 0.6~0.999 可配置置信度阈值
+- **Domain customization**: BioBERT fine-tuned for agriculture
+- **Multi-level classification**: Supports broad agriculture, professional agriculture, ultra-strict, and other classification standards
+- **Keyword enhancement**: Combines 5000+ agricultural keywords to improve classification accuracy
+- **Adjustable threshold**: Configurable confidence threshold from 0.6 to 0.999
 
-### 3. 原子化事实提取
+### 3. Atomic Fact Extraction
 
 ```
-Wiki 整篇文章
-    ↓ 结构化解析
-原子事实列表
-    ↓ 选择性展开
-单个原子事实 → 单个问答对
+Full Wiki article
+    ↓ Structured parsing
+Atomic fact list
+    ↓ Selective expansion
+Single atomic fact → Single QA pair
 ```
 
-- 将 Wiki 条目拆分为多个原子事实
-- 每个原子事实生成一个独立问答对
-- 保证问答的精确性和可验证性
+- Splits Wiki entries into multiple atomic facts
+- Generates one independent QA pair per atomic fact
+- Ensures precision and verifiability of QA pairs
 
-### 4. 真实性约束机制
+### 4. Factual Integrity Constraints
 
-| 约束类型 | 实现方式 |
+| Constraint Type | Implementation |
 |---------|---------|
-| 内容约束 | 严格基于原文内容生成 |
-| 禁止编造 | 答案仅使用文本中的具体事实和数据 |
-| 可验证性 | 保留 source_file 和 title 便于溯源 |
+| Content constraint | Generate strictly from original text |
+| No fabrication | Answers use only concrete facts and data from the text |
+| Verifiability | Retain source_file and title for traceability |
 
-### 5. 断点续传机制
+### 5. Checkpoint/Resume Mechanism
 
-- 支持配额（quota）用尽后恢复处理
-- 自动跳过已完成的文件
-- 详细的处理日志便于监控进度
+- Supports resuming after quota exhaustion
+- Automatically skips completed files
+- Detailed processing logs for progress monitoring
 
-## QA 生成规则
+## QA Generation Rules
 
-1. **农业领域判定**：自动判断文本是否属于农业领域
-2. **问题要求**：
-   - 基于文本内容，不超出范围
-   - 清晰有意义，独立可理解
-   - 不使用引用性词语
-3. **答案要求**：
-   - 优先使用文本中的具体事实和数据
-   - 可适当补充专业知识
-   - 严禁编造任何信息
+1. **Agricultural domain classification**: Automatically determines whether text belongs to the agricultural domain
+2. **Question requirements**:
+   - Based on text content; do not exceed scope
+   - Clear, meaningful, and independently understandable
+   - Do not use referential wording
+3. **Answer requirements**:
+   - Prefer concrete facts and data from the text
+   - May supplement with domain knowledge where appropriate
+   - Fabrication of any information is strictly prohibited

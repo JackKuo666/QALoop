@@ -1,45 +1,45 @@
-# 农业问答数据集生成系统 (Agricultural QA Dataset Generation System)
+# Agricultural QA Dataset Generation System
 
-## 项目概述
+## Project Overview
 
-本项目是一个专为农业领域设计的高质量问答数据集生成系统，用于为农业大语言模型提供监督微调（SFT）训练数据。系统支持多种生成策略，具备智能去重，质量控制和RAG（检索增强生成）集成等功能。
+This project is a high-quality question-answer (QA) dataset generation system designed for the agricultural domain. It produces supervised fine-tuning (SFT) training data for agricultural large language models. The system supports multiple generation strategies, intelligent deduplication, quality control, and RAG (Retrieval-Augmented Generation) integration.
 
-## 📊 系统流程图
+## 📊 System Flow Diagrams
 
-### 整体工作流程
+### Overall Workflow
 
 ```mermaid
 flowchart TD
-    A[输入种子问题] --> B{是否启用RAG?}
-    B -->|是| C[RAG检索增强]
-    B -->|否| D[直接使用种子问题]
-    C --> E[增强后的种子问题]
+    A[Input seed questions] --> B{RAG enabled?}
+    B -->|Yes| C[RAG retrieval augmentation]
+    B -->|No| D[Use seed questions directly]
+    C --> E[Augmented seed questions]
     D --> E
     
-    E --> F[智能策略选择器]
-    F --> G[选择最优生成策略组合]
+    E --> F[Intelligent strategy selector]
+    F --> G[Select optimal strategy combination]
     
-    G --> H[批量QA生成]
-    H --> I[应用20+种生成策略]
-    I --> J[生成QA对]
+    G --> H[Batch QA generation]
+    H --> I[Apply 20+ generation strategies]
+    I --> J[Generate QA pairs]
     
-    J --> K[质量控制]
-    K --> L{质量检查}
-    L -->|不通过| M[过滤低质量QA]
-    L -->|通过| N[保留QA对]
-    M --> O[丢弃]
-    N --> P[嵌入去重器]
+    J --> K[Quality control]
+    K --> L{Quality check}
+    L -->|Fail| M[Filter low-quality QA]
+    L -->|Pass| N[Keep QA pairs]
+    M --> O[Discard]
+    N --> P[Embedding deduplicator]
     
-    P --> Q[语义相似度计算]
-    Q --> R{相似度检查}
-    R -->|相似度>阈值| S[去重处理]
-    R -->|相似度≤阈值| T[保留唯一QA]
+    P --> Q[Semantic similarity computation]
+    Q --> R{Similarity check}
+    R -->|Similarity > threshold| S[Deduplication]
+    R -->|Similarity ≤ threshold| T[Keep unique QA]
     S --> O
-    T --> U[策略平衡器]
+    T --> U[Strategy balancer]
     
-    U --> V[平衡策略使用频率]
-    V --> W[最终QA数据集]
-    W --> X[输出JSONL文件]
+    U --> V[Balance strategy usage frequency]
+    V --> W[Final QA dataset]
+    W --> X[Output JSONL file]
     
     style A fill:#e1f5ff
     style F fill:#fff4e1
@@ -49,40 +49,40 @@ flowchart TD
     style X fill:#e1f5e1
 ```
 
-### 核心模块交互流程
+### Core Module Interaction Flow
 
 ```mermaid
 flowchart LR
-    subgraph 输入层
-        A1[种子问题文件]
-        A2[配置文件]
-        A3[RAG服务]
+    subgraph Input Layer
+        A1[Seed question files]
+        A2[Configuration files]
+        A3[RAG service]
     end
     
-    subgraph 处理层
-        B1[批处理器<br/>BatchProcessor]
-        B2[QA生成器<br/>DeepSeekGenerator]
-        B3[智能策略选择器<br/>IntelligentSelector]
+    subgraph Processing Layer
+        B1[Batch processor<br/>BatchProcessor]
+        B2[QA generator<br/>DeepSeekGenerator]
+        B3[Intelligent strategy selector<br/>IntelligentSelector]
     end
     
-    subgraph 优化层
-        C1[策略平衡器<br/>StrategyBalancer]
-        C2[提示增强器<br/>PromptEnhancer]
+    subgraph Optimization Layer
+        C1[Strategy balancer<br/>StrategyBalancer]
+        C2[Prompt enhancer<br/>PromptEnhancer]
     end
     
-    subgraph 质量层
-        D1[质量控制<br/>QualityFilter]
-        D2[嵌入去重器<br/>EmbeddingDeduplicator]
+    subgraph Quality Layer
+        D1[Quality control<br/>QualityFilter]
+        D2[Embedding deduplicator<br/>EmbeddingDeduplicator]
     end
     
-    subgraph 输出层
-        E1[JSONL数据集]
-        E2[统计报告]
+    subgraph Output Layer
+        E1[JSONL dataset]
+        E2[Statistics report]
     end
     
     A1 --> B1
     A2 --> B1
-    A3 -.->|可选| B2
+    A3 -.->|Optional| B2
     
     B1 --> B2
     B2 --> B3
@@ -99,22 +99,22 @@ flowchart LR
     style D2 fill:#e1ffe1
 ```
 
-### 生成策略选择流程
+### Generation Strategy Selection Flow
 
 ```mermaid
 flowchart TD
-    A[种子问题输入] --> B[分析问题特征]
-    B --> C{问题类型识别}
+    A[Seed question input] --> B[Analyze question characteristics]
+    B --> C{Question type identification}
     
-    C -->|基础理论| D1[选择: 释义/详细阐述]
-    C -->|实践应用| D2[选择: 场景应用/创新应用]
-    C -->|对比分析| D3[选择: 对比分析/跨物种迁移]
-    C -->|推理问题| D4[选择: 反向推理/因果链条]
-    C -->|时间相关| D5[选择: 时间维度/时序分析]
-    C -->|空间相关| D6[选择: 空间维度/尺度变化]
-    C -->|假设性| D7[选择: 假设场景/反事实推理]
+    C -->|Basic theory| D1[Select: paraphrase / elaboration]
+    C -->|Practical application| D2[Select: scenario application / innovative application]
+    C -->|Comparative analysis| D3[Select: comparative analysis / cross-species transfer]
+    C -->|Reasoning questions| D4[Select: reverse reasoning / causal chain]
+    C -->|Time-related| D5[Select: temporal dimension / time-series analysis]
+    C -->|Space-related| D6[Select: spatial dimension / scale change]
+    C -->|Hypothetical| D7[Select: hypothetical scenario / counterfactual reasoning]
     
-    D1 --> E[策略组合优化]
+    D1 --> E[Strategy combination optimization]
     D2 --> E
     D3 --> E
     D4 --> E
@@ -122,8 +122,8 @@ flowchart TD
     D6 --> E
     D7 --> E
     
-    E --> F[应用策略平衡器]
-    F --> G[生成QA对]
+    E --> F[Apply strategy balancer]
+    F --> G[Generate QA pairs]
     
     style A fill:#e1f5ff
     style E fill:#fff4e1
@@ -131,159 +131,159 @@ flowchart TD
     style G fill:#e1ffe1
 ```
 
-## ✨ 最新更新
+## ✨ Latest Updates
 
-### 🎯 2026-01-22 更新
-- ✅ **智能策略选择器**: 已修复并可用，基于内容特点自动选择最佳生成策略
-- ✅ **嵌入去重器**: 默认开启，基于预训练多语言模型进行语义去重
-- ✅ **策略平衡器**: 已修复并可用，自动平衡不同策略使用频率
-- ✅ **相对路径导入**: 所有模块使用相对路径，项目结构更加清晰
-- ✅ **RAG缓存优化**: 改进缓存机制，提升检索效率
+### 🎯 2026-01-22 Update
+- ✅ **Intelligent strategy selector**: Fixed and available; automatically selects the best generation strategy based on content characteristics
+- ✅ **Embedding deduplicator**: Enabled by default; performs semantic deduplication using a pretrained multilingual model
+- ✅ **Strategy balancer**: Fixed and available; automatically balances usage frequency across strategies
+- ✅ **Relative path imports**: All modules use relative paths for a clearer project structure
+- ✅ **RAG cache optimization**: Improved caching mechanism for better retrieval efficiency
 
-## 主要特性
+## Key Features
 
-### 🚀 核心功能
-- **多样化生成策略**: 支持 20+ 种生成方法，包括释义、推理、对比分析、假设场景等
-- **智能策略选择**: 基于内容特点自动选择最佳生成策略 ✅
-- **多物种覆盖**: 支持玉米、大豆、水稻、油菜、小麦、畜禽、合成生物技术等
-- **批量处理能力**: 
-  - 异步并行处理多个物种文件（可配置并发数）
-  - 自动文件扫描（JSON/JSONL格式）
-  - 统一输出管理（时间戳目录）
-  - 进度实时监控（成功率、耗时等统计）
-- **RAG检索增强系统**: 
-  - 智能中英文自动翻译（内置334个专业术语字典）
-  - 多维度智能筛选（7个维度，100分制）
-  - RAG结果缓存（基于MD5哈希，持久化）
-  - 并行RAG处理架构（标记+动态加载）
-  - 共享RAG结果机制（专家问题预检索）
-- **嵌入去重**: 基于语义相似度的智能去重机制 (默认开启) ✅
-- **质量控制**: 
-  - 多维度质量评估和过滤机制
-  - 相似度可控生成（可配置阈值，控制创新度）
-  - 难度级别控制（easy/medium/hard）
-- **策略平衡**: 自动平衡不同生成策略的使用频率 ✅
-- **分类与权重系统**: 
-  - 基于关键词的子类别匹配
-  - 物种特定关键词权重加成（2倍）
-  - 权重配置系统（YAML配置文件）
-- **提示词增强**: 
-  - 扩展分类信息注入
-  - 种子问题深化模式
-  - 多分类变体生成
+### 🚀 Core Capabilities
+- **Diverse generation strategies**: Supports 20+ generation methods including paraphrase, reasoning, comparative analysis, hypothetical scenarios, and more
+- **Intelligent strategy selection**: Automatically selects the best generation strategy based on content characteristics ✅
+- **Multi-species coverage**: Supports maize, soybean, rice, rapeseed, wheat, livestock and poultry, synthetic biotechnology, and more
+- **Batch processing**:
+  - Asynchronously processes multiple species files in parallel (configurable concurrency)
+  - Automatic file scanning (JSON/JSONL formats)
+  - Unified output management (timestamped directories)
+  - Real-time progress monitoring (success rate, elapsed time, and other statistics)
+- **RAG retrieval-augmented system**:
+  - Intelligent Chinese-English automatic translation (built-in dictionary of 334 domain terms)
+  - Multi-dimensional intelligent filtering (7 dimensions, 100-point scale)
+  - RAG result caching (MD5 hash-based, persistent)
+  - Parallel RAG processing architecture (marking + dynamic loading)
+  - Shared RAG result mechanism (pre-retrieval for expert questions)
+- **Embedding deduplication**: Intelligent deduplication based on semantic similarity (enabled by default) ✅
+- **Quality control**:
+  - Multi-dimensional quality assessment and filtering
+  - Controllable similarity generation (configurable threshold to control novelty)
+  - Difficulty level control (easy/medium/hard)
+- **Strategy balancing**: Automatically balances usage frequency across generation strategies ✅
+- **Classification and weighting system**:
+  - Keyword-based subcategory matching
+  - Species-specific keyword weight boost (2x)
+  - Weight configuration system (YAML config files)
+- **Prompt enhancement**:
+  - Extended classification information injection
+  - Seed question deepening mode
+  - Multi-category variant generation
 
-### 🎯 生成策略
-- **释义与重述** (Paraphrase)
-- **详细阐述** (Elaboration)
-- **视角转换** (Perspective Shift)
-- **多轮对话** (Multi-turn)
-- **跨物种迁移** (Cross-species)
-- **反向推理** (Reverse Reasoning)
-- **创新应用** (Innovative Application)
-- **对比分析** (Comparative Analysis)
-- **未来情景** (Future Scenario)
-- **假设性场景** (Hypothetical)
-- **反事实推理** (Counterfactual)
-- **元问题** (Meta Question)
-- **时间维度变化** (Temporal Shift)
-- **空间维度变化** (Spatial Shift)
-- **跨学科融合** (Discipline Cross)
-- **尺度变化** (Scale Change)
-- **时序分析** (Time Series)
-- **因果链条** (Causal Chain)
-- **对话变体** (Dialogue Variation)
-- **种子深化** (Seed Deepening)
+### 🎯 Generation Strategies
+- **Paraphrase and Restatement** (Paraphrase)
+- **Elaboration** (Elaboration)
+- **Perspective Shift** (Perspective Shift)
+- **Multi-turn Dialogue** (Multi-turn)
+- **Cross-species Transfer** (Cross-species)
+- **Reverse Reasoning** (Reverse Reasoning)
+- **Innovative Application** (Innovative Application)
+- **Comparative Analysis** (Comparative Analysis)
+- **Future Scenario** (Future Scenario)
+- **Hypothetical Scenario** (Hypothetical)
+- **Counterfactual Reasoning** (Counterfactual)
+- **Meta Question** (Meta Question)
+- **Temporal Dimension Shift** (Temporal Shift)
+- **Spatial Dimension Shift** (Spatial Shift)
+- **Cross-disciplinary Integration** (Discipline Cross)
+- **Scale Change** (Scale Change)
+- **Time-series Analysis** (Time Series)
+- **Causal Chain** (Causal Chain)
+- **Dialogue Variation** (Dialogue Variation)
+- **Seed Deepening** (Seed Deepening)
 
-## 项目结构
+## Project Structure
 
 ```
 agri_sft_ds/
-├── src/                          # 源代码
-│   ├── core/                     # 核心生成模块
-│   │   ├── qa_generator_v2.py       # QA生成器主文件
-│   │   ├── main_batch.py            # 批处理入口
-│   │   └── batch_processor.py       # 批处理器
-│   ├── optimization/              # 优化与增强
-│   │   ├── intelligent_strategy_selector.py  # 智能策略选择器 ✅
-│   │   ├── enhanced_strategy_selector.py     # 增强策略选择器
-│   │   ├── prompt_enhancer.py       # 提示增强器
-│   │   ├── STRATEGY_BALANCER.py     # 策略平衡器 ✅
-│   │   └── Self-awareness_dialogue_expansion.py  # 对话扩展优化器
-│   ├── quality/                   # 去重与质量控制
-│   │   ├── embedding_deduplicator.py   # 嵌入去重器 ✅
-│   │   ├── deduplicate_qa.py          # QA去重工具
-│   │   └── rag_cache.py               # RAG缓存系统
-│   └── runs/                      # 扩展与运行
-│       ├── run_expansion_from_dir.py      # 目录扩展脚本
-│       ├── run_expansion_from_expert.py   # 专家模式扩展
-│       ├── rag_async_optimization.py      # RAG异步优化
-│       └── rag_cache_integration.py       # RAG缓存集成
+├── src/                          # Source code
+│   ├── core/                     # Core generation modules
+│   │   ├── qa_generator_v2.py       # Main QA generator
+│   │   ├── main_batch.py            # Batch processing entry point
+│   │   └── batch_processor.py       # Batch processor
+│   ├── optimization/              # Optimization and enhancement
+│   │   ├── intelligent_strategy_selector.py  # Intelligent strategy selector ✅
+│   │   ├── enhanced_strategy_selector.py     # Enhanced strategy selector
+│   │   ├── prompt_enhancer.py       # Prompt enhancer
+│   │   ├── STRATEGY_BALANCER.py     # Strategy balancer ✅
+│   │   └── Self-awareness_dialogue_expansion.py  # Dialogue expansion optimizer
+│   ├── quality/                   # Deduplication and quality control
+│   │   ├── embedding_deduplicator.py   # Embedding deduplicator ✅
+│   │   ├── deduplicate_qa.py          # QA deduplication utility
+│   │   └── rag_cache.py               # RAG cache system
+│   └── runs/                      # Expansion and execution
+│       ├── run_expansion_from_dir.py      # Directory expansion script
+│       ├── run_expansion_from_expert.py   # Expert mode expansion
+│       ├── rag_async_optimization.py      # RAG async optimization
+│       └── rag_cache_integration.py       # RAG cache integration
 │
-├── config/                       # 配置文件
-│   ├── config.yaml                  # 主配置
-│   ├── config.py                    # 配置管理
-│   ├── generation_ratios_config.yaml # 生成比例配置
-│   └── .env                         # 环境变量
+├── config/                       # Configuration files
+│   ├── config.yaml                  # Main configuration
+│   ├── config.py                    # Configuration management
+│   ├── generation_ratios_config.yaml # Generation ratio configuration
+│   └── .env                         # Environment variables
 │
-├── data/                         # 数据文件
-│   ├── raw/                        # 原始数据
-│   │   ├── agri_keywords.xlsx          # 农业关键词
-│   │   ├── domain_task.xlsx           # 领域任务
-│   │   ├── domain_task_expert.xlsx    # 专家领域任务
+├── data/                         # Data files
+│   ├── raw/                        # Raw data
+│   │   ├── agri_keywords.xlsx          # Agricultural keywords
+│   │   ├── domain_task.xlsx           # Domain tasks
+│   │   ├── domain_task_expert.xlsx    # Expert domain tasks
 │   │   ├── domain_task_expert_updated.xlsx
-│   │   ├── 专家问题_扩增CoT.xlsx       # 专家问题CoT扩增
-│   │   └── 单个水稻种子问题测试.xlsx    # 水稻测试数据
-│   ├── processed/                # 处理后的数据
-│   │   └── rag_cache/                # RAG缓存
-│   └── qa/                       # QA数据文件
+│   │   ├── 专家问题_扩增CoT.xlsx       # Expert question CoT expansion
+│   │   └── 单个水稻种子问题测试.xlsx    # Rice test data
+│   ├── processed/                # Processed data
+│   │   └── rag_cache/                # RAG cache
+│   └── qa/                       # QA data files
 │       ├── 油菜_answers.jsonl
 │       └── 玉米_answers.jsonl
 │
-├── output/                       # 输出文件
-│   ├── output_expert_expanded_*/     # 专家扩展输出
-│   └── output_全部物种_expanded_*/   # 全部物种扩展输出
+├── output/                       # Output files
+│   ├── output_expert_expanded_*/     # Expert expansion output
+│   └── output_全部物种_expanded_*/   # All-species expansion output
 │
-├── docs/                         # 文档
-│   ├── README.md                     # 项目说明文档
+├── docs/                         # Documentation
+│   ├── README.md                     # Project documentation
 │   ├── run_expansion_from_dir_README.md
 │   ├── run_expansion_from_expert_README.md
-│   └── requirements.txt              # 依赖列表
+│   └── requirements.txt              # Dependency list
 │
-├── tests/                        # 测试文件（待添加）
+├── tests/                        # Test files (to be added)
 │
-├── scripts/                      # 辅助脚本（待添加）
+├── scripts/                      # Utility scripts (to be added)
 │
-├── .gitignore                    # Git忽略配置
-├── MANIFEST.in                   # 打包清单
-└── README.md                     # 项目根说明文档
+├── .gitignore                    # Git ignore configuration
+├── MANIFEST.in                   # Package manifest
+└── README.md                     # Root project documentation
 ```
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-1. **安装依赖**
+1. **Install dependencies**
    ```bash
-   # 使用 uv 安装依赖（推荐）
+   # Install dependencies with uv (recommended)
    uv sync
 
-   # 或使用 pip
+   # Or use pip
    pip install -r docs/requirements.txt
    ```
 
-2. **配置API密钥**
+2. **Configure API keys**
    ```bash
-   # 编辑 config/.env 文件
+   # Edit config/.env
    OPENAI_API_KEY=${OPENAI_API_KEY}
    ```
 
-3. **运行示例**
+3. **Run an example**
 
-   使用示例数据快速运行：
+   Quick run with sample data:
 
    ```bash
    uv run python src/core/main_batch.py --seeds examples/sample_seeds.jsonl --output output/
    ```
 
-   或使用自己的数据：
+   Or use your own data:
 
    ```bash
    python src/core/main_batch.py \
@@ -292,78 +292,78 @@ agri_sft_ds/
        --variants_per_seed 3
 ```
 
-## 环境要求
+## Requirements
 
 - Python 3.8+
-- 依赖包（安装方法见下方）
-- OpenAI API Key 或兼容的 API 服务
-- RAG服务（可选，用于检索增强）
+- Dependencies (see installation below)
+- OpenAI API Key or compatible API service
+- RAG service (optional, for retrieval augmentation)
 
-## 安装与配置
+## Installation and Configuration
 
-### 1. 安装依赖
+### 1. Install Dependencies
 
-### 安装
+### Installation
 
 ```bash
-# 使用 uv 安装依赖（推荐）
+# Install dependencies with uv (recommended)
 uv sync
 
-# 或使用 pip
+# Or use pip
 pip install -r requirements.txt
 ```
 
-主要依赖包括：
-- `openai` - OpenAI API客户端
-- `torch` - PyTorch深度学习框架
+Main dependencies include:
+- `openai` - OpenAI API client
+- `torch` - PyTorch deep learning framework
 - `transformers` - Hugging Face Transformers
-- `aiohttp` - 异步HTTP客户端
-- `pydantic` - 数据验证
-- `scikit-learn` - 机器学习库
-- `sentence-transformers` - 句子嵌入
-- `python-dotenv` - 环境变量管理
+- `aiohttp` - Async HTTP client
+- `pydantic` - Data validation
+- `scikit-learn` - Machine learning library
+- `sentence-transformers` - Sentence embeddings
+- `python-dotenv` - Environment variable management
 
-### 2. 配置API密钥
+### 2. Configure API Keys
 
-编辑 `.env` 文件，添加你的API密钥：
+Edit the `.env` file and add your API key:
 
 ```bash
 OPENAI_API_KEY=${OPENAI_API_KEY}
 ```
 
-### 3. 配置参数
+### 3. Configure Parameters
 
-编辑 `config.yaml` 文件，根据需要调整参数：
+Edit `config.yaml` and adjust parameters as needed:
 
 ```yaml
-# 模型配置
+# Model configuration
 model_name: "gpt-5.1"
-api_base: "${OPENAI_BASE_URL}"  # 通过环境变量设置
-api_key: "${OPENAI_API_KEY}"    # 通过环境变量设置
+api_base: "${OPENAI_BASE_URL}"  # Set via environment variable
+api_key: "${OPENAI_API_KEY}"    # Set via environment variable
 max_retries: 3
 request_timeout: 60
 
-# 生成参数
+# Generation parameters
 default_variants_per_seed: 2
 default_batch_size: 10
 temperature: 0.7
 
-# 质量参数
+# Quality parameters
 min_question_length: 10
 min_answer_length: 40
 max_question_length: 500
 max_answer_length: 8000
 
-# Embedding去重参数
-use_embedding_deduplication: true  # 默认开启 ✅
+# Embedding deduplication parameters
+use_embedding_deduplication: true  # Enabled by default ✅
 embedding_similarity_threshold: 0.30
 ```
 
-## 使用方法
+## Usage
 
-### 基础使用
+### Basic Usage
 
-#### 1. 使用主批处理脚本
+#### 1. Main batch processing script
 
 ```bash
 python src/core/main_batch.py \
@@ -373,7 +373,7 @@ python src/core/main_batch.py \
     --batch_size 10
 ```
 
-#### 2. 从目录扩展生成（批量物种QA扩增）
+#### 2. Directory expansion (batch multi-species QA augmentation)
 
 ```bash
 python src/runs/run_expansion_from_dir.py \
@@ -386,13 +386,13 @@ python src/runs/run_expansion_from_dir.py \
     --difficulty medium
 ```
 
-**功能特点**:
-- ✅ 异步并行处理多个物种文件（可配置并发数）
-- ✅ 自动文件扫描（扫描目录下的所有JSON/JSONL文件）
-- ✅ 统一输出管理（所有物种结果保存到统一的时间戳目录）
-- ✅ 进度实时监控（显示处理进度、成功率、耗时等统计信息）
+**Features**:
+- ✅ Asynchronously processes multiple species files in parallel (configurable concurrency)
+- ✅ Automatic file scanning (scans all JSON/JSONL files in a directory)
+- ✅ Unified output management (all species results saved to a timestamped directory)
+- ✅ Real-time progress monitoring (progress, success rate, elapsed time, and other statistics)
 
-#### 3. 专家模式扩展
+#### 3. Expert mode expansion
 
 ```bash
 python src/runs/run_expansion_from_expert.py \
@@ -401,23 +401,23 @@ python src/runs/run_expansion_from_expert.py \
     --config config/generation_ratios_config.yaml
 ```
 
-**功能特点**:
-- ✅ Excel文件解析（支持解析专家问题Excel文件，包含方向、分类等信息）
-- ✅ 多分类扩增（为每个扩展分类生成指定数量的QA对变体）
-- ✅ 分类映射（基于`domain_task_expert.xlsx`进行专家任务分类映射）
-- ✅ 提示词增强（扩展分类信息注入、种子问题深化模式）
-- ✅ 支持无答案的专家问题
-- ✅ 物种一致性验证
+**Features**:
+- ✅ Excel file parsing (supports expert question Excel files with direction, category, and other fields)
+- ✅ Multi-category expansion (generates a specified number of QA pair variants per extended category)
+- ✅ Category mapping (expert task category mapping based on `domain_task_expert.xlsx`)
+- ✅ Prompt enhancement (extended category information injection, seed question deepening mode)
+- ✅ Supports expert questions without answers
+- ✅ Species consistency validation
 
-### 高级功能
+### Advanced Features
 
-#### 启用RAG检索增强
+#### Enable RAG retrieval augmentation
 
 ```python
 from src.core.main_batch import RAGClient
 
 rag_client = RAGClient()
-# 配置RAG服务地址
+# Configure RAG service URL
 rag_config = {
     'url': 'http://localhost:9487/retrieve',
     'timeout': 300,
@@ -425,354 +425,354 @@ rag_config = {
 }
 ```
 
-#### 自定义生成策略
+#### Custom generation strategies
 
-编辑 `config/generation_ratios_config.yaml` 文件，自定义各子类别权重：
+Edit `config/generation_ratios_config.yaml` to customize subcategory weights:
 
 ```yaml
 subspecies_ratios:
   基础理论问答: 1.0
   物种特异性知识问答: 1.2
   育种方案设计与评估: 1.0
-  # ... 更多配置
+  # ... more configuration
 ```
 
-#### 使用嵌入去重
+#### Use embedding deduplication
 
 ```python
 from src.quality.embedding_deduplicator import get_global_deduplicator
 
 deduplicator = get_global_deduplicator()
-# 去重后的QA对
+# Deduplicated QA pairs
 unique_qa_pairs = deduplicator.deduplicate(qa_pairs)
 ```
 
-## 输出格式
+## Output Format
 
-生成的QA数据集为JSONL格式，每行包含一个QA对：
+The generated QA dataset is in JSONL format, with one QA pair per line:
 
 ```json
 {
-  "question": "问题内容",
-  "answer": "答案内容",
+  "question": "Question content",
+  "answer": "Answer content",
   "metadata": {
-    "category": "类别",
-    "difficulty": "难度",
-    "tags": ["标签1", "标签2"],
-    "generation_method": "生成策略",
+    "category": "Category",
+    "difficulty": "Difficulty",
+    "tags": ["tag1", "tag2"],
+    "generation_method": "Generation strategy",
     "quality_score": 0.95,
-    "species": "物种",
-    "subspecies": "子类别"
+    "species": "Species",
+    "subspecies": "Subcategory"
   }
 }
 ```
 
-## 配置说明
-
-### 生成比例配置
-
-`config/generation_ratios_config.yaml` 文件控制：
-- 物种权重配置
-- 子类别权重配置
-- 生成策略参数
-- 质量控制阈值
-- 输出控制选项
-
-### 质量控制
-
-系统提供多层次质量控制：
-
-#### 相似度控制
-- **可配置最大相似度阈值**（0.0-1.0）
-- **控制生成结果与种子问题的相似程度**
-- 值越小越创新，值越大越一致
-- **应用场景**:
-  - 低相似度（<0.3）：更多创新，适合探索性扩增
-  - 高相似度（>0.7）：更高一致性，适合精确扩增
-
-#### 难度级别
-- 支持easy/medium/hard三个难度级别
-- 专家问题默认hard级别
-
-#### 质量配置
-- 最小/最大问题/答案长度限制
-- 去重相似度阈值（默认30%）
-- Embedding去重支持
-- 语义相似度去重 (默认开启) ✅
-- 策略平衡器 (自动平衡策略使用) ✅
-- 智能质量评估
-
-### RAG集成
-
-#### 智能RAG检索
-- **中英文自动翻译**: 内置334个专业术语的中英文对照字典
-- **智能语言检测**: 自动检测查询语言，中文查询自动翻译为英文检索
-- **多级降级策略**:
-  - 优先使用`mtranslate`库翻译
-  - 失败后降级到字典翻译
-  - 英文检索结果少时回退到中文检索
-
-#### RAG缓存机制
-- **结果缓存**: 基于MD5哈希的查询结果缓存，避免重复检索
-- **缓存持久化**: 缓存保存到`data/processed/rag_cache/rag_cache.json`
-- **缓存命中提示**: 清晰显示缓存命中情况
-
-#### 智能RAG筛选
-- **多维度评分系统**（总分100分）:
-  - 关键词匹配（30分）：科学、技术、机制、比较、趋势、农业、统计等7类关键词
-  - 问题类型（20分）：开放性问题+15分，封闭性问题-5分
-  - 答案长度（20分）：长答案+20分，中等答案+10分
-  - 复杂概念（15分）：分子、基因、蛋白等专业术语
-  - 数据信息（10分）：数字、百分比、单位等
-  - 问题长度（5分）：长问题加分
-- **阈值控制**: 综合得分≥25分才启用RAG（可配置）
-- **特殊规则**:
-  - 极短问题（<5字符）直接跳过
-  - 极长答案（>2000字符）直接使用RAG
-  - 短答案但专业问题仍使用RAG
-
-#### RAG处理模式
-- **并行模式**（默认）:
-  - 先标记需要RAG的种子（添加`needs_rag`标签）
-  - QA生成时动态加载RAG检索
-  - 支持立即加载RAG，确保文档正确保存
-- **串行模式**:
-  - 预先增强所有种子
-  - 适合需要完整RAG上下文的场景
-
-#### 共享RAG结果
-- 专家问题预检索，每个问题只检索一次
-- 检索结果共享给所有扩展分类使用
-- 减少RAG服务调用次数，提高效率
-
-## 核心创新点
-
-### 🎯 技术创新
-
-#### 1. 智能中英文RAG检索系统
-- **创新**: 自动检测查询语言，中文查询自动翻译为英文检索
-- **优势**: 充分利用英文文献库，提高检索质量
-- **降级策略**: 多级降级确保系统鲁棒性
-
-#### 2. 多维度智能RAG筛选算法
-- **创新**: 基于7个维度、100分制的综合评分系统
-- **优势**: 精准判断是否需要RAG，避免资源浪费
-- **可配置**: 阈值可调，平衡准确性和覆盖率
-
-#### 3. 并行RAG处理架构
-- **创新**: 标记+动态加载的并行模式
-- **优势**: RAG检索和QA生成同时进行，提高效率
-- **优化**: 每个专家问题只检索一次，结果共享给所有扩展分类
-
-#### 4. 基于权重的分类选择系统
-- **创新**: 关键词匹配+权重配置+智能筛选
-- **优势**: 灵活控制不同类别和物种的生成比例
-- **应用**: 支持数据平衡和重点领域增强
-
-### 🏗️ 架构创新
-
-#### 1. 模块化设计
-- **RAG客户端**: 独立的RAGClient类，支持配置化
-- **缓存系统**: 独立的缓存管理，支持持久化
-- **分类映射**: 独立的映射加载函数，支持多种数据源
-
-#### 2. 异步并发处理
-- **物种级并发**: 多个物种文件并行处理
-- **批次级并发**: QA生成支持批次并发
-- **信号量控制**: 可配置最大并发数，防止资源耗尽
-
-#### 3. 错误处理与容错
-- **优雅降级**: RAG失败时继续使用原始种子
-- **异常捕获**: 完善的异常处理和日志记录
-- **状态跟踪**: 详细的RAG检索状态（success/success_no_docs/failed/skipped）
-
-### 💡 业务创新
-
-#### 1. 专家问题专用处理流程
-- **创新**: 针对专家问题的特殊处理逻辑
-- **特点**:
-  - 支持无答案的专家问题
-  - 多分类扩增支持
-  - 种子问题深化模式
-  - 物种一致性验证
-
-#### 2. 提示词增强技术
-- **创新**: 将扩展分类信息注入提示词
-- **优势**: 让模型根据分类进行精准扩增
-- **模式**: 支持普通增强和种子深化两种模式
-
-#### 3. 相似度可控生成
-- **创新**: 可配置相似度阈值，控制生成创新度
-- **应用**:
-  - 低相似度：更多创新，适合探索性扩增
-  - 高相似度：更高一致性，适合精确扩增
-
-### ⚡ 性能优化创新
-
-#### 1. RAG缓存机制
-- **创新**: 基于MD5的查询结果缓存
-- **效果**: 避免重复检索，大幅提升性能
-- **持久化**: 缓存跨会话保存
-
-#### 2. 智能RAG筛选
-- **创新**: 多维度评分，精准筛选
-- **效果**: 减少不必要的RAG检索，节省资源
-- **统计**: 详细的RAG使用率统计
-
-#### 3. 共享RAG结果
-- **创新**: 专家问题预检索，结果共享
-- **效果**: 每个问题只检索一次，多个分类共享
-- **优化**: 减少RAG服务调用次数
-
-## 性能优化
-
-### 批处理优化
-- 支持批量生成
-- 异步并发处理（物种级并发、批次级并发）
-- 信号量控制（可配置最大并发数）
-- 智能速率限制
-- 失败重试机制
-
-### 内存优化
-- 流式处理大文件
-- 缓存机制（RAG结果缓存、嵌入向量缓存）
-- 垃圾回收优化
-
-### 效率提升
-- RAG结果缓存：避免重复检索，提升性能约60-80%
-- 智能RAG筛选：减少不必要的检索，节省资源
-- 共享RAG结果：减少RAG服务调用次数约50-70%
-- 并行处理：处理效率提升约2-3倍
+## Configuration Reference
+
+### Generation ratio configuration
+
+The `config/generation_ratios_config.yaml` file controls:
+- Species weight configuration
+- Subcategory weight configuration
+- Generation strategy parameters
+- Quality control thresholds
+- Output control options
+
+### Quality control
+
+The system provides multi-layer quality control:
+
+#### Similarity control
+- **Configurable maximum similarity threshold** (0.0–1.0)
+- **Controls how similar generated results are to seed questions**
+- Lower values mean more novelty; higher values mean more consistency
+- **Use cases**:
+  - Low similarity (<0.3): More innovation, suitable for exploratory expansion
+  - High similarity (>0.7): Higher consistency, suitable for precise expansion
+
+#### Difficulty levels
+- Supports three difficulty levels: easy/medium/hard
+- Expert questions default to hard
+
+#### Quality configuration
+- Min/max question and answer length limits
+- Deduplication similarity threshold (default 30%)
+- Embedding deduplication support
+- Semantic similarity deduplication (enabled by default) ✅
+- Strategy balancer (automatically balances strategy usage) ✅
+- Intelligent quality assessment
+
+### RAG integration
+
+#### Intelligent RAG retrieval
+- **Automatic Chinese-English translation**: Built-in dictionary of 334 domain term pairs
+- **Intelligent language detection**: Automatically detects query language; Chinese queries are translated to English for retrieval
+- **Multi-level fallback strategy**:
+  - Prefer `mtranslate` library for translation
+  - Fall back to dictionary translation on failure
+  - Fall back to Chinese retrieval when English retrieval returns few results
+
+#### RAG caching
+- **Result caching**: MD5 hash-based query result cache to avoid duplicate retrieval
+- **Persistent cache**: Cache saved to `data/processed/rag_cache/rag_cache.json`
+- **Cache hit reporting**: Clearly displays cache hit status
+
+#### Intelligent RAG filtering
+- **Multi-dimensional scoring system** (100 points total):
+  - Keyword matching (30 points): 7 keyword categories including science, technology, mechanism, comparison, trend, agriculture, statistics
+  - Question type (20 points): +15 for open-ended questions, -5 for closed-ended questions
+  - Answer length (20 points): +20 for long answers, +10 for medium answers
+  - Complex concepts (15 points): Domain terms such as molecule, gene, protein
+  - Data information (10 points): Numbers, percentages, units, etc.
+  - Question length (5 points): Bonus for longer questions
+- **Threshold control**: RAG is enabled only when the composite score ≥ 25 (configurable)
+- **Special rules**:
+  - Very short questions (<5 characters) are skipped directly
+  - Very long answers (>2000 characters) always use RAG
+  - Short answers for domain-specific questions still use RAG
+
+#### RAG processing modes
+- **Parallel mode** (default):
+  - First mark seeds that need RAG (add `needs_rag` tag)
+  - Dynamically load RAG retrieval during QA generation
+  - Supports immediate RAG loading to ensure documents are saved correctly
+- **Serial mode**:
+  - Pre-augment all seeds
+  - Suitable for scenarios requiring complete RAG context
+
+#### Shared RAG results
+- Pre-retrieve expert questions once per question
+- Share retrieval results across all extended categories
+- Reduces RAG service calls and improves efficiency
+
+## Core Innovations
+
+### 🎯 Technical Innovations
+
+#### 1. Intelligent Chinese-English RAG retrieval system
+- **Innovation**: Automatically detects query language; Chinese queries are translated to English for retrieval
+- **Advantage**: Fully leverages English literature databases for better retrieval quality
+- **Fallback strategy**: Multi-level fallback ensures system robustness
+
+#### 2. Multi-dimensional intelligent RAG filtering algorithm
+- **Innovation**: Composite scoring system based on 7 dimensions and a 100-point scale
+- **Advantage**: Accurately determines whether RAG is needed, avoiding wasted resources
+- **Configurable**: Adjustable threshold balances accuracy and coverage
+
+#### 3. Parallel RAG processing architecture
+- **Innovation**: Marking + dynamic loading parallel mode
+- **Advantage**: RAG retrieval and QA generation run concurrently for higher efficiency
+- **Optimization**: Each expert question is retrieved once; results are shared across all extended categories
+
+#### 4. Weight-based classification selection system
+- **Innovation**: Keyword matching + weight configuration + intelligent filtering
+- **Advantage**: Flexibly controls generation ratios across categories and species
+- **Application**: Supports data balancing and focus-area enhancement
+
+### 🏗️ Architecture Innovations
+
+#### 1. Modular design
+- **RAG client**: Standalone RAGClient class with configurable settings
+- **Cache system**: Standalone cache management with persistence
+- **Category mapping**: Standalone mapping loader supporting multiple data sources
+
+#### 2. Async concurrent processing
+- **Species-level concurrency**: Multiple species files processed in parallel
+- **Batch-level concurrency**: QA generation supports batch concurrency
+- **Semaphore control**: Configurable max concurrency to prevent resource exhaustion
+
+#### 3. Error handling and fault tolerance
+- **Graceful degradation**: Continue with original seeds when RAG fails
+- **Exception handling**: Comprehensive exception handling and logging
+- **Status tracking**: Detailed RAG retrieval status (success/success_no_docs/failed/skipped)
+
+### 💡 Business Innovations
+
+#### 1. Expert question dedicated processing pipeline
+- **Innovation**: Special processing logic for expert questions
+- **Features**:
+  - Supports expert questions without answers
+  - Multi-category expansion support
+  - Seed question deepening mode
+  - Species consistency validation
+
+#### 2. Prompt enhancement technique
+- **Innovation**: Injects extended category information into prompts
+- **Advantage**: Enables the model to perform precise expansion by category
+- **Modes**: Supports both standard enhancement and seed deepening modes
+
+#### 3. Controllable similarity generation
+- **Innovation**: Configurable similarity threshold to control generation novelty
+- **Applications**:
+  - Low similarity: More innovation, suitable for exploratory expansion
+  - High similarity: Higher consistency, suitable for precise expansion
+
+### ⚡ Performance Optimization Innovations
+
+#### 1. RAG caching
+- **Innovation**: MD5-based query result caching
+- **Effect**: Avoids duplicate retrieval, significantly improving performance
+- **Persistence**: Cache survives across sessions
+
+#### 2. Intelligent RAG filtering
+- **Innovation**: Multi-dimensional scoring for precise filtering
+- **Effect**: Reduces unnecessary RAG retrieval and saves resources
+- **Statistics**: Detailed RAG usage statistics
+
+#### 3. Shared RAG results
+- **Innovation**: Pre-retrieval for expert questions with shared results
+- **Effect**: Each question retrieved once, shared across multiple categories
+- **Optimization**: Reduces RAG service call count
+
+## Performance Optimization
+
+### Batch processing optimization
+- Supports batch generation
+- Async concurrent processing (species-level and batch-level concurrency)
+- Semaphore control (configurable max concurrency)
+- Intelligent rate limiting
+- Failure retry mechanism
+
+### Memory optimization
+- Streaming processing for large files
+- Caching (RAG result cache, embedding vector cache)
+- Garbage collection optimization
+
+### Efficiency improvements
+- RAG result caching: Avoids duplicate retrieval, ~60–80% performance improvement
+- Intelligent RAG filtering: Reduces unnecessary retrieval and saves resources
+- Shared RAG results: Reduces RAG service calls by ~50–70%
+- Parallel processing: ~2–3x processing efficiency improvement
 
-## 监控与日志
+## Monitoring and Logging
 
-系统提供详细的日志记录：
-- 生成进度跟踪
-- 质量评估日志
-- 错误诊断信息
-- 性能指标统计
+The system provides detailed logging:
+- Generation progress tracking
+- Quality assessment logs
+- Error diagnostics
+- Performance metrics
 
-## 故障排除
+## Troubleshooting
 
-### 常见问题
+### Common Issues
 
-1. **API调用失败**
-   - 检查API密钥配置
-   - 验证API服务地址
-   - 查看网络连接
+1. **API call failures**
+   - Check API key configuration
+   - Verify API service URL
+   - Check network connectivity
 
-2. **生成质量不佳**
-   - 调整temperature参数
-   - 增加variants_per_seed数量
-   - 启用RAG检索增强
+2. **Poor generation quality**
+   - Adjust temperature parameter
+   - Increase variants_per_seed count
+   - Enable RAG retrieval augmentation
 
-3. **内存不足**
-   - 减小batch_size
-   - 启用流式处理
-   - 清理缓存
+3. **Insufficient memory**
+   - Reduce batch_size
+   - Enable streaming processing
+   - Clear cache
 
-4. **去重效果不理想**
-   - 调整相似度阈值
-   - 检查嵌入模型
-   - 验证输入数据质量
+4. **Suboptimal deduplication**
+   - Adjust similarity threshold
+   - Check embedding model
+   - Verify input data quality
 
-### 最新修复 (2026-01-22)
+### Recent fixes (2026-01-22)
 
-如果您遇到以下问题，现在已经修复：
+If you encountered the following issues, they are now fixed:
 
-1. **"Embedding去重器不可用"** - ✅ 已修复，默认开启
-2. **"策略平衡器不可用"** - ✅ 已修复，自动平衡
-3. **"智能策略选择器不可用"** - ✅ 已修复，智能选择
-4. **模块导入错误** - ✅ 已修复，使用相对路径
+1. **"Embedding deduplicator unavailable"** - ✅ Fixed; enabled by default
+2. **"Strategy balancer unavailable"** - ✅ Fixed; automatic balancing
+3. **"Intelligent strategy selector unavailable"** - ✅ Fixed; intelligent selection
+4. **Module import errors** - ✅ Fixed; relative paths used
 
-## 应用场景
+## Use Cases
 
-### 批量物种QA扩增 (`run_expansion_from_dir.py`)
-- 📌 **批量物种QA扩增**: 处理多个物种的QA对扩增
-- 📌 **数据增强**: 从种子QA对生成大量变体
-- 📌 **分类平衡**: 通过权重配置平衡不同类别
+### Batch multi-species QA expansion (`run_expansion_from_dir.py`)
+- 📌 **Batch multi-species QA expansion**: Process QA pair expansion for multiple species
+- 📌 **Data augmentation**: Generate large numbers of variants from seed QA pairs
+- 📌 **Category balancing**: Balance different categories via weight configuration
 
-### 专家问题扩增 (`run_expansion_from_expert.py`)
-- 📌 **专家问题扩增**: 处理专家级问题QA对生成
-- 📌 **多分类扩增**: 从单一问题生成多个分类的QA对
-- 📌 **知识深化**: 通过种子深化模式深入探索主题
+### Expert question expansion (`run_expansion_from_expert.py`)
+- 📌 **Expert question expansion**: Generate QA pairs from expert-level questions
+- 📌 **Multi-category expansion**: Generate QA pairs across multiple categories from a single question
+- 📌 **Knowledge deepening**: Explore topics in depth via seed deepening mode
 
-## 技术亮点
+## Technical Highlights
 
-### 代码质量
-- ✅ **类型注解**: 完整的类型提示
-- ✅ **文档字符串**: 详细的函数文档
-- ✅ **错误处理**: 完善的异常处理机制
-- ✅ **日志记录**: 详细的日志输出
+### Code quality
+- ✅ **Type annotations**: Complete type hints
+- ✅ **Docstrings**: Detailed function documentation
+- ✅ **Error handling**: Comprehensive exception handling
+- ✅ **Logging**: Detailed log output
 
-### 可配置性
-- ✅ **参数化设计**: 所有关键参数可配置
-- ✅ **配置文件支持**: YAML配置文件
-- ✅ **命令行参数**: 丰富的命令行选项
-- ✅ **默认值优化**: 合理的默认配置
+### Configurability
+- ✅ **Parameterized design**: All key parameters are configurable
+- ✅ **Configuration file support**: YAML configuration files
+- ✅ **Command-line arguments**: Rich CLI options
+- ✅ **Optimized defaults**: Sensible default configuration
 
-### 可扩展性
-- ✅ **策略模式**: 生成策略可扩展
-- ✅ **插件化设计**: RAG客户端可替换
-- ✅ **接口抽象**: 清晰的接口定义
+### Extensibility
+- ✅ **Strategy pattern**: Extensible generation strategies
+- ✅ **Plugin design**: Replaceable RAG client
+- ✅ **Interface abstraction**: Clear interface definitions
 
-## 扩展开发
+## Extension Development
 
-### 添加新的生成策略
+### Add a new generation strategy
 
-1. 在 `src/core/qa_generator_v2.py` 中添加新的 `GenerationMethod`
-2. 实现对应的生成逻辑
-3. 更新 `METHOD_NAME_MAP` 映射
+1. Add a new `GenerationMethod` in `src/core/qa_generator_v2.py`
+2. Implement the corresponding generation logic
+3. Update the `METHOD_NAME_MAP` mapping
 
-### 自定义质量评估
+### Custom quality assessment
 
-1. 继承 `QualityConfig` 类
-2. 实现自定义评估逻辑
-3. 在生成流程中集成
+1. Subclass `QualityConfig`
+2. Implement custom assessment logic
+3. Integrate into the generation pipeline
 
-### 集成新的数据源
+### Integrate a new data source
 
-1. 实现数据加载器
-2. 支持新的文件格式
-3. 更新 `config/` 目录下的配置参数
+1. Implement a data loader
+2. Support new file formats
+3. Update configuration parameters under `config/`
 
-### 自定义RAG筛选规则
+### Custom RAG filtering rules
 
-1. 修改 `src/runs/run_expansion_from_dir.py` 中的 `should_use_rag` 函数
-2. 调整评分权重和阈值
-3. 添加新的筛选维度
+1. Modify the `should_use_rag` function in `src/runs/run_expansion_from_dir.py`
+2. Adjust scoring weights and thresholds
+3. Add new filtering dimensions
 
-## 许可证
+## License
 
-本项目采用 MIT 许可证。
+This project is licensed under the MIT License.
 
-## 贡献指南
+## Contributing
 
-欢迎提交 Issue 和 Pull Request 来改进项目。
+Issues and Pull Requests are welcome to improve the project.
 
-## 联系方式
+## Contact
 
-如有问题，请通过 GitHub Issues 联系我们。
+For questions, please contact us via GitHub Issues.
 
-## 系统总结
+## System Summary
 
-本系统构成了一个**完整的农业领域QA对扩增系统**，具有以下特点：
+This system is a **complete agricultural domain QA pair expansion system** with the following characteristics:
 
-1. **智能化**：智能RAG检索、智能筛选、智能分类匹配、智能策略选择
-2. **高效性**：异步并发、缓存机制、并行处理、共享RAG结果
-3. **灵活性**：丰富的配置选项、多种生成策略、可扩展架构、相似度可控生成
-4. **专业性**：针对农业领域的专业术语和分类体系、334个专业术语字典
-5. **鲁棒性**：完善的错误处理、降级策略、状态跟踪、优雅降级
+1. **Intelligence**: Intelligent RAG retrieval, intelligent filtering, intelligent category matching, intelligent strategy selection
+2. **Efficiency**: Async concurrency, caching, parallel processing, shared RAG results
+3. **Flexibility**: Rich configuration options, multiple generation strategies, extensible architecture, controllable similarity generation
+4. **Domain expertise**: Domain terminology and classification system for agriculture, 334-term domain dictionary
+5. **Robustness**: Comprehensive error handling, fallback strategies, status tracking, graceful degradation
 
-**核心价值**：通过RAG增强和智能扩增，从少量高质量种子QA对生成大量高质量的变体，为农业知识问答系统提供数据支持。
+**Core value**: Through RAG augmentation and intelligent expansion, generate large volumes of high-quality variants from a small set of high-quality seed QA pairs to support agricultural knowledge QA systems.
 
-**主要优势**：
-- 🚀 生成效率提升2-3倍
-- 💰 成本降低30-50%（RAG服务调用成本降低50-70%）
-- 📈 检索效率提升60-80%
-- 🎯 去重准确率提升40-60%
-- ✨ 生成质量通过率提升30-50%
+**Key advantages**:
+- 🚀 2–3x generation efficiency improvement
+- 💰 30–50% cost reduction (RAG service call cost reduced by 50–70%)
+- 📈 60–80% retrieval efficiency improvement
+- 🎯 40–60% deduplication accuracy improvement
+- ✨ 30–50% generation quality pass rate improvement
 
 ---
 
-**注意**: 请确保在使用前遵守相关的数据使用条款和API服务协议。
+**Note**: Please ensure compliance with relevant data usage terms and API service agreements before use.

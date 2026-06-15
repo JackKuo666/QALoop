@@ -305,11 +305,3 @@ uv run python <main_script>.py --help
 | **tqdm** | 进度条显示 |
 
 大部分管道仅需以上基础依赖。特定管道可能需要额外依赖（如 Neo4j、Elasticsearch），详见各管道README。
-
----
-
-## 管道状态
-
-所有 **11 个管道** 均已通过 `gpt-5.1` 测试验证，可端到端运行。
-
-详见 [PIPELINE_STATUS.md](./PIPELINE_STATUS.md)

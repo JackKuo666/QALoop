@@ -305,11 +305,3 @@ uv run python <main_script>.py --help
 | **tqdm** | Progress bar display |
 
 Most pipelines only require the above basic dependencies. Specific pipelines may need additional dependencies (e.g., Neo4j, Elasticsearch); see each pipeline's README for details.
-
----
-
-## Pipeline Status
-
-All **11 pipelines** have been tested and verified with `gpt-5.1` and can run end-to-end.
-
-See [PIPELINE_STATUS.md](./PIPELINE_STATUS.md) for details.

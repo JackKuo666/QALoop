@@ -47,6 +47,25 @@ body {
     color: white;
     padding: 40px 30px 30px;
     text-align: center;
+    position: relative;
+}
+
+.auth-lang-switch {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-lang-switch:hover {
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .auth-header h1 {
@@ -143,6 +162,54 @@ body {
     color: #999;
 }
 
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.08);
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.password-toggle .icon-eye-off {
+    display: none;
+}
+
+.password-toggle.is-visible .icon-eye {
+    display: none;
+}
+
+.password-toggle.is-visible .icon-eye-off {
+    display: block;
+}
+
 .form-group select {
     cursor: pointer;
     appearance: none;
@@ -235,6 +302,14 @@ body {
     background: #d1ecf1;
     color: #0c5460;
     border: 1px solid #bee5eb;
+}
+
+.demo-hint {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
 }
 
 /* 响应式设计 */

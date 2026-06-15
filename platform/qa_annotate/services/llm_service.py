@@ -5,6 +5,7 @@ from typing import Any
 import httpx
 from sqlalchemy.orm import Session
 
+from qa_annotate.config import settings
 from qa_annotate.database.crud import SystemConfigCRUD
 
 LLM_CONFIG_KEYS = {
@@ -21,9 +22,15 @@ def get_llm_config(db: Session) -> dict[str, str | None]:
         dict: 包含 api_key, base_url, model_name 的字典
     """
     config = {}
+    env_defaults = {
+        "api_key": settings.LLM_API_KEY,
+        "base_url": settings.LLM_BASE_URL,
+        "model_name": settings.LLM_MODEL_NAME,
+    }
     for field, key in LLM_CONFIG_KEYS.items():
         record = SystemConfigCRUD.get_by_key(db, key=key)
-        config[field] = record.value if record else None
+        db_value = record.value if record else None
+        config[field] = db_value or env_defaults[field]
     return config
 
 

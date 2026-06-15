@@ -159,12 +159,16 @@ def get_cached_analysis(
     project_id: int,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_superuser),
+    lang: str = Query("zh", description="Report language: zh or en"),
 ):
     """获取项目缓存的 LLM 分析报告
 
     需要 superuser 权限。
     """
-    cached = LlmAnalysisCacheCRUD.get_by_project(db, project_id)
+    language = "en" if lang.lower().startswith("en") else "zh"
+    cached = LlmAnalysisCacheCRUD.get_by_project(
+        db, project_id=project_id, language=language
+    )
     if not cached:
         raise HTTPException(status_code=404, detail="暂无缓存的分析报告")
 

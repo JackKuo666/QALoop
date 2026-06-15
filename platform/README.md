@@ -1,6 +1,120 @@
+---
+title: QALoop Annotation Platform
+emoji: 📝
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # QA Annotation System
 
 面向 **问答（QA）数据协作标注与质量管理** 的 Web 应用：多用户任务流、可配置的标注量表（Schema）、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。适合作为数据构建流水线中的「人工标注与质检」环节，与外部的 QA 生成、模型评测等工具链组合使用。
+
+## Demo 使用说明
+
+本 Space 为演示环境，**开箱即用，无需手动配置 Secrets**。
+
+### 登录
+
+打开 Space 页面后，登录表单会**自动填入**默认管理员账号，直接点击「登录」即可体验。
+
+| 项目 | 默认值 |
+|------|--------|
+| 管理员用户名 | `admin` |
+| 管理员密码 | `123456` |
+
+### 快速体验流程
+
+登录后已预置示例项目与 QA 数据，可直接：
+
+1. **浏览项目 / 数据集** — 管理后台查看预置的「测试」项目及 QA 对
+2. **查看标注配置** — 已有评分、单选等标注维度
+3. **领取并标注** — 切换到用户中心完成任务
+4. **查看分析 / 导出** — 查看标注进度与 LLM 分析报告，导出结果
+
+如需从零搭建，也可自行创建项目、配置量表并导入 JSON / CSV。
+
+### Demo 示例数据（`seed/demo.sql`）
+
+HF Space 首次启动且数据库为空时，`scripts/space_init.py` 会自动导入 `seed/demo.sql`（SQLite 文本导出，可进 git；HF 不接受二进制 `.db`）。
+
+| 说明 | 内容 |
+|------|------|
+| 预置内容 | 1 个项目、3 个数据集、50 条 QA、标注配置及示例标注结果 |
+| LLM 配置 | 预填 Base URL 与 `gpt-5.1`；API Key 通过 `LLM_API_KEY` 环境变量注入，**不写入 sql** |
+| 运行时数据 | 导入后写入容器内 `/data/annotations.db`，网页上的修改只改运行时库 |
+| 与 sql 的关系 | **网页操作不会回写 `demo.sql`**；更新 Demo 需手动导出并 push |
+
+更新 Demo 数据示例：
+
+```bash
+# 从本地运行时库导出（注意脱敏 llm_api_key）
+sqlite3 ../data/annotations.db ".dump" > seed/demo.sql
+git add seed/demo.sql && git commit -m "Update demo seed" && git push space main
+```
+
+关闭自动导入：设置环境变量 `SEED_DEMO_DATA=false`。
+
+### 注册普通用户
+
+当前为 `production` 模式：新用户可自行注册，但需管理员在「用户管理」中**手动启用**后才能标注。
+
+### Demo 默认配置
+
+| 配置项 | 默认值 | 说明 |
+|--------|--------|------|
+| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT 签名密钥（Demo 用，勿用于正式部署） |
+| `ADMIN_USERNAME` | `admin` | 首次启动自动创建的管理员 |
+| `ADMIN_PASSWORD` | `123456` | 管理员密码 |
+| `DB_DIR` | `/data` | 数据库存储目录 |
+| `ENVIRONMENT` | `production` | 新注册用户需管理员启用 |
+
+> **安全提示**：以上为公开 Demo 配置，请勿存放真实敏感数据。正式部署时请通过 HF Secrets 覆盖 `SECRET_KEY` 和 `ADMIN_PASSWORD`。
+
+## 部署到 Hugging Face Spaces
+
+1. 在 [Hugging Face](https://huggingface.co/new-space) 创建 Space，SDK 选择 **Docker**
+2. 将 `platform/` 目录内容推送到 Space 仓库（可只上传 platform 子目录作为仓库根目录）
+3. **Demo 场景无需配置 Secrets**，直接构建即可运行
+4. 正式部署时，在 Space **Settings → Repository secrets** 中覆盖：
+
+| Secret | Demo 默认 | 说明 |
+|--------|-----------|------|
+| `SECRET_KEY` | `qaloop-demo-jwt-secret-key-32bytes` | JWT 密钥，正式环境请改为随机字符串 |
+| `ADMIN_USERNAME` | `admin` | 首次启动自动创建的管理员用户名 |
+| `ADMIN_PASSWORD` | `123456` | 管理员密码（至少 6 位） |
+
+5. 可选 **Variables**：
+
+| Variable | 默认值 | 说明 |
+|----------|--------|------|
+| `DB_DIR` | `/data` | SQLite 数据目录（Dockerfile 已默认设为 `/data`） |
+| `ENVIRONMENT` | `production` | 新注册用户需管理员启用 |
+| `LLM_BASE_URL` | `http://43.159.131.233:3001/v1` | LLM API Base URL（OpenAI 兼容） |
+| `LLM_MODEL_NAME` | `gpt-5.1` | LLM 模型名称 |
+
+6. **LLM 分析（可选）**：在 Space **Settings → Repository secrets** 中设置：
+
+| Secret | 说明 |
+|--------|------|
+| `LLM_API_KEY` | LLM API Token（启动时自动写入系统配置） |
+
+Demo 已预填 Base URL 与模型名，对应 OpenAI 兼容调用：
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="http://43.159.131.233:3001/v1",
+    api_key="your-token",  # 在 HF Secrets 中设置 LLM_API_KEY
+)
+# model: gpt-5.1
+```
+
+7. Space 构建完成后访问页面，用 `admin` / `123456` 登录即可使用
+
+> **注意**：免费 Space 休眠重启后，若未启用持久化存储，标注数据可能丢失。Demo 展示用途无碍；正式协作标注建议自建服务器部署。
 
 ## 要点
 
@@ -8,7 +122,7 @@
 - **灵活标注配置** — 评分、分类、文本、单选/多选、二元；可选理由与置信度字段
 - **协作与权限** — 超级用户管理后台；普通用户领取任务并标注；JWT 认证
 - **分析与导出** — 标注进度与统计分析；结果可按配置简化导出
-- **可选 LLM** — OpenAI 兼容 Chat API，对项目内标注备注生成分析报告（需系统配置，非 `.env`）
+- **可选 LLM** — OpenAI 兼容 Chat API，默认 `http://43.159.131.233:3001/v1` + `gpt-5.1`；Token 通过 `LLM_API_KEY` 环境变量注入
 - **种子问题** — 预置问题模板，按类型/子类管理
 - **界面语言** — 中英文（i18n）
 

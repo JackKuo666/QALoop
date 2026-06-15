@@ -70,9 +70,7 @@ def register(user_register: UserRegister, db: Session = Depends(get_db)):
 
 
 @router.post("/login", response_model=Token)
-def login(
-    user_login: UserLogin, db: Session = Depends(get_db), response: Response = None
-):
+def login(user_login: UserLogin, response: Response, db: Session = Depends(get_db)):
     """用户登录"""
     # 先检查用户是否存在
     user = UserCRUD.authenticate_user(
@@ -113,16 +111,15 @@ def login(
     )
 
     # 设置cookie: 从配置读取过期时间，HttpOnly
-    if response is not None:
-        response.set_cookie(
-            key="access_token",
-            value=access_token,
-            max_age=token_expire_seconds,
-            expires=token_expire_seconds,
-            path="/",
-            httponly=True,
-            samesite="lax",
-        )
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        max_age=token_expire_seconds,
+        expires=token_expire_seconds,
+        path="/",
+        httponly=True,
+        samesite="lax",
+    )
 
     return Token(access_token=access_token, token_type="bearer", user=user)
 

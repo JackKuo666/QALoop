@@ -18,8 +18,9 @@ wheels/
 # 本地数据库目录
 data/
 
-# 数据库文件
+# 数据库文件（Demo 使用 seed/demo.sql 文本导入）
 *.db
+seed/*.db
 
 # 环境变量
 .env

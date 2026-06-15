@@ -19,6 +19,7 @@ from qa_annotate.api.seed_question import router as seed_question_router
 from qa_annotate.api.system_config import router as system_config_router
 from qa_annotate.api.user import router as user_router
 from qa_annotate.config import settings
+from qa_annotate.bootstrap import ensure_llm_config, seed_demo_llm_analysis
 from qa_annotate.database.base import init_db
 
 
@@ -45,6 +46,8 @@ async def lifespan(app: FastAPI):
     """应用生命周期管理"""
     # 启动时执行
     init_db()
+    ensure_llm_config()
+    seed_demo_llm_analysis()
     yield
     # 关闭时执行（如果需要清理资源，可以在这里添加）
 

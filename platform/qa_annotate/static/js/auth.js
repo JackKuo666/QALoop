@@ -47,6 +47,32 @@ function hashPasswordWithTimestamp(password) {
     return { hash: finalHash, timestamp: timestamp };
 }
 
+function initPasswordToggle(inputId, toggleId) {
+    const input = document.getElementById(inputId);
+    const toggle = document.getElementById(toggleId);
+    if (!input || !toggle) return;
+
+    const showLabel = () => (window.t ? window.t('auth.showPassword') : '显示密码');
+    const hideLabel = () => (window.t ? window.t('auth.hidePassword') : '隐藏密码');
+
+    const updateToggleLabel = (visible) => {
+        const label = visible ? hideLabel() : showLabel();
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+    };
+
+    toggle.addEventListener('click', () => {
+        const visible = input.type === 'text';
+        input.type = visible ? 'password' : 'text';
+        toggle.classList.toggle('is-visible', !visible);
+        updateToggleLabel(!visible);
+    });
+
+    updateToggleLabel(false);
+}
+
+initPasswordToggle('login-password', 'login-password-toggle');
+
 // 切换表单标签
 document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -111,11 +137,11 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         // 2秒后跳转
         setTimeout(() => {
             if (redirectUrl) {
-                // 如果有redirect参数，跳转到指定页面
                 window.location.href = decodeURIComponent(redirectUrl);
+            } else if (data.user.is_superuser) {
+                window.location.href = '/manager';
             } else {
-                // 否则跳转到首页
-                window.location.href = '/';
+                window.location.href = '/user';
             }
         }, 2000);
     } catch (error) {

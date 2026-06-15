@@ -97,7 +97,7 @@ function updateAllTranslations() {
  * @returns {string} 当前语言代码，如 'zh-CN' 或 'en-US'
  */
 function getCurrentLanguage() {
-    return window.i18next ? window.i18next.language : 'zh-CN';
+    return window.i18next ? window.i18next.language : 'en-US';
 }
 
 /**

@@ -234,7 +234,7 @@ function closeModal() {
 function initEventListeners() {
     // 退出登录
     document.getElementById('logoutBtn').addEventListener('click', () => {
-        if (confirm('确定要退出登录吗？')) {
+        if (confirm(t('actions.confirmLogout'))) {
             clearToken();
             window.location.href = '/auth';
         }

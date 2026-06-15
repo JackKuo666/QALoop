@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QA 标注系统 - 登录/注册</title>
+    <title>QA Annotation System - Login</title>
     <link rel="stylesheet" href="/static/css/auth.css">
 </head>
 <body>
     <div class="container">
         <div class="auth-container">
             <div class="auth-header">
-                <h1 data-i18n="auth.loginTitle">QA 标注系统</h1>
+                <button class="auth-lang-switch" id="languageSwitchBtn" type="button" title="Switch Language">
+                    <span id="currentLanguage">English</span>
+                </button>
+                <h1 data-i18n="auth.loginTitle">QA Annotation System</h1>
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="login" data-i18n="auth.login">登录</button>
-                    <button class="tab-btn" data-tab="register" data-i18n="auth.register">注册</button>
+                    <button class="tab-btn active" data-tab="login" data-i18n="auth.login">Login</button>
+                    <button class="tab-btn" data-tab="register" data-i18n="auth.register">Register</button>
                 </div>
             </div>
 
@@ -21,7 +24,7 @@
             <div class="form-container active" id="login-form">
                 <form id="loginForm">
                     <div class="form-group">
-                        <label for="login-username" data-i18n="auth.username">用户名</label>
+                        <label for="login-username" data-i18n="auth.username">Username</label>
                         <input
                             type="text"
                             id="login-username"
@@ -29,24 +32,44 @@
                             required
                             minlength="3"
                             maxlength="50"
+                            value="admin"
                             data-i18n-placeholder="auth.usernamePlaceholder"
-                            placeholder="请输入用户名"
+                            placeholder="Please enter username"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="login-password" data-i18n="auth.password">密码</label>
-                        <input
-                            type="password"
-                            id="login-password"
-                            name="password"
-                            required
-                            minlength="6"
-                            data-i18n-placeholder="auth.passwordPlaceholder"
-                            placeholder="请输入密码"
-                        >
+                        <label for="login-password" data-i18n="auth.password">Password</label>
+                        <div class="password-field">
+                            <input
+                                type="password"
+                                id="login-password"
+                                name="password"
+                                required
+                                minlength="6"
+                                value="123456"
+                                data-i18n-placeholder="auth.passwordPlaceholder"
+                                placeholder="Please enter password"
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="login-password-toggle"
+                                data-i18n-aria-label="auth.showPassword"
+                                aria-label="Show password"
+                                title="Show password"
+                            >
+                                <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 5C7 5 2.73 8.11 1 12c1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="currentColor"/>
+                                </svg>
+                                <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 7a4.5 4.5 0 0 1 4.5 4.5c0 .57-.11 1.12-.31 1.62l2.2 2.2A11.77 11.77 0 0 0 23 12c-1.73-3.89-6-7-11-7-1.45 0-2.84.24-4.12.67l1.97 1.97c.5-.2 1.05-.31 1.62-.31zM2 4.27l2.28 2.28A11.74 11.74 0 0 0 1 12c1.73 3.89 6 7 11 7 1.55 0 3.03-.3 4.38-.84l2.58 2.58L21.73 22 20 20.27 3.27 3 2 4.27zm7.53 7.53-1.77-1.77A2.5 2.5 0 0 0 9.5 12c0 1.38 1.12 2.5 2.5 2.5.47 0 .91-.13 1.29-.35l-1.76-1.76z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.login">登录</span></button>
+                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.login">Login</span></button>
+                        <p class="demo-hint" data-i18n="auth.demoHint">Demo: Default admin credentials are pre-filled. Click Login to get started.</p>
                     </div>
                     <div class="message" id="login-message"></div>
                 </form>
@@ -56,7 +79,7 @@
             <div class="form-container" id="register-form">
                 <form id="registerForm">
                     <div class="form-group">
-                        <label for="register-username" data-i18n="auth.username">用户名</label>
+                        <label for="register-username" data-i18n="auth.username">Username</label>
                         <input
                             type="text"
                             id="register-username"
@@ -65,11 +88,11 @@
                             minlength="3"
                             maxlength="50"
                             data-i18n-placeholder="auth.usernamePlaceholderWithHint"
-                            placeholder="请输入用户名（3-50个字符）"
+                            placeholder="Please enter username (3-50 characters)"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="register-password" data-i18n="auth.password">密码</label>
+                        <label for="register-password" data-i18n="auth.password">Password</label>
                         <input
                             type="password"
                             id="register-password"
@@ -77,52 +100,52 @@
                             required
                             minlength="6"
                             data-i18n-placeholder="auth.passwordPlaceholderWithHint"
-                            placeholder="请输入密码（至少6个字符）"
+                            placeholder="Please enter password (at least 6 characters)"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="register-fullname" data-i18n="auth.fullnameOptional">全名（可选）</label>
+                        <label for="register-fullname" data-i18n="auth.fullnameOptional">Full Name (optional)</label>
                         <input
                             type="text"
                             id="register-fullname"
                             name="full_name"
                             maxlength="100"
                             data-i18n-placeholder="auth.fullnamePlaceholder"
-                            placeholder="请输入全名"
+                            placeholder="Please enter full name"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="register-organization" data-i18n="auth.organizationOptional">单位（可选）</label>
+                        <label for="register-organization" data-i18n="auth.organizationOptional">Organization (optional)</label>
                         <select id="register-organization" name="organization">
-                            <option value="" data-i18n="auth.selectOrganization">请选择</option>
+                            <option value="" data-i18n="auth.selectOrganization">Please select</option>
                             <option value="崖州湾实验室">崖州湾实验室</option>
                             <option value="之江实验室">之江实验室</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="register-team" data-i18n="auth.teamOptional">团队（可选）</label>
+                        <label for="register-team" data-i18n="auth.teamOptional">Team (optional)</label>
                         <input
                             type="text"
                             id="register-team"
                             name="team"
                             maxlength="100"
                             data-i18n-placeholder="auth.teamPlaceholder"
-                            placeholder="请输入团队"
+                            placeholder="Please enter team"
                         >
                     </div>
                     <div class="form-group">
-                        <label for="register-species" data-i18n="auth.speciesOptional">物种（可选）</label>
+                        <label for="register-species" data-i18n="auth.speciesOptional">Species (optional)</label>
                         <input
                             type="text"
                             id="register-species"
                             name="species"
                             maxlength="100"
                             data-i18n-placeholder="auth.speciesPlaceholder"
-                            placeholder="请输入物种"
+                            placeholder="Please enter species"
                         >
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.register">注册</span></button>
+                        <button type="submit" class="btn btn-primary"><span data-i18n="auth.register">Register</span></button>
                     </div>
                     <div class="message" id="register-message"></div>
                 </form>
@@ -144,7 +167,7 @@
                 return;
             }
 
-            const savedLanguage = localStorage.getItem('appLanguage') || 'zh-CN';
+            const savedLanguage = localStorage.getItem('appLanguage') || 'en-US';
 
             try {
                 const [zhCN, enUS] = await Promise.all([
@@ -154,7 +177,7 @@
 
                 await i18next.init({
                     lng: savedLanguage,
-                    fallbackLng: 'zh-CN',
+                    fallbackLng: 'en-US',
                     debug: false,
                     resources: {
                         'zh-CN': {
@@ -172,16 +195,38 @@
                 };
 
                 updatePageLanguage();
+
+                const langBtn = document.getElementById('languageSwitchBtn');
+                if (langBtn) {
+                    langBtn.addEventListener('click', toggleLanguage);
+                }
             } catch (error) {
                 console.error('i18next 初始化失败:', error);
             }
         });
+
+        function toggleLanguage() {
+            if (!window.i18next) return;
+
+            const currentLang = window.i18next.language;
+            const newLang = currentLang === 'zh-CN' ? 'en-US' : 'zh-CN';
+
+            window.i18next.changeLanguage(newLang, () => {
+                localStorage.setItem('appLanguage', newLang);
+                updatePageLanguage();
+            });
+        }
 
         function updatePageLanguage() {
             if (!window.i18next) return;
 
             const lang = window.i18next.language;
             document.documentElement.lang = lang;
+
+            const langBtn = document.getElementById('currentLanguage');
+            if (langBtn) {
+                langBtn.textContent = lang === 'zh-CN' ? '中文' : 'English';
+            }
 
             // 更新所有带有 data-i18n 属性的元素
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -205,6 +250,21 @@
                 const key = element.getAttribute('data-i18n-placeholder');
                 element.placeholder = window.i18next.t(key);
             });
+
+            // 更新 aria-label
+            document.querySelectorAll('[data-i18n-aria-label]').forEach(element => {
+                const key = element.getAttribute('data-i18n-aria-label');
+                element.setAttribute('aria-label', window.i18next.t(key));
+                element.setAttribute('title', window.i18next.t(key));
+            });
+
+            const loginPassword = document.getElementById('login-password');
+            const loginToggle = document.getElementById('login-password-toggle');
+            if (loginPassword && loginToggle && loginPassword.type === 'text') {
+                const label = window.i18next.t('auth.hidePassword');
+                loginToggle.setAttribute('aria-label', label);
+                loginToggle.setAttribute('title', label);
+            }
 
             // 更新页面标题
             document.title = window.i18next.t('auth.loginTitle') + ' - ' + window.i18next.t('auth.login');

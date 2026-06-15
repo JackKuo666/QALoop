@@ -2224,19 +2224,16 @@ class LlmAnalysisCacheCRUD:
     """LLM 分析报告缓存 CRUD 操作"""
 
     @staticmethod
-    def get_by_project(db: Session, project_id: int) -> Optional[dict]:
-        """获取项目最新的分析报告缓存
-
-        Returns:
-            包含 analysis_text, model_name, notes_count, language, created_at, updated_at 的字典，
-            如果没有缓存则返回 None
-        """
-        db_model = (
-            db.query(LlmAnalysisCacheModel)
-            .filter(LlmAnalysisCacheModel.project_id == project_id)
-            .order_by(LlmAnalysisCacheModel.updated_at.desc())
-            .first()
+    def get_by_project(
+        db: Session, project_id: int, language: str | None = None
+    ) -> Optional[dict]:
+        """获取项目分析报告缓存（可按语言筛选）"""
+        query = db.query(LlmAnalysisCacheModel).filter(
+            LlmAnalysisCacheModel.project_id == project_id
         )
+        if language:
+            query = query.filter(LlmAnalysisCacheModel.language == language)
+        db_model = query.order_by(LlmAnalysisCacheModel.updated_at.desc()).first()
         if not db_model:
             return None
         return {
@@ -2260,7 +2257,10 @@ class LlmAnalysisCacheCRUD:
         """保存分析报告缓存（如果已有则更新，否则创建）"""
         db_model = (
             db.query(LlmAnalysisCacheModel)
-            .filter(LlmAnalysisCacheModel.project_id == project_id)
+            .filter(
+                LlmAnalysisCacheModel.project_id == project_id,
+                LlmAnalysisCacheModel.language == language,
+            )
             .first()
         )
         if db_model:

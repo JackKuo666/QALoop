@@ -37,7 +37,11 @@ window.AnnotationAnalysis = {
      */
     loadCachedAnalysis: async function() {
         try {
-            const response = await apiGet(`/analysis/projects/${this.currentProjectId}/cached-analysis`);
+            const currentLang = (window.i18next && window.i18next.language) || 'zh';
+            const lang = currentLang.startsWith('zh') ? 'zh' : 'en';
+            const response = await apiGet(
+                `/analysis/projects/${this.currentProjectId}/cached-analysis?lang=${lang}`
+            );
             if (response) {
                 this.renderLlmAnalysisResult(response);
                 const btn = document.getElementById('generateLlmAnalysisBtn');

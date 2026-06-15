@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,7 +107,7 @@
             }
 
             // 初始化 i18next
-            const savedLanguage = localStorage.getItem('appLanguage') || 'zh-CN';
+            const savedLanguage = localStorage.getItem('appLanguage') || 'en-US';
 
             try {
                 // 并行加载语言文件
@@ -118,7 +118,7 @@
 
                 await i18next.init({
                     lng: savedLanguage,
-                    fallbackLng: 'zh-CN',
+                    fallbackLng: 'en-US',
                     debug: false,
                     resources: {
                         'zh-CN': {

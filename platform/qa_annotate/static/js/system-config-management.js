@@ -195,6 +195,11 @@
 
         // ==================== LLM 配置管理 ====================
 
+        const LLM_DEFAULTS = {
+            base_url: 'http://43.159.131.233:3001/v1',
+            model_name: 'gpt-5.1',
+        };
+
         loadLlmSettings: async function() {
             const keys = [
                 { field: 'api_key', key: 'llm_api_key', displayId: 'llmApiKeyDisplay' },
@@ -208,7 +213,7 @@
                     llmConfig[field] = config.value;
                 } catch (error) {
                     if (error.status === 404) {
-                        llmConfig[field] = null;
+                        llmConfig[field] = LLM_DEFAULTS[field] || null;
                     } else {
                         console.error(`加载 LLM 配置 ${key} 失败:`, error);
                     }

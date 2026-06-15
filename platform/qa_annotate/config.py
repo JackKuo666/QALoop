@@ -32,11 +32,16 @@ class Settings(BaseSettings):
 
     # 认证配置
     TOKEN_EXPIRE_DAYS: int = 7  # Token过期天数
-    SECRET_KEY: str  # JWT密钥，生产环境必须修改
+    SECRET_KEY: str = "qaloop-demo-jwt-secret-key-32bytes"  # JWT密钥，Demo 默认值，生产环境务必修改
     ALGORITHM: str = "HS256"  # JWT算法
 
     # SQLAlchemy配置
     SQLALCHEMY_ECHO: bool = False  # 是否打印SQL语句
+
+    # LLM 默认配置（可通过环境变量覆盖；API Key 建议用 LLM_API_KEY 注入）
+    LLM_API_KEY: Optional[str] = None
+    LLM_BASE_URL: str = "http://43.159.131.233:3001/v1"
+    LLM_MODEL_NAME: str = "gpt-5.1"
 
     model_config = SettingsConfigDict(
         env_file=".env",

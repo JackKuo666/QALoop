@@ -1004,7 +1004,7 @@ async def import_project(
 def export_project_annotations(
     project_id: int,
     format: str = Query(
-        "json", regex="^(json|csv)$", description="导出格式：json 或 csv"
+        "json", pattern="^(json|csv)$", description="导出格式：json 或 csv"
     ),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_superuser),

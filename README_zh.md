@@ -1,6 +1,10 @@
 # QALoop
 
-QA 数据全生命周期工具集：从生成、标注到评测。
+**面向大规模农业 QA 构建与评测的人机协同闭环框架**
+
+ICDM 论文官方代码发布。QALoop 将农业 QA 数据生产实现为**闭环系统**：异构数据源经 Pipeline 路由进入源适配 QA 合成管道，在协作标注平台上完成专家验证，结构化反馈驱动管道迭代，并通过独立 Benchmark 进行外部评测。
+
+在植物育种案例研究中，QALoop 通过 7 条生产级管道产出 **245,958 条 QA 记录**，构建 **1,434 题的独立 Benchmark**，并对 **11 个 LLM** 进行专家打分对比。迭代式专家反馈改进了多条管道；下游对 Qwen3-8B 全参数 SFT 将育种 Benchmark 平均分从 **84.58 提升至 88.17**。
 
 ## 系统架构
 
@@ -31,6 +35,33 @@ QALoop/
 独立的 QA 数据生成流水线集合，每个 Pipeline 负责从特定数据源生成 QA 对。各管道目录下包含各自的 README、示例与文档。
 
 详见 [pipelines/README.md](pipelines/README.md)。
+
+## 发布内容说明
+
+本仓库聚焦**可复用框架代码**，而非无限制公开全部生产数据：
+
+| 包含 | 说明 |
+|------|------|
+| `platform/` | 专家验证与协作标注平台（FastAPI） |
+| `pipelines/` | 11 条源适配 QA 合成管道及最小可运行示例 |
+| 文档 | README、配置与部署说明 |
+
+论文中的生产级数据集与完整独立 Benchmark **未**包含在本发布中，数据获取方式见论文说明。
+
+## 引用
+
+如在研究中使用 QALoop，请引用：
+
+```bibtex
+@inproceedings{kuo2026qaloop,
+  title={QALoop: A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation},
+  author={...},
+  booktitle={IEEE International Conference on Data Mining (ICDM)},
+  year={2026}
+}
+```
+
+> 作者列表与完整 BibTeX 将在正式发表后更新。
 
 ## 快速开始
 

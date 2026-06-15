@@ -1,6 +1,6 @@
 # Agricultural Knowledge QA Pair Generation System
 
-This repository contains **11 independent data pipelines** that automatically generate high-quality question-answer (QA) pairs from diverse sources (papers, patents, books, knowledge graphs, Wikipedia, germplasm reports, etc.) for LLM SFT (Supervised Fine-Tuning) training.
+Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666/QALoop) — a human-in-the-loop framework for large-scale agricultural QA construction and evaluation (ICDM). This directory contains **11 independent pipelines** that generate high-quality question-answer (QA) pairs from heterogeneous agricultural sources (papers, patents, books, knowledge graphs, Wikipedia, germplasm reports, gene records, expert questions, etc.) for LLM SFT training.
 
 ---
 

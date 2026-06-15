@@ -9,7 +9,7 @@ pinned: false
 
 # QA Annotation System
 
-面向 **问答（QA）数据协作标注与质量管理** 的 Web 应用：多用户任务流、可配置的标注量表（Schema）、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。适合作为数据构建流水线中的「人工标注与质检」环节，与外部的 QA 生成、模型评测等工具链组合使用。
+[QALoop](https://github.com/JackKuo666/QALoop) 人机协同闭环框架（ICDM）中的 **专家验证平台**。面向 **QA 数据协作标注与质量管理**：多用户任务流、可配置标注量表、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。接收上游 QA 合成管道产出的候选 QA 对，并将专家判断转化为结构化反馈，驱动管道迭代。
 
 ## Demo 使用说明
 
@@ -128,7 +128,7 @@ client = OpenAI(
 
 ## 系统概览
 
-![QALoop 系统架构](seed/figure1.png)
+![QALoop 系统架构](https://raw.githubusercontent.com/JackKuo666/QALoop/main/platform/seed/figure1.png)
 
 上图展示了 QALoop 完整流程。本平台对应其中的 **专家验证平台（Expert Validation Platform）** 环节——接收上游 QA 合成管道产出的候选 QA 对，支持人工质检、反馈与导出。
 
@@ -365,7 +365,7 @@ ruff format .
 
 ## 研究与引用
 
-若本系统或配套数据集用于发表论文，建议在文中说明：**标注维度与指南版本**、**导出格式与字段含义**，并在此补充论文标题、会议/期刊与 BibTeX（待发表时可先占位「即将更新」）。
+本平台是 QALoop 的 **专家验证平台** 组件。如在论文中使用，请引用 QALoop ICDM 论文，并说明 **标注维度与指南版本**、**导出格式与字段含义**。BibTeX 见[根目录 README](https://github.com/JackKuo666/QALoop#citation)。
 
 ## Roadmap（设想）
 

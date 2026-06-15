@@ -9,7 +9,7 @@ pinned: false
 
 # QA Annotation System
 
-A web application for **collaborative QA data annotation and quality management**: multi-user task workflows, configurable annotation schemas, statistics and export, plus optional **LLM-assisted review of annotation notes**. Designed as the human annotation and quality-check stage in a data pipeline, to be combined with external QA generation and model evaluation tools.
+The **Expert Validation Platform** in [QALoop](https://github.com/JackKuo666/QALoop) — a human-in-the-loop framework for large-scale agricultural QA construction and evaluation (ICDM). This web application supports **collaborative QA annotation and quality management**: multi-user task workflows, configurable annotation schemas, statistics and export, plus optional **LLM-assisted review of annotation notes**. It receives candidate QA pairs from upstream synthesis pipelines and converts expert judgments into structured feedback for pipeline iteration.
 
 ## Demo Usage
 
@@ -128,7 +128,7 @@ client = OpenAI(
 
 ## System Overview
 
-![QALoop System Architecture](seed/figure1.png)
+![QALoop System Architecture](https://raw.githubusercontent.com/JackKuo666/QALoop/main/platform/seed/figure1.png)
 
 The diagram above shows the full QALoop workflow. This platform corresponds to the **Expert Validation Platform** stage — receiving candidate QA pairs from upstream synthesis pipelines and supporting human quality review, feedback, and export.
 
@@ -365,7 +365,7 @@ ruff format .
 
 ## Research and Citation
 
-If you use this system or accompanying datasets in a publication, please describe in the paper: **annotation dimensions and guideline version**, **export format and field meanings**, and add the paper title, venue, and BibTeX here (placeholder "coming soon" if not yet published).
+This platform is the **Expert Validation Platform** component of QALoop. If you use it in a publication, please cite the QALoop ICDM paper and describe **annotation dimensions and guideline version**, **export format and field meanings**. See the [root README](https://github.com/JackKuo666/QALoop#citation) for BibTeX.
 
 ## Roadmap
 

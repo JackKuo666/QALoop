@@ -22,5 +22,8 @@ data/
 *.db
 seed/*.db
 
+# 图片（HF Space 不接受二进制 git push，保留在 GitHub monorepo）
+seed/*.png
+
 # 环境变量
 .env

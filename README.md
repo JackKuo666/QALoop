@@ -1,6 +1,10 @@
 # QALoop
 
-A full-lifecycle toolkit for QA data: from generation and annotation to evaluation.
+**A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation**
+
+Official code release for our ICDM paper. QALoop operationalizes agricultural QA data production as a **closed-loop system**: heterogeneous sources are routed to source-adaptive synthesis pipelines, expert-validated through a collaborative annotation platform, revised via structured feedback, and evaluated with an independent benchmark.
+
+In a plant breeding case study, QALoop produced **245,958 QA records** across seven production-scale pipelines, built a **1,434-question independent benchmark**, and supported comparison of **11 LLMs** with expert-scored outputs. Iterative expert feedback improved multiple pipelines; downstream full-parameter SFT of Qwen3-8B raised the plant-breeding benchmark average from **84.58 to 88.17**.
 
 ## System Architecture
 
@@ -31,6 +35,33 @@ See [platform/README.md](platform/README.md) for details.
 A collection of standalone QA data generation pipelines. Each pipeline generates QA pairs from a specific data source. Each pipeline directory contains its own README, examples, and documentation.
 
 See [pipelines/README.md](pipelines/README.md) for details.
+
+## What's Released
+
+This repository focuses on **reusable framework code**, not unrestricted release of all production data:
+
+| Included | Description |
+|----------|-------------|
+| `platform/` | Expert validation & annotation platform (FastAPI) |
+| `pipelines/` | 11 source-adaptive QA synthesis pipelines with minimal runnable examples |
+| Documentation | READMEs, configuration guides, and deployment instructions |
+
+Production-scale datasets and the full independent benchmark from the paper are **not** included in this release. See the paper for data availability details.
+
+## Citation
+
+If you use QALoop in your research, please cite:
+
+```bibtex
+@inproceedings{kuo2026qaloop,
+  title={QALoop: A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation},
+  author={...},
+  booktitle={IEEE International Conference on Data Mining (ICDM)},
+  year={2026}
+}
+```
+
+> Author list and BibTeX will be updated upon publication.
 
 ## Quick Start
 

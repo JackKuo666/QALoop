@@ -8,9 +8,8 @@ A full-lifecycle toolkit for QA data: from generation and annotation to evaluati
 QALoop/
 ├── platform/      # Annotation and evaluation platform (FastAPI web app)
 ├── pipelines/     # QA generation pipeline collection
-├── examples/      # Usage examples and sample data
-├── docs/          # Documentation
-└── README.md
+├── data/          # Local data storage (SQLite database, gitignored)
+└── LICENSE
 ```
 
 ## Modules
@@ -23,15 +22,9 @@ See [platform/README.md](platform/README.md) for details.
 
 ### pipelines/ — QA Generation Pipelines
 
-A collection of standalone QA data generation pipelines. Each pipeline generates QA pairs from a specific data source.
+A collection of standalone QA data generation pipelines. Each pipeline generates QA pairs from a specific data source. Each pipeline directory contains its own README, examples, and documentation.
 
-### examples/ — Usage Examples
-
-Import data formats, pipeline configuration examples, and more.
-
-### docs/ — Documentation
-
-Architecture design, API documentation, deployment guides, and more.
+See [pipelines/README.md](pipelines/README.md) for details.
 
 ## Quick Start
 

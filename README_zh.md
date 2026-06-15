@@ -8,9 +8,8 @@ QA 数据全生命周期工具集：从生成、标注到评测。
 QALoop/
 ├── platform/      # 标注与评测平台（FastAPI Web 应用）
 ├── pipelines/     # QA 生成 Pipeline 集合
-├── examples/      # 使用示例与样例数据
-├── docs/          # 文档
-└── README.md
+├── data/          # 本地数据存储（SQLite 数据库，已 gitignore）
+└── LICENSE
 ```
 
 ## 模块说明
@@ -23,15 +22,9 @@ QALoop/
 
 ### pipelines/ — QA 生成 Pipeline
 
-独立的 QA 数据生成流水线集合，每个 Pipeline 负责从特定数据源生成 QA 对。
+独立的 QA 数据生成流水线集合，每个 Pipeline 负责从特定数据源生成 QA 对。各管道目录下包含各自的 README、示例与文档。
 
-### examples/ — 使用示例
-
-导入数据格式、Pipeline 配置示例等。
-
-### docs/ — 文档
-
-架构设计、API 文档、部署指南等。
+详见 [pipelines/README.md](pipelines/README.md)。
 
 ## 快速开始
 

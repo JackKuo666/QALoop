@@ -17,6 +17,9 @@ build/
 # Database
 data/
 
+# Generated output
+output/
+
 # OS
 .DS_Store
 Thumbs.db

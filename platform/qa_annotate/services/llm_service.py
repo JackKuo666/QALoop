@@ -68,7 +68,6 @@ async def call_llm_chat(
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},
         ],
-        "temperature": 0.7,
         "max_tokens": 4096,
     }
 

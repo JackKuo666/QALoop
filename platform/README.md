@@ -100,6 +100,13 @@ Currently in `production` mode: new users can self-register, but must be **manua
 |--------|-------------|
 | `LLM_API_KEY` | LLM API Token (auto-written to system config on startup) |
 
+When `LLM_BASE_URL` or `LLM_MODEL_NAME` is explicitly set in the environment,
+the application also synchronizes it to the system configuration on startup.
+Those environment values take precedence over values already stored in the
+database, so setting all three LLM variables and letting the Space restart is
+enough—no separate configuration in the admin UI is required. If an
+environment variable is unset, the existing system configuration is preserved.
+
 Demo pre-fills Base URL and model name for OpenAI-compatible calls:
 
 ```python

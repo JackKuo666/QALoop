@@ -100,6 +100,11 @@ git add seed/demo.sql && git commit -m "Update demo seed" && git push space main
 |--------|------|
 | `LLM_API_KEY` | LLM API Token（启动时自动写入系统配置） |
 
+若运行环境中明确设置了 `LLM_BASE_URL` 或 `LLM_MODEL_NAME`，应用会在启动时
+同步到系统配置，并覆盖数据库中已有的对应值。因此在 Space 中设置这三个 LLM
+变量并等待重启后即可直接使用，无需再进入管理后台单独配置。未设置环境变量时，
+则保留现有的系统配置。
+
 Demo 已预填 Base URL 与模型名，对应 OpenAI 兼容调用：
 
 ```python

@@ -1,5 +1,6 @@
 """应用启动时的数据库初始化辅助函数"""
 
+import os
 from pathlib import Path
 
 from qa_annotate.config import settings
@@ -21,10 +22,18 @@ _DEMO_ANALYSIS_NOTES_COUNT = 4
 
 
 def ensure_llm_config() -> None:
-    """写入 LLM 默认配置；API Key 优先从环境变量同步。"""
+    """写入 LLM 默认配置；显式设置的环境变量优先同步。"""
     db = SessionLocal()
     try:
         for key, setting_name, description in _LLM_CONFIG_SPECS:
+            env_value = os.getenv(setting_name)
+            if env_value:
+                SystemConfigCRUD.set_value(
+                    db, key=key, value=env_value, description=description
+                )
+                print(f"已从环境变量同步 LLM 配置: {key}")
+                continue
+
             if SystemConfigCRUD.get_by_key(db, key=key):
                 continue
             value = getattr(settings, setting_name)

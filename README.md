@@ -1,10 +1,10 @@
 # QALoop
 
-**A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation**
+**Expert-Involved Data Production for Domain-Specific Question Answering**
 
-Official code release for our ICDM paper. QALoop operationalizes agricultural QA data production as a **closed-loop system**: heterogeneous sources are routed to source-adaptive synthesis pipelines, expert-validated through a collaborative annotation platform, revised via structured feedback, and evaluated with an independent benchmark.
+Code release for the DASFAA 2027 Industry Track submission. QALoop is a data production system that combines source-adaptive QA generation, a shared record format, and expert-involved development and quality auditing. Heterogeneous sources are routed to source-adaptive pipelines, experts review sampled outputs, and developers revise prompts, representations, and filters.
 
-In a plant breeding case study, QALoop produced **245,958 QA records** across seven production-scale pipelines, built a **1,434-question independent benchmark**, and supported comparison of **11 LLMs** with expert-scored outputs. Iterative expert feedback improved multiple pipelines; downstream full-parameter SFT of Qwen3-8B raised the plant-breeding benchmark average from **84.58 to 88.17**.
+In an agricultural plant-breeding deployment, seven production pipelines produced **245,958 QA records**. The latest recorded expert audits found **94.3–100%** of sampled answers accurate in six pipelines. An independent evaluation set contains **1,434** source-separated questions. Experts also compared eleven candidate generators with model identities hidden. Downstream full-parameter SFT of Qwen3-8B raised the domain hierarchical macro-average from **84.58 to 88.17**. The mean score on eleven general benchmarks decreased from **82.34 to 79.96**.
 
 ## System Architecture
 
@@ -43,7 +43,7 @@ This repository focuses on **reusable framework code**, not unrestricted release
 | Included | Description |
 |----------|-------------|
 | `platform/` | Expert validation & annotation platform (FastAPI) |
-| `pipelines/` | 11 source-adaptive QA synthesis pipelines with minimal runnable examples |
+| `pipelines/` | Source-adaptive QA synthesis pipelines with minimal runnable examples. The paper reports seven production pipelines; gene-data and knowledge-graph pipelines in this repository are outside that total. |
 | Documentation | READMEs, configuration guides, and deployment instructions |
 
 Production-scale datasets and the full independent benchmark from the paper are **not** included in this release. See the paper for data availability details.
@@ -53,15 +53,16 @@ Production-scale datasets and the full independent benchmark from the paper are 
 If you use QALoop in your research, please cite:
 
 ```bibtex
-@inproceedings{kuo2026qaloop,
-  title={QALoop: A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation},
-  author={...},
-  booktitle={IEEE International Conference on Data Mining (ICDM)},
-  year={2026}
+@inproceedings{guo2027qaloop,
+  title={QALoop: Expert-Involved Data Production for Domain-Specific Question Answering},
+  author={Guo, Menghao and others},
+  booktitle={Database Systems for Advanced Applications (DASFAA), Industry Track},
+  year={2027},
+  note={Submitted}
 }
 ```
 
-> Author list and BibTeX will be updated upon publication.
+> The author list will be completed when the paper is published.
 
 ## Quick Start
 

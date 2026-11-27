@@ -9,7 +9,7 @@ pinned: false
 
 # QA Annotation System
 
-[QALoop](https://github.com/JackKuo666/QALoop) 人机协同闭环框架（ICDM）中的 **专家验证平台**。面向 **QA 数据协作标注与质量管理**：多用户任务流、可配置标注量表、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。接收上游 QA 合成管道产出的候选 QA 对，并将专家判断转化为结构化反馈，驱动管道迭代。
+[QALoop](https://github.com/JackKuo666/QALoop) 的 **专家验证平台**，对应 DASFAA 2027 Industry Track 投稿中的专家参与领域问答数据生产系统。面向 **QA 数据协作标注与质量管理**：多用户任务流、可配置标注量表、统计与导出，以及可选的 **LLM 辅助阅读标注备注**。接收上游 QA 合成管道产出的候选 QA 对，并将专家判断转化为结构化反馈，驱动管道迭代。
 
 ## Demo 使用说明
 
@@ -365,7 +365,7 @@ ruff format .
 
 ## 研究与引用
 
-本平台是 QALoop 的 **专家验证平台** 组件。如在论文中使用，请引用 QALoop ICDM 论文，并说明 **标注维度与指南版本**、**导出格式与字段含义**。BibTeX 见[根目录 README](https://github.com/JackKuo666/QALoop#citation)。
+本平台是 QALoop 的 **专家验证平台** 组件。如在论文中使用，请引用 QALoop 的 DASFAA 2027 Industry Track 论文，并说明 **标注维度与指南版本**、**导出格式与字段含义**。BibTeX 见[根目录 README](https://github.com/JackKuo666/QALoop#citation)。
 
 ## Roadmap（设想）
 

@@ -9,7 +9,7 @@ pinned: false
 
 # QA Annotation System
 
-The **Expert Validation Platform** in [QALoop](https://github.com/JackKuo666/QALoop) — a human-in-the-loop framework for large-scale agricultural QA construction and evaluation (ICDM). This web application supports **collaborative QA annotation and quality management**: multi-user task workflows, configurable annotation schemas, statistics and export, plus optional **LLM-assisted review of annotation notes**. It receives candidate QA pairs from upstream synthesis pipelines and converts expert judgments into structured feedback for pipeline iteration.
+The **Expert Validation Platform** in [QALoop](https://github.com/JackKuo666/QALoop), the code release for the DASFAA 2027 Industry Track submission on expert-involved domain QA data production. This web application supports **collaborative QA annotation and quality management**: multi-user task workflows, configurable annotation schemas, statistics and export, plus optional **LLM-assisted review of annotation notes**. It receives candidate QA pairs from upstream synthesis pipelines and converts expert judgments into structured feedback for pipeline iteration.
 
 ## Demo Usage
 
@@ -365,7 +365,7 @@ ruff format .
 
 ## Research and Citation
 
-This platform is the **Expert Validation Platform** component of QALoop. If you use it in a publication, please cite the QALoop ICDM paper and describe **annotation dimensions and guideline version**, **export format and field meanings**. See the [root README](https://github.com/JackKuo666/QALoop#citation) for BibTeX.
+This platform is the **Expert Validation Platform** component of QALoop. If you use it in a publication, please cite the QALoop DASFAA 2027 Industry Track paper and describe **annotation dimensions and guideline version**, **export format and field meanings**. See the [root README](https://github.com/JackKuo666/QALoop#citation) for BibTeX.
 
 ## Roadmap
 

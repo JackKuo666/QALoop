@@ -1,10 +1,10 @@
 # QALoop
 
-**面向大规模农业 QA 构建与评测的人机协同闭环框架**
+**面向领域问答的专家参与数据生产系统**
 
-ICDM 论文官方代码发布。QALoop 将农业 QA 数据生产实现为**闭环系统**：异构数据源经 Pipeline 路由进入源适配 QA 合成管道，在协作标注平台上完成专家验证，结构化反馈驱动管道迭代，并通过独立 Benchmark 进行外部评测。
+DASFAA 2027 Industry Track 投稿的代码发布。QALoop 把源适配问答生成、统一记录格式，以及专家参与的开发与质量审核放在同一套流程里。异构来源进入各自的生成管道，专家抽查样本，开发者据此修改提示词、中间表示和过滤规则。
 
-在植物育种案例研究中，QALoop 通过 7 条生产级管道产出 **245,958 条 QA 记录**，构建 **1,434 题的独立 Benchmark**，并对 **11 个 LLM** 进行专家打分对比。迭代式专家反馈改进了多条管道；下游对 Qwen3-8B 全参数 SFT 将育种 Benchmark 平均分从 **84.58 提升至 88.17**。
+在农业植物育种部署中，7 条生产管道产出 **245,958 条 QA 记录**。六条管道最近一次有记录的专家审核中，抽查答案的准确比例为 **94.3%–100%**。独立评测集包含 **1,434** 道来源隔离的题目。专家还对 11 个候选生成模型做了身份隐藏的比较。下游对 Qwen3-8B 全参数 SFT 后，领域分层宏平均从 **84.58 升到 88.17**；11 个通用基准的平均分从 **82.34 降到 79.96**。
 
 ## 系统架构
 
@@ -43,7 +43,7 @@ QALoop/
 | 包含 | 说明 |
 |------|------|
 | `platform/` | 专家验证与协作标注平台（FastAPI） |
-| `pipelines/` | 11 条源适配 QA 合成管道及最小可运行示例 |
+| `pipelines/` | 源适配 QA 合成管道及最小可运行示例。论文报告 7 条生产管道；本仓库中的基因数据和知识图谱管道不计入该总数。 |
 | 文档 | README、配置与部署说明 |
 
 论文中的生产级数据集与完整独立 Benchmark **未**包含在本发布中，数据获取方式见论文说明。
@@ -53,15 +53,16 @@ QALoop/
 如在研究中使用 QALoop，请引用：
 
 ```bibtex
-@inproceedings{kuo2026qaloop,
-  title={QALoop: A Human-in-the-Loop Framework for Large-scale Agricultural QA Construction and Evaluation},
-  author={...},
-  booktitle={IEEE International Conference on Data Mining (ICDM)},
-  year={2026}
+@inproceedings{guo2027qaloop,
+  title={QALoop: Expert-Involved Data Production for Domain-Specific Question Answering},
+  author={Guo, Menghao and others},
+  booktitle={Database Systems for Advanced Applications (DASFAA), Industry Track},
+  year={2027},
+  note={Submitted}
 }
 ```
 
-> 作者列表与完整 BibTeX 将在正式发表后更新。
+> 作者列表在论文发表后补全。
 
 ## 快速开始
 

@@ -1,6 +1,6 @@
 # Agricultural Knowledge QA Pair Generation System
 
-Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666/QALoop) — a human-in-the-loop framework for large-scale agricultural QA construction and evaluation (ICDM). This directory contains **11 independent pipelines** that generate high-quality question-answer (QA) pairs from heterogeneous agricultural sources (papers, patents, books, knowledge graphs, Wikipedia, germplasm reports, gene records, expert questions, etc.) for LLM SFT training.
+Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666/QALoop), the code release for the DASFAA 2027 Industry Track submission on expert-involved domain QA data production. This directory contains independent pipelines that generate question-answer (QA) pairs from heterogeneous agricultural sources (papers, patents, books, knowledge graphs, Wikipedia, germplasm reports, gene records, expert questions, and others) for LLM SFT training. The submitted paper reports seven production pipelines; the gene-data and knowledge-graph pipelines here are outside that total.
 
 ---
 

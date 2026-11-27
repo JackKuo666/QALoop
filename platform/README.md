@@ -103,11 +103,12 @@ Currently in `production` mode: new users can self-register, but must be **manua
 Demo pre-fills Base URL and model name for OpenAI-compatible calls:
 
 ```python
+import os
 from openai import OpenAI
 
 client = OpenAI(
     base_url="https://api.example.com/v1",
-    api_key="your-token",  # Set LLM_API_KEY in HF Secrets
+    api_key=os.environ["LLM_API_KEY"],  # Set in your environment, or in HF Space Secrets
 )
 # model: gpt-5.1
 ```

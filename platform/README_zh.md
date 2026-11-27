@@ -103,11 +103,12 @@ git add seed/demo.sql && git commit -m "Update demo seed" && git push space main
 Demo 已预填 Base URL 与模型名，对应 OpenAI 兼容调用：
 
 ```python
+import os
 from openai import OpenAI
 
 client = OpenAI(
     base_url="https://api.example.com/v1",
-    api_key="your-token",  # 在 HF Secrets 中设置 LLM_API_KEY
+    api_key=os.environ["LLM_API_KEY"],  # 在运行环境或 HF Space Secrets 中设置
 )
 # model: gpt-5.1
 ```

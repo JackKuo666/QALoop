@@ -1,6 +1,6 @@
 # Agricultural Knowledge QA Pair Generation System
 
-Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666/QALoop), the code release for the DASFAA 2027 Industry Track submission on expert-involved domain QA data production. This directory contains independent pipelines that generate question-answer (QA) pairs from heterogeneous agricultural sources (papers, patents, books, knowledge graphs, Wikipedia, germplasm reports, gene records, expert questions, and others) for LLM SFT training. The submitted paper reports seven production pipelines; the gene-data and knowledge-graph pipelines here are outside that total.
+Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666/QALoop), the code release for the DASFAA 2027 Industry Track submission on expert-involved domain QA data production. The paper reports seven production pipelines. Expert seeds are implemented here as `expert_qa_augmentation` and `expertq_generatea`. Full-text papers, theses, wiki, books, germplasm reports, and patents correspond to `paper_synthesis`, `thesis_synthesis`, `wiki_synthesis`, `books_qa_generater`, `seedreport_synthesis`, and `patent_synthesis`. `gene_synthesis` and `kg_synthesis` are extensions. `qa_data_acquisition_quality` checks existing QA records and is not a production pipeline.
 
 ---
 
@@ -26,19 +26,19 @@ Source-adaptive QA synthesis pipelines in [QALoop](https://github.com/JackKuo666
 
 ## Quick Overview
 
-| # | Pipeline | Data Source | Key Innovation | Output |
-|---|----------|-------------|----------------|--------|
-| 1 | [expert_qa_augmentation](#1-expert_qa_augmentation) | Seed questions | 20+ generation strategies, intelligent RAG retrieval | JSONL |
-| 2 | [expertq_generatea](#2-expertq_generatea) | Seed questions | 31+ model support, Thinking mode | JSONL |
-| 3 | [gene_synthesis](#3-gene_synthesis) | Gene literature | Evidence anchoring, multi-hop reasoning protocol | JSONL |
-| 4 | [kg_synthesis](#4-kg_synthesis) | Knowledge graph | TopK whitelist, P3 random path fallback | JSON/JSONL |
-| 5 | [paper_synthesis](#5-paper_synthesis) | Academic papers | Two-stage reasoning chain, intelligent ratio control | JSONL |
-| 6 | [patent_synthesis](#6-patent_synthesis) | Patents | Evaluate-feedback-retrieve-generate loop | JSONL |
-| 7 | [thesis_synthesis](#7-thesis_synthesis) | Theses | Multi-format chapter splitting, objective question generation | JSONL |
-| 8 | [wiki_synthesis](#8-wiki_synthesis) | Wikipedia | BioBERT + Qwen two-stage filtering | JSONL |
-| 9 | [books_qa_generater](#9-books_qa_generater) | Books | TOC-aware chapter splitting, hierarchical quality control | JSONL |
-| 10 | [qa_data_acquisition_quality](#10-qa_data_acquisition_quality) | QA data | LLM generative evaluation | JSONL |
-| 11 | [seedreport_synthesis](#11-seedreport_synthesis) | Germplasm reports | 8 user intent categories, zero-anaphora QA | JSONL |
+| # | Pipeline | In the paper | Data Source | Key Innovation | Output |
+|---|----------|-------------|----------------|----------------|--------|
+| 1 | [expert_qa_augmentation](#1-expert_qa_augmentation) | Expert seeds | Seed questions | 20+ generation strategies, intelligent RAG retrieval | JSONL |
+| 2 | [expertq_generatea](#2-expertq_generatea) | Expert seeds | Seed questions | 31+ model support, Thinking mode | JSONL |
+| 3 | [gene_synthesis](#3-gene_synthesis) | Extension | Gene literature | Evidence anchoring, multi-hop reasoning protocol | JSONL |
+| 4 | [kg_synthesis](#4-kg_synthesis) | Extension | Knowledge graph | TopK whitelist, P3 random path fallback | JSON/JSONL |
+| 5 | [paper_synthesis](#5-paper_synthesis) | Full-text papers | Academic papers | Two-stage reasoning chain, intelligent ratio control | JSONL |
+| 6 | [patent_synthesis](#6-patent_synthesis) | Patents | Patents | Evaluate-feedback-retrieve-generate loop | JSONL |
+| 7 | [thesis_synthesis](#7-thesis_synthesis) | Theses | Theses | Multi-format chapter splitting, objective question generation | JSONL |
+| 8 | [wiki_synthesis](#8-wiki_synthesis) | Wiki | Wikipedia | BioBERT + Qwen two-stage filtering | JSONL |
+| 9 | [books_qa_generater](#9-books_qa_generater) | Books | Books | TOC-aware chapter splitting, hierarchical quality control | JSONL |
+| 10 | [qa_data_acquisition_quality](#10-qa_data_acquisition_quality) | Quality check | QA data | LLM generative evaluation | JSONL |
+| 11 | [seedreport_synthesis](#11-seedreport_synthesis) | Germplasm reports | Germplasm reports | 8 user intent categories, zero-anaphora QA | JSONL |
 
 ---
 

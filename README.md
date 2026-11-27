@@ -32,9 +32,9 @@ See [platform/README.md](platform/README.md) for details.
 
 ### pipelines/ — QA Generation Pipelines
 
-A collection of standalone QA data generation pipelines. Each pipeline generates QA pairs from a specific data source. Each pipeline directory contains its own README, examples, and documentation.
+Code for the seven production pipelines in the paper, plus two extensions and a quality check. Each directory contains its own README, examples, and documentation.
 
-See [pipelines/README.md](pipelines/README.md) for details.
+See [pipelines/README.md](pipelines/README.md) for which directory corresponds to which pipeline.
 
 ## What's Released
 
@@ -43,7 +43,7 @@ This repository focuses on **reusable framework code**, not unrestricted release
 | Included | Description |
 |----------|-------------|
 | `platform/` | Expert validation & annotation platform (FastAPI) |
-| `pipelines/` | Source-adaptive QA synthesis pipelines with minimal runnable examples. The paper reports seven production pipelines; gene-data and knowledge-graph pipelines in this repository are outside that total. |
+| `pipelines/` | Source-adaptive QA synthesis pipelines with minimal runnable examples. |
 | Documentation | READMEs, configuration guides, and deployment instructions |
 
 Production-scale datasets and the full independent benchmark from the paper are **not** included in this release. See the paper for data availability details.

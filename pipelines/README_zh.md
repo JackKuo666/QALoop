@@ -1,6 +1,6 @@
 # 农业知识问答对生成系统
 
-[QALoop](https://github.com/JackKuo666/QALoop) 的**源适配 QA 合成管道**集合，对应 DASFAA 2027 Industry Track 投稿中的专家参与领域问答数据生产系统。本目录包含多条独立管道，从异构农业数据源（论文、专利、图书、知识图谱、维基百科、种质报告、基因文献、专家问题等）生成问答对，用于大模型 SFT 训练。投稿论文报告 7 条生产管道；这里的基因数据和知识图谱管道不计入该总数。
+[QALoop](https://github.com/JackKuo666/QALoop) 的**源适配 QA 合成管道**，对应 DASFAA 2027 Industry Track 投稿。论文报告七条生产管道。专家种子由 `expert_qa_augmentation` 和 `expertq_generatea` 实现；全文论文、学位论文、维基百科、图书、种质报告和专利分别对应 `paper_synthesis`、`thesis_synthesis`、`wiki_synthesis`、`books_qa_generater`、`seedreport_synthesis` 和 `patent_synthesis`。`gene_synthesis` 和 `kg_synthesis` 是扩展。`qa_data_acquisition_quality` 对已有问答做质检，不是生产管道。
 
 ---
 
@@ -26,19 +26,19 @@
 
 ## 快速概览
 
-| # | 管道 | 数据源 | 核心创新 | 输出 |
-|---|------|--------|---------|------|
-| 1 | [expert_qa_augmentation](#1-expert_qa_augmentation) | 种子问题 | 20+生成策略、智能RAG检索 | JSONL |
-| 2 | [expertq_generatea](#2-expertq_generatea) | 种子问题 | 31+模型支持、Thinking模式 | JSONL |
-| 3 | [gene_synthesis](#3-gene_synthesis) | 基因文献 | 证据锚定、多跳推理协议 | JSONL |
-| 4 | [kg_synthesis](#4-kg_synthesis) | 知识图谱 | TopK白名单、P3随机路径回退 | JSON/JSONL |
-| 5 | [paper_synthesis](#5-paper_synthesis) | 学术论文 | 两阶段推理链、智能比例控制 | JSONL |
-| 6 | [patent_synthesis](#6-patent_synthesis) | 专利 | 评测-反馈-检索-生成闭环 | JSONL |
-| 7 | [thesis_synthesis](#7-thesis_synthesis) | 学位论文 | 多格式章节分割、客观题生成 | JSONL |
-| 8 | [wiki_synthesis](#8-wiki_synthesis) | Wikipedia | BioBERT+Qwen两阶段筛选 | JSONL |
-| 9 | [books_qa_generater](#9-books_qa_generater) | 图书 | 目录感知章节拆分、层次化质量控制 | JSONL |
-| 10 | [qa_data_acquisition_quality](#10-qa_data_acquisition_quality) | QA数据 | LLM生成式评估 | JSONL |
-| 11 | [seedreport_synthesis](#11-seedreport_synthesis) | 种质报告 | 8大用户意图体系、零指代问答 | JSONL |
+| # | 管道 | 论文中 | 数据源 | 核心创新 | 输出 |
+|---|------|--------|--------|---------|------|
+| 1 | [expert_qa_augmentation](#1-expert_qa_augmentation) | 专家种子 | 种子问题 | 20+生成策略、智能RAG检索 | JSONL |
+| 2 | [expertq_generatea](#2-expertq_generatea) | 专家种子 | 种子问题 | 31+模型支持、Thinking模式 | JSONL |
+| 3 | [gene_synthesis](#3-gene_synthesis) | 扩展 | 基因文献 | 证据锚定、多跳推理协议 | JSONL |
+| 4 | [kg_synthesis](#4-kg_synthesis) | 扩展 | 知识图谱 | TopK白名单、P3随机路径回退 | JSON/JSONL |
+| 5 | [paper_synthesis](#5-paper_synthesis) | 全文论文 | 学术论文 | 两阶段推理链、智能比例控制 | JSONL |
+| 6 | [patent_synthesis](#6-patent_synthesis) | 专利 | 专利 | 评测-反馈-检索-生成闭环 | JSONL |
+| 7 | [thesis_synthesis](#7-thesis_synthesis) | 学位论文 | 学位论文 | 多格式章节分割、客观题生成 | JSONL |
+| 8 | [wiki_synthesis](#8-wiki_synthesis) | 维基百科 | Wikipedia | BioBERT+Qwen两阶段筛选 | JSONL |
+| 9 | [books_qa_generater](#9-books_qa_generater) | 图书 | 图书 | 目录感知章节拆分、层次化质量控制 | JSONL |
+| 10 | [qa_data_acquisition_quality](#10-qa_data_acquisition_quality) | 质检 | QA数据 | LLM生成式评估 | JSONL |
+| 11 | [seedreport_synthesis](#11-seedreport_synthesis) | 种质报告 | 种质报告 | 8大用户意图体系、零指代问答 | JSONL |
 
 ---
 

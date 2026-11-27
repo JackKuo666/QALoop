@@ -10,7 +10,7 @@ DASFAA 2027 Industry Track 投稿的代码发布。QALoop 把源适配问答生�
 
 ![QALoop 系统架构](platform/seed/figure1.png)
 
-上图展示了 QALoop 端到端流程：异构农业数据源经 Pipeline 路由与源适配 QA 合成管道进入候选 QA 池，随后在 **专家验证平台**（`platform/`）完成人工质检；反馈与迭代引擎形成闭环，最终输出精选训练 QA、独立评测集及下游模型评测。
+上图展示了 QALoop 端到端流程：异构农业来源经源适配问答合成管道进入候选问答池，再在 **专家验证平台**（`platform/`）完成抽查；开发者根据反馈修订提示词、表示和过滤规则。输出包括训练用问答、独立评测集和下游模型评测。
 
 ## 项目结构
 
@@ -32,9 +32,9 @@ QALoop/
 
 ### pipelines/ — QA 生成 Pipeline
 
-独立的 QA 数据生成流水线集合，每个 Pipeline 负责从特定数据源生成 QA 对。各管道目录下包含各自的 README、示例与文档。
+论文中七条生产管道的代码，以及两条扩展和一项质检。各目录下包含各自的 README、示例与文档。
 
-详见 [pipelines/README.md](pipelines/README.md)。
+各文件夹与论文的对应关系见 [pipelines/README.md](pipelines/README.md)。
 
 ## 发布内容说明
 
@@ -43,7 +43,7 @@ QALoop/
 | 包含 | 说明 |
 |------|------|
 | `platform/` | 专家验证与协作标注平台（FastAPI） |
-| `pipelines/` | 源适配 QA 合成管道及最小可运行示例。论文报告 7 条生产管道；本仓库中的基因数据和知识图谱管道不计入该总数。 |
+| `pipelines/` | 源适配 QA 合成管道及最小可运行示例。 |
 | 文档 | README、配置与部署说明 |
 
 论文中的生产级数据集与完整独立 Benchmark **未**包含在本发布中，数据获取方式见论文说明。

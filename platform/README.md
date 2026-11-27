@@ -107,8 +107,8 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="https://api.example.com/v1",
-    api_key=os.environ["LLM_API_KEY"],  # Set in your environment, or in HF Space Secrets
+    base_url=os.environ["LLM_BASE_URL"],  # e.g. https://api.example.com/v1
+    api_key=os.environ["LLM_API_KEY"],    # Set in your environment, or in HF Space Secrets
 )
 # model: gpt-5.1
 ```

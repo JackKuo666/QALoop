@@ -684,7 +684,7 @@
       "llmBaseUrl": "Base URL",
       "llmModelName": "Model Name",
       "llmApiKeyPlaceholder": "Set via LLM_API_KEY environment variable",
-      "llmBaseUrlPlaceholder": "http://43.159.131.233:3001/v1",
+      "llmBaseUrlPlaceholder": "https://api.example.com/v1",
       "llmModelNamePlaceholder": "gpt-5.1",
       "llmConfigValue": "Current Value:",
       "llmConfigNotSet": "Not configured",

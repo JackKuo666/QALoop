@@ -681,7 +681,7 @@
       "llmBaseUrl": "Base URL",
       "llmModelName": "模型名称",
       "llmApiKeyPlaceholder": "通过 LLM_API_KEY 环境变量配置",
-      "llmBaseUrlPlaceholder": "http://43.159.131.233:3001/v1",
+      "llmBaseUrlPlaceholder": "https://api.example.com/v1",
       "llmModelNamePlaceholder": "gpt-5.1",
       "llmConfigValue": "当前值：",
       "llmConfigNotSet": "未配置",

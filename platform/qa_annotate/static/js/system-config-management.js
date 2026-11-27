@@ -196,7 +196,7 @@
         // ==================== LLM 配置管理 ====================
 
         const LLM_DEFAULTS = {
-            base_url: 'http://43.159.131.233:3001/v1',
+            base_url: 'https://api.example.com/v1',
             model_name: 'gpt-5.1',
         };
 

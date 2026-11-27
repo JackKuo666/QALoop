@@ -40,7 +40,7 @@ CREATE TABLE system_configs (
 	PRIMARY KEY (id)
 );
 INSERT INTO system_configs VALUES(1,'allow_registration','true','是否允许用户注册（true/false）','2026-03-23 14:09:27.427149','2026-03-23 14:09:27.427163');
-INSERT INTO system_configs VALUES(2,'llm_base_url','http://43.159.131.233:3001/v1','LLM API Base URL','2026-04-09 09:32:11.544387','2026-04-09 09:32:11.544400');
+INSERT INTO system_configs VALUES(2,'llm_base_url','https://api.example.com/v1','LLM API Base URL','2026-04-09 09:32:11.544387','2026-04-09 09:32:11.544400');
 INSERT INTO system_configs VALUES(3,'llm_model_name','gpt-5.1','LLM Model Name','2026-04-09 09:32:11.677416','2026-04-09 09:32:11.677429');
 CREATE TABLE users (
 	id INTEGER NOT NULL, 

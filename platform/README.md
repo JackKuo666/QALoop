@@ -91,7 +91,7 @@ Currently in `production` mode: new users can self-register, but must be **manua
 |----------|---------|-------------|
 | `DB_DIR` | `/data` | SQLite data directory (Dockerfile defaults to `/data`) |
 | `ENVIRONMENT` | `production` | New registrations require admin enablement |
-| `LLM_BASE_URL` | `http://43.159.131.233:3001/v1` | LLM API Base URL (OpenAI-compatible) |
+| `LLM_BASE_URL` | `https://api.example.com/v1` | LLM API Base URL (OpenAI-compatible) |
 | `LLM_MODEL_NAME` | `gpt-5.1` | LLM model name |
 
 6. **LLM Analysis (optional)**: Set in Space **Settings → Repository secrets**:
@@ -106,7 +106,7 @@ Demo pre-fills Base URL and model name for OpenAI-compatible calls:
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="http://43.159.131.233:3001/v1",
+    base_url="https://api.example.com/v1",
     api_key="your-token",  # Set LLM_API_KEY in HF Secrets
 )
 # model: gpt-5.1
@@ -122,7 +122,7 @@ client = OpenAI(
 - **Flexible annotation configs** — Rating, category, text, single/multi-select, binary; optional reason and confidence fields
 - **Collaboration and permissions** — Superuser admin dashboard; regular users claim tasks and annotate; JWT auth
 - **Analysis and export** — Annotation progress and statistics; configurable simplified export
-- **Optional LLM** — OpenAI-compatible Chat API, default `http://43.159.131.233:3001/v1` + `gpt-5.1`; Token injected via `LLM_API_KEY` env var
+- **Optional LLM** — OpenAI-compatible Chat API, default `https://api.example.com/v1` + `gpt-5.1`; Token injected via `LLM_API_KEY` env var
 - **Seed questions** — Predefined question templates organized by type/subtype
 - **UI language** — Chinese and English (i18n)
 

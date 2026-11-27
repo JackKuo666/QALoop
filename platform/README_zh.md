@@ -91,7 +91,7 @@ git add seed/demo.sql && git commit -m "Update demo seed" && git push space main
 |----------|--------|------|
 | `DB_DIR` | `/data` | SQLite 数据目录（Dockerfile 已默认设为 `/data`） |
 | `ENVIRONMENT` | `production` | 新注册用户需管理员启用 |
-| `LLM_BASE_URL` | `http://43.159.131.233:3001/v1` | LLM API Base URL（OpenAI 兼容） |
+| `LLM_BASE_URL` | `https://api.example.com/v1` | LLM API Base URL（OpenAI 兼容） |
 | `LLM_MODEL_NAME` | `gpt-5.1` | LLM 模型名称 |
 
 6. **LLM 分析（可选）**：在 Space **Settings → Repository secrets** 中设置：
@@ -106,7 +106,7 @@ Demo 已预填 Base URL 与模型名，对应 OpenAI 兼容调用：
 from openai import OpenAI
 
 client = OpenAI(
-    base_url="http://43.159.131.233:3001/v1",
+    base_url="https://api.example.com/v1",
     api_key="your-token",  # 在 HF Secrets 中设置 LLM_API_KEY
 )
 # model: gpt-5.1
@@ -122,7 +122,7 @@ client = OpenAI(
 - **灵活标注配置** — 评分、分类、文本、单选/多选、二元；可选理由与置信度字段
 - **协作与权限** — 超级用户管理后台；普通用户领取任务并标注；JWT 认证
 - **分析与导出** — 标注进度与统计分析；结果可按配置简化导出
-- **可选 LLM** — OpenAI 兼容 Chat API，默认 `http://43.159.131.233:3001/v1` + `gpt-5.1`；Token 通过 `LLM_API_KEY` 环境变量注入
+- **可选 LLM** — OpenAI 兼容 Chat API，默认 `https://api.example.com/v1` + `gpt-5.1`；Token 通过 `LLM_API_KEY` 环境变量注入
 - **种子问题** — 预置问题模板，按类型/子类管理
 - **界面语言** — 中英文（i18n）
 

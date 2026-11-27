@@ -40,7 +40,7 @@ class Settings(BaseSettings):
 
     # LLM 默认配置（可通过环境变量覆盖；API Key 建议用 LLM_API_KEY 注入）
     LLM_API_KEY: Optional[str] = None
-    LLM_BASE_URL: str = "http://43.159.131.233:3001/v1"
+    LLM_BASE_URL: str = "https://api.example.com/v1"
     LLM_MODEL_NAME: str = "gpt-5.1"
 
     model_config = SettingsConfigDict(
